@@ -1,0 +1,299 @@
+[
+  1,
+  [
+    "cdXkj9ln1BzL9RhYhBNspa"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "ani_item7",
+      "\r\nani_item7.png\r\nsize: 388,384\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nBongHong\r\n  rotate: true\r\n  xy: 205, 2\r\n  size: 170, 169\r\n  orig: 180, 169\r\n  offset: 5, 0\r\n  index: -1\r\nCherry\r\n  rotate: true\r\n  xy: 1, 1\r\n  size: 171, 203\r\n  orig: 231, 208\r\n  offset: 33, 5\r\n  index: -1\r\nSaoTrang\r\n  rotate: false\r\n  xy: 1, 173\r\n  size: 230, 208\r\n  orig: 233, 210\r\n  offset: 1, 1\r\n  index: -1\r\nSaoVang\r\n  rotate: true\r\n  xy: 232, 208\r\n  size: 173, 155\r\n  orig: 175, 157\r\n  offset: 1, 1\r\n  index: -1\r\n",
+      [
+        "ani_item7.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "FU2pjTAi+tnLs/it2My7o1208lQ",
+          "spine": "3.8.75",
+          "x": -118.4,
+          "y": -104.65,
+          "width": 234.89,
+          "height": 221.18,
+          "images": "./images/",
+          "audio": ""
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "BongHong",
+            "parent": "root"
+          },
+          {
+            "name": "Cherry",
+            "parent": "root"
+          },
+          {
+            "name": "SaoVang",
+            "parent": "root"
+          },
+          {
+            "name": "SaoTrang",
+            "parent": "root"
+          }
+        ],
+        "slots": [
+          {
+            "name": "BongHong",
+            "bone": "BongHong",
+            "attachment": "BongHong",
+            "blend": "additive"
+          },
+          {
+            "name": "SaoVang",
+            "bone": "SaoVang",
+            "attachment": "SaoVang"
+          },
+          {
+            "name": "SaoTrang",
+            "bone": "SaoTrang",
+            "attachment": "SaoTrang"
+          },
+          {
+            "name": "Cherry",
+            "bone": "Cherry",
+            "attachment": "Cherry"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "SaoVang": {
+                "SaoVang": {
+                  "x": -1.51,
+                  "y": -6.46,
+                  "width": 175,
+                  "height": 157
+                }
+              },
+              "BongHong": {
+                "BongHong": {
+                  "x": 0.2,
+                  "y": -0.96,
+                  "width": 180,
+                  "height": 169
+                }
+              },
+              "SaoTrang": {
+                "SaoTrang": {
+                  "x": -1.9,
+                  "y": 0.35,
+                  "width": 233,
+                  "height": 210
+                }
+              },
+              "Cherry": {
+                "Cherry": {
+                  "x": 0.99,
+                  "y": 12.54,
+                  "width": 231,
+                  "height": 208
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "ani_item7_lose": {},
+          "ani_item7_win": {
+            "bones": {
+              "BongHong": {
+                "rotate": [
+                  {
+                    "angle": 90.63
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": 0.92
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -88.81
+                  },
+                  {
+                    "time": 2,
+                    "angle": -178.88
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 90.63
+                  }
+                ]
+              },
+              "Cherry": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.738,
+                    "y": 0.738
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.738,
+                    "y": 0.738
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "SaoTrang": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.721,
+                    "y": 0.721
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.722,
+                    "y": 0.722
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ],
+                "shear": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "y": -20.73
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "y": 26.21
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "SaoVang": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 1.122,
+                    "y": 1.122
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 1.122,
+                    "y": 1.122
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              }
+            },
+            "drawOrder": [
+              {
+                "time": 0.6667,
+                "offsets": [
+                  {
+                    "slot": "SaoVang",
+                    "offset": 2
+                  }
+                ]
+              },
+              {
+                "time": 1.3333,
+                "offsets": [
+                  {
+                    "slot": "SaoVang",
+                    "offset": 1
+                  }
+                ]
+              },
+              {
+                "time": 2,
+                "offsets": [
+                  {
+                    "slot": "SaoVang",
+                    "offset": 2
+                  }
+                ]
+              },
+              {
+                "time": 2.6667,
+                "offsets": [
+                  {
+                    "slot": "SaoVang",
+                    "offset": 1
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "e7xxKNM/BBN7NxXb9k7Gi8"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Group 40",
+      "rect": [
+        7,
+        0,
+        1279,
+        281
+      ],
+      "offset": [
+        0.5,
+        0
+      ],
+      "originalSize": [
+        1292,
+        281
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "650POrbNhJE6EXXxDwh395"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "icon_night_club_lady",
+      "rect": [
+        2,
+        2,
+        2029,
+        962
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2033,
+        966
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

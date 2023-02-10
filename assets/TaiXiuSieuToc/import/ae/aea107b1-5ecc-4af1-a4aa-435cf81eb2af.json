@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "led.atlas",
+      "\r\nled.png\r\nsize: 2048,1024\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nled2/led2_01\r\n  rotate: true\r\n  xy: 1616, 796\r\n  size: 64, 61\r\n  orig: 720, 320\r\n  offset: 47, 241\r\n  index: -1\r\nled2/led2_02\r\n  rotate: false\r\n  xy: 810, 664\r\n  size: 105, 67\r\n  orig: 720, 320\r\n  offset: 45, 238\r\n  index: -1\r\nled2/led2_03\r\n  rotate: false\r\n  xy: 877, 733\r\n  size: 163, 67\r\n  orig: 720, 320\r\n  offset: 45, 238\r\n  index: -1\r\nled2/led2_04\r\n  rotate: false\r\n  xy: 640, 733\r\n  size: 235, 67\r\n  orig: 720, 320\r\n  offset: 45, 238\r\n  index: -1\r\nled2/led2_05\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 317, 67\r\n  orig: 720, 320\r\n  offset: 45, 238\r\n  index: -1\r\nled2/led2_06\r\n  rotate: false\r\n  xy: 2, 71\r\n  size: 404, 69\r\n  orig: 720, 320\r\n  offset: 45, 236\r\n  index: -1\r\nled2/led2_07\r\n  rotate: false\r\n  xy: 1129, 765\r\n  size: 485, 95\r\n  orig: 720, 320\r\n  offset: 45, 210\r\n  index: -1\r\nled2/led2_08\r\n  rotate: false\r\n  xy: 1129, 862\r\n  size: 549, 145\r\n  orig: 720, 320\r\n  offset: 45, 160\r\n  index: -1\r\nled2/led2_09\r\n  rotate: false\r\n  xy: 554, 802\r\n  size: 573, 205\r\n  orig: 720, 320\r\n  offset: 61, 100\r\n  index: -1\r\nled2/led2_10\r\n  rotate: false\r\n  xy: 2, 748\r\n  size: 550, 259\r\n  orig: 720, 320\r\n  offset: 105, 46\r\n  index: -1\r\nled2/led2_11\r\n  rotate: false\r\n  xy: 2, 449\r\n  size: 490, 297\r\n  orig: 720, 320\r\n  offset: 172, 8\r\n  index: -1\r\nled2/led2_12\r\n  rotate: false\r\n  xy: 2, 142\r\n  size: 408, 305\r\n  orig: 720, 320\r\n  offset: 255, 0\r\n  index: -1\r\nled2/led2_13\r\n  rotate: false\r\n  xy: 1680, 702\r\n  size: 316, 305\r\n  orig: 720, 320\r\n  offset: 347, 0\r\n  index: -1\r\nled2/led2_14\r\n  rotate: false\r\n  xy: 412, 162\r\n  size: 223, 285\r\n  orig: 720, 320\r\n  offset: 440, 0\r\n  index: -1\r\nled2/led2_15\r\n  rotate: false\r\n  xy: 494, 510\r\n  size: 144, 236\r\n  orig: 720, 320\r\n  offset: 519, 0\r\n  index: -1\r\nled2/led2_16\r\n  rotate: false\r\n  xy: 640, 560\r\n  size: 95, 171\r\n  orig: 720, 320\r\n  offset: 568, 0\r\n  index: -1\r\nled2/led2_17\r\n  rotate: false\r\n  xy: 737, 622\r\n  size: 71, 109\r\n  orig: 720, 320\r\n  offset: 592, 0\r\n  index: -1\r\nled2/led2_18\r\n  rotate: false\r\n  xy: 321, 6\r\n  size: 63, 63\r\n  orig: 720, 320\r\n  offset: 599, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "e5cXKMe4NKoaASJHcvMLqk"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "OngNuocPhai",
+      "rect": [
+        0,
+        2,
+        152,
+        176
+      ],
+      "offset": [
+        -7,
+        0
+      ],
+      "originalSize": [
+        166,
+        180
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

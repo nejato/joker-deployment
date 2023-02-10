@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "SAMLOC.atlas",
+      "\r\nSAMLOC.png\r\nsize: 1024,256\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n5395c2a4bd68981a7e01b7e93684d1540ca263e111f1e-2SCmRS\r\n  rotate: false\r\n  xy: 265, 54\r\n  size: 227, 198\r\n  orig: 227, 198\r\n  offset: 0, 0\r\n  index: -1\r\nGroup 31252\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 261, 250\r\n  orig: 261, 250\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 1\r\n  rotate: false\r\n  xy: 717, 110\r\n  size: 139, 142\r\n  orig: 139, 142\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 2\r\n  rotate: false\r\n  xy: 494, 57\r\n  size: 221, 195\r\n  orig: 221, 195\r\n  offset: 0, 0\r\n  index: -1\r\ntext\r\n  rotate: true\r\n  xy: 858, 32\r\n  size: 220, 61\r\n  orig: 220, 61\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

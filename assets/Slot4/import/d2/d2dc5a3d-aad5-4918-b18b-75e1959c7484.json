@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "89vO66WrFK0LYAxZNL4gAt"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "thangno",
+      "rect": [
+        3,
+        5,
+        1014,
+        817
+      ],
+      "offset": [
+        -4,
+        -1
+      ],
+      "originalSize": [
+        1028,
+        825
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,628 @@
+[
+  1,
+  [
+    "18uErH0QNCTqN4sGQexSZU"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "Untitled-2-01",
+      "\r\nUntitled-2-01.png\r\nsize: 1956,932\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nDayDai\r\n  rotate: true\r\n  xy: 1658, 136\r\n  size: 156, 111\r\n  orig: 158, 113\r\n  offset: 1, 1\r\n  index: -1\r\nDayNgan\r\n  rotate: false\r\n  xy: 1770, 176\r\n  size: 82, 94\r\n  orig: 84, 102\r\n  offset: 1, 7\r\n  index: -1\r\nKhoiDac\r\n  rotate: false\r\n  xy: 1415, 590\r\n  size: 537, 341\r\n  orig: 546, 373\r\n  offset: 7, 16\r\n  index: -1\r\nKhoiMix\r\n  rotate: false\r\n  xy: 1376, 16\r\n  size: 281, 276\r\n  orig: 289, 285\r\n  offset: 3, 6\r\n  index: -1\r\nKhoiNhat\r\n  rotate: false\r\n  xy: 1415, 293\r\n  size: 379, 296\r\n  orig: 384, 310\r\n  offset: 3, 8\r\n  index: -1\r\nNapPhaLe\r\n  rotate: false\r\n  xy: 1893, 279\r\n  size: 59, 84\r\n  orig: 61, 86\r\n  offset: 1, 1\r\n  index: -1\r\nThanLo\r\n  rotate: false\r\n  xy: 1795, 364\r\n  size: 146, 225\r\n  orig: 159, 230\r\n  offset: 1, 3\r\n  index: -1\r\nThanLoRong\r\n  rotate: true\r\n  xy: 671, 1\r\n  size: 221, 319\r\n  orig: 225, 321\r\n  offset: 1, 1\r\n  index: -1\r\nXichPhai\r\n  rotate: true\r\n  xy: 1795, 271\r\n  size: 92, 97\r\n  orig: 94, 99\r\n  offset: 1, 1\r\n  index: -1\r\nXichTrai\r\n  rotate: true\r\n  xy: 1658, 33\r\n  size: 102, 161\r\n  orig: 106, 166\r\n  offset: 1, 2\r\n  index: -1\r\nXoayNuoc\r\n  rotate: true\r\n  xy: 1218, 61\r\n  size: 161, 157\r\n  orig: 164, 161\r\n  offset: 1, 2\r\n  index: -1\r\nbangTien\r\n  rotate: false\r\n  xy: 721, 223\r\n  size: 627, 105\r\n  orig: 629, 107\r\n  offset: 1, 1\r\n  index: -1\r\nbg\r\n  rotate: false\r\n  xy: 721, 329\r\n  size: 693, 602\r\n  orig: 695, 604\r\n  offset: 1, 1\r\n  index: -1\r\nbong\r\n  rotate: true\r\n  xy: 991, 14\r\n  size: 208, 226\r\n  orig: 214, 234\r\n  offset: 3, 5\r\n  index: -1\r\nkhung\r\n  rotate: false\r\n  xy: 1, 293\r\n  size: 719, 638\r\n  orig: 721, 640\r\n  offset: 1, 1\r\n  index: -1\r\nlo\r\n  rotate: false\r\n  xy: 1, 7\r\n  size: 669, 285\r\n  orig: 726, 639\r\n  offset: 36, 105\r\n  index: -1\r\nnuoc\r\n  rotate: false\r\n  xy: 1, 7\r\n  size: 669, 285\r\n  orig: 726, 639\r\n  offset: 36, 105\r\n  index: -1\r\nthan\r\n  rotate: false\r\n  xy: 1, 7\r\n  size: 669, 285\r\n  orig: 726, 639\r\n  offset: 36, 105\r\n  index: -1\r\n",
+      [
+        "Untitled-2-01.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "1uPx3zgiqJO+klpYiYp8udSQDUk",
+          "spine": "3.8.75",
+          "x": -355.71,
+          "y": -328.4,
+          "width": 726.14,
+          "height": 646.95,
+          "images": "./images/",
+          "audio": "C:/Users/User1/Desktop/LoNuocThan/logo/source"
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "KhoiNhat",
+            "parent": "root",
+            "x": -182.7,
+            "y": -58.27
+          },
+          {
+            "name": "KhoiDac",
+            "parent": "root",
+            "x": -102.38,
+            "y": -87.48
+          },
+          {
+            "name": "KhoiMix",
+            "parent": "root",
+            "x": 189.7,
+            "y": -64.36
+          },
+          {
+            "name": "ThanLoRong",
+            "parent": "root",
+            "x": 136.16,
+            "y": 33
+          },
+          {
+            "name": "ThanLo",
+            "parent": "root",
+            "x": -166.88,
+            "y": 15.97
+          },
+          {
+            "name": "DayDai",
+            "parent": "root",
+            "x": 200.66,
+            "y": 186.35
+          },
+          {
+            "name": "DayNgan",
+            "parent": "root",
+            "x": 194.57,
+            "y": 193.65
+          },
+          {
+            "name": "XichPhai",
+            "parent": "root",
+            "x": -107.24,
+            "y": 78.03
+          },
+          {
+            "name": "XichTrai",
+            "parent": "root",
+            "x": -252.07,
+            "y": 26.92
+          },
+          {
+            "name": "bong",
+            "parent": "root",
+            "x": -176.61,
+            "y": 52.48
+          }
+        ],
+        "slots": [
+          {
+            "name": "bg",
+            "bone": "root",
+            "attachment": "bg"
+          },
+          {
+            "name": "khung",
+            "bone": "root",
+            "attachment": "khung"
+          },
+          {
+            "name": "KhoiDac",
+            "bone": "KhoiDac",
+            "attachment": "KhoiDac"
+          },
+          {
+            "name": "ThanLoRong",
+            "bone": "ThanLoRong",
+            "attachment": "ThanLoRong"
+          },
+          {
+            "name": "DayNgan",
+            "bone": "DayNgan",
+            "attachment": "DayNgan"
+          },
+          {
+            "name": "DayDai",
+            "bone": "DayDai",
+            "attachment": "DayDai"
+          },
+          {
+            "name": "KhoiMix",
+            "bone": "KhoiMix",
+            "attachment": "KhoiMix"
+          },
+          {
+            "name": "bong",
+            "bone": "bong",
+            "attachment": "bong"
+          },
+          {
+            "name": "XoayNuoc",
+            "bone": "root",
+            "attachment": "XoayNuoc"
+          },
+          {
+            "name": "XichPhai",
+            "bone": "XichPhai",
+            "attachment": "XichPhai"
+          },
+          {
+            "name": "ThanLo",
+            "bone": "ThanLo",
+            "attachment": "ThanLo"
+          },
+          {
+            "name": "XichTrai",
+            "bone": "XichTrai",
+            "attachment": "XichTrai"
+          },
+          {
+            "name": "NapPhaLe",
+            "bone": "root",
+            "attachment": "NapPhaLe"
+          },
+          {
+            "name": "KhoiNhat",
+            "bone": "KhoiNhat",
+            "attachment": "KhoiNhat"
+          },
+          {
+            "name": "bangTien",
+            "bone": "root",
+            "attachment": "bangTien"
+          },
+          {
+            "name": "than",
+            "bone": "root",
+            "attachment": "than"
+          },
+          {
+            "name": "nuoc",
+            "bone": "root",
+            "attachment": "nuoc"
+          },
+          {
+            "name": "lo",
+            "bone": "root",
+            "attachment": "lo"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "DayNgan": {
+                "DayNgan": {
+                  "x": -14.73,
+                  "y": 17.95,
+                  "width": 84,
+                  "height": 102
+                }
+              },
+              "lo": {
+                "lo": {
+                  "x": 7.29,
+                  "y": -0.95,
+                  "width": 726,
+                  "height": 639
+                }
+              },
+              "bg": {
+                "bg": {
+                  "x": 6.34,
+                  "y": -8.4,
+                  "width": 695,
+                  "height": 604
+                }
+              },
+              "bong": {
+                "bong": {
+                  "x": 4.45,
+                  "y": -9.88,
+                  "width": 214,
+                  "height": 234
+                }
+              },
+              "XoayNuoc": {
+                "XoayNuoc": {
+                  "x": -159.16,
+                  "y": 17.1,
+                  "width": 164,
+                  "height": 161
+                }
+              },
+              "KhoiNhat": {
+                "KhoiNhat": {
+                  "x": 19.54,
+                  "y": 8.87,
+                  "width": 384,
+                  "height": 310
+                }
+              },
+              "nuoc": {
+                "nuoc": {
+                  "x": 7.36,
+                  "y": -8.01,
+                  "width": 726,
+                  "height": 639
+                }
+              },
+              "than": {
+                "than": {
+                  "x": 7.43,
+                  "y": -6.65,
+                  "width": 726,
+                  "height": 639
+                }
+              },
+              "ThanLo": {
+                "ThanLo": {
+                  "x": 12.22,
+                  "y": 25.63,
+                  "width": 159,
+                  "height": 230
+                }
+              },
+              "NapPhaLe": {
+                "NapPhaLe": {
+                  "x": -204.66,
+                  "y": 114.6,
+                  "width": 61,
+                  "height": 86
+                }
+              },
+              "KhoiDac": {
+                "KhoiDac": {
+                  "x": 31.22,
+                  "y": -4.42,
+                  "width": 546,
+                  "height": 373
+                }
+              },
+              "DayDai": {
+                "DayDai": {
+                  "x": 57.18,
+                  "y": 13.75,
+                  "width": 158,
+                  "height": 113
+                }
+              },
+              "khung": {
+                "khung": {
+                  "x": 5.34,
+                  "y": -8.4,
+                  "width": 721,
+                  "height": 640
+                }
+              },
+              "KhoiMix": {
+                "KhoiMix": {
+                  "x": 17.64,
+                  "y": -9.54,
+                  "width": 289,
+                  "height": 285
+                }
+              },
+              "XichPhai": {
+                "XichPhai": {
+                  "x": -16.92,
+                  "y": -23.93,
+                  "width": 94,
+                  "height": 99
+                }
+              },
+              "ThanLoRong": {
+                "ThanLoRong": {
+                  "x": -7.82,
+                  "y": 10.1,
+                  "width": 225,
+                  "height": 321
+                }
+              },
+              "XichTrai": {
+                "XichTrai": {
+                  "x": 21.91,
+                  "y": -14.32,
+                  "width": 106,
+                  "height": 166
+                }
+              },
+              "bangTien": {
+                "bangTien": {
+                  "x": 12.34,
+                  "y": -236.9,
+                  "width": 629,
+                  "height": 107
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "animation": {
+            "slots": {
+              "NapPhaLe": {
+                "attachment": [
+                  {
+                    "name": null
+                  }
+                ]
+              }
+            },
+            "bones": {
+              "ThanLo": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 1.17,
+                    "y": 1.17
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 1.17,
+                    "y": 1.17
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "XichPhai": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 1.227,
+                    "y": 1.227
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 1.227,
+                    "y": 1.227
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "XichTrai": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.894,
+                    "y": 1.093
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.894,
+                    "y": 1.093
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "bong": {
+                "rotate": [
+                  {
+                    "angle": 88.77
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": 2.17
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -90.72
+                  },
+                  {
+                    "time": 2,
+                    "angle": -172.93
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 91.44
+                  }
+                ],
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 1.397,
+                    "y": 1.397
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 1.397,
+                    "y": 1.397
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "ThanLoRong": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.826,
+                    "y": 0.826
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.826,
+                    "y": 0.826
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "DayDai": {
+                "translate": [
+                  {
+                    "y": 4.87
+                  },
+                  {
+                    "time": 0.6667,
+                    "x": -8.52,
+                    "y": -23.12
+                  },
+                  {
+                    "time": 1.3333,
+                    "y": 3.65
+                  },
+                  {
+                    "time": 2,
+                    "x": -10.95,
+                    "y": -24.34
+                  },
+                  {
+                    "time": 2.6667,
+                    "y": 4.87
+                  }
+                ]
+              },
+              "DayNgan": {
+                "translate": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": -13.39,
+                    "y": -24.34
+                  },
+                  {
+                    "time": 1.3333,
+                    "x": -1.62,
+                    "y": 0.81
+                  },
+                  {
+                    "time": 2,
+                    "x": -14.2,
+                    "y": -26.37
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "KhoiDac": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 1.365,
+                    "y": 1.365
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 1.365,
+                    "y": 1.365
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "KhoiMix": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 1.555,
+                    "y": 1.555
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 1.555,
+                    "y": 1.555
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "KhoiNhat": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.613,
+                    "y": 0.613
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.613,
+                    "y": 0.613
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

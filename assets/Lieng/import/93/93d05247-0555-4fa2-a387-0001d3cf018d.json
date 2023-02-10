@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "76JITXuzZB0LY8i7qSF/15"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Baccarat_Dealer",
+      "rect": [
+        2,
+        2,
+        450,
+        222
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        454,
+        226
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

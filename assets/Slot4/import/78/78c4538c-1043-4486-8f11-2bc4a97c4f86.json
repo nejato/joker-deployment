@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "496PRgx/xBHIaoxJV40TLV"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "anim-FreeSpin-Bonus",
+      "rect": [
+        4,
+        5,
+        1928,
+        608
+      ],
+      "offset": [
+        -0.5,
+        0
+      ],
+      "originalSize": [
+        1937,
+        618
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

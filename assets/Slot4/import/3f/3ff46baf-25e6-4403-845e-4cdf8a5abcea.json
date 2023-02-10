@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "4fYwcYlyhEDbdKVg1ZcHWG"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "fooder",
+      "rect": [
+        1,
+        0,
+        1099,
+        114
+      ],
+      "offset": [
+        0.5,
+        0
+      ],
+      "originalSize": [
+        1100,
+        114
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

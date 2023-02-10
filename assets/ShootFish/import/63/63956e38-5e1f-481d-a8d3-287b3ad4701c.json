@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "94nFtpwipAO45TpvFB3Slb"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "btnHelp2",
+      "rect": [
+        1,
+        1,
+        68,
+        69
+      ],
+      "offset": [
+        -0.5,
+        0
+      ],
+      "originalSize": [
+        71,
+        71
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

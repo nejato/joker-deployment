@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "16jtqAPNZLf5lC1ED2U/Lj"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "anim_LnT",
+      "rect": [
+        1,
+        1,
+        230,
+        283
+      ],
+      "offset": [
+        -12,
+        113.5
+      ],
+      "originalSize": [
+        256,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

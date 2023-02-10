@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "37emY3mBZFi4Y9TSnXgpZz"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "gun1",
+      "rect": [
+        1,
+        1,
+        238,
+        287
+      ],
+      "offset": [
+        -8,
+        111.5
+      ],
+      "originalSize": [
+        256,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

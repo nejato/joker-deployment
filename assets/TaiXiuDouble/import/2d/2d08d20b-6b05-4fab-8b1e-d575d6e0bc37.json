@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "e47iCX4YxJDZSLHf0cVf7u"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "qicon_help",
+      "rect": [
+        0,
+        0,
+        66,
+        66
+      ],
+      "offset": [
+        0,
+        0.5
+      ],
+      "originalSize": [
+        66,
+        67
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

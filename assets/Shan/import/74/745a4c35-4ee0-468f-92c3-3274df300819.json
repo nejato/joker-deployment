@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "e8fZY2/jxNwJbhtWUMl0qE"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "handBase",
+      "rect": [
+        0,
+        0,
+        419,
+        499
+      ],
+      "offset": [
+        -1.5,
+        0
+      ],
+      "originalSize": [
+        422,
+        499
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "08rgDvJJZC0KuZPsawdQy/"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Khung-Main",
+      "rect": [
+        0,
+        0,
+        1081,
+        659
+      ],
+      "offset": [
+        0,
+        6.5
+      ],
+      "originalSize": [
+        1081,
+        672
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

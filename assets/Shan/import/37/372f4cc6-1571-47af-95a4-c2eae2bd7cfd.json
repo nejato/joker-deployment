@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "16KkXIy9lHCqtGr2Y2Y5oc"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Invited_0005_Accept",
+      "rect": [
+        2,
+        3,
+        173,
+        64
+      ],
+      "offset": [
+        0,
+        -0.5
+      ],
+      "originalSize": [
+        177,
+        69
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,69 @@
+
+bac.png
+size: 497,234
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 22
+  rotate: true
+  xy: 2, 7
+  size: 225, 222
+  orig: 236, 231
+  offset: 7, 4
+  index: -1
+Layer 23
+  rotate: false
+  xy: 226, 113
+  size: 118, 119
+  orig: 130, 121
+  offset: 11, 1
+  index: -1
+Layer 24
+  rotate: true
+  xy: 350, 19
+  size: 112, 38
+  orig: 114, 40
+  offset: 1, 1
+  index: -1
+Layer 25
+  rotate: false
+  xy: 346, 133
+  size: 126, 99
+  orig: 137, 101
+  offset: 10, 1
+  index: -1
+Layer 26
+  rotate: false
+  xy: 434, 21
+  size: 33, 35
+  orig: 35, 37
+  offset: 1, 1
+  index: -1
+Layer 27
+  rotate: true
+  xy: 390, 2
+  size: 54, 42
+  orig: 57, 45
+  offset: 1, 1
+  index: -1
+Layer 28
+  rotate: false
+  xy: 226, 4
+  size: 122, 107
+  orig: 124, 110
+  offset: 1, 2
+  index: -1
+Layer 29
+  rotate: false
+  xy: 390, 94
+  size: 98, 37
+  orig: 134, 37
+  offset: 26, 0
+  index: -1
+Layer 30
+  rotate: false
+  xy: 390, 58
+  size: 105, 34
+  orig: 107, 39
+  offset: 1, 3
+  index: -1

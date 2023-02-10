@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "adJML3X+tMR5KOMdEVTQCB"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "btnAdd",
+      "rect": [
+        0,
+        0,
+        71,
+        52
+      ],
+      "offset": [
+        0,
+        0.5
+      ],
+      "originalSize": [
+        71,
+        53
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

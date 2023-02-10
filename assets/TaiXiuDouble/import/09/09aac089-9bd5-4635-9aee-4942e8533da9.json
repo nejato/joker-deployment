@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "7ej08mR6pAe49YVUB6UHLG"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "feng_bg",
+      "rect": [
+        0,
+        0,
+        1016,
+        497
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        1016,
+        497
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

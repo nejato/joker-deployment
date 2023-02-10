@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "3eMIEEDQhAZ78zBYwLTIBg"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ic_chiemtinh",
+      "rect": [
+        1,
+        1,
+        436,
+        508
+      ],
+      "offset": [
+        -37,
+        1
+      ],
+      "originalSize": [
+        512,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "f92Pq7mkpK7rumbpXzOHeG"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "UI_Bonus",
+      "rect": [
+        2,
+        52,
+        621,
+        344
+      ],
+      "offset": [
+        -1,
+        -24.5
+      ],
+      "originalSize": [
+        627,
+        399
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

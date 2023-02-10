@@ -1,0 +1,136 @@
+[
+  1,
+  [
+    "9c9hMg2hxI8Iff8ZPg7eMa"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    [
+      [
+        {
+          "name": "angrybirds_mng_bg_2",
+          "rect": [
+            1,
+            1,
+            1259,
+            790
+          ],
+          "offset": [
+            -1,
+            -135
+          ],
+          "originalSize": [
+            1575,
+            1124
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "angrybirds_mng_btn_close",
+          "rect": [
+            639,
+            1262,
+            92,
+            96
+          ],
+          "offset": [
+            -1,
+            2
+          ],
+          "originalSize": [
+            94,
+            100
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "angrybirds_mng_bg_thongbao",
+          "rect": [
+            1,
+            1262,
+            636,
+            452
+          ],
+          "offset": [
+            -10,
+            20
+          ],
+          "originalSize": [
+            712,
+            520
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  ]
+]

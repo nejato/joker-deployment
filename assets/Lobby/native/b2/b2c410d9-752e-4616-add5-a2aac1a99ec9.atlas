@@ -1,0 +1,83 @@
+
+Bikini.png
+size: 1024,1193
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BGBikini
+  rotate: false
+  xy: 802, 803
+  size: 220, 388
+  orig: 220, 388
+  offset: 0, 0
+  index: -1
+BGboard
+  rotate: false
+  xy: 802, 701
+  size: 214, 100
+  orig: 214, 100
+  offset: 0, 0
+  index: -1
+Bikini
+  rotate: false
+  xy: 276, 2
+  size: 256, 88
+  orig: 256, 88
+  offset: 0, 0
+  index: -1
+mieng
+  rotate: true
+  xy: 2, 12
+  size: 70, 58
+  orig: 70, 58
+  offset: 0, 0
+  index: -1
+numberchung2
+  rotate: false
+  xy: 673, 37
+  size: 221, 108
+  orig: 221, 108
+  offset: 0, 0
+  index: -1
+tay1
+  rotate: true
+  xy: 673, 147
+  size: 351, 346
+  orig: 351, 346
+  offset: 0, 0
+  index: -1
+tay2
+  rotate: false
+  xy: 276, 517
+  size: 522, 146
+  orig: 522, 146
+  offset: 0, 0
+  index: -1
+than
+  rotate: true
+  xy: 2, 665
+  size: 526, 798
+  orig: 526, 798
+  offset: 0, 0
+  index: -1
+toc1
+  rotate: false
+  xy: 276, 92
+  size: 395, 406
+  orig: 395, 406
+  offset: 0, 0
+  index: -1
+toc2
+  rotate: true
+  xy: 802, 500
+  size: 199, 209
+  orig: 199, 209
+  offset: 0, 0
+  index: -1
+vay
+  rotate: true
+  xy: 2, 84
+  size: 579, 272
+  orig: 579, 272
+  offset: 0, 0
+  index: -1

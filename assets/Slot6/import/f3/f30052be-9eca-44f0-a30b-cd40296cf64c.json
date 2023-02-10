@@ -1,0 +1,337 @@
+[
+  1,
+  [
+    "baBYGAegFCQLKr2cdZK7p9"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "ani_item6",
+      "\r\nani_item6.png\r\nsize: 492,212\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nBong\r\n  rotate: false\r\n  xy: 1, 1\r\n  size: 221, 208\r\n  orig: 233, 210\r\n  offset: 1, 1\r\n  index: -1\r\nNgoiSao\r\n  rotate: false\r\n  xy: 223, 21\r\n  size: 15, 14\r\n  orig: 17, 16\r\n  offset: 1, 1\r\n  index: -1\r\nSao\r\n  rotate: true\r\n  xy: 377, 82\r\n  size: 127, 113\r\n  orig: 128, 117\r\n  offset: 0, 0\r\n  index: -1\r\nTao\r\n  rotate: false\r\n  xy: 223, 36\r\n  size: 153, 173\r\n  orig: 231, 208\r\n  offset: 32, 30\r\n  index: -1\r\n",
+      [
+        "ani_item6.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "Gk+v9GQeOPEVES2ZqMTpYDs6R9I",
+          "spine": "3.8.75",
+          "x": -115.3,
+          "y": -99.52,
+          "width": 237,
+          "height": 211.5,
+          "images": "./images/",
+          "audio": "C:/Users/User1/Desktop/HoaQuaGavin1/qua_tao_xanh/source"
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "Sao",
+            "parent": "root"
+          },
+          {
+            "name": "NgoiSao",
+            "parent": "root",
+            "x": 40.81,
+            "y": 20.14
+          },
+          {
+            "name": "Tao",
+            "parent": "root"
+          },
+          {
+            "name": "Bong",
+            "parent": "root"
+          }
+        ],
+        "slots": [
+          {
+            "name": "Bong",
+            "bone": "Bong",
+            "attachment": "Bong",
+            "blend": "additive"
+          },
+          {
+            "name": "Tao",
+            "bone": "Tao",
+            "attachment": "Tao"
+          },
+          {
+            "name": "Sao",
+            "bone": "Sao",
+            "attachment": "Sao"
+          },
+          {
+            "name": "NgoiSao",
+            "bone": "NgoiSao",
+            "attachment": "NgoiSao"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "Sao": {
+                "Sao": {
+                  "x": 3.7,
+                  "y": 4.98,
+                  "width": 128,
+                  "height": 117
+                }
+              },
+              "Tao": {
+                "Tao": {
+                  "x": 0.2,
+                  "y": 7.98,
+                  "width": 231,
+                  "height": 208
+                }
+              },
+              "Bong": {
+                "Bong": {
+                  "x": 5.2,
+                  "y": 5.48,
+                  "width": 233,
+                  "height": 210
+                }
+              },
+              "NgoiSao": {
+                "NgoiSao": {
+                  "x": 1.94,
+                  "y": -1.72,
+                  "width": 17,
+                  "height": 16
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "ani_item6_lose": {},
+          "ani_item6_win": {
+            "slots": {
+              "NgoiSao": {
+                "color": [
+                  {
+                    "color": "ffffff49"
+                  },
+                  {
+                    "time": 0.6667,
+                    "color": "ffffffff"
+                  },
+                  {
+                    "time": 1.3333,
+                    "color": "ffffff49"
+                  },
+                  {
+                    "time": 2,
+                    "color": "ffffffff"
+                  },
+                  {
+                    "time": 2.6667,
+                    "color": "ffffff49"
+                  }
+                ]
+              }
+            },
+            "bones": {
+              "NgoiSao": {
+                "translate": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": -11.13,
+                    "y": -5.27
+                  },
+                  {
+                    "time": 1.3333,
+                    "x": 0.59,
+                    "y": -4.1
+                  },
+                  {
+                    "time": 2,
+                    "x": -12.31,
+                    "y": -7.03
+                  },
+                  {
+                    "time": 2.6667,
+                    "x": 1.17,
+                    "y": -1.17
+                  }
+                ],
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 2.827,
+                    "y": 2.827
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 2.827,
+                    "y": 2.827
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "Bong": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.753,
+                    "y": 0.753
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.753,
+                    "y": 0.753
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "Sao": {
+                "rotate": [
+                  {
+                    "angle": 89.08
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": -0.6
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -86.74
+                  },
+                  {
+                    "time": 2,
+                    "angle": -178.41
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 89.08
+                  }
+                ],
+                "scale": [
+                  {
+                    "x": 1.386,
+                    "y": 1.386
+                  },
+                  {
+                    "time": 0.6667,
+                    "x": 0.773,
+                    "y": 0.773
+                  },
+                  {
+                    "time": 1.3333,
+                    "x": 1.386,
+                    "y": 1.386
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.773,
+                    "y": 0.773
+                  },
+                  {
+                    "time": 2.6667,
+                    "x": 1.386,
+                    "y": 1.386
+                  }
+                ],
+                "shear": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": -25.45
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": -25.45
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "Tao": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.68,
+                    "y": 0.68
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.64,
+                    "y": 0.64
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,137 @@
+[
+  1,
+  [
+    "f4/eTD2SlO1IaUbuSwA0oY",
+    "16gBLVLvxJFrWOXA2q4p7Q",
+    "beJrtTnXtOGK8As2cXXj20"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    [
+      [
+        {
+          "name": "box_win",
+          "rect": [
+            0,
+            0,
+            165,
+            56
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            165,
+            56
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "Group 21",
+          "rect": [
+            0,
+            0,
+            54,
+            54
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            54,
+            54
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    [
+      [
+        {
+          "name": "hEADE",
+          "rect": [
+            0,
+            0,
+            808,
+            79
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            808,
+            79
+          ],
+          "capInsets": [
+            120,
+            34,
+            123,
+            35
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        2
+      ]
+    ]
+  ]
+]

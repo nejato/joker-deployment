@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "8bmQC4/i1HGLg3CXOY/eMs"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "preview",
+      "rect": [
+        219,
+        58,
+        841,
+        598
+      ],
+      "offset": [
+        -0.5,
+        3
+      ],
+      "originalSize": [
+        1280,
+        720
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

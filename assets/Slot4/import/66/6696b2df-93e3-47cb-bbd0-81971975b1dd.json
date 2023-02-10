@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "1eO/aALMVE+YHPk4048cBW"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "angrybirds_symbol_3_4",
+      "rect": [
+        4,
+        4,
+        1928,
+        388
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        1936,
+        396
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

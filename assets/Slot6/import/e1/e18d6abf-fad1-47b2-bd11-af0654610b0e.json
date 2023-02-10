@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "2a4CE6dihPC7vzBjXn7WxR"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "effect_win",
+      "rect": [
+        1,
+        1,
+        2029,
+        1012
+      ],
+      "offset": [
+        -0.5,
+        1
+      ],
+      "originalSize": [
+        2032,
+        1016
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "79vphppGBK/qH/LBeWZ1PK"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "bacay",
+      "rect": [
+        3,
+        3,
+        471,
+        195
+      ],
+      "offset": [
+        -17.5,
+        27.5
+      ],
+      "originalSize": [
+        512,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

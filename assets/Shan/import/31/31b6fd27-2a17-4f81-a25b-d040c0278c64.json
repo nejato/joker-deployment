@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "77lbDWI1NEz4m0/Ales+lK"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Draw",
+      "rect": [
+        6,
+        8,
+        193,
+        202
+      ],
+      "offset": [
+        0,
+        -4
+      ],
+      "originalSize": [
+        205,
+        210
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

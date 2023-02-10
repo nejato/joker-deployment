@@ -1,0 +1,83 @@
+{
+    "paths": {
+        "c2k3D9ZWtPr4GXUE0KcQg7": [
+            "prefabs/card/TienLen_ItemCardResult",
+            "cc.Prefab"
+        ],
+        "93Ah42chRMQ7+MK/GiHHcM": [
+            "prefabs/card/TienLen_ItemPlayerResult",
+            "cc.Prefab"
+        ],
+        "23QIHGErdFG4CbgNjglnyq": [
+            "prefabs/card/card",
+            "cc.Prefab"
+        ]
+    },
+    "uuids": [
+        "0bq+63xfhCFaNy5w/kBGPF",
+        "23QIHGErdFG4CbgNjglnyq",
+        "25gfGG5RxK/LDONI5R8QpL",
+        "28lCBI2lRADLZDrXRIwStc",
+        "2aRU6cm7VNxKvnYihB+5dT",
+        "58PfG1VOFCoJRfK3AoudaS",
+        "5f+Ku6YxFMupdKEdLBlSGj",
+        "67kpl++4FMvaW8DYp4kz2i",
+        "6cXRZcDHRG/7tY7Yz1gURJ",
+        "6e31ifYC9HNLwG43xlG9bl",
+        "70syTFH/BNZr0cWqgTYbX1",
+        "8dX/d2KONFC6U25oH5NOtZ",
+        "904ExHulBLQKPsC6Ps3qMW",
+        "93Ah42chRMQ7+MK/GiHHcM",
+        "98JyVbvBFGv4/hTZo0sPtG",
+        "c2k3D9ZWtPr4GXUE0KcQg7",
+        "c8upMIa4VBQ507oIYmMcdQ",
+        "d1hRc5OupC06fDHGOs2TAm",
+        "ecpdLyjvZBwrvm+cedCcQy",
+        "edm880y2tC8KqoWrHdYBY3",
+        "f3qO+rrrVL46ywsxp01Fzq"
+    ],
+    "scenes": {},
+    "redirect": [
+        "ecpdLyjvZBwrvm+cedCcQy",
+        0
+    ],
+    "deps": [
+        "internal"
+    ],
+    "packs": {
+        "02956405b": [
+            "25gfGG5RxK/LDONI5R8QpL",
+            "6cXRZcDHRG/7tY7Yz1gURJ",
+            "6e31ifYC9HNLwG43xlG9bl",
+            "70syTFH/BNZr0cWqgTYbX1",
+            "904ExHulBLQKPsC6Ps3qMW",
+            "edm880y2tC8KqoWrHdYBY3"
+        ],
+        "0296b6e0e": [
+            "23QIHGErdFG4CbgNjglnyq",
+            "28lCBI2lRADLZDrXRIwStc"
+        ],
+        "05f0d7c9b": [
+            "5f+Ku6YxFMupdKEdLBlSGj",
+            "c2k3D9ZWtPr4GXUE0KcQg7"
+        ],
+        "0c544c024": [
+            "0bq+63xfhCFaNy5w/kBGPF",
+            "2aRU6cm7VNxKvnYihB+5dT",
+            "58PfG1VOFCoJRfK3AoudaS",
+            "67kpl++4FMvaW8DYp4kz2i",
+            "8dX/d2KONFC6U25oH5NOtZ",
+            "93Ah42chRMQ7+MK/GiHHcM",
+            "98JyVbvBFGv4/hTZo0sPtG",
+            "c8upMIa4VBQ507oIYmMcdQ",
+            "d1hRc5OupC06fDHGOs2TAm",
+            "f3qO+rrrVL46ywsxp01Fzq"
+        ]
+    },
+    "name": "resources",
+    "importBase": "import",
+    "nativeBase": "native",
+    "debug": true,
+    "isZip": false,
+    "encrypted": false
+}

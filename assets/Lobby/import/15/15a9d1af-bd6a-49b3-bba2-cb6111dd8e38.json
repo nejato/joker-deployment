@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "oantuti.atlas",
+      "\r\noantuti.png\r\nsize: 512,256\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n22_BG\r\n  rotate: false\r\n  xy: 2, 63\r\n  size: 223, 186\r\n  orig: 223, 186\r\n  offset: 0, 0\r\n  index: -1\r\n22_oan\r\n  rotate: true\r\n  xy: 417, 128\r\n  size: 121, 67\r\n  orig: 121, 67\r\n  offset: 0, 0\r\n  index: -1\r\n22_ti\r\n  rotate: false\r\n  xy: 81, 2\r\n  size: 57, 59\r\n  orig: 57, 59\r\n  offset: 0, 0\r\n  index: -1\r\n22_tu\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 77, 59\r\n  orig: 77, 59\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 62\r\n  rotate: false\r\n  xy: 227, 89\r\n  size: 188, 160\r\n  orig: 188, 160\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

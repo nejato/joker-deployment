@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "ddJRYuNlhB6Lt2Qzq+g6Ic"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Mynu-UI-loading",
+      "rect": [
+        4,
+        4,
+        960,
+        515
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        968,
+        523
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

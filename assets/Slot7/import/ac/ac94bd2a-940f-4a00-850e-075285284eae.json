@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "96vHaMKJdCTp79+zuQdD0G"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "UI_BigWin",
+      "rect": [
+        5,
+        2,
+        1961,
+        595
+      ],
+      "offset": [
+        -8.5,
+        0.5
+      ],
+      "originalSize": [
+        1988,
+        600
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

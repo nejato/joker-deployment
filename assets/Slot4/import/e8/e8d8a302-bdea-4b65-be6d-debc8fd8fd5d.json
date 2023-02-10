@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "7exG0QdsNEO49sduWGowks"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "angrybirds_minigame_item",
+      "rect": [
+        2,
+        4,
+        1928,
+        193
+      ],
+      "offset": [
+        -1,
+        -1
+      ],
+      "originalSize": [
+        1934,
+        199
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

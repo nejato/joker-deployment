@@ -1,0 +1,263 @@
+[
+  1,
+  [
+    "09pdpQUINO34UB4yNbMfKe"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "ani_item4",
+      "\r\nani_item4.png\r\nsize: 772,212\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nQuaDua\r\n  rotate: false\r\n  xy: 644, 13\r\n  size: 125, 196\r\n  orig: 231, 208\r\n  offset: 53, 6\r\n  index: -1\r\nSaoTren\r\n  rotate: false\r\n  xy: 1, 1\r\n  size: 231, 208\r\n  orig: 231, 208\r\n  offset: 0, 0\r\n  index: -1\r\nVangSangXanh\r\n  rotate: true\r\n  xy: 439, 2\r\n  size: 207, 204\r\n  orig: 209, 209\r\n  offset: 1, 2\r\n  index: -1\r\nVongTrangTo\r\n  rotate: true\r\n  xy: 233, 2\r\n  size: 207, 205\r\n  orig: 209, 209\r\n  offset: 1, 2\r\n  index: -1\r\n",
+      [
+        "ani_item4.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "3ru2fTLAuDtpwOexacRgyX6EDiY",
+          "spine": "3.8.75",
+          "x": -117.02,
+          "y": -100.12,
+          "width": 232,
+          "height": 209.5,
+          "images": "./images/",
+          "audio": "C:/Users/User1/Desktop/HoaQuaGavin1/qua_dua/source"
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "SaoTren",
+            "parent": "root"
+          },
+          {
+            "name": "QuaDua",
+            "parent": "root"
+          },
+          {
+            "name": "VangSangXanh",
+            "parent": "root"
+          },
+          {
+            "name": "VongTrangTo",
+            "parent": "root"
+          }
+        ],
+        "slots": [
+          {
+            "name": "VangSangXanh",
+            "bone": "VangSangXanh",
+            "attachment": "VangSangXanh",
+            "blend": "additive"
+          },
+          {
+            "name": "VongTrangTo",
+            "bone": "VongTrangTo",
+            "attachment": "VongTrangTo"
+          },
+          {
+            "name": "QuaDua",
+            "bone": "QuaDua",
+            "attachment": "QuaDua"
+          },
+          {
+            "name": "SaoTren",
+            "bone": "SaoTren",
+            "attachment": "SaoTren"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "VongTrangTo": {
+                "VongTrangTo": {
+                  "x": 0.48,
+                  "y": 4.38,
+                  "width": 209,
+                  "height": 209
+                }
+              },
+              "SaoTren": {
+                "SaoTren": {
+                  "x": -1.52,
+                  "y": 4.38,
+                  "width": 231,
+                  "height": 208
+                }
+              },
+              "QuaDua": {
+                "QuaDua": {
+                  "x": -0.52,
+                  "y": 5.38,
+                  "width": 231,
+                  "height": 208
+                }
+              },
+              "VangSangXanh": {
+                "VangSangXanh": {
+                  "x": 0.48,
+                  "y": 4.38,
+                  "width": 209,
+                  "height": 209
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "ani_item4_lose": {},
+          "ani_item4_win": {
+            "bones": {
+              "QuaDua": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.724,
+                    "y": 0.724
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.724,
+                    "y": 0.724
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "SaoTren": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.654,
+                    "y": 0.654
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.562,
+                    "y": 0.562
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ],
+                "shear": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "y": -43
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "y": 44.17
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "VangSangXanh": {
+                "rotate": [
+                  {
+                    "angle": 90.4
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": -0.51
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -85.84
+                  },
+                  {
+                    "time": 2,
+                    "angle": 175.89
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 88.82
+                  }
+                ]
+              },
+              "VongTrangTo": {
+                "rotate": [
+                  {
+                    "angle": 96.54
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": -174.82
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -89.66
+                  },
+                  {
+                    "time": 2,
+                    "angle": -13.47
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 87.16
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

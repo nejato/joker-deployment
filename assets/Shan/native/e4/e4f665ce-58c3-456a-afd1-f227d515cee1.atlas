@@ -1,0 +1,62 @@
+
+Shan9.png
+size: 1382,253
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+9
+  rotate: false
+  xy: 1087, 15
+  size: 185, 236
+  orig: 199, 251
+  offset: 8, 8
+  index: -1
+Layer 2
+  rotate: false
+  xy: 2, 2
+  size: 694, 249
+  orig: 714, 270
+  offset: 10, 10
+  index: -1
+Polygon 1
+  rotate: true
+  xy: 1274, 73
+  size: 54, 52
+  orig: 58, 56
+  offset: 2, 2
+  index: -1
+Polygon 1 copy
+  rotate: true
+  xy: 1328, 24
+  size: 48, 47
+  orig: 52, 51
+  offset: 2, 2
+  index: -1
+Polygon 1 copy 2
+  rotate: true
+  xy: 1274, 18
+  size: 53, 52
+  orig: 57, 56
+  offset: 2, 2
+  index: -1
+Polygon 1 copy 3
+  rotate: true
+  xy: 1328, 74
+  size: 53, 52
+  orig: 57, 56
+  offset: 2, 2
+  index: -1
+Shan
+  rotate: false
+  xy: 698, 14
+  size: 387, 237
+  orig: 415, 264
+  offset: 15, 16
+  index: -1
+Shape 2
+  rotate: true
+  xy: 1274, 129
+  size: 122, 78
+  orig: 134, 88
+  offset: 6, 4
+  index: -1

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "aaJJwbBRRNj7Ds+K/fCAxh"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "anim_bikini",
+      "rect": [
+        2,
+        3,
+        4016,
+        1003
+      ],
+      "offset": [
+        -1.5,
+        -0.5
+      ],
+      "originalSize": [
+        4023,
+        1008
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

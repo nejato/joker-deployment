@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "3b5C+sS0VDzoCtA7YrUJe9"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "bg_top2",
+      "rect": [
+        0,
+        0,
+        443,
+        90
+      ],
+      "offset": [
+        -18.5,
+        0
+      ],
+      "originalSize": [
+        480,
+        90
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

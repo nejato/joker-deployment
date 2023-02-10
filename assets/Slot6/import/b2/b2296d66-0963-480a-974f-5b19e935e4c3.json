@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "3cpbFhGlZParDYeciydeHK"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "popup",
+      "rect": [
+        0,
+        0,
+        1090,
+        671
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        1090,
+        671
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

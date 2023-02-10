@@ -1,0 +1,181 @@
+
+anim_bikini girl.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Jdau
+  rotate: true
+  xy: 1044, 51
+  size: 170, 189
+  orig: 170, 189
+  offset: 0, 0
+  index: -1
+b3
+  rotate: false
+  xy: 662, 189
+  size: 96, 191
+  orig: 96, 191
+  offset: 0, 0
+  index: -1
+b6
+  rotate: false
+  xy: 1339, 277
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+bonus
+  rotate: true
+  xy: 1943, 710
+  size: 200, 86
+  orig: 200, 86
+  offset: 0, 0
+  index: -1
+c4
+  rotate: false
+  xy: 1684, 243
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+d3
+  rotate: false
+  xy: 760, 109
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+jackpot
+  rotate: true
+  xy: 1886, 243
+  size: 200, 75
+  orig: 200, 75
+  offset: 0, 0
+  index: -1
+scatter
+  rotate: false
+  xy: 2, 2
+  size: 148, 161
+  orig: 148, 161
+  offset: 0, 0
+  index: -1
+v2
+  rotate: true
+  xy: 341, 382
+  size: 157, 459
+  orig: 157, 459
+  offset: 0, 0
+  index: -1
+w2
+  rotate: false
+  xy: 152, 29
+  size: 174, 134
+  orig: 174, 134
+  offset: 0, 0
+  index: -1
+wbody
+  rotate: true
+  xy: 2, 541
+  size: 481, 1146
+  orig: 481, 1146
+  offset: 0, 0
+  index: -1
+wdau
+  rotate: false
+  xy: 2, 165
+  size: 337, 374
+  orig: 337, 374
+  offset: 0, 0
+  index: -1
+wild
+  rotate: false
+  xy: 1339, 225
+  size: 114, 50
+  orig: 114, 50
+  offset: 0, 0
+  index: -1
+wilddai
+  rotate: false
+  xy: 328, 80
+  size: 145, 64
+  orig: 145, 64
+  offset: 0, 0
+  index: -1
+wmu
+  rotate: true
+  xy: 1700, 624
+  size: 398, 241
+  orig: 398, 241
+  offset: 0, 0
+  index: -1
+wnguc
+  rotate: true
+  xy: 341, 146
+  size: 234, 319
+  orig: 234, 319
+  offset: 0, 0
+  index: -1
+wphao
+  rotate: false
+  xy: 1150, 479
+  size: 548, 543
+  orig: 548, 543
+  offset: 0, 0
+  index: -1
+wsh
+  rotate: false
+  xy: 1700, 445
+  size: 266, 177
+  orig: 266, 177
+  offset: 0, 0
+  index: -1
+wtay1
+  rotate: true
+  xy: 802, 311
+  size: 228, 271
+  orig: 228, 271
+  offset: 0, 0
+  index: -1
+wtoc1
+  rotate: false
+  xy: 962, 115
+  size: 80, 194
+  orig: 80, 194
+  offset: 0, 0
+  index: -1
+wtoc2
+  rotate: false
+  xy: 1541, 289
+  size: 141, 188
+  orig: 141, 188
+  offset: 0, 0
+  index: -1
+wtoc3
+  rotate: false
+  xy: 1075, 223
+  size: 262, 254
+  orig: 262, 254
+  offset: 0, 0
+  index: -1
+wvai
+  rotate: false
+  xy: 1968, 610
+  size: 78, 98
+  orig: 78, 98
+  offset: 0, 0
+  index: -1
+xoay
+  rotate: true
+  xy: 1943, 912
+  size: 110, 103
+  orig: 110, 103
+  offset: 0, 0
+  index: -1
+xoay 1
+  rotate: false
+  xy: 1235, 45
+  size: 162, 176
+  orig: 162, 176
+  offset: 0, 0
+  index: -1

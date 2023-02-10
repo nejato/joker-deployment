@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "fbWrOxMXhFy6NF/Nkcwm/3"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "BOTTOMA_BAR",
+      "rect": [
+        3,
+        4,
+        1744,
+        272
+      ],
+      "offset": [
+        0,
+        -0.5
+      ],
+      "originalSize": [
+        1750,
+        279
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

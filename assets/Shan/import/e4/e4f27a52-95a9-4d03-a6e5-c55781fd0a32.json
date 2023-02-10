@@ -1,0 +1,333 @@
+[
+  1,
+  [
+    "68P8YUa4lIULCPsWdtnGB2"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "Shan9",
+      "\nShan9.png\nsize: 1382,253\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\n9\n  rotate: false\n  xy: 1087, 15\n  size: 185, 236\n  orig: 199, 251\n  offset: 8, 8\n  index: -1\nLayer 2\n  rotate: false\n  xy: 2, 2\n  size: 694, 249\n  orig: 714, 270\n  offset: 10, 10\n  index: -1\nPolygon 1\n  rotate: true\n  xy: 1274, 73\n  size: 54, 52\n  orig: 58, 56\n  offset: 2, 2\n  index: -1\nPolygon 1 copy\n  rotate: true\n  xy: 1328, 24\n  size: 48, 47\n  orig: 52, 51\n  offset: 2, 2\n  index: -1\nPolygon 1 copy 2\n  rotate: true\n  xy: 1274, 18\n  size: 53, 52\n  orig: 57, 56\n  offset: 2, 2\n  index: -1\nPolygon 1 copy 3\n  rotate: true\n  xy: 1328, 74\n  size: 53, 52\n  orig: 57, 56\n  offset: 2, 2\n  index: -1\nShan\n  rotate: false\n  xy: 698, 14\n  size: 387, 237\n  orig: 415, 264\n  offset: 15, 16\n  index: -1\nShape 2\n  rotate: true\n  xy: 1274, 129\n  size: 122, 78\n  orig: 134, 88\n  offset: 6, 4\n  index: -1\n",
+      [
+        "Shan9.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "GAQxaR3ICw7sMo96KA2kOl3Gfo4",
+          "spine": "3.8.75",
+          "x": -361.75,
+          "y": -113.53,
+          "width": 714,
+          "height": 288.27,
+          "images": "../../images/",
+          "audio": "E:/Shan Koe Mee"
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "bone1",
+            "parent": "root",
+            "x": -222.44,
+            "y": 78.82
+          },
+          {
+            "name": "bone2",
+            "parent": "root",
+            "x": -270.54,
+            "y": -36.74
+          },
+          {
+            "name": "bone3",
+            "parent": "root",
+            "x": 241.85,
+            "y": 103.51
+          },
+          {
+            "name": "bone4",
+            "parent": "root",
+            "x": 208.74,
+            "y": -51.61
+          },
+          {
+            "name": "bone5",
+            "parent": "root",
+            "x": 39.9,
+            "y": 125.29
+          },
+          {
+            "name": "bone0",
+            "parent": "root",
+            "x": 27.29,
+            "y": 27.29
+          },
+          {
+            "name": "10",
+            "parent": "root",
+            "x": 167.28,
+            "y": 53.04
+          }
+        ],
+        "slots": [
+          {
+            "name": "Layer 2",
+            "bone": "root",
+            "attachment": "Layer 2"
+          },
+          {
+            "name": "Polygon 1",
+            "bone": "bone1",
+            "attachment": "Polygon 1"
+          },
+          {
+            "name": "Polygon 1 copy",
+            "bone": "bone2",
+            "attachment": "Polygon 1 copy"
+          },
+          {
+            "name": "Polygon 1 copy 2",
+            "bone": "bone3",
+            "attachment": "Polygon 1 copy 2"
+          },
+          {
+            "name": "Polygon 1 copy 3",
+            "bone": "bone4",
+            "attachment": "Polygon 1 copy 3"
+          },
+          {
+            "name": "9",
+            "bone": "root"
+          },
+          {
+            "name": "Shan",
+            "bone": "root"
+          },
+          {
+            "name": "Shape 2",
+            "bone": "bone5",
+            "attachment": "Shape 2"
+          },
+          {
+            "name": "10",
+            "bone": "10",
+            "attachment": "9"
+          },
+          {
+            "name": "Shan2",
+            "bone": "bone0",
+            "attachment": "Shan"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "10": {
+                "9": {
+                  "x": -3.53,
+                  "y": -16.07,
+                  "width": 199,
+                  "height": 251
+                }
+              },
+              "Layer 2": {
+                "Layer 2": {
+                  "x": -4.75,
+                  "y": 21.47,
+                  "width": 714,
+                  "height": 270
+                }
+              },
+              "Polygon 1 copy": {
+                "Polygon 1 copy": {
+                  "x": -1.21,
+                  "y": -2.29,
+                  "width": 52,
+                  "height": 51
+                }
+              },
+              "Shan2": {
+                "Shan": {
+                  "x": -92.54,
+                  "y": -5.82,
+                  "width": 415,
+                  "height": 264
+                }
+              },
+              "Shape 2": {
+                "Shape 2": {
+                  "x": -0.65,
+                  "y": 5.19,
+                  "rotation": 0.23,
+                  "width": 134,
+                  "height": 88
+                }
+              },
+              "Polygon 1 copy 2": {
+                "Polygon 1 copy 2": {
+                  "x": 0.89,
+                  "y": -2.04,
+                  "width": 57,
+                  "height": 56
+                }
+              },
+              "Polygon 1 copy 3": {
+                "Polygon 1 copy 3": {
+                  "x": 0.01,
+                  "y": -1.92,
+                  "width": 57,
+                  "height": 56
+                }
+              },
+              "Polygon 1": {
+                "Polygon 1": {
+                  "x": -0.31,
+                  "y": -2.35,
+                  "width": 58,
+                  "height": 56
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "animation": {
+            "bones": {
+              "10": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 0.693,
+                    "y": 0.693
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone2": {
+                "rotate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "angle": -74.55
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone1": {
+                "rotate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "angle": -34.92
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone4": {
+                "rotate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "angle": -32.68
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone3": {
+                "rotate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "angle": -30.34
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone5": {
+                "scale": [
+                  {
+                    "x": 1.1,
+                    "y": 1.1
+                  },
+                  {
+                    "time": 0.5,
+                    "x": 0.929,
+                    "y": 0.929
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone0": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 1.11,
+                    "y": 1.11
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

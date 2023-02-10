@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "c2T/wBEmBKf6MZv3h3ohnx"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "1_dong_chip",
+      "rect": [
+        1,
+        1,
+        130,
+        92
+      ],
+      "offset": [
+        0,
+        0.5
+      ],
+      "originalSize": [
+        132,
+        95
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

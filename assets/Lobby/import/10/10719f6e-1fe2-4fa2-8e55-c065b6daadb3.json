@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "dct6Zjwa5FmYV0c31xwBJr"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ThanTai",
+      "rect": [
+        1,
+        1,
+        962,
+        1019
+      ],
+      "offset": [
+        -30,
+        1.5
+      ],
+      "originalSize": [
+        1024,
+        1024
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

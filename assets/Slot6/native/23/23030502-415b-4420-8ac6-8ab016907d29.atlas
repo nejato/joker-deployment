@@ -1,0 +1,34 @@
+
+bonus.png
+size: 788,212
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BongTrangDuoi
+  rotate: true
+  xy: 424, 4
+  size: 205, 181
+  orig: 233, 210
+  offset: 12, 15
+  index: -1
+BongTrangTren
+  rotate: true
+  xy: 606, 12
+  size: 197, 181
+  orig: 233, 209
+  offset: 13, 13
+  index: -1
+HatDe
+  rotate: false
+  xy: 1, 1
+  size: 231, 208
+  orig: 233, 210
+  offset: 1, 1
+  index: -1
+bongVang
+  rotate: true
+  xy: 233, 8
+  size: 201, 190
+  orig: 207, 198
+  offset: 3, 4
+  index: -1

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "74oScdPS9FiZ5vJ5vIZ+ye"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "bantay",
+      "rect": [
+        5,
+        3,
+        200,
+        208
+      ],
+      "offset": [
+        -23,
+        21
+      ],
+      "originalSize": [
+        256,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

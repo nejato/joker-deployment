@@ -1,0 +1,225 @@
+[
+  1,
+  [
+    "67q5qvxptOu4jr3XfhpicR"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "bonus",
+      "\r\nbonus.png\r\nsize: 788,212\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nBongTrangDuoi\r\n  rotate: true\r\n  xy: 424, 4\r\n  size: 205, 181\r\n  orig: 233, 210\r\n  offset: 12, 15\r\n  index: -1\r\nBongTrangTren\r\n  rotate: true\r\n  xy: 606, 12\r\n  size: 197, 181\r\n  orig: 233, 209\r\n  offset: 13, 13\r\n  index: -1\r\nHatDe\r\n  rotate: false\r\n  xy: 1, 1\r\n  size: 231, 208\r\n  orig: 233, 210\r\n  offset: 1, 1\r\n  index: -1\r\nbongVang\r\n  rotate: true\r\n  xy: 233, 8\r\n  size: 201, 190\r\n  orig: 207, 198\r\n  offset: 3, 4\r\n  index: -1\r\n",
+      [
+        "bonus.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "vI49M4edcAPIg8Empqa4xdtnI+g",
+          "spine": "3.8.75",
+          "x": -117.83,
+          "y": -100.79,
+          "width": 237.82,
+          "height": 220.25,
+          "images": "./images/",
+          "audio": "C:/Users/User1/Desktop/HoaQuaGavin1/bonus/source"
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "BongTrangTren",
+            "parent": "root"
+          },
+          {
+            "name": "BongTrangDuoi",
+            "parent": "root"
+          },
+          {
+            "name": "HatDe",
+            "parent": "root"
+          },
+          {
+            "name": "bongVang",
+            "parent": "root"
+          }
+        ],
+        "slots": [
+          {
+            "name": "bongVang",
+            "bone": "bongVang",
+            "attachment": "bongVang",
+            "blend": "additive"
+          },
+          {
+            "name": "BongTrangDuoi",
+            "bone": "BongTrangDuoi",
+            "attachment": "BongTrangDuoi"
+          },
+          {
+            "name": "BongTrangTren",
+            "bone": "BongTrangTren",
+            "attachment": "BongTrangTren"
+          },
+          {
+            "name": "HatDe",
+            "bone": "HatDe",
+            "attachment": "HatDe"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "bongVang": {
+                "bongVang": {
+                  "x": 0.67,
+                  "y": 8.46,
+                  "width": 207,
+                  "height": 198
+                }
+              },
+              "HatDe": {
+                "HatDe": {
+                  "x": -1.33,
+                  "y": 14.46,
+                  "width": 233,
+                  "height": 210
+                }
+              },
+              "BongTrangTren": {
+                "BongTrangTren": {
+                  "x": -1.33,
+                  "y": 14.96,
+                  "width": 233,
+                  "height": 209
+                }
+              },
+              "BongTrangDuoi": {
+                "BongTrangDuoi": {
+                  "x": 3.49,
+                  "y": 4.21,
+                  "width": 233,
+                  "height": 210
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "ani_bonus_lose": {},
+          "ani_bonus_win": {
+            "bones": {
+              "HatDe": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.527,
+                    "y": 0.527
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.527,
+                    "y": 0.527
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "BongTrangDuoi": {
+                "rotate": [
+                  {
+                    "angle": 90.31
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": 3.46
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -89.44
+                  },
+                  {
+                    "time": 2,
+                    "angle": 175.7
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 92.15
+                  }
+                ]
+              },
+              "BongTrangTren": {
+                "rotate": [
+                  {
+                    "angle": 88.01
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": 173.66
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -88.07
+                  },
+                  {
+                    "time": 2,
+                    "angle": -4.44
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 90.09
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

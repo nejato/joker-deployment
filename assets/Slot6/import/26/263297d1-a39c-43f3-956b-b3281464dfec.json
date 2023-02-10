@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "09pdpQUINO34UB4yNbMfKe"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ani_item4",
+      "rect": [
+        1,
+        1,
+        768,
+        208
+      ],
+      "offset": [
+        -1,
+        1
+      ],
+      "originalSize": [
+        772,
+        212
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

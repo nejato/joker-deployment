@@ -1,0 +1,320 @@
+[
+  1,
+  [
+    "76BIOg5u5KnpmonJyIlPab"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "icon_shankoemee",
+      "\r\nicon_shankoemee.png\r\nsize: 652,204\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nLayer 1\r\n  rotate: false\r\n  xy: 2, 6\r\n  size: 199, 196\r\n  orig: 201, 198\r\n  offset: 1, 1\r\n  index: -1\r\nLayer 2\r\n  rotate: false\r\n  xy: 203, 20\r\n  size: 185, 182\r\n  orig: 187, 184\r\n  offset: 1, 1\r\n  index: -1\r\nLayer 3\r\n  rotate: true\r\n  xy: 390, 41\r\n  size: 161, 178\r\n  orig: 163, 180\r\n  offset: 1, 1\r\n  index: -1\r\nLayer 4\r\n  rotate: false\r\n  xy: 464, 15\r\n  size: 101, 24\r\n  orig: 103, 27\r\n  offset: 1, 2\r\n  index: -1\r\nLayer 5\r\n  rotate: false\r\n  xy: 596, 110\r\n  size: 54, 92\r\n  orig: 56, 94\r\n  offset: 1, 1\r\n  index: -1\r\nLayer 6\r\n  rotate: false\r\n  xy: 390, 2\r\n  size: 72, 37\r\n  orig: 74, 39\r\n  offset: 1, 1\r\n  index: -1\r\nshan_koe_mee_0000s_0005_Layer-5\r\n  rotate: false\r\n  xy: 596, 58\r\n  size: 43, 50\r\n  orig: 45, 52\r\n  offset: 1, 1\r\n  index: -1\r\nshan_koe_mee_0000s_0006_Layer-4\r\n  rotate: false\r\n  xy: 596, 6\r\n  size: 43, 50\r\n  orig: 45, 53\r\n  offset: 1, 2\r\n  index: -1\r\nshan_koe_mee_0001s_0000_SHAN-KOE-MEE\r\n  rotate: true\r\n  xy: 570, 3\r\n  size: 199, 24\r\n  orig: 201, 26\r\n  offset: 1, 1\r\n  index: -1\r\n",
+      [
+        "icon_shankoemee.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "2vUi/dPfCIK77EKJVdmOlLkL7J4",
+          "spine": "3.8.75",
+          "x": -107.31,
+          "y": -105.43,
+          "width": 201,
+          "height": 198,
+          "images": "./images/",
+          "audio": "C:/Users/Admin/Downloads/myanmar"
+        },
+        "bones": [
+          {
+            "name": "root",
+            "x": -0.78,
+            "y": -8.54
+          },
+          {
+            "name": "bone",
+            "parent": "root",
+            "x": 13.37,
+            "y": -54.05
+          },
+          {
+            "name": "bone2",
+            "parent": "root",
+            "x": -59.8,
+            "y": -56.03
+          },
+          {
+            "name": "bone3",
+            "parent": "root",
+            "x": -12.72,
+            "y": -78.4
+          },
+          {
+            "name": "bone4",
+            "parent": "bone",
+            "x": 26.92,
+            "y": 71.8
+          },
+          {
+            "name": "bone5",
+            "parent": "bone",
+            "x": 16.99,
+            "y": 70.14
+          },
+          {
+            "name": "bone6",
+            "parent": "root",
+            "x": -17.12,
+            "y": -17.88
+          }
+        ],
+        "slots": [
+          {
+            "name": "Layer 2",
+            "bone": "root",
+            "attachment": "Layer 2"
+          },
+          {
+            "name": "Layer 1",
+            "bone": "root",
+            "attachment": "Layer 1"
+          },
+          {
+            "name": "Layer 3",
+            "bone": "root",
+            "attachment": "Layer 3"
+          },
+          {
+            "name": "shan_koe_mee_0001s_0000_SHAN-KOE-MEE",
+            "bone": "bone3",
+            "attachment": "shan_koe_mee_0001s_0000_SHAN-KOE-MEE"
+          },
+          {
+            "name": "Layer 4",
+            "bone": "bone2",
+            "attachment": "Layer 4"
+          },
+          {
+            "name": "shan_koe_mee_0000s_0006_Layer-4",
+            "bone": "bone5",
+            "attachment": "shan_koe_mee_0000s_0006_Layer-4"
+          },
+          {
+            "name": "shan_koe_mee_0000s_0005_Layer-5",
+            "bone": "bone4",
+            "attachment": "shan_koe_mee_0000s_0005_Layer-5"
+          },
+          {
+            "name": "Layer 5",
+            "bone": "bone",
+            "attachment": "Layer 5"
+          },
+          {
+            "name": "Layer 6",
+            "bone": "bone6",
+            "attachment": "Layer 6"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "Layer 1": {
+                "Layer 1": {
+                  "x": -6.04,
+                  "y": 2.1,
+                  "width": 201,
+                  "height": 198
+                }
+              },
+              "Layer 2": {
+                "Layer 2": {
+                  "x": -6.04,
+                  "y": 2.1,
+                  "width": 187,
+                  "height": 184
+                }
+              },
+              "Layer 3": {
+                "Layer 3": {
+                  "x": -25.04,
+                  "y": 11.1,
+                  "width": 163,
+                  "height": 180
+                }
+              },
+              "Layer 4": {
+                "Layer 4": {
+                  "x": 38.37,
+                  "y": -2.91,
+                  "width": 103,
+                  "height": 27
+                }
+              },
+              "Layer 5": {
+                "Layer 5": {
+                  "x": 15.1,
+                  "y": 37.15,
+                  "width": 56,
+                  "height": 94
+                }
+              },
+              "Layer 6": {
+                "Layer 6": {
+                  "x": -7.7,
+                  "y": -3.87,
+                  "width": 74,
+                  "height": 39
+                }
+              },
+              "shan_koe_mee_0000s_0005_Layer-5": {
+                "shan_koe_mee_0000s_0005_Layer-5": {
+                  "x": 2.67,
+                  "y": 19.07,
+                  "scaleX": 1.2705,
+                  "scaleY": 1.2705,
+                  "width": 45,
+                  "height": 52
+                }
+              },
+              "shan_koe_mee_0000s_0006_Layer-4": {
+                "shan_koe_mee_0000s_0006_Layer-4": {
+                  "x": -1.39,
+                  "y": 19.23,
+                  "scaleX": 1.2813,
+                  "scaleY": 1.2813,
+                  "width": 45,
+                  "height": 53
+                }
+              },
+              "shan_koe_mee_0001s_0000_SHAN-KOE-MEE": {
+                "shan_koe_mee_0001s_0000_SHAN-KOE-MEE": {
+                  "x": 6.68,
+                  "y": -0.5,
+                  "width": 201,
+                  "height": 26
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "animation": {
+            "bones": {
+              "bone3": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 1.126,
+                    "y": 1.126
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone2": {
+                "rotate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "angle": 2.37
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone": {
+                "rotate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "angle": -5.23
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone5": {
+                "rotate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "angle": 6.21
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone4": {
+                "rotate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "angle": -8.62
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone6": {
+                "translate": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "y": 2.13
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

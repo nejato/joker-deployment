@@ -1,0 +1,52 @@
+[
+  1,
+  [
+    "d8Ze+GgTBNuZkVy2KE3X0c"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "light_1 copy 5",
+      "rect": [
+        730,
+        1235,
+        222,
+        6
+      ],
+      "offset": [
+        -7,
+        0
+      ],
+      "originalSize": [
+        236,
+        6
+      ],
+      "rotated": 1,
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

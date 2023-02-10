@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "c2GVU2hAhIHKXsLJjijcdK"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "FSW_X100_X500_thantai",
+      "rect": [
+        2,
+        2,
+        211,
+        135
+      ],
+      "offset": [
+        -0.5,
+        0
+      ],
+      "originalSize": [
+        216,
+        139
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

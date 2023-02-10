@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "cdXkj9ln1BzL9RhYhBNspa"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ani_item7",
+      "rect": [
+        1,
+        1,
+        386,
+        380
+      ],
+      "offset": [
+        0,
+        1
+      ],
+      "originalSize": [
+        388,
+        384
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

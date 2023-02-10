@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "67q5qvxptOu4jr3XfhpicR"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "bonus",
+      "rect": [
+        1,
+        1,
+        786,
+        208
+      ],
+      "offset": [
+        0,
+        1
+      ],
+      "originalSize": [
+        788,
+        212
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "lama.atlas",
+      "\r\nlama.png\r\nsize: 1024,512\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n7_BG\r\n  rotate: false\r\n  xy: 321, 116\r\n  size: 222, 389\r\n  orig: 222, 389\r\n  offset: 0, 0\r\n  index: -1\r\n7_lâm\r\n  rotate: false\r\n  xy: 545, 431\r\n  size: 212, 74\r\n  orig: 212, 74\r\n  offset: 0, 0\r\n  index: -1\r\n7_nv\r\n  rotate: false\r\n  xy: 2, 109\r\n  size: 317, 396\r\n  orig: 317, 396\r\n  offset: 0, 0\r\n  index: -1\r\nframe_hu\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 238, 105\r\n  orig: 238, 105\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

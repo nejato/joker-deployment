@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "anim_fast.atlas",
+      "\r\nanim_fast.png\r\nsize: 2048,2048\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nchonphong\r\n  rotate: false\r\n  xy: 2, 678\r\n  size: 1920, 1080\r\n  orig: 1920, 1080\r\n  offset: 0, 0\r\n  index: -1\r\ndo\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 551, 347\r\n  orig: 551, 347\r\n  offset: 0, 0\r\n  index: -1\r\nvang\r\n  rotate: false\r\n  xy: 2, 351\r\n  size: 575, 325\r\n  orig: 575, 325\r\n  offset: 0, 0\r\n  index: -1\r\nxanh\r\n  rotate: false\r\n  xy: 579, 398\r\n  size: 587, 278\r\n  orig: 587, 278\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

@@ -1,0 +1,412 @@
+
+Mynu-UI-loading.png
+size: 904,523
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+001
+  rotate: false
+  xy: 383, 10
+  size: 61, 10
+  orig: 62, 11
+  offset: 0, 0
+  index: -1
+002
+  rotate: false
+  xy: 446, 12
+  size: 58, 8
+  orig: 58, 10
+  offset: 0, 1
+  index: -1
+003
+  rotate: true
+  xy: 886, 157
+  size: 55, 9
+  orig: 55, 11
+  offset: 0, 1
+  index: -1
+004
+  rotate: false
+  xy: 608, 172
+  size: 52, 7
+  orig: 53, 9
+  offset: 1, 1
+  index: -1
+005
+  rotate: false
+  xy: 446, 2
+  size: 48, 8
+  orig: 49, 10
+  offset: 1, 1
+  index: -1
+006
+  rotate: false
+  xy: 496, 2
+  size: 46, 8
+  orig: 47, 10
+  offset: 1, 1
+  index: -1
+007
+  rotate: false
+  xy: 671, 155
+  size: 43, 7
+  orig: 44, 9
+  offset: 1, 1
+  index: -1
+008
+  rotate: false
+  xy: 506, 12
+  size: 41, 8
+  orig: 41, 10
+  offset: 0, 1
+  index: -1
+009
+  rotate: false
+  xy: 375, 416
+  size: 38, 8
+  orig: 39, 10
+  offset: 1, 1
+  index: -1
+010
+  rotate: false
+  xy: 337, 228
+  size: 35, 7
+  orig: 36, 9
+  offset: 1, 1
+  index: -1
+011
+  rotate: true
+  xy: 791, 378
+  size: 21, 7
+  orig: 22, 9
+  offset: 1, 1
+  index: -1
+012
+  rotate: true
+  xy: 522, 22
+  size: 20, 9
+  orig: 20, 11
+  offset: 0, 1
+  index: -1
+013
+  rotate: true
+  xy: 886, 138
+  size: 17, 9
+  orig: 18, 11
+  offset: 1, 1
+  index: -1
+014
+  rotate: true
+  xy: 500, 89
+  size: 17, 8
+  orig: 17, 10
+  offset: 0, 1
+  index: -1
+015
+  rotate: true
+  xy: 671, 137
+  size: 15, 8
+  orig: 15, 10
+  offset: 0, 1
+  index: -1
+016
+  rotate: false
+  xy: 367, 58
+  size: 14, 7
+  orig: 14, 9
+  offset: 0, 1
+  index: -1
+017
+  rotate: true
+  xy: 375, 401
+  size: 13, 7
+  orig: 13, 9
+  offset: 0, 1
+  index: -1
+018
+  rotate: false
+  xy: 531, 123
+  size: 12, 8
+  orig: 12, 10
+  offset: 0, 1
+  index: -1
+019
+  rotate: true
+  xy: 608, 159
+  size: 11, 7
+  orig: 11, 9
+  offset: 0, 1
+  index: -1
+020
+  rotate: false
+  xy: 791, 368
+  size: 10, 8
+  orig: 10, 10
+  offset: 0, 1
+  index: -1
+021
+  rotate: false
+  xy: 482, 79
+  size: 9, 7
+  orig: 9, 9
+  offset: 0, 1
+  index: -1
+022
+  rotate: false
+  xy: 337, 219
+  size: 8, 7
+  orig: 9, 9
+  offset: 1, 1
+  index: -1
+023
+  rotate: false
+  xy: 638, 82
+  size: 8, 8
+  orig: 8, 10
+  offset: 0, 1
+  index: -1
+Btn-quay
+  rotate: false
+  xy: 94, 67
+  size: 241, 168
+  orig: 244, 169
+  offset: 2, 1
+  index: -1
+Btn-quayVtim
+  rotate: false
+  xy: 746, 137
+  size: 138, 72
+  orig: 138, 72
+  offset: 0, 0
+  index: -1
+Btn-quayVxanh
+  rotate: false
+  xy: 545, 92
+  size: 124, 65
+  orig: 124, 65
+  offset: 0, 0
+  index: -1
+Btn-stop
+  rotate: false
+  xy: 375, 199
+  size: 256, 141
+  orig: 264, 148
+  offset: 4, 3
+  index: -1
+CT-bangChoiThu
+  rotate: false
+  xy: 803, 343
+  size: 99, 178
+  orig: 99, 178
+  offset: 0, 0
+  index: -1
+CT-den
+  rotate: false
+  xy: 803, 49
+  size: 46, 86
+  orig: 46, 86
+  offset: 0, 0
+  index: -1
+CT-denNho
+  rotate: false
+  xy: 337, 108
+  size: 173, 23
+  orig: 173, 23
+  offset: 0, 0
+  index: -1
+CT-text
+  rotate: false
+  xy: 746, 211
+  size: 109, 130
+  orig: 136, 131
+  offset: 14, 0
+  index: -1
+CT-text2
+  rotate: true
+  xy: 671, 26
+  size: 109, 130
+  orig: 136, 131
+  offset: 14, 0
+  index: -1
+Kduoi
+  rotate: false
+  xy: 2, 426
+  size: 414, 95
+  orig: 414, 95
+  offset: 0, 0
+  index: -1
+Kduoi-25do
+  rotate: true
+  xy: 418, 401
+  size: 40, 382
+  orig: 40, 383
+  offset: 0, 0
+  index: -1
+Kduoi-25doB
+  rotate: true
+  xy: 337, 181
+  size: 16, 323
+  orig: 17, 324
+  offset: 0, 1
+  index: -1
+Kduoi-domsang
+  rotate: false
+  xy: 512, 114
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
+Kduoi-hieuUng
+  rotate: false
+  xy: 418, 443
+  size: 383, 78
+  orig: 385, 78
+  offset: 1, 0
+  index: -1
+Kduoi-vetxuoc
+  rotate: false
+  xy: 383, 22
+  size: 137, 43
+  orig: 139, 45
+  offset: 1, 1
+  index: -1
+Ktren
+  rotate: true
+  xy: 2, 8
+  size: 416, 90
+  orig: 416, 90
+  offset: 0, 0
+  index: -1
+Ktren-anhDen
+  rotate: false
+  xy: 94, 4
+  size: 287, 23
+  orig: 296, 29
+  offset: 6, 3
+  index: -1
+Ktren-bangeffect
+  rotate: false
+  xy: 375, 342
+  size: 364, 57
+  orig: 364, 57
+  offset: 0, 0
+  index: -1
+Ktren-duoiHong
+  rotate: false
+  xy: 337, 67
+  size: 143, 19
+  orig: 143, 19
+  offset: 0, 0
+  index: -1
+Ktren-duoiXanh
+  rotate: false
+  xy: 337, 88
+  size: 161, 18
+  orig: 161, 18
+  offset: 0, 0
+  index: -1
+Ktren-sangdai
+  rotate: false
+  xy: 337, 133
+  size: 206, 24
+  orig: 210, 28
+  offset: 2, 2
+  index: -1
+Ktren-sangtron
+  rotate: false
+  xy: 522, 44
+  size: 61, 46
+  orig: 63, 48
+  offset: 1, 1
+  index: -1
+Ktren-tamgiac1
+  rotate: true
+  xy: 857, 272
+  size: 69, 45
+  orig: 69, 45
+  offset: 0, 0
+  index: -1
+Ktren-tamgiac2
+  rotate: true
+  xy: 857, 214
+  size: 56, 45
+  orig: 56, 45
+  offset: 0, 0
+  index: -1
+Ktren-xoetNgang
+  rotate: false
+  xy: 337, 159
+  size: 269, 20
+  orig: 277, 24
+  offset: 4, 2
+  index: -1
+Pinkflare
+  rotate: false
+  xy: 803, 4
+  size: 43, 43
+  orig: 50, 48
+  offset: 4, 2
+  index: -1
+btn-quayFlare
+  rotate: true
+  xy: 716, 154
+  size: 50, 26
+  orig: 50, 26
+  offset: 0, 0
+  index: -1
+load-aoZu
+  rotate: false
+  xy: 633, 206
+  size: 111, 134
+  orig: 115, 136
+  offset: 0, 1
+  index: -1
+load-bang
+  rotate: false
+  xy: 94, 237
+  size: 279, 187
+  orig: 279, 187
+  offset: 0, 0
+  index: -1
+load-bich
+  rotate: true
+  xy: 662, 164
+  size: 40, 52
+  orig: 44, 54
+  offset: 2, 1
+  index: -1
+load-chuon
+  rotate: true
+  xy: 585, 49
+  size: 41, 51
+  orig: 43, 53
+  offset: 1, 1
+  index: -1
+load-co
+  rotate: false
+  xy: 741, 349
+  size: 48, 50
+  orig: 50, 52
+  offset: 1, 1
+  index: -1
+load-ro
+  rotate: true
+  xy: 549, 2
+  size: 40, 51
+  orig: 42, 53
+  offset: 1, 1
+  index: -1
+load-sangVien
+  rotate: false
+  xy: 851, 43
+  size: 37, 92
+  orig: 39, 94
+  offset: 1, 1
+  index: -1
+load-textVang
+  rotate: false
+  xy: 94, 29
+  size: 271, 36
+  orig: 273, 38
+  offset: 1, 1
+  index: -1

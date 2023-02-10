@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "690II89dlOdoxXYnBCeRft"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "cut-icon",
+      "rect": [
+        1,
+        1,
+        394,
+        506
+      ],
+      "offset": [
+        -58,
+        2
+      ],
+      "originalSize": [
+        512,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

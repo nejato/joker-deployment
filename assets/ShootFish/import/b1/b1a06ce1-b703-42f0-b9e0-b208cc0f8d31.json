@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "aemsuV4FpM0Iq91sAaYZLx"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "PA_100",
+      "rect": [
+        2,
+        3,
+        237,
+        235
+      ],
+      "offset": [
+        -7.5,
+        7.5
+      ],
+      "originalSize": [
+        256,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

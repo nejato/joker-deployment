@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "f7Z9WFEjlOTrGA7RHXLofg"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "bikini_room",
+      "rect": [
+        3,
+        3,
+        2039,
+        1017
+      ],
+      "offset": [
+        -1.5,
+        0.5
+      ],
+      "originalSize": [
+        2048,
+        1024
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "e8wU5GxHJP3qfUrgRf0ZtU"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Anim_BossXuatHien",
+      "rect": [
+        4,
+        2,
+        908,
+        254
+      ],
+      "offset": [
+        0.5,
+        0.5
+      ],
+      "originalSize": [
+        915,
+        259
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

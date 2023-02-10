@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "5ddr2GHoNI87PgPi1WokQ2"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Bonus",
+      "rect": [
+        3,
+        3,
+        636,
+        477
+      ],
+      "offset": [
+        -191,
+        14.5
+      ],
+      "originalSize": [
+        1024,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

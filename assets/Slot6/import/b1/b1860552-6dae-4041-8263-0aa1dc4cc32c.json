@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "01qj2X0exArp1hC0qOA3zY"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "wild",
+      "rect": [
+        1,
+        1,
+        556,
+        208
+      ],
+      "offset": [
+        -1,
+        1
+      ],
+      "originalSize": [
+        560,
+        212
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

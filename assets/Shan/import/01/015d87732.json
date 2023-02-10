@@ -1,0 +1,137 @@
+[
+  1,
+  [
+    "10fDuGb25LYar5HNIC3bt7",
+    "01Qh+1JwVJq4mrAVGT4os3",
+    "ddZRPZL/9KU5k/4gffwX4Z"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    [
+      [
+        {
+          "name": "NotDraw",
+          "rect": [
+            6,
+            6,
+            241,
+            84
+          ],
+          "offset": [
+            0.5,
+            -1
+          ],
+          "originalSize": [
+            252,
+            94
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "Compare",
+          "rect": [
+            6,
+            6,
+            241,
+            84
+          ],
+          "offset": [
+            0,
+            -0.5
+          ],
+          "originalSize": [
+            253,
+            95
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    [
+      [
+        {
+          "name": "Draw",
+          "rect": [
+            6,
+            6,
+            241,
+            84
+          ],
+          "offset": [
+            0,
+            -0.5
+          ],
+          "originalSize": [
+            253,
+            95
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        2
+      ]
+    ]
+  ]
+]

@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "xteen.atlas",
+      "\r\nxteen.png\r\nsize: 1024,512\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n19_BG\r\n  rotate: false\r\n  xy: 264, 95\r\n  size: 223, 389\r\n  orig: 223, 389\r\n  offset: 0, 0\r\n  index: -1\r\n19_hand\r\n  rotate: false\r\n  xy: 489, 295\r\n  size: 144, 82\r\n  orig: 144, 82\r\n  offset: 0, 0\r\n  index: -1\r\n19_nv\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 260, 482\r\n  orig: 260, 482\r\n  offset: 0, 0\r\n  index: -1\r\n19_xteen\r\n  rotate: false\r\n  xy: 264, 18\r\n  size: 205, 75\r\n  orig: 205, 75\r\n  offset: 0, 0\r\n  index: -1\r\nframe_hu\r\n  rotate: false\r\n  xy: 489, 379\r\n  size: 238, 105\r\n  orig: 238, 105\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

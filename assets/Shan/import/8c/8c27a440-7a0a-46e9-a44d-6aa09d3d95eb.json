@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "90xQ97aBBEPbZRl3+ISsDR"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "icon_chip",
+      "rect": [
+        0,
+        1,
+        47,
+        39
+      ],
+      "offset": [
+        0,
+        -0.5
+      ],
+      "originalSize": [
+        47,
+        40
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

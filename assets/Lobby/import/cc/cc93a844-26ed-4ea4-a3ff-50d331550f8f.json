@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "c8r+F25UNP2IKk9cGdVfKg"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "icon_3cay",
+      "rect": [
+        2,
+        2,
+        665,
+        206
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        669,
+        210
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

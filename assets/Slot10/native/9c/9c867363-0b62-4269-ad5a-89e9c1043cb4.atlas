@@ -1,0 +1,20 @@
+
+iteamfreespin.png
+size: 296,158
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 1
+  rotate: true
+  xy: 165, 20
+  size: 136, 129
+  orig: 152, 134
+  offset: 6, 2
+  index: -1
+bgfreespin
+  rotate: false
+  xy: 2, 2
+  size: 161, 154
+  orig: 161, 167
+  offset: 0, 6
+  index: -1

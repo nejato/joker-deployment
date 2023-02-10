@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "32kEgWVSVMiYy38crjCEP0"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "item_freespins",
+      "rect": [
+        2,
+        2,
+        423,
+        199
+      ],
+      "offset": [
+        -42.5,
+        26.5
+      ],
+      "originalSize": [
+        512,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

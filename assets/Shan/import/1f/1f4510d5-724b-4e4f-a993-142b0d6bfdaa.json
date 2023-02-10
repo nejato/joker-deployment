@@ -1,0 +1,319 @@
+[
+  1,
+  [
+    "52FOmFhwtCXqwJktaumh0R"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "Shan8",
+      "\nShan8.png\nsize: 1304,256\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\n8\n  rotate: false\n  xy: 1162, 74\n  size: 140, 180\n  orig: 142, 182\n  offset: 1, 1\n  index: -1\nPolygon 1\n  rotate: false\n  xy: 816, 24\n  size: 62, 63\n  orig: 70, 70\n  offset: 4, 4\n  index: -1\nPolygon 1 copy\n  rotate: false\n  xy: 1005, 27\n  size: 59, 60\n  orig: 67, 67\n  offset: 4, 4\n  index: -1\nPolygon 1 copy 3\n  rotate: false\n  xy: 746, 18\n  size: 68, 69\n  orig: 76, 76\n  offset: 4, 4\n  index: -1\nPolygon 1 copy 4\n  rotate: false\n  xy: 943, 26\n  size: 60, 61\n  orig: 68, 68\n  offset: 4, 4\n  index: -1\nPolygon 1 copy 5\n  rotate: false\n  xy: 880, 25\n  size: 61, 62\n  orig: 69, 69\n  offset: 4, 4\n  index: -1\nShan\n  rotate: false\n  xy: 746, 89\n  size: 414, 165\n  orig: 416, 167\n  offset: 1, 1\n  index: -1\nShape 1\n  rotate: false\n  xy: 2, 2\n  size: 742, 252\n  orig: 744, 254\n  offset: 1, 1\n  index: -1\n",
+      [
+        "Shan8.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "4GoxMmDns+pSP6bEaDdieGL1iOg",
+          "spine": "3.8.75",
+          "x": -330.29,
+          "y": -138.52,
+          "width": 744,
+          "height": 287,
+          "images": "./images/",
+          "audio": ""
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "bone",
+            "parent": "root",
+            "x": 56.43,
+            "y": 19.85
+          },
+          {
+            "name": "bone2",
+            "parent": "root",
+            "x": 348.35,
+            "y": 59.2
+          },
+          {
+            "name": "bone3",
+            "parent": "root",
+            "x": -258.93,
+            "y": 50.39,
+            "color": "9c9c9cff"
+          },
+          {
+            "name": "bone4",
+            "parent": "root",
+            "x": 52.58,
+            "y": 115.82
+          },
+          {
+            "name": "bone5",
+            "parent": "root",
+            "x": -221.58,
+            "y": -91.73
+          },
+          {
+            "name": "bone6",
+            "parent": "root",
+            "x": 285.06,
+            "y": -76.61
+          }
+        ],
+        "slots": [
+          {
+            "name": "Shape 1",
+            "bone": "root",
+            "attachment": "Shape 1"
+          },
+          {
+            "name": "Shan",
+            "bone": "root"
+          },
+          {
+            "name": "Polygon 1",
+            "bone": "bone2",
+            "attachment": "Polygon 1"
+          },
+          {
+            "name": "Polygon 1 copy 3",
+            "bone": "bone4",
+            "attachment": "Polygon 1 copy 3"
+          },
+          {
+            "name": "8",
+            "bone": "root"
+          },
+          {
+            "name": "Polygon 1 copy",
+            "bone": "bone3",
+            "attachment": "Polygon 1 copy"
+          },
+          {
+            "name": "Polygon 1 copy 5",
+            "bone": "bone6",
+            "attachment": "Polygon 1 copy 5"
+          },
+          {
+            "name": "Polygon 1 copy 4",
+            "bone": "bone5",
+            "attachment": "Polygon 1 copy 4"
+          },
+          {
+            "name": "Layer 25 copy",
+            "bone": "root"
+          },
+          {
+            "name": "9",
+            "bone": "bone",
+            "attachment": "8"
+          },
+          {
+            "name": "Shan2",
+            "bone": "bone",
+            "attachment": "Shan"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "9": {
+                "8": {
+                  "x": 184.28,
+                  "y": 15.63,
+                  "width": 142,
+                  "height": 182
+                }
+              },
+              "Polygon 1 copy": {
+                "Polygon 1 copy": {
+                  "x": -2.85,
+                  "y": -4.41,
+                  "width": 67,
+                  "height": 67
+                }
+              },
+              "Shan2": {
+                "Shan": {
+                  "x": -102.72,
+                  "y": -2.87,
+                  "width": 416,
+                  "height": 167
+                }
+              },
+              "Shape 1": {
+                "Shape 1": {
+                  "x": 41.71,
+                  "y": -11.52,
+                  "width": 744,
+                  "height": 254
+                }
+              },
+              "Polygon 1 copy 3": {
+                "Polygon 1 copy 3": {
+                  "x": -3.87,
+                  "y": -5.34,
+                  "width": 76,
+                  "height": 76
+                }
+              },
+              "Polygon 1 copy 4": {
+                "Polygon 1 copy 4": {
+                  "x": -1.71,
+                  "y": -5.79,
+                  "width": 68,
+                  "height": 68
+                }
+              },
+              "Polygon 1 copy 5": {
+                "Polygon 1 copy 5": {
+                  "x": -2.85,
+                  "y": -2.41,
+                  "width": 69,
+                  "height": 69
+                }
+              },
+              "Polygon 1": {
+                "Polygon 1": {
+                  "x": -2.64,
+                  "y": -3.72,
+                  "width": 70,
+                  "height": 70
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "animation": {
+            "bones": {
+              "bone": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 0.901,
+                    "y": 0.901
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone2": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 1.262,
+                    "y": 1.262
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone3": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 1.287,
+                    "y": 1.287
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone4": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 1.791,
+                    "y": 1.791
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone5": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 1.359,
+                    "y": 1.359
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              },
+              "bone6": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.5,
+                    "x": 1.457,
+                    "y": 1.457
+                  },
+                  {
+                    "time": 1
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

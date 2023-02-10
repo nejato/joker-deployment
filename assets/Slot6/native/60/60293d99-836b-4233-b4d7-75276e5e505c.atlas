@@ -1,0 +1,34 @@
+
+ani_scatter.png
+size: 368,400
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BongTrangDuoi
+  rotate: true
+  xy: 1, 1
+  size: 206, 179
+  orig: 231, 208
+  offset: 11, 17
+  index: -1
+BongTrangTren
+  rotate: true
+  xy: 181, 1
+  size: 198, 181
+  orig: 231, 208
+  offset: 11, 13
+  index: -1
+Layer 4
+  rotate: true
+  xy: 204, 200
+  size: 199, 162
+  orig: 231, 208
+  offset: 16, 34
+  index: -1
+bongVang
+  rotate: false
+  xy: 1, 208
+  size: 202, 191
+  orig: 231, 208
+  offset: 16, 3
+  index: -1

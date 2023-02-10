@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "a6gVbWQjNEI4IpOfOlZbGx"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ic_ketsat222",
+      "rect": [
+        5,
+        1,
+        50,
+        48
+      ],
+      "offset": [
+        -2,
+        8.5
+      ],
+      "originalSize": [
+        64,
+        67
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

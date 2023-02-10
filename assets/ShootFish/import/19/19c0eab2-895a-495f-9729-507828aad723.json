@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "af4ZemJWdI/Y/l+o0AcssF"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "PA_x100X500_tienca",
+      "rect": [
+        7,
+        2,
+        634,
+        214
+      ],
+      "offset": [
+        2.5,
+        0
+      ],
+      "originalSize": [
+        643,
+        218
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

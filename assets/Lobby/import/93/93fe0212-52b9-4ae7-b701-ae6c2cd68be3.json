@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "banca.atlas",
+      "\r\nbanca.png\r\nsize: 1024,256\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n21_BG\r\n  rotate: true\r\n  xy: 2, 2\r\n  size: 223, 389\r\n  orig: 223, 389\r\n  offset: 0, 0\r\n  index: -1\r\n21_banca\r\n  rotate: false\r\n  xy: 651, 30\r\n  size: 187, 88\r\n  orig: 187, 88\r\n  offset: 0, 0\r\n  index: -1\r\n21_ca\r\n  rotate: true\r\n  xy: 393, 62\r\n  size: 163, 256\r\n  orig: 163, 256\r\n  offset: 0, 0\r\n  index: -1\r\n21_nuoc\r\n  rotate: true\r\n  xy: 891, 39\r\n  size: 186, 88\r\n  orig: 186, 88\r\n  offset: 0, 0\r\n  index: -1\r\nframe_hu\r\n  rotate: false\r\n  xy: 651, 120\r\n  size: 238, 105\r\n  orig: 238, 105\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

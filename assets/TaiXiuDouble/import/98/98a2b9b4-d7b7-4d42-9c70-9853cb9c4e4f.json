@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "c5kPlRbkFBSLfvs52xCu4t"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Tàixỉu",
+      "rect": [
+        1,
+        1,
+        938,
+        1022
+      ],
+      "offset": [
+        -42,
+        0
+      ],
+      "originalSize": [
+        1024,
+        1024
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

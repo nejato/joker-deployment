@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "45nbZ86DpGKoSaINfNzyNX"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Invited_0000_bg_Noti",
+      "rect": [
+        0,
+        0,
+        506,
+        169
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        506,
+        169
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

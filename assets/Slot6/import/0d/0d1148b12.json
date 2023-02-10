@@ -1,0 +1,2122 @@
+[
+  1,
+  [
+    "ec9uiOXYZET6ODNAjGXeup",
+    "c5iU9ySD9NUokIX5PVJJ7W",
+    "1a1ZrkEEFJbaXy76OFQ+q8",
+    "6bPJU9XhRONKf8+/I69ayb",
+    "75yD8SRPhHerm17z1FE7Y5",
+    "e7QREe0oxL2IzsvM8LVQ/d",
+    "4dF2+ngftJHrYP8ASWe3/l",
+    "d3kMXCeHdIjY0517IdUEPx",
+    "e2KYicFZBHuqtMSm08jvg8",
+    "16jGSnPwhMsJxAxFLJBm6O",
+    "3erX4PuhpNWZ7M2zldhGPd",
+    "b1XB43SQJD+aGXBMeV38gt",
+    "44ROKbxlRH9om6KiAnP57G",
+    "6e5gn9ildPg6x0gSuuN+uc",
+    "41+tVZOYxC1Je/DacUMEd7",
+    "c9fbZogDhKvb6rvGmpuqpM",
+    "75Unj+LYFJiaovWtkWBfip",
+    "c8/TVCP2xBYIzW3sd1C4Sj",
+    "2dy2Q3WC1Nprxb3IT5n/ky",
+    "30tViooahCy64Ex301QDDb",
+    "14AaalYMZOCJxGiy3dyLR8",
+    "83ssgVQmlL5q9tVAh5fzNd",
+    "28P8HD3G5OoYd7h1MLJ0y3",
+    "deVlfphtRPZoxO/2IoAjqt",
+    "88oJ5vl1hMSLYQuHUsz6qX",
+    "bdws3BInRHWYe6r0s+D5Mb",
+    "af8VWFDMtFeY6CxlTg9QA0",
+    "47RhquZ9NHiZVs0sT+uimi",
+    "57b0to75FGa5LeFUXTOU48",
+    "59sepnF9dHpI0kavqUb4w0",
+    "41bzwwDPhItZdM7Ew2c/wM",
+    "7ezdBmvtFLbZN7T68KOVva",
+    "c3rN+b80hJCaPwKA0pAb5W",
+    "9ek5b47HlC5bUnuulMkQzr",
+    "7c5bwXxRRLjolJOnElHiB8",
+    "e6lfk44ZVLp56nx6VvncDR",
+    "604TncRyxDpbeU3ViLbbkU",
+    "d31fOkL6ZEe5AtQUqNRP4V",
+    "2bH4MrQb1HdZLRjlO1fgef",
+    "baBGH6NjtCAIv9X0ebKNEm",
+    "a7VsKyRINOU7QIXUBAdZUd",
+    "dcNQLE/O5OW6+rCQQx8tdL",
+    "22difq+NJOsYG3hne05ys4",
+    "f2nvrBMchKT6wUeYgx8XfL",
+    "17ooKtpHRESpHmPf9tV5fC",
+    "fbaZZpXlZIRrfTfWLHdSvs",
+    "6dYQQiKC5BwoWa6fcLn73r",
+    "21z5UsMIdOBr6D7K83AK1r",
+    "d4UbhvKKZPbJ/e0CT2LC2E"
+  ],
+  [
+    "_textureSetter",
+    "bonus",
+    "bonus_blur",
+    "box_free",
+    "btn_choithat",
+    "btn_choithu",
+    "btn_giam",
+    "btn_quay",
+    "btn_quaynhanh",
+    "btn_quaynhanh_on",
+    "btn_tang",
+    "btn_tudong",
+    "btn_tudong_on",
+    "dong",
+    "ic_back",
+    "ic_close",
+    "ic_huongdan",
+    "ic_lichsu",
+    "ic_music",
+    "ic_music_off",
+    "ic_sound",
+    "ic_sound_off",
+    "ic_vinhdanh",
+    "item_1",
+    "item_1_blur",
+    "item_2",
+    "item_2_blur",
+    "item_3",
+    "item_3_blur",
+    "item_4",
+    "item_4_blur",
+    "item_5",
+    "item_5_blur",
+    "item_6",
+    "item_6_blur",
+    "item_7",
+    "item_7_blur",
+    "jackpot",
+    "jackpot_blur",
+    "muccuoc",
+    "scatter",
+    "scatter_blur",
+    "title",
+    "title1",
+    "title2",
+    "title3",
+    "tongcuoc",
+    "tongthang",
+    "wild"
+  ],
+  [
+    "cc.SpriteFrame",
+    [
+      "cc.SpriteAtlas",
+      [
+        "_name",
+        "_spriteFrames"
+      ],
+      2,
+      11
+    ]
+  ],
+  [
+    [
+      1,
+      0,
+      1,
+      2
+    ]
+  ],
+  [
+    [
+      [
+        {
+          "name": "ic_sound",
+          "rect": [
+            257,
+            1472,
+            88,
+            88
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            88,
+            88
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_quaynhanh_on",
+          "rect": [
+            811,
+            909,
+            167,
+            116
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            167,
+            116
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "title2",
+          "rect": [
+            467,
+            421,
+            324,
+            81
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            324,
+            81
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bonus_blur",
+          "rect": [
+            253,
+            830,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_vinhdanh",
+          "rect": [
+            437,
+            1472,
+            88,
+            88
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            88,
+            88
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "jackpot_blur",
+          "rect": [
+            538,
+            1194,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_music",
+          "rect": [
+            347,
+            1382,
+            88,
+            88
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            88,
+            88
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_music_off",
+          "rect": [
+            437,
+            1382,
+            88,
+            88
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            88,
+            88
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_tang",
+          "rect": [
+            127,
+            1073,
+            52,
+            75
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            52,
+            75
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_4_blur",
+          "rect": [
+            441,
+            824,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_tudong_on",
+          "rect": [
+            538,
+            1378,
+            167,
+            116
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            167,
+            116
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_3",
+          "rect": [
+            1,
+            421,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_giam",
+          "rect": [
+            696,
+            566,
+            51,
+            73
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            51,
+            73
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_3_blur",
+          "rect": [
+            352,
+            1198,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_4",
+          "rect": [
+            234,
+            211,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_7_blur",
+          "rect": [
+            625,
+            1010,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "box_free",
+          "rect": [
+            78,
+            1138,
+            210,
+            86
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            210,
+            86
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "tongcuoc",
+          "rect": [
+            127,
+            841,
+            230,
+            124
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            230,
+            124
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "dong",
+          "rect": [
+            811,
+            740,
+            167,
+            118
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            167,
+            118
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_huongdan",
+          "rect": [
+            1,
+            1460,
+            88,
+            88
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            88,
+            88
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_choithat",
+          "rect": [
+            441,
+            639,
+            183,
+            183
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            183,
+            183
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_6_blur",
+          "rect": [
+            439,
+            1008,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_5",
+          "rect": [
+            467,
+            1,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_sound_off",
+          "rect": [
+            347,
+            1472,
+            88,
+            88
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            88,
+            88
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_1_blur",
+          "rect": [
+            253,
+            1014,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_6",
+          "rect": [
+            700,
+            1,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "scatter",
+          "rect": [
+            467,
+            211,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_2_blur",
+          "rect": [
+            166,
+            1198,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_tudong",
+          "rect": [
+            91,
+            1382,
+            164,
+            112
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            164,
+            112
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "muccuoc",
+          "rect": [
+            811,
+            542,
+            196,
+            118
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            196,
+            118
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_2",
+          "rect": [
+            234,
+            1,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        [
+          0,
+          "ui_main.plist",
+          [
+            {},
+            "bonus",
+            6,
+            0,
+            "bonus_blur",
+            6,
+            1,
+            "box_free",
+            6,
+            2,
+            "btn_choithat",
+            6,
+            3,
+            "btn_choithu",
+            6,
+            4,
+            "btn_giam",
+            6,
+            5,
+            "btn_quay",
+            6,
+            6,
+            "btn_quaynhanh",
+            6,
+            7,
+            "btn_quaynhanh_on",
+            6,
+            8,
+            "btn_tang",
+            6,
+            9,
+            "btn_tudong",
+            6,
+            10,
+            "btn_tudong_on",
+            6,
+            11,
+            "dong",
+            6,
+            12,
+            "ic_back",
+            6,
+            13,
+            "ic_close",
+            6,
+            14,
+            "ic_huongdan",
+            6,
+            15,
+            "ic_lichsu",
+            6,
+            16,
+            "ic_music",
+            6,
+            17,
+            "ic_music_off",
+            6,
+            18,
+            "ic_sound",
+            6,
+            19,
+            "ic_sound_off",
+            6,
+            20,
+            "ic_vinhdanh",
+            6,
+            21,
+            "item_1",
+            6,
+            22,
+            "item_1_blur",
+            6,
+            23,
+            "item_2",
+            6,
+            24,
+            "item_2_blur",
+            6,
+            25,
+            "item_3",
+            6,
+            26,
+            "item_3_blur",
+            6,
+            27,
+            "item_4",
+            6,
+            28,
+            "item_4_blur",
+            6,
+            29,
+            "item_5",
+            6,
+            30,
+            "item_5_blur",
+            6,
+            31,
+            "item_6",
+            6,
+            32,
+            "item_6_blur",
+            6,
+            33,
+            "item_7",
+            6,
+            34,
+            "item_7_blur",
+            6,
+            35,
+            "jackpot",
+            6,
+            36,
+            "jackpot_blur",
+            6,
+            37,
+            "muccuoc",
+            6,
+            38,
+            "scatter",
+            6,
+            39,
+            "scatter_blur",
+            6,
+            40,
+            "title",
+            6,
+            41,
+            "title1",
+            6,
+            42,
+            "title2",
+            6,
+            43,
+            "title3",
+            6,
+            44,
+            "tongcuoc",
+            6,
+            45,
+            "tongthang",
+            6,
+            46,
+            "wild",
+            6,
+            47
+          ]
+        ]
+      ],
+      0,
+      0,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_5_blur",
+          "rect": [
+            627,
+            824,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bonus",
+          "rect": [
+            1,
+            1,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_lichsu",
+          "rect": [
+            257,
+            1382,
+            88,
+            88
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            88,
+            88
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_quay",
+          "rect": [
+            234,
+            631,
+            205,
+            197
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            205,
+            197
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "jackpot",
+          "rect": [
+            234,
+            421,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "wild",
+          "rect": [
+            700,
+            211,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "scatter_blur",
+          "rect": [
+            724,
+            1194,
+            184,
+            182
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            184,
+            182
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_1",
+          "rect": [
+            1,
+            211,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_quaynhanh",
+          "rect": [
+            707,
+            1378,
+            164,
+            112
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            164,
+            112
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "item_7",
+          "rect": [
+            1,
+            631,
+            231,
+            208
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            231,
+            208
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_choithu",
+          "rect": [
+            626,
+            639,
+            183,
+            183
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            183,
+            183
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  ]
+]

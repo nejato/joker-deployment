@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "49k2zdkY1B7583pN6+twUD"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ic_tao_ban",
+      "rect": [
+        0,
+        0,
+        66,
+        55
+      ],
+      "offset": [
+        0,
+        1
+      ],
+      "originalSize": [
+        66,
+        57
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

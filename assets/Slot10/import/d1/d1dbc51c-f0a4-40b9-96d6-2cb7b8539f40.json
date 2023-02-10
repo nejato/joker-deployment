@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "Group 3 copy.atlas",
+      "\r\nGroup 3 copy.png\r\nsize: 2048,512\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nGroup 11\r\n  rotate: false\r\n  xy: 1014, 60\r\n  size: 303, 354\r\n  orig: 303, 354\r\n  offset: 0, 0\r\n  index: -1\r\nGroup 22\r\n  rotate: true\r\n  xy: 2, 2\r\n  size: 412, 579\r\n  orig: 412, 579\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 3\r\n  rotate: true\r\n  xy: 583, 26\r\n  size: 388, 429\r\n  orig: 388, 429\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

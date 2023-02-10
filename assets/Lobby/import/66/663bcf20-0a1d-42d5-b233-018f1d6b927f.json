@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "a3Qm/7T+tB3KEs3sx0vYKa"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "poker",
+      "rect": [
+        3,
+        3,
+        487,
+        192
+      ],
+      "offset": [
+        -9.5,
+        29
+      ],
+      "originalSize": [
+        512,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

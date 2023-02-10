@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "baBYGAegFCQLKr2cdZK7p9"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ani_item6",
+      "rect": [
+        1,
+        1,
+        489,
+        208
+      ],
+      "offset": [
+        -0.5,
+        1
+      ],
+      "originalSize": [
+        492,
+        212
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

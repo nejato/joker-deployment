@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "2fgZUmV8VEy7nBuHGOeIQ/"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "maubinh",
+      "rect": [
+        3,
+        3,
+        835,
+        250
+      ],
+      "offset": [
+        -91.5,
+        0
+      ],
+      "originalSize": [
+        1024,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,27 @@
+
+ani_item3.png
+size: 596,212
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+QuaDao
+  rotate: false
+  xy: 441, 38
+  size: 152, 171
+  orig: 154, 173
+  offset: 1, 1
+  index: -1
+bong
+  rotate: false
+  xy: 232, 1
+  size: 208, 208
+  orig: 210, 210
+  offset: 1, 1
+  index: -1
+sao
+  rotate: false
+  xy: 1, 1
+  size: 230, 208
+  orig: 233, 210
+  offset: 2, 1
+  index: -1

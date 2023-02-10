@@ -1,0 +1,2114 @@
+[
+  1,
+  [
+    "260ZY2581Dn5eI+8/GOuR/",
+    "70MMBEdTFBw4XWRw7MQTvj",
+    "32gK+L09ZGlZrUKZgOkdcz",
+    "5bSMrPis1EwJSCQI1DjjK7",
+    "28Qhrb2uRFu700MzkDvnkW",
+    "c5Tq5RoL1FvbzybwQ7AUaw",
+    "b7M2mlFqlAb6x8LsPatK9X",
+    "2cXxGMJE1IAqI8wJb6r4pq",
+    "4aCY2saDtJPZMLG35C1/cE",
+    "f6w/rw0EBHWIwSw3yDtYdC",
+    "acuq1tWytIhYpY/SP3z/tA",
+    "0bFUE24BNCbLHUSrw2LFO3",
+    "eayfHW35pENa3r/Dssby9c",
+    "45BsuLGjtDbbMZQQqFlcfk",
+    "adKjGH5CpJg7rNVgZ2IHqb",
+    "5dnOtOGIVKyJvW3LT3FBGa",
+    "382X44uPFEVZ2rgwaB3e4S",
+    "b7NXfDwHRIZY3h1fwrg3Pj",
+    "92FmIdvUhFC5GJEs0qauHr",
+    "7ecjd39u9EuqSZoL7cHkbl",
+    "dbVJPN8TNE86VYKw5StXsM",
+    "bea0aATaFOP42Rrq+bCi9k",
+    "51Q7MGhIlOeLZEXYKk6aOZ",
+    "aaOzaa8A1Ndp1L9u3GckEf",
+    "78vl+pcqFOLbBuGm9qX6R7",
+    "640nHnFH1FmaVxgw2q15AH",
+    "dbh6ZIoVxDvIRe7eIirZBQ",
+    "14Z2Ma/Z9Fd4+xzlAHMJy7",
+    "51RVnzCLVEd6Z57xIjPKoC",
+    "c9Vx49mqhNL4vRIFKo7X+e",
+    "95j4kPTKRD6IhE0GCB3J5a",
+    "6fiShpFyBOZ5NAZPGv0xGm",
+    "31h0TcF7dMP4JnVnFHygHh",
+    "cdTCPbFPJJLrMIQI1t9A2a",
+    "c0gJjWvwdFf7URpcUtKGKi",
+    "c9du+nJOZGQYI3yntqLp39",
+    "bdfhw1+XNJ06odKYrUo4Zc",
+    "dcngvuSBJG76M8QRvcnSMV",
+    "fc6O7RyUhFqYRO4yiCGiM6",
+    "52YFrkk7NCyZrHSUXNVZIR",
+    "e225tqwZ1KAKUwDba3Xzbf",
+    "41m0UwBKhIwLvNxeRNFBRm",
+    "8cYWcKVItE/Yvk8gv4lb2+",
+    "6dkG8rcHdO6J1H7tDJu2rI",
+    "d7y5gWp1ROUZQCnlSQgwEo",
+    "fftjDGS6FATpbYGa3rxig8",
+    "c1SSmdxQtARp/73XBP3Mdh",
+    "85kDWnlAdO3oBgcoL2aWzU",
+    "6dWM0kvzdHqozTX6SouTvK"
+  ],
+  [
+    "_textureSetter",
+    "bao1a",
+    "bao1b",
+    "bgName",
+    "bg_shape_shadow",
+    "btn_back_gamebai",
+    "btn_baosam",
+    "btn_boluot_xeng",
+    "btn_cash_gamebai",
+    "btn_chat_gamebai",
+    "btn_danhbai_xeng",
+    "btn_exit_room",
+    "btn_faq_gamebai",
+    "btn_huybao_sam - Copy",
+    "btn_toi_trang",
+    "btn_xacnhan_endgame",
+    "btn_xepbai_xeng",
+    "chicken_table",
+    "effectTimePoker",
+    "icon_bao_sam",
+    "icon_huy_bao_sam - Copy",
+    "khung_bao_binh",
+    "khung_bao_blue",
+    "khung_bao_gold",
+    "khung_nen_avatar",
+    "khung_sap_thuong",
+    "labai_xeng52",
+    "logo_bacay",
+    "logo_baicao",
+    "logo_lieng",
+    "logo_maubinh",
+    "logo_maubinha",
+    "logo_poker",
+    "logo_sam_loc",
+    "logo_sam_solo",
+    "logo_tlmn",
+    "logo_tlmn_solo",
+    "logo_xidzach",
+    "logo_xocxoc",
+    "muiten_banchoi",
+    "nen_so_bai",
+    "ping_0",
+    "ping_1",
+    "ping_2",
+    "ping_3",
+    "process_baosam",
+    "process_nen_baosam",
+    "viewing",
+    "x_bao_sam"
+  ],
+  [
+    "cc.SpriteFrame",
+    [
+      "cc.SpriteAtlas",
+      [
+        "_name",
+        "_spriteFrames"
+      ],
+      2,
+      11
+    ]
+  ],
+  [
+    [
+      1,
+      0,
+      1,
+      2
+    ]
+  ],
+  [
+    [
+      [
+        {
+          "name": "btn_exit_room",
+          "rect": [
+            577,
+            0,
+            41,
+            37
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            41,
+            37
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_bacay",
+          "rect": [
+            613,
+            117,
+            203,
+            109
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            203,
+            109
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_shape_shadow",
+          "rect": [
+            595,
+            501,
+            286,
+            181
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            288,
+            181
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_poker",
+          "rect": [
+            0,
+            226,
+            203,
+            109
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            203,
+            109
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bao1b",
+          "rect": [
+            452,
+            117,
+            161,
+            108
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            161,
+            108
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ping_0",
+          "rect": [
+            319,
+            0,
+            29,
+            28
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            29,
+            28
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_cash_gamebai",
+          "rect": [
+            327,
+            117,
+            80,
+            82
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            80,
+            82
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "khung_bao_blue",
+          "rect": [
+            769,
+            697,
+            35,
+            242
+          ],
+          "offset": [
+            0,
+            -4
+          ],
+          "originalSize": [
+            41,
+            258
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_baicao",
+          "rect": [
+            0,
+            697,
+            109,
+            203
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            109,
+            203
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "muiten_banchoi",
+          "rect": [
+            276,
+            41,
+            60,
+            65
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            60,
+            65
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bgName",
+          "rect": [
+            407,
+            117,
+            45,
+            96
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            45,
+            96
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_xacnhan_endgame",
+          "rect": [
+            101,
+            41,
+            175,
+            51
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            175,
+            51
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "khung_sap_thuong",
+          "rect": [
+            0,
+            41,
+            101,
+            43
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            101,
+            43
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "x_bao_sam",
+          "rect": [
+            618,
+            0,
+            41,
+            39
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            41,
+            39
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ping_2",
+          "rect": [
+            377,
+            0,
+            29,
+            28
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            29,
+            28
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_maubinha",
+          "rect": [
+            816,
+            117,
+            203,
+            109
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            203,
+            109
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bao1a",
+          "rect": [
+            803,
+            340,
+            108,
+            161
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            108,
+            161
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "khung_nen_avatar",
+          "rect": [
+            0,
+            501,
+            326,
+            161
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            326,
+            161
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "icon_bao_sam",
+          "rect": [
+            659,
+            0,
+            150,
+            41
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            150,
+            41
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "viewing",
+          "rect": [
+            470,
+            0,
+            107,
+            36
+          ],
+          "offset": [
+            -2,
+            0
+          ],
+          "originalSize": [
+            129,
+            36
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ping_1",
+          "rect": [
+            348,
+            0,
+            29,
+            28
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            29,
+            28
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_maubinh",
+          "rect": [
+            436,
+            697,
+            111,
+            205
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            113,
+            207
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "khung_bao_gold",
+          "rect": [
+            881,
+            501,
+            48,
+            196
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            48,
+            196
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_toi_trang",
+          "rect": [
+            869,
+            226,
+            114,
+            114
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            114,
+            114
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "chicken_table",
+          "rect": [
+            326,
+            501,
+            269,
+            180
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            269,
+            180
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_tlmn_solo",
+          "rect": [
+            547,
+            697,
+            111,
+            205
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            113,
+            207
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "khung_bao_binh",
+          "rect": [
+            114,
+            340,
+            560,
+            122
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            560,
+            122
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_sam_solo",
+          "rect": [
+            406,
+            226,
+            205,
+            111
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            207,
+            113
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "process_nen_baosam",
+          "rect": [
+            804,
+            697,
+            28,
+            325
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            28,
+            325
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_back_gamebai",
+          "rect": [
+            336,
+            41,
+            76,
+            75
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            76,
+            75
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_lieng",
+          "rect": [
+            109,
+            697,
+            109,
+            203
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            109,
+            203
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_tlmn",
+          "rect": [
+            218,
+            697,
+            109,
+            203
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            109,
+            203
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_sam_loc",
+          "rect": [
+            203,
+            226,
+            203,
+            109
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            203,
+            109
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ping_3",
+          "rect": [
+            406,
+            0,
+            28,
+            29
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            28,
+            29
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "icon_huy_bao_sam - Copy",
+          "rect": [
+            809,
+            0,
+            150,
+            41
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            150,
+            41
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "labai_xeng52",
+          "rect": [
+            611,
+            226,
+            144,
+            112
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            144,
+            112
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_xidzach",
+          "rect": [
+            327,
+            697,
+            109,
+            203
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            109,
+            203
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "nen_so_bai",
+          "rect": [
+            434,
+            0,
+            36,
+            36
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            36,
+            36
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_faq_gamebai",
+          "rect": [
+            0,
+            117,
+            75,
+            76
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            75,
+            76
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        [
+          0,
+          "PlistBanChoi.plist",
+          [
+            {},
+            "bao1a",
+            6,
+            0,
+            "bao1b",
+            6,
+            1,
+            "bgName",
+            6,
+            2,
+            "bg_shape_shadow",
+            6,
+            3,
+            "btn_back_gamebai",
+            6,
+            4,
+            "btn_baosam",
+            6,
+            5,
+            "btn_boluot_xeng",
+            6,
+            6,
+            "btn_cash_gamebai",
+            6,
+            7,
+            "btn_chat_gamebai",
+            6,
+            8,
+            "btn_danhbai_xeng",
+            6,
+            9,
+            "btn_exit_room",
+            6,
+            10,
+            "btn_faq_gamebai",
+            6,
+            11,
+            "btn_huybao_sam - Copy",
+            6,
+            12,
+            "btn_toi_trang",
+            6,
+            13,
+            "btn_xacnhan_endgame",
+            6,
+            14,
+            "btn_xepbai_xeng",
+            6,
+            15,
+            "chicken_table",
+            6,
+            16,
+            "effectTimePoker",
+            6,
+            17,
+            "icon_bao_sam",
+            6,
+            18,
+            "icon_huy_bao_sam - Copy",
+            6,
+            19,
+            "khung_bao_binh",
+            6,
+            20,
+            "khung_bao_blue",
+            6,
+            21,
+            "khung_bao_gold",
+            6,
+            22,
+            "khung_nen_avatar",
+            6,
+            23,
+            "khung_sap_thuong",
+            6,
+            24,
+            "labai_xeng52",
+            6,
+            25,
+            "logo_bacay",
+            6,
+            26,
+            "logo_baicao",
+            6,
+            27,
+            "logo_lieng",
+            6,
+            28,
+            "logo_maubinh",
+            6,
+            29,
+            "logo_maubinha",
+            6,
+            30,
+            "logo_poker",
+            6,
+            31,
+            "logo_sam_loc",
+            6,
+            32,
+            "logo_sam_solo",
+            6,
+            33,
+            "logo_tlmn",
+            6,
+            34,
+            "logo_tlmn_solo",
+            6,
+            35,
+            "logo_xidzach",
+            6,
+            36,
+            "logo_xocxoc",
+            6,
+            37,
+            "muiten_banchoi",
+            6,
+            38,
+            "nen_so_bai",
+            6,
+            39,
+            "ping_0",
+            6,
+            40,
+            "ping_1",
+            6,
+            41,
+            "ping_2",
+            6,
+            42,
+            "ping_3",
+            6,
+            43,
+            "process_baosam",
+            6,
+            44,
+            "process_nen_baosam",
+            6,
+            45,
+            "viewing",
+            6,
+            46,
+            "x_bao_sam",
+            6,
+            47
+          ]
+        ]
+      ],
+      0,
+      0,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_chat_gamebai",
+          "rect": [
+            412,
+            41,
+            76,
+            75
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            76,
+            75
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "logo_xocxoc",
+          "rect": [
+            658,
+            697,
+            111,
+            205
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            113,
+            207
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "process_baosam",
+          "rect": [
+            0,
+            0,
+            319,
+            24
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            319,
+            24
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  ]
+]

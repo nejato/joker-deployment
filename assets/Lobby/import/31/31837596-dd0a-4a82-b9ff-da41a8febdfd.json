@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "caothap.atlas",
+      "\r\ncaothap.png\r\nsize: 512,256\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n3_bai\r\n  rotate: false\r\n  xy: 226, 90\r\n  size: 164, 162\r\n  orig: 164, 162\r\n  offset: 0, 0\r\n  index: -1\r\n3_cao\r\n  rotate: false\r\n  xy: 125, 18\r\n  size: 110, 45\r\n  orig: 110, 45\r\n  offset: 0, 0\r\n  index: -1\r\n3_muiten1\r\n  rotate: true\r\n  xy: 392, 73\r\n  size: 84, 87\r\n  orig: 84, 87\r\n  offset: 0, 0\r\n  index: -1\r\n3_muiten2\r\n  rotate: false\r\n  xy: 392, 159\r\n  size: 97, 93\r\n  orig: 97, 93\r\n  offset: 0, 0\r\n  index: -1\r\n3_thap\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 121, 61\r\n  orig: 121, 61\r\n  offset: 0, 0\r\n  index: -1\r\nGroup 31184\r\n  rotate: false\r\n  xy: 2, 65\r\n  size: 222, 187\r\n  orig: 222, 187\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

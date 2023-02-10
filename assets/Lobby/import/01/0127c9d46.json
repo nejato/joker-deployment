@@ -1,0 +1,96 @@
+[
+  1,
+  [
+    "c4Xj3oaHZJMJesGPZRYoqN",
+    "013TlrgJhPtpWjHGbhWyFt"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    [
+      [
+        {
+          "name": "popupbgMax",
+          "rect": [
+            1,
+            0,
+            1028,
+            550
+          ],
+          "offset": [
+            -1,
+            0
+          ],
+          "originalSize": [
+            1032,
+            550
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bggtittle",
+          "rect": [
+            0,
+            1,
+            414,
+            78
+          ],
+          "offset": [
+            -0.5,
+            1.5
+          ],
+          "originalSize": [
+            415,
+            83
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ]
+  ]
+]

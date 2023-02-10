@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "07RxR8NJlJML/ym5hzqyyd"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "txt_huongdan",
+      "rect": [
+        0,
+        1,
+        248,
+        53
+      ],
+      "offset": [
+        0,
+        3.5
+      ],
+      "originalSize": [
+        248,
+        62
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

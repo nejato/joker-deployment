@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "0fUfEGRvtFt4Yf4c3KsiFb"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "btnquay2",
+      "rect": [
+        2,
+        7,
+        208,
+        170
+      ],
+      "offset": [
+        0,
+        -2
+      ],
+      "originalSize": [
+        212,
+        180
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

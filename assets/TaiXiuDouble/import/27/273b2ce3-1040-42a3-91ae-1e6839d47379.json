@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "ecZHqGEuxA9oIupyHdFLGQ"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "txt_lsgd",
+      "rect": [
+        81,
+        0,
+        291,
+        77
+      ],
+      "offset": [
+        -5.5,
+        0
+      ],
+      "originalSize": [
+        464,
+        77
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

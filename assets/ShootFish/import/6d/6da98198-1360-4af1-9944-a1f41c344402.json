@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "dfLHlVGXlIT7GK/zfeiQ1o"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "PA_x220",
+      "rect": [
+        2,
+        2,
+        303,
+        251
+      ],
+      "offset": [
+        -102.5,
+        0.5
+      ],
+      "originalSize": [
+        512,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

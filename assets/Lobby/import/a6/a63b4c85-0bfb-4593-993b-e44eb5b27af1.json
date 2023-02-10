@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "a0nyB/v2NOopQqYPL4ux3R"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "worlddance",
+      "rect": [
+        2,
+        2,
+        858,
+        766
+      ],
+      "offset": [
+        -2,
+        0
+      ],
+      "originalSize": [
+        866,
+        770
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

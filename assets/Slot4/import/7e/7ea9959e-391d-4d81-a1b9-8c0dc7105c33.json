@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "0aW5YnMI9JaLg42fRxRJrW"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "sadfs",
+      "rect": [
+        0,
+        0,
+        1046,
+        245
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        1046,
+        245
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

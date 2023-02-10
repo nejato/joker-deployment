@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "fe2+ngSbJEV795KJ1jpnwd"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "namelobby",
+      "rect": [
+        2,
+        2,
+        1997,
+        916
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2001,
+        920
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

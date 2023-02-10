@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "27IC6ugbNAg5pFHjOlwwMl"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ZASXC",
+      "rect": [
+        1,
+        1,
+        836,
+        499
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        838,
+        501
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

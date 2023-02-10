@@ -1,0 +1,133 @@
+[
+  1,
+  [
+    "4aXf4OpNxEc5RINrXpHlTm"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "LoNuocThan_Button",
+      "\r\nLoNuocThan_Button.png\r\nsize: 306,153\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nA1\r\n  rotate: false\r\n  xy: 1, 1\r\n  size: 151, 151\r\n  orig: 151, 151\r\n  offset: 0, 0\r\n  index: -1\r\nA2\r\n  rotate: false\r\n  xy: 154, 1\r\n  size: 151, 151\r\n  orig: 151, 151\r\n  offset: 0, 0\r\n  index: -1\r\n",
+      [
+        "LoNuocThan_Button.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "mz/N/QLLQOZQwWnd4jYciAIWCLk",
+          "spine": "3.7.93",
+          "width": 151,
+          "height": 151,
+          "images": "",
+          "audio": ""
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "bone",
+            "parent": "root"
+          },
+          {
+            "name": "bone2",
+            "parent": "root"
+          }
+        ],
+        "slots": [
+          {
+            "name": "A1",
+            "bone": "bone",
+            "attachment": "A1"
+          },
+          {
+            "name": "A2",
+            "bone": "bone2",
+            "attachment": "A2"
+          }
+        ],
+        "skins": {
+          "default": {
+            "A1": {
+              "A1": {
+                "x": 0.5,
+                "y": 0.5,
+                "width": 151,
+                "height": 151
+              }
+            },
+            "A2": {
+              "A2": {
+                "x": 0.5,
+                "y": 0.5,
+                "width": 151,
+                "height": 151
+              }
+            }
+          }
+        },
+        "animations": {
+          "animation": {
+            "slots": {
+              "A2": {
+                "color": [
+                  {
+                    "time": 0,
+                    "color": "ffffff00"
+                  },
+                  {
+                    "time": 1,
+                    "color": "ffffffff"
+                  },
+                  {
+                    "time": 2,
+                    "color": "ffffff00"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

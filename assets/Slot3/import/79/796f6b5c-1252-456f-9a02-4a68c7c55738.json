@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "843ddphAhASLO6fAt6WP9u"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "bangthuong",
+      "rect": [
+        0,
+        0,
+        1438,
+        709
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        1438,
+        709
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

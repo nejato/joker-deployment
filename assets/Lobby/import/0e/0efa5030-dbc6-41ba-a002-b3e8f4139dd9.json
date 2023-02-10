@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "4fNIWp35RHx6SD9ZRMqtZl"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "icon_tlmn",
+      "rect": [
+        1,
+        6,
+        660,
+        339
+      ],
+      "offset": [
+        -1,
+        -1.5
+      ],
+      "originalSize": [
+        664,
+        348
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "b7VU3775pFga27CsmNKxVk"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "bg-chat",
+      "rect": [
+        0,
+        0,
+        407,
+        495
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        407,
+        495
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

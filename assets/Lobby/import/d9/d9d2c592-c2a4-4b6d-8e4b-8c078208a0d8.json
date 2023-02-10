@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "TLMN.atlas",
+      "\r\nTLMN.png\r\nsize: 512,256\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n9_BG\r\n  rotate: false\r\n  xy: 2, 62\r\n  size: 223, 186\r\n  orig: 223, 186\r\n  offset: 0, 0\r\n  index: -1\r\n9_bai1\r\n  rotate: false\r\n  xy: 227, 115\r\n  size: 121, 133\r\n  orig: 121, 133\r\n  offset: 0, 0\r\n  index: -1\r\n9_bai2\r\n  rotate: false\r\n  xy: 350, 121\r\n  size: 105, 127\r\n  orig: 105, 127\r\n  offset: 0, 0\r\n  index: -1\r\n9_bai3\r\n  rotate: false\r\n  xy: 355, 6\r\n  size: 84, 113\r\n  orig: 84, 113\r\n  offset: 0, 0\r\n  index: -1\r\n9_bai4\r\n  rotate: true\r\n  xy: 227, 7\r\n  size: 106, 126\r\n  orig: 106, 126\r\n  offset: 0, 0\r\n  index: -1\r\n9_miennam\r\n  rotate: true\r\n  xy: 457, 74\r\n  size: 174, 46\r\n  orig: 174, 46\r\n  offset: 0, 0\r\n  index: -1\r\n9_tienlen\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 179, 58\r\n  orig: 179, 58\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

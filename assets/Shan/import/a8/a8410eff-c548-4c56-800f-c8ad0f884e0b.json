@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "a3rSOlKv9M44Aahb4utGfi"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "labai_52",
+      "rect": [
+        3,
+        3,
+        142,
+        181
+      ],
+      "offset": [
+        0,
+        -0.5
+      ],
+      "originalSize": [
+        148,
+        186
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

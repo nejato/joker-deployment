@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "19cc3gUpdMh6BjhTj5s8hY"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "pokemon",
+      "rect": [
+        3,
+        3,
+        1782,
+        443
+      ],
+      "offset": [
+        0,
+        -0.5
+      ],
+      "originalSize": [
+        1788,
+        448
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,249 @@
+[
+  1,
+  [
+    "abTVJwsyBARoTTaFoj1Ak3"
+  ],
+  0,
+  [
+    [
+      "sp.SkeletonData",
+      [
+        "_name",
+        "_atlasText",
+        "textureNames",
+        "_skeletonJson",
+        "textures"
+      ],
+      -1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  ],
+  [
+    [
+      0,
+      "ani_item5",
+      "\r\nani_item5.png\r\nsize: 644,192\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nBongTrangDuoi\r\n  rotate: false\r\n  xy: 233, 10\r\n  size: 205, 181\r\n  orig: 233, 210\r\n  offset: 12, 15\r\n  index: -1\r\nBongTrangTren\r\n  rotate: false\r\n  xy: 233, 10\r\n  size: 205, 181\r\n  orig: 233, 210\r\n  offset: 12, 15\r\n  index: -1\r\nQuaLuu\r\n  rotate: false\r\n  xy: 1, 12\r\n  size: 231, 179\r\n  orig: 231, 208\r\n  offset: 0, 16\r\n  index: -1\r\nbongVang\r\n  rotate: false\r\n  xy: 439, 1\r\n  size: 201, 190\r\n  orig: 207, 198\r\n  offset: 3, 4\r\n  index: -1\r\n",
+      [
+        "ani_item5.png"
+      ],
+      {
+        "skeleton": {
+          "hash": "CuenBWQRSoTgD62OLWvRi1RQQJw",
+          "spine": "3.8.75",
+          "x": -117.62,
+          "y": -105.69,
+          "width": 235,
+          "height": 210,
+          "images": "./images/",
+          "audio": "C:/Users/User1/Desktop/HoaQuaGavin1/qua_luu/source"
+        },
+        "bones": [
+          {
+            "name": "root"
+          },
+          {
+            "name": "bongVang",
+            "parent": "root"
+          },
+          {
+            "name": "BongTrangDuoi",
+            "parent": "root"
+          },
+          {
+            "name": "QuaLuu",
+            "parent": "root"
+          },
+          {
+            "name": "BongTrangTren",
+            "parent": "root"
+          }
+        ],
+        "slots": [
+          {
+            "name": "bongVang",
+            "bone": "bongVang",
+            "attachment": "bongVang",
+            "blend": "additive"
+          },
+          {
+            "name": "BongTrangDuoi",
+            "bone": "BongTrangDuoi",
+            "attachment": "BongTrangDuoi"
+          },
+          {
+            "name": "BongTrangTren",
+            "bone": "BongTrangTren",
+            "attachment": "BongTrangTren"
+          },
+          {
+            "name": "QuaLuu",
+            "bone": "QuaLuu",
+            "attachment": "QuaLuu"
+          }
+        ],
+        "skins": [
+          {
+            "name": "default",
+            "attachments": {
+              "bongVang": {
+                "bongVang": {
+                  "x": 2.88,
+                  "y": -1.31,
+                  "width": 207,
+                  "height": 198
+                }
+              },
+              "BongTrangTren": {
+                "BongTrangTren": {
+                  "x": 0.88,
+                  "y": -0.69,
+                  "width": 233,
+                  "height": 210
+                }
+              },
+              "BongTrangDuoi": {
+                "BongTrangDuoi": {
+                  "x": 0.88,
+                  "y": -0.69,
+                  "width": 233,
+                  "height": 210
+                }
+              },
+              "QuaLuu": {
+                "QuaLuu": {
+                  "x": -2.12,
+                  "y": -0.69,
+                  "width": 231,
+                  "height": 208
+                }
+              }
+            }
+          }
+        ],
+        "animations": {
+          "ani_item5_lose": {},
+          "ani_item5_win": {
+            "bones": {
+              "QuaLuu": {
+                "scale": [
+                  {},
+                  {
+                    "time": 0.6667,
+                    "x": 0.762,
+                    "y": 0.762
+                  },
+                  {
+                    "time": 1.3333
+                  },
+                  {
+                    "time": 2,
+                    "x": 0.762,
+                    "y": 0.762
+                  },
+                  {
+                    "time": 2.6667
+                  }
+                ]
+              },
+              "BongTrangDuoi": {
+                "rotate": [
+                  {
+                    "angle": 85.17
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": 2.21
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -88.51
+                  },
+                  {
+                    "time": 2,
+                    "angle": 178.99
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 87.3
+                  }
+                ]
+              },
+              "BongTrangTren": {
+                "rotate": [
+                  {
+                    "angle": 88.14
+                  },
+                  {
+                    "time": 0.6667,
+                    "angle": -177.38
+                  },
+                  {
+                    "time": 1.3333,
+                    "angle": -93.78
+                  },
+                  {
+                    "time": 2,
+                    "angle": -3.98
+                  },
+                  {
+                    "time": 2.6667,
+                    "angle": 85.83
+                  }
+                ]
+              },
+              "bongVang": {
+                "scale": [
+                  {
+                    "x": 0.832,
+                    "y": 0.832
+                  },
+                  {
+                    "time": 0.6667
+                  },
+                  {
+                    "time": 1.3333,
+                    "x": 0.832,
+                    "y": 0.832
+                  },
+                  {
+                    "time": 2
+                  },
+                  {
+                    "time": 2.6667,
+                    "x": 0.832,
+                    "y": 0.832
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      [
+        0
+      ]
+    ]
+  ],
+  0,
+  0,
+  [
+    0
+  ],
+  [
+    -1
+  ],
+  [
+    0
+  ]
+]

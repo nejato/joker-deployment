@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "diamond.atlas",
+      "\r\ndiamond.png\r\nsize: 1024,256\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n20_BG\r\n  rotate: true\r\n  xy: 2, 27\r\n  size: 223, 389\r\n  orig: 223, 389\r\n  offset: 0, 0\r\n  index: -1\r\n20_diamond\r\n  rotate: false\r\n  xy: 633, 194\r\n  size: 210, 56\r\n  orig: 210, 56\r\n  offset: 0, 0\r\n  index: -1\r\n20_kc1\r\n  rotate: false\r\n  xy: 554, 5\r\n  size: 149, 138\r\n  orig: 149, 138\r\n  offset: 0, 0\r\n  index: -1\r\n20_kc2\r\n  rotate: true\r\n  xy: 705, 41\r\n  size: 151, 135\r\n  orig: 151, 135\r\n  offset: 0, 0\r\n  index: -1\r\n20_kc3\r\n  rotate: false\r\n  xy: 393, 2\r\n  size: 159, 141\r\n  orig: 159, 141\r\n  offset: 0, 0\r\n  index: -1\r\nframe_hu\r\n  rotate: false\r\n  xy: 393, 145\r\n  size: 238, 105\r\n  orig: 238, 105\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

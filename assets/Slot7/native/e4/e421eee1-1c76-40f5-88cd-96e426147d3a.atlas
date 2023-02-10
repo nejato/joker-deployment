@@ -1,0 +1,132 @@
+
+skeleton.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+B
+  rotate: true
+  xy: 2, 2
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+BG
+  rotate: false
+  xy: 470, 130
+  size: 127, 124
+  orig: 127, 124
+  offset: 0, 0
+  index: -1
+B_Bright
+  rotate: false
+  xy: 135, 57
+  size: 22, 28
+  orig: 22, 28
+  offset: 0, 0
+  index: -1
+Face
+  rotate: false
+  xy: 599, 133
+  size: 128, 121
+  orig: 128, 121
+  offset: 0, 0
+  index: -1
+Face_Glow
+  rotate: false
+  xy: 333, 126
+  size: 135, 128
+  orig: 135, 128
+  offset: 0, 0
+  index: -1
+Frame
+  rotate: false
+  xy: 170, 95
+  size: 161, 159
+  orig: 161, 159
+  offset: 0, 0
+  index: -1
+Glow_Round
+  rotate: false
+  xy: 2, 87
+  size: 166, 167
+  orig: 166, 167
+  offset: 0, 0
+  index: -1
+N
+  rotate: false
+  xy: 815, 226
+  size: 25, 28
+  orig: 25, 28
+  offset: 0, 0
+  index: -1
+N_Bright
+  rotate: false
+  xy: 729, 150
+  size: 21, 23
+  orig: 21, 23
+  offset: 0, 0
+  index: -1
+O
+  rotate: false
+  xy: 333, 95
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+O_Bright
+  rotate: false
+  xy: 360, 100
+  size: 21, 24
+  orig: 21, 24
+  offset: 0, 0
+  index: -1
+S
+  rotate: true
+  xy: 36, 7
+  size: 22, 29
+  orig: 22, 29
+  offset: 0, 0
+  index: -1
+S_Bright
+  rotate: true
+  xy: 815, 207
+  size: 17, 24
+  orig: 17, 24
+  offset: 0, 0
+  index: -1
+Shirt_Front
+  rotate: false
+  xy: 729, 206
+  size: 84, 48
+  orig: 84, 48
+  offset: 0, 0
+  index: -1
+Shirt_Front_Glow
+  rotate: false
+  xy: 2, 31
+  size: 91, 54
+  orig: 91, 54
+  offset: 0, 0
+  index: -1
+U
+  rotate: false
+  xy: 729, 175
+  size: 25, 29
+  orig: 25, 29
+  offset: 0, 0
+  index: -1
+U_Bright
+  rotate: false
+  xy: 756, 181
+  size: 19, 23
+  orig: 19, 23
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 95, 47
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1

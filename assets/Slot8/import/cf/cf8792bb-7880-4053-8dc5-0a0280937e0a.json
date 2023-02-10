@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "3bnbGStaNOQYHUQwj0UYVf"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "sttt_ui_anim",
+      "rect": [
+        2,
+        3,
+        287,
+        1024
+      ],
+      "offset": [
+        -0.5,
+        0
+      ],
+      "originalSize": [
+        292,
+        1030
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

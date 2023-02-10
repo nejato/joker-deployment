@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "candy.atlas",
+      "\r\ncandy.png\r\nsize: 1024,256\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n11_BG\r\n  rotate: false\r\n  xy: 2, 4\r\n  size: 222, 187\r\n  orig: 222, 187\r\n  offset: 0, 0\r\n  index: -1\r\n11_candy\r\n  rotate: false\r\n  xy: 395, 123\r\n  size: 205, 68\r\n  orig: 205, 68\r\n  offset: 0, 0\r\n  index: -1\r\n11_candy1\r\n  rotate: false\r\n  xy: 395, 2\r\n  size: 129, 119\r\n  orig: 129, 119\r\n  offset: 0, 0\r\n  index: -1\r\n11_candy2\r\n  rotate: false\r\n  xy: 226, 36\r\n  size: 167, 155\r\n  orig: 167, 155\r\n  offset: 0, 0\r\n  index: -1\r\n11_candy3\r\n  rotate: false\r\n  xy: 602, 66\r\n  size: 125, 125\r\n  orig: 125, 125\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "25Ald/pd9K/6aOsb265ijk"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "UI_TrialMode",
+      "rect": [
+        5,
+        2,
+        846,
+        114
+      ],
+      "offset": [
+        1,
+        0
+      ],
+      "originalSize": [
+        854,
+        118
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

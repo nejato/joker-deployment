@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "TLMN solo.atlas",
+      "\r\nTLMN solo.png\r\nsize: 1024,512\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nA\r\n  rotate: false\r\n  xy: 348, 207\r\n  size: 263, 252\r\n  orig: 263, 252\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 1\r\n  rotate: false\r\n  xy: 2, 86\r\n  size: 344, 373\r\n  orig: 344, 373\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 2\r\n  rotate: false\r\n  xy: 613, 291\r\n  size: 134, 168\r\n  orig: 134, 168\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 3\r\n  rotate: true\r\n  xy: 2, 2\r\n  size: 82, 187\r\n  orig: 82, 187\r\n  offset: 0, 0\r\n  index: -1\r\nTLMN\r\n  rotate: false\r\n  xy: 348, 162\r\n  size: 140, 43\r\n  orig: 140, 43\r\n  offset: 0, 0\r\n  index: -1\r\nsolo\r\n  rotate: false\r\n  xy: 613, 256\r\n  size: 98, 33\r\n  orig: 98, 33\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

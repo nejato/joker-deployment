@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "xocdia.atlas",
+      "\r\nxocdia.png\r\nsize: 1024,256\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n2_BG\r\n  rotate: true\r\n  xy: 2, 2\r\n  size: 223, 390\r\n  orig: 223, 390\r\n  offset: 0, 0\r\n  index: -1\r\n2_bat\r\n  rotate: false\r\n  xy: 674, 13\r\n  size: 151, 117\r\n  orig: 151, 117\r\n  offset: 0, 0\r\n  index: -1\r\n2_bat2\r\n  rotate: false\r\n  xy: 855, 133\r\n  size: 149, 92\r\n  orig: 149, 92\r\n  offset: 0, 0\r\n  index: -1\r\n2_chip\r\n  rotate: false\r\n  xy: 884, 32\r\n  size: 34, 43\r\n  orig: 34, 43\r\n  offset: 0, 0\r\n  index: -1\r\n2_coin\r\n  rotate: true\r\n  xy: 394, 24\r\n  size: 201, 278\r\n  orig: 201, 278\r\n  offset: 0, 0\r\n  index: -1\r\n2_dia\r\n  rotate: false\r\n  xy: 884, 77\r\n  size: 95, 54\r\n  orig: 95, 54\r\n  offset: 0, 0\r\n  index: -1\r\n2_dia2\r\n  rotate: false\r\n  xy: 674, 132\r\n  size: 179, 93\r\n  orig: 179, 93\r\n  offset: 0, 0\r\n  index: -1\r\n2_xoc\r\n  rotate: true\r\n  xy: 827, 13\r\n  size: 117, 55\r\n  orig: 117, 55\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

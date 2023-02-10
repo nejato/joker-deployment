@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "0864kVsa5OzoXWh2+Q86BU"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "iteamjackpot",
+      "rect": [
+        2,
+        2,
+        885,
+        537
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        889,
+        541
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

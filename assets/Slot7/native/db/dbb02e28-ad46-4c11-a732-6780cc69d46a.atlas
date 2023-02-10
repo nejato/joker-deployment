@@ -1,0 +1,132 @@
+
+skeleton.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Char
+  rotate: false
+  xy: 281, 365
+  size: 130, 145
+  orig: 130, 145
+  offset: 0, 0
+  index: -1
+Frame
+  rotate: false
+  xy: 2, 82
+  size: 150, 148
+  orig: 150, 148
+  offset: 0, 0
+  index: -1
+Glow_Round
+  rotate: false
+  xy: 2, 232
+  size: 277, 278
+  orig: 277, 278
+  offset: 0, 0
+  index: -1
+Paper_Square
+  rotate: false
+  xy: 2, 2
+  size: 27, 38
+  orig: 27, 38
+  offset: 0, 0
+  index: -1
+a
+  rotate: false
+  xy: 307, 327
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+a1
+  rotate: false
+  xy: 413, 433
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+background
+  rotate: true
+  xy: 154, 103
+  size: 127, 125
+  orig: 127, 125
+  offset: 0, 0
+  index: -1
+c
+  rotate: false
+  xy: 42, 44
+  size: 23, 36
+  orig: 23, 36
+  offset: 0, 0
+  index: -1
+c1
+  rotate: false
+  xy: 281, 286
+  size: 23, 36
+  orig: 23, 36
+  offset: 0, 0
+  index: -1
+e
+  rotate: false
+  xy: 439, 473
+  size: 21, 37
+  orig: 21, 37
+  offset: 0, 0
+  index: -1
+e1
+  rotate: true
+  xy: 67, 59
+  size: 21, 37
+  orig: 21, 37
+  offset: 0, 0
+  index: -1
+eff_particle
+  rotate: false
+  xy: 2, 42
+  size: 38, 38
+  orig: 38, 38
+  offset: 0, 0
+  index: -1
+r
+  rotate: false
+  xy: 281, 248
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+r1
+  rotate: false
+  xy: 331, 327
+  size: 22, 36
+  orig: 22, 36
+  offset: 0, 0
+  index: -1
+s
+  rotate: false
+  xy: 281, 324
+  size: 24, 39
+  orig: 24, 39
+  offset: 0, 0
+  index: -1
+s1
+  rotate: false
+  xy: 413, 471
+  size: 24, 39
+  orig: 24, 39
+  offset: 0, 0
+  index: -1
+t
+  rotate: true
+  xy: 154, 82
+  size: 19, 36
+  orig: 19, 36
+  offset: 0, 0
+  index: -1
+t1
+  rotate: false
+  xy: 413, 395
+  size: 19, 36
+  orig: 19, 36
+  offset: 0, 0
+  index: -1

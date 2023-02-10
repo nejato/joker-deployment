@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "caz8dKJ1VJRr5hGtjwnegb"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ic_caidat222",
+      "rect": [
+        3,
+        0,
+        54,
+        53
+      ],
+      "offset": [
+        -1,
+        10
+      ],
+      "originalSize": [
+        62,
+        73
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

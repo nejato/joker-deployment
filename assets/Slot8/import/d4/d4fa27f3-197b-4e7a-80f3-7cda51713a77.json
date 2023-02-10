@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "cdE26Ku2hAlIAQgfH//V3d"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "STTT-NoHuMerge",
+      "rect": [
+        3,
+        3,
+        1988,
+        1144
+      ],
+      "offset": [
+        0,
+        -0.5
+      ],
+      "originalSize": [
+        1994,
+        1149
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

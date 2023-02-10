@@ -1,0 +1,48 @@
+
+caorua.png
+size: 330,309
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+15_bai1
+  rotate: false
+  xy: 201, 175
+  size: 121, 132
+  orig: 122, 134
+  offset: 0, 1
+  index: -1
+15_bai2
+  rotate: true
+  xy: 201, 66
+  size: 107, 127
+  orig: 108, 128
+  offset: 1, 1
+  index: -1
+15_bai3
+  rotate: true
+  xy: 2, 4
+  size: 90, 118
+  orig: 91, 118
+  offset: 1, 0
+  index: -1
+15_cao
+  rotate: true
+  xy: 122, 8
+  size: 86, 63
+  orig: 114, 68
+  offset: 16, 3
+  index: -1
+15_rua
+  rotate: false
+  xy: 187, 2
+  size: 67, 62
+  orig: 135, 68
+  offset: 33, 3
+  index: -1
+caor
+  rotate: false
+  xy: 2, 96
+  size: 197, 211
+  orig: 198, 212
+  offset: 0, 1
+  index: -1

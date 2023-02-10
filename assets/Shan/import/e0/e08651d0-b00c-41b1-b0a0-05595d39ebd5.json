@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "d4CWmNymRK24iigJpazhCk"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Invited_0002_TIME_",
+      "rect": [
+        4,
+        14,
+        94,
+        51
+      ],
+      "offset": [
+        0.5,
+        -4.5
+      ],
+      "originalSize": [
+        101,
+        70
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

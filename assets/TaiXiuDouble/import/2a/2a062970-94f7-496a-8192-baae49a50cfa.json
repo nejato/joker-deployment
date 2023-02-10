@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "4bAW3hxJhPhY1BKCaj3zUm"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "longjinbi",
+      "rect": [
+        2,
+        3,
+        519,
+        518
+      ],
+      "offset": [
+        0,
+        -0.5
+      ],
+      "originalSize": [
+        523,
+        523
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

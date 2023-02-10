@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "415+TnaQJJuaIuzbB5gMjp"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "anim-Jackpot-new",
+      "rect": [
+        2,
+        2,
+        2012,
+        401
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        2016,
+        405
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

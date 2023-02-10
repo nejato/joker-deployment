@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "dfhrZFFftH+Kr1IUF87dlG"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Anim_Lobby",
+      "rect": [
+        4,
+        3,
+        1003,
+        899
+      ],
+      "offset": [
+        1,
+        3.5
+      ],
+      "originalSize": [
+        1009,
+        912
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

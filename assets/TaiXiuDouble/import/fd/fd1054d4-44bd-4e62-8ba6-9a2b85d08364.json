@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "516TDoqI1Ba4UmtfKyfEXZ"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "time_countdown_1",
+      "rect": [
+        1,
+        1,
+        677,
+        375
+      ],
+      "offset": [
+        -172.5,
+        67.5
+      ],
+      "originalSize": [
+        1024,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

@@ -1,0 +1,132 @@
+
+CoinRotate.png
+size: 842,695
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+1
+  rotate: false
+  xy: 2, 520
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+10
+  rotate: false
+  xy: 2, 345
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 170, 520
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 2, 170
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+13
+  rotate: true
+  xy: 2, 2
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 338, 520
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+15
+  rotate: false
+  xy: 170, 345
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+16
+  rotate: false
+  xy: 170, 170
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+17
+  rotate: true
+  xy: 177, 2
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+18
+  rotate: false
+  xy: 506, 520
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 338, 345
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+3
+  rotate: false
+  xy: 338, 170
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+4
+  rotate: true
+  xy: 352, 2
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+5
+  rotate: false
+  xy: 674, 520
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 506, 345
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+7
+  rotate: false
+  xy: 506, 170
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+8
+  rotate: true
+  xy: 527, 2
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1
+9
+  rotate: false
+  xy: 674, 345
+  size: 166, 173
+  orig: 166, 173
+  offset: 0, 0
+  index: -1

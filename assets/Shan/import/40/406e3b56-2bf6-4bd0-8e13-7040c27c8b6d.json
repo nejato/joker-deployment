@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "d4CMBhqYxATJX2+ml0ISc/"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "dealer_shan_koe_mee_myanmar",
+      "rect": [
+        2,
+        2,
+        203,
+        965
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        207,
+        969
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

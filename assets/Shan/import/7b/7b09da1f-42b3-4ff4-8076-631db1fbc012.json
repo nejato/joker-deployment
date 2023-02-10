@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "c6qWd4YrNKYJ4HMOOQJbmX"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "boder_chua_chip",
+      "rect": [
+        0,
+        0,
+        182,
+        46
+      ],
+      "offset": [
+        0,
+        0.5
+      ],
+      "originalSize": [
+        182,
+        47
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

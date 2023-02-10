@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "skeleton.atlas",
+      "\r\nskeleton.png\r\nsize: 2048,2048\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\nGroup 122\r\n  rotate: false\r\n  xy: 1744, 1466\r\n  size: 178, 75\r\n  orig: 178, 75\r\n  offset: 0, 0\r\n  index: -1\r\nGroup 123\r\n  rotate: false\r\n  xy: 1524, 1476\r\n  size: 218, 66\r\n  orig: 218, 66\r\n  offset: 0, 0\r\n  index: -1\r\nGroup 124\r\n  rotate: true\r\n  xy: 1920, 1572\r\n  size: 209, 81\r\n  orig: 209, 81\r\n  offset: 0, 0\r\n  index: -1\r\nGroup 125\r\n  rotate: false\r\n  xy: 784, 631\r\n  size: 143, 64\r\n  orig: 143, 64\r\n  offset: 0, 0\r\n  index: -1\r\nGroup 126\r\n  rotate: false\r\n  xy: 1855, 1783\r\n  size: 190, 87\r\n  orig: 190, 87\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 1\r\n  rotate: false\r\n  xy: 1387, 1401\r\n  size: 82, 82\r\n  orig: 82, 82\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 2 copy1\r\n  rotate: false\r\n  xy: 2, 545\r\n  size: 361, 697\r\n  orig: 361, 697\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 3\r\n  rotate: true\r\n  xy: 1771, 1543\r\n  size: 220, 147\r\n  orig: 220, 147\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 7\r\n  rotate: true\r\n  xy: 1771, 1543\r\n  size: 220, 147\r\n  orig: 220, 147\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 4\r\n  rotate: false\r\n  xy: 607, 1774\r\n  size: 262, 268\r\n  orig: 262, 268\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 5\r\n  rotate: true\r\n  xy: 607, 1254\r\n  size: 189, 144\r\n  orig: 189, 144\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 6\r\n  rotate: false\r\n  xy: 1858, 1872\r\n  size: 175, 170\r\n  orig: 175, 170\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 8\r\n  rotate: true\r\n  xy: 2, 2\r\n  size: 211, 203\r\n  orig: 211, 203\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 949 copy 2\r\n  rotate: true\r\n  xy: 749, 1497\r\n  size: 275, 117\r\n  orig: 275, 117\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 949 copy 3\r\n  rotate: true\r\n  xy: 749, 1497\r\n  size: 275, 117\r\n  orig: 275, 117\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00000\r\n  rotate: false\r\n  xy: 1060, 1041\r\n  size: 136, 304\r\n  orig: 136, 304\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00001\r\n  rotate: true\r\n  xy: 1200, 1765\r\n  size: 136, 326\r\n  orig: 136, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00002\r\n  rotate: false\r\n  xy: 506, 587\r\n  size: 136, 326\r\n  orig: 136, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00003\r\n  rotate: true\r\n  xy: 868, 1487\r\n  size: 136, 326\r\n  orig: 136, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00004\r\n  rotate: true\r\n  xy: 871, 1765\r\n  size: 136, 327\r\n  orig: 136, 327\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00005\r\n  rotate: false\r\n  xy: 365, 915\r\n  size: 140, 327\r\n  orig: 140, 327\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00006\r\n  rotate: false\r\n  xy: 144, 216\r\n  size: 139, 327\r\n  orig: 139, 327\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00007\r\n  rotate: false\r\n  xy: 607, 1445\r\n  size: 140, 327\r\n  orig: 140, 327\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00008\r\n  rotate: true\r\n  xy: 1201, 1903\r\n  size: 139, 326\r\n  orig: 139, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00009\r\n  rotate: true\r\n  xy: 868, 1625\r\n  size: 138, 326\r\n  orig: 138, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00010\r\n  rotate: true\r\n  xy: 1196, 1625\r\n  size: 138, 326\r\n  orig: 138, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00011\r\n  rotate: false\r\n  xy: 644, 599\r\n  size: 138, 325\r\n  orig: 138, 325\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00012\r\n  rotate: false\r\n  xy: 693, 273\r\n  size: 137, 324\r\n  orig: 137, 324\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00013\r\n  rotate: false\r\n  xy: 784, 1023\r\n  size: 137, 323\r\n  orig: 137, 323\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00014\r\n  rotate: false\r\n  xy: 923, 1035\r\n  size: 135, 311\r\n  orig: 135, 311\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00015\r\n  rotate: false\r\n  xy: 1198, 1040\r\n  size: 134, 305\r\n  orig: 134, 305\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00016\r\n  rotate: false\r\n  xy: 507, 915\r\n  size: 135, 327\r\n  orig: 135, 327\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00017\r\n  rotate: false\r\n  xy: 421, 258\r\n  size: 134, 326\r\n  orig: 134, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00018\r\n  rotate: false\r\n  xy: 557, 259\r\n  size: 134, 326\r\n  orig: 134, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00019\r\n  rotate: false\r\n  xy: 285, 216\r\n  size: 134, 327\r\n  orig: 134, 327\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00020\r\n  rotate: true\r\n  xy: 871, 1903\r\n  size: 139, 328\r\n  orig: 139, 328\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00021\r\n  rotate: false\r\n  xy: 2, 215\r\n  size: 140, 328\r\n  orig: 140, 328\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00022\r\n  rotate: false\r\n  xy: 365, 586\r\n  size: 139, 327\r\n  orig: 139, 327\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00023\r\n  rotate: true\r\n  xy: 1529, 1904\r\n  size: 138, 327\r\n  orig: 138, 327\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00024\r\n  rotate: true\r\n  xy: 1196, 1485\r\n  size: 138, 326\r\n  orig: 138, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00025\r\n  rotate: false\r\n  xy: 644, 926\r\n  size: 138, 326\r\n  orig: 138, 326\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00026\r\n  rotate: true\r\n  xy: 1529, 1765\r\n  size: 137, 324\r\n  orig: 137, 324\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00027\r\n  rotate: false\r\n  xy: 784, 697\r\n  size: 136, 324\r\n  orig: 136, 324\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00028\r\n  rotate: true\r\n  xy: 753, 1348\r\n  size: 137, 324\r\n  orig: 137, 324\r\n  offset: 0, 0\r\n  index: -1\r\nfx wild/Wild_Fx_00029\r\n  rotate: true\r\n  xy: 1079, 1347\r\n  size: 136, 306\r\n  orig: 136, 306\r\n  offset: 0, 0\r\n  index: -1\r\nmiengj\r\n  rotate: false\r\n  xy: 1334, 1034\r\n  size: 141, 107\r\n  orig: 141, 107\r\n  offset: 0, 0\r\n  index: -1\r\ntay phai\r\n  rotate: false\r\n  xy: 1524, 1544\r\n  size: 245, 219\r\n  orig: 245, 219\r\n  offset: 0, 0\r\n  index: -1\r\ntay trai\r\n  rotate: false\r\n  xy: 207, 34\r\n  size: 201, 180\r\n  orig: 201, 180\r\n  offset: 0, 0\r\n  index: -1\r\nthan\r\n  rotate: false\r\n  xy: 2, 1244\r\n  size: 603, 798\r\n  orig: 603, 798\r\n  offset: 0, 0\r\n  index: -1\r\nthantai\r\n  rotate: false\r\n  xy: 1334, 1143\r\n  size: 164, 202\r\n  orig: 164, 202\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

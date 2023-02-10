@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "afgPUYNsJFSr0IVM64SfOb"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "jocker8888888-01",
+      "rect": [
+        552,
+        93,
+        2465,
+        2351
+      ],
+      "offset": [
+        30.5,
+        -28
+      ],
+      "originalSize": [
+        3508,
+        2481
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

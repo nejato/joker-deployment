@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "fbaKXev7ND4YynC+49QNqk"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ani_scatter",
+      "rect": [
+        1,
+        1,
+        365,
+        398
+      ],
+      "offset": [
+        -0.5,
+        0
+      ],
+      "originalSize": [
+        368,
+        400
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

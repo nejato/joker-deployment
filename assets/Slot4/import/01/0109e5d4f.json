@@ -1,0 +1,178 @@
+[
+  1,
+  [
+    "37f72xqM9GH6d8agq7Kk8V"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    [
+      [
+        {
+          "name": "angrybirds_untick",
+          "rect": [
+            715,
+            1089,
+            71,
+            69
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            71,
+            69
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "angrybirds_setting_btn_close",
+          "rect": [
+            1790,
+            97,
+            92,
+            96
+          ],
+          "offset": [
+            -1,
+            2
+          ],
+          "originalSize": [
+            94,
+            100
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "angrybirds_setting_bg",
+          "rect": [
+            1089,
+            1089,
+            876,
+            644
+          ],
+          "offset": [
+            7,
+            -15
+          ],
+          "originalSize": [
+            1006,
+            794
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "angrybirds_tick",
+          "rect": [
+            644,
+            1089,
+            71,
+            69
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            71,
+            69
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  ]
+]

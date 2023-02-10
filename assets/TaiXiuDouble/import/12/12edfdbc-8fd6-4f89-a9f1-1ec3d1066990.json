@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "65H1gHMb9JqZh7M6H11jlr"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "popup_to_sun",
+      "rect": [
+        0,
+        0,
+        682,
+        490
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        682,
+        490
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

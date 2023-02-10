@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "90lytU001PT5/0rEJAfIZx"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Invited_0003_IN-TABLE_",
+      "rect": [
+        27,
+        18,
+        104,
+        50
+      ],
+      "offset": [
+        -0.5,
+        -4
+      ],
+      "originalSize": [
+        159,
+        78
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

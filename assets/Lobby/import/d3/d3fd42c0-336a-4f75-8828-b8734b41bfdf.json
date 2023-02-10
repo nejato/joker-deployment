@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "c4ENE6P/xI3a2c4FuECuLH"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ic_sieuxe",
+      "rect": [
+        1,
+        1,
+        1010,
+        464
+      ],
+      "offset": [
+        -6,
+        23
+      ],
+      "originalSize": [
+        1024,
+        512
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

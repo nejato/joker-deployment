@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "8fy2LCwiNG6qhNrTiGqi/E"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Thang-Coin-1",
+      "rect": [
+        2,
+        2,
+        889,
+        965
+      ],
+      "offset": [
+        -65.5,
+        27.5
+      ],
+      "originalSize": [
+        1024,
+        1024
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

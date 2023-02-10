@@ -1,0 +1,34 @@
+
+ani_item7.png
+size: 388,384
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BongHong
+  rotate: true
+  xy: 205, 2
+  size: 170, 169
+  orig: 180, 169
+  offset: 5, 0
+  index: -1
+Cherry
+  rotate: true
+  xy: 1, 1
+  size: 171, 203
+  orig: 231, 208
+  offset: 33, 5
+  index: -1
+SaoTrang
+  rotate: false
+  xy: 1, 173
+  size: 230, 208
+  orig: 233, 210
+  offset: 1, 1
+  index: -1
+SaoVang
+  rotate: true
+  xy: 232, 208
+  size: 173, 155
+  orig: 175, 157
+  offset: 1, 1
+  index: -1

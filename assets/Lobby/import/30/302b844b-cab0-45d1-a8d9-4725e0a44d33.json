@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "avenger.atlas",
+      "\r\navenger.png\r\nsize: 1024,512\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n17_BG\r\n  rotate: false\r\n  xy: 310, 97\r\n  size: 222, 390\r\n  orig: 222, 390\r\n  offset: 0, 0\r\n  index: -1\r\n17_hand\r\n  rotate: false\r\n  xy: 534, 288\r\n  size: 79, 92\r\n  orig: 79, 92\r\n  offset: 0, 0\r\n  index: -1\r\n17_hand2\r\n  rotate: false\r\n  xy: 774, 417\r\n  size: 95, 70\r\n  orig: 95, 70\r\n  offset: 0, 0\r\n  index: -1\r\n17_logo\r\n  rotate: false\r\n  xy: 310, 2\r\n  size: 218, 93\r\n  orig: 218, 93\r\n  offset: 0, 0\r\n  index: -1\r\n17_nv\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 306, 485\r\n  orig: 306, 485\r\n  offset: 0, 0\r\n  index: -1\r\nframe_hu\r\n  rotate: false\r\n  xy: 534, 382\r\n  size: 238, 105\r\n  orig: 238, 105\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

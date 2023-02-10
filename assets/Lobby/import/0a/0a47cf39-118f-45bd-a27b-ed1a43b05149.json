@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "67HwelcKRL2LAIvnIuApOt"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "TLMN solo",
+      "rect": [
+        1,
+        1,
+        660,
+        344
+      ],
+      "offset": [
+        -1,
+        1
+      ],
+      "originalSize": [
+        664,
+        348
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

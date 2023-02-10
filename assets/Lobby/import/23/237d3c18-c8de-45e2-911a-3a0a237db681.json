@@ -1,0 +1,35 @@
+[
+  1,
+  0,
+  0,
+  [
+    [
+      "cc.TextAsset",
+      [
+        "_name",
+        "text"
+      ],
+      1
+    ]
+  ],
+  [
+    [
+      0,
+      0,
+      1,
+      3
+    ]
+  ],
+  [
+    [
+      0,
+      "ic_sieuxe.atlas",
+      "\r\nic_sieuxe.png\r\nsize: 2048,512\r\nformat: RGBA8888\r\nfilter: Linear,Linear\r\nrepeat: none\r\n1\r\n  rotate: false\r\n  xy: 1609, 239\r\n  size: 46, 61\r\n  orig: 46, 61\r\n  offset: 0, 0\r\n  index: -1\r\n1 copy\r\n  rotate: true\r\n  xy: 1948, 291\r\n  size: 183, 98\r\n  orig: 183, 98\r\n  offset: 0, 0\r\n  index: -1\r\n2\r\n  rotate: false\r\n  xy: 1322, 178\r\n  size: 80, 59\r\n  orig: 80, 59\r\n  offset: 0, 0\r\n  index: -1\r\n2 copy\r\n  rotate: true\r\n  xy: 2, 192\r\n  size: 282, 515\r\n  orig: 282, 515\r\n  offset: 0, 0\r\n  index: -1\r\n3\r\n  rotate: true\r\n  xy: 443, 88\r\n  size: 102, 80\r\n  orig: 102, 80\r\n  offset: 0, 0\r\n  index: -1\r\n3.1\r\n  rotate: true\r\n  xy: 519, 216\r\n  size: 258, 491\r\n  orig: 258, 491\r\n  offset: 0, 0\r\n  index: -1\r\n4\r\n  rotate: false\r\n  xy: 353, 61\r\n  size: 88, 129\r\n  orig: 88, 129\r\n  offset: 0, 0\r\n  index: -1\r\n5\r\n  rotate: true\r\n  xy: 1683, 341\r\n  size: 72, 134\r\n  orig: 72, 134\r\n  offset: 0, 0\r\n  index: -1\r\n6\r\n  rotate: false\r\n  xy: 1322, 302\r\n  size: 359, 172\r\n  orig: 359, 172\r\n  offset: 0, 0\r\n  index: -1\r\nLayer 2\r\n  rotate: false\r\n  xy: 1012, 166\r\n  size: 308, 308\r\n  orig: 308, 308\r\n  offset: 0, 0\r\n  index: -1\r\ncar\r\n  rotate: false\r\n  xy: 2, 2\r\n  size: 349, 188\r\n  orig: 349, 188\r\n  offset: 0, 0\r\n  index: -1\r\ntext1\r\n  rotate: false\r\n  xy: 1683, 415\r\n  size: 263, 59\r\n  orig: 263, 59\r\n  offset: 0, 0\r\n  index: -1\r\ntext2\r\n  rotate: false\r\n  xy: 1322, 239\r\n  size: 285, 61\r\n  orig: 285, 61\r\n  offset: 0, 0\r\n  index: -1\r\n"
+    ]
+  ],
+  0,
+  0,
+  [],
+  [],
+  []
+]

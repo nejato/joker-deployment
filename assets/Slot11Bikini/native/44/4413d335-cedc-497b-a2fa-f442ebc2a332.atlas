@@ -1,0 +1,153 @@
+
+bikini_room.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+4
+  rotate: false
+  xy: 2, 55
+  size: 402, 156
+  orig: 402, 156
+  offset: 0, 0
+  index: -1
+bang1
+  rotate: false
+  xy: 533, 264
+  size: 402, 156
+  orig: 402, 156
+  offset: 0, 0
+  index: -1
+bang3
+  rotate: true
+  xy: 1599, 451
+  size: 570, 222
+  orig: 570, 222
+  offset: 0, 0
+  index: -1
+tay
+  rotate: true
+  xy: 991, 284
+  size: 351, 572
+  orig: 351, 572
+  offset: 0, 0
+  index: -1
+tay1
+  rotate: false
+  xy: 1823, 485
+  size: 138, 183
+  orig: 138, 183
+  offset: 0, 0
+  index: -1
+tay2
+  rotate: false
+  xy: 406, 85
+  size: 111, 126
+  orig: 111, 126
+  offset: 0, 0
+  index: -1
+tay2.
+  rotate: true
+  xy: 1823, 670
+  size: 351, 140
+  orig: 351, 140
+  offset: 0, 0
+  index: -1
+than1
+  rotate: false
+  xy: 533, 422
+  size: 456, 599
+  orig: 456, 599
+  offset: 0, 0
+  index: -1
+than2
+  rotate: true
+  xy: 991, 637
+  size: 384, 606
+  orig: 384, 606
+  offset: 0, 0
+  index: -1
+than3
+  rotate: false
+  xy: 2, 213
+  size: 529, 808
+  orig: 529, 808
+  offset: 0, 0
+  index: -1
+toc1
+  rotate: true
+  xy: 2, 2
+  size: 51, 99
+  orig: 51, 99
+  offset: 0, 0
+  index: -1
+toc1.
+  rotate: false
+  xy: 1965, 920
+  size: 78, 101
+  orig: 78, 101
+  offset: 0, 0
+  index: -1
+toc2
+  rotate: true
+  xy: 533, 231
+  size: 31, 108
+  orig: 31, 108
+  offset: 0, 0
+  index: -1
+toc2.
+  rotate: true
+  xy: 1965, 822
+  size: 96, 76
+  orig: 96, 76
+  offset: 0, 0
+  index: -1
+toc3
+  rotate: false
+  xy: 1823, 452
+  size: 45, 31
+  orig: 45, 31
+  offset: 0, 0
+  index: -1
+toc4
+  rotate: false
+  xy: 1565, 344
+  size: 120, 105
+  orig: 120, 105
+  offset: 0, 0
+  index: -1
+toc5
+  rotate: false
+  xy: 1965, 725
+  size: 59, 95
+  orig: 59, 95
+  offset: 0, 0
+  index: -1
+toc6
+  rotate: true
+  xy: 1965, 681
+  size: 42, 55
+  orig: 42, 55
+  offset: 0, 0
+  index: -1
+toc7
+  rotate: false
+  xy: 1687, 358
+  size: 91, 91
+  orig: 91, 91
+  offset: 0, 0
+  index: -1
+toc8
+  rotate: false
+  xy: 937, 359
+  size: 51, 61
+  orig: 51, 61
+  offset: 0, 0
+  index: -1
+toc9
+  rotate: false
+  xy: 1565, 306
+  size: 67, 36
+  orig: 67, 36
+  offset: 0, 0
+  index: -1
