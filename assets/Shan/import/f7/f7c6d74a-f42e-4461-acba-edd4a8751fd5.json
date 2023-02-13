@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "e3YIn2EZVC0JrOizdp5HMg"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "win_tren_avatar",
+      "rect": [
+        3,
+        3,
+        249,
+        93
+      ],
+      "offset": [
+        -0.5,
+        14.5
+      ],
+      "originalSize": [
+        256,
+        128
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

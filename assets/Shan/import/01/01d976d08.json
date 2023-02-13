@@ -1,0 +1,299 @@
+[
+  1,
+  [
+    "6bchmVHuBFT5xc7N1WwYHB"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    [
+      [
+        {
+          "name": "settingingame-bg",
+          "rect": [
+            586,
+            396,
+            74,
+            359
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            74,
+            359
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-music_1",
+          "rect": [
+            1902,
+            571,
+            57,
+            59
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            57,
+            59
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-music_2",
+          "rect": [
+            1765,
+            572,
+            57,
+            59
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            57,
+            59
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-refesh_table",
+          "rect": [
+            1701,
+            520,
+            58,
+            59
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            58,
+            59
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-guide",
+          "rect": [
+            1448,
+            548,
+            54,
+            61
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            54,
+            61
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-suond_2",
+          "rect": [
+            1575,
+            536,
+            60,
+            59
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            60,
+            59
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-suond_1",
+          "rect": [
+            1382,
+            542,
+            60,
+            59
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            60,
+            59
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  ]
+]

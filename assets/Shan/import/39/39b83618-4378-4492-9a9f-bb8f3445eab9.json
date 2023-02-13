@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "88tSnyUWdOqbEuvGOVXn8g"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ic_back_game",
+      "rect": [
+        4,
+        3,
+        72,
+        72
+      ],
+      "offset": [
+        0.5,
+        0
+      ],
+      "originalSize": [
+        79,
+        78
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

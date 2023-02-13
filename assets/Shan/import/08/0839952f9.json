@@ -1,0 +1,1849 @@
+[
+  1,
+  [
+    "6bchmVHuBFT5xc7N1WwYHB",
+    "92smcwo0pHTKfRBNgjuoKD",
+    "5bZmBYwO5PoYxVeeNXxWkR",
+    "23gow0JmBHUojCozaJsxOy",
+    "aci0NuSO9Hy7W9e7IuuMAy",
+    "28BF7UCSBForGxAKVPmlTv",
+    "9ffJnl4L9GtqA15aDv+BHs",
+    "27dN8lefREHp/kUVDvtDaQ",
+    "80pQwq1S5Ph58C96tdTznD",
+    "2b/NHBvshOmpRvwSBYDmuD",
+    "c3YS48BUhKUqsE652c2fMr",
+    "564Wo87f1Bg6CuNSmAmXwr",
+    "4dA/YcMcpCgapIxGh2lCNn",
+    "dakjxiVQlG+InBR9r+WXZR",
+    "3cIyd2Fr9N/JinlU+mTKCO",
+    "18qJWsI6tFVasC/15k/eJ9",
+    "5azq2h+NVMpJp9sCtAEbrg",
+    "a96YB7kUVJcJ/EjZxTDgRS",
+    "51/K1IUSNIXpBqe4Jc0G6b",
+    "aeovPZDSxEEqzQHybQXjFA",
+    "646jOD7VlGjpbjNdNLgMDb",
+    "06UpEBrIZBXKJTWbi0ILEU",
+    "6cfj2kwdBPgo0pJXCjDIlt",
+    "97GOSepi9CeqQ8LTxPyK5u",
+    "c0+siSQANDRIHhRsNBreQY",
+    "ecHarWxzxC664JPYKtSYVV",
+    "f1fzWV5L9Mx4ci/nkly6MA",
+    "1bnLRxTchDVY36tGJkYPeS",
+    "6dzXpnXuhBNaBwMrLg7isb",
+    "54xF6rmhRHa5cUnJT08ibl",
+    "f3RMy8dR5CJ4Y1D1DINoPD",
+    "47dejC4R1C6LV41Zbqb9vo",
+    "405nhQljhGcZhlq3WgY5kj",
+    "18mmtJeBVJmKiE4eGtXbdJ",
+    "8410Tr86hIC6+hIhNmIIp8",
+    "02fT1p3lRIYrcy8lbGXmwL",
+    "92VPWofV1OW7NffS5B0Uhf",
+    "9ciGm6thJN2q9sRZMHcWQT",
+    "18ji8h9xZGwIFvZtZZuzLP",
+    "27mnNHFn5A9p0MTeZ9jnMh",
+    "38YU6mkApPzoKmOH9S9RIW",
+    "69mjJmr9RBIJbcdpBB0mWa",
+    "e11JojGv1HS6GqL+fQfsTM",
+    "a7PdvAW6FK84Vyy6Flmlam"
+  ],
+  [
+    "_textureSetter",
+    "help-bg",
+    "help-line",
+    "mail-bg_alphal_1",
+    "mail-bg_btn",
+    "mail-bg_checkbox",
+    "mail-bg_inbox",
+    "mail-bg_mail_1",
+    "mail-checkbox",
+    "mail-mail1",
+    "mail-mail2",
+    "mail-recyclebin",
+    "mail-tab_1",
+    "mail-tab_2",
+    "mail-txt_friend",
+    "mail-txt_system",
+    "notify-bg_0",
+    "notify-bg_00",
+    "sendgift-btn_sereach",
+    "sendgift-chip_1",
+    "sendgift-chip_2",
+    "sendgift-chip_3",
+    "sendgift-chip_4",
+    "sendgift-chip_5",
+    "sendgift-chip_6",
+    "sendgift-ic_star",
+    "setting-bg_off",
+    "setting-bg_on",
+    "setting-btn_logout",
+    "setting-ic_music",
+    "setting-ic_sound",
+    "setting-icon_help",
+    "setting-icon_logout",
+    "setting-txt_quitapp",
+    "settingingame-back",
+    "settingingame-bg",
+    "settingingame-guide",
+    "settingingame-guide_borkkdeng",
+    "settingingame-guide_dragon_1",
+    "settingingame-music_1",
+    "settingingame-music_2",
+    "settingingame-refesh_table",
+    "settingingame-suond_1",
+    "settingingame-suond_2"
+  ],
+  [
+    "cc.SpriteFrame",
+    [
+      "cc.SpriteAtlas",
+      [
+        "_name",
+        "_spriteFrames"
+      ],
+      2,
+      11
+    ]
+  ],
+  [
+    [
+      1,
+      0,
+      1,
+      2
+    ]
+  ],
+  [
+    [
+      [
+        {
+          "name": "sendgift-chip_3",
+          "rect": [
+            1046,
+            502,
+            98,
+            106
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            98,
+            106
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-guide_dragon_1",
+          "rect": [
+            1051,
+            5,
+            413,
+            619
+          ],
+          "offset": [
+            -1,
+            -4
+          ],
+          "originalSize": [
+            419,
+            627
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "setting-txt_quitapp",
+          "rect": [
+            586,
+            582,
+            169,
+            50
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            169,
+            50
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-txt_system",
+          "rect": [
+            1913,
+            246,
+            173,
+            55
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            173,
+            55
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "setting-bg_on",
+          "rect": [
+            586,
+            485,
+            230,
+            91
+          ],
+          "offset": [
+            3,
+            0
+          ],
+          "originalSize": [
+            236,
+            91
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-bg_alphal_1",
+          "rect": [
+            1816,
+            5,
+            235,
+            163
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            235,
+            163
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-bg_mail_1",
+          "rect": [
+            5,
+            109,
+            1040,
+            98
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            1040,
+            98
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-bg_checkbox",
+          "rect": [
+            1913,
+            425,
+            61,
+            61
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            61,
+            61
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-mail1",
+          "rect": [
+            1402,
+            485,
+            67,
+            51
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            67,
+            57
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-txt_friend",
+          "rect": [
+            1402,
+            424,
+            163,
+            55
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            163,
+            55
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "setting-icon_logout",
+          "rect": [
+            1701,
+            585,
+            54,
+            48
+          ],
+          "offset": [
+            0,
+            1
+          ],
+          "originalSize": [
+            54,
+            58
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "setting-icon_help",
+          "rect": [
+            822,
+            589,
+            30,
+            58
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            54,
+            58
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-tab_1",
+          "rect": [
+            1676,
+            5,
+            509,
+            64
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            509,
+            64
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "sendgift-btn_sereach",
+          "rect": [
+            761,
+            582,
+            42,
+            55
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            42,
+            55
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "setting-ic_music",
+          "rect": [
+            1515,
+            548,
+            54,
+            58
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            54,
+            58
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-recyclebin",
+          "rect": [
+            1902,
+            492,
+            64,
+            73
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            64,
+            73
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "notify-bg_0",
+          "rect": [
+            5,
+            213,
+            1031,
+            35
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            1031,
+            35
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "help-line",
+          "rect": [
+            586,
+            476,
+            342,
+            3
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            342,
+            3
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "sendgift-chip_2",
+          "rect": [
+            934,
+            502,
+            98,
+            106
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            98,
+            106
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "sendgift-chip_4",
+          "rect": [
+            1158,
+            511,
+            98,
+            106
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            98,
+            106
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "setting-btn_logout",
+          "rect": [
+            1178,
+            424,
+            218,
+            81
+          ],
+          "offset": [
+            0,
+            -1
+          ],
+          "originalSize": [
+            218,
+            83
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-checkbox",
+          "rect": [
+            886,
+            589,
+            42,
+            41
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            42,
+            41
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-back",
+          "rect": [
+            1641,
+            536,
+            60,
+            54
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            60,
+            60
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "help-bg",
+          "rect": [
+            1816,
+            486,
+            80,
+            80
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            80,
+            80
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "sendgift-chip_5",
+          "rect": [
+            1270,
+            511,
+            98,
+            106
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            98,
+            106
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "settingingame-guide_borkkdeng",
+          "rect": [
+            5,
+            254,
+            378,
+            575
+          ],
+          "offset": [
+            0,
+            25
+          ],
+          "originalSize": [
+            380,
+            625
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-bg_inbox",
+          "rect": [
+            5,
+            5,
+            1040,
+            98
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            1040,
+            98
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "notify-bg_00",
+          "rect": [
+            586,
+            254,
+            453,
+            136
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            453,
+            136
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-bg_btn",
+          "rect": [
+            951,
+            424,
+            221,
+            72
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            221,
+            72
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "sendgift-chip_1",
+          "rect": [
+            822,
+            485,
+            98,
+            106
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            98,
+            106
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "sendgift-chip_6",
+          "rect": [
+            1571,
+            424,
+            98,
+            106
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            98,
+            106
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-mail2",
+          "rect": [
+            1475,
+            485,
+            67,
+            57
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            67,
+            57
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "mail-tab_2",
+          "rect": [
+            1746,
+            5,
+            509,
+            64
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            509,
+            64
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        [
+          0,
+          "popup.plist",
+          [
+            {},
+            "help-bg",
+            6,
+            0,
+            "help-line",
+            6,
+            1,
+            "mail-bg_alphal_1",
+            6,
+            2,
+            "mail-bg_btn",
+            6,
+            3,
+            "mail-bg_checkbox",
+            6,
+            4,
+            "mail-bg_inbox",
+            6,
+            5,
+            "mail-bg_mail_1",
+            6,
+            6,
+            "mail-checkbox",
+            6,
+            7,
+            "mail-mail1",
+            6,
+            8,
+            "mail-mail2",
+            6,
+            9,
+            "mail-recyclebin",
+            6,
+            10,
+            "mail-tab_1",
+            6,
+            11,
+            "mail-tab_2",
+            6,
+            12,
+            "mail-txt_friend",
+            6,
+            13,
+            "mail-txt_system",
+            6,
+            14,
+            "notify-bg_0",
+            6,
+            15,
+            "notify-bg_00",
+            6,
+            16,
+            "sendgift-btn_sereach",
+            6,
+            17,
+            "sendgift-chip_1",
+            6,
+            18,
+            "sendgift-chip_2",
+            6,
+            19,
+            "sendgift-chip_3",
+            6,
+            20,
+            "sendgift-chip_4",
+            6,
+            21,
+            "sendgift-chip_5",
+            6,
+            22,
+            "sendgift-chip_6",
+            6,
+            23,
+            "sendgift-ic_star",
+            6,
+            24,
+            "setting-bg_off",
+            6,
+            25,
+            "setting-bg_on",
+            6,
+            26,
+            "setting-btn_logout",
+            6,
+            27,
+            "setting-ic_music",
+            6,
+            28,
+            "setting-ic_sound",
+            6,
+            29,
+            "setting-icon_help",
+            6,
+            30,
+            "setting-icon_logout",
+            6,
+            31,
+            "setting-txt_quitapp",
+            6,
+            32,
+            "settingingame-back",
+            6,
+            33,
+            "settingingame-bg",
+            6,
+            34,
+            "settingingame-guide",
+            6,
+            35,
+            "settingingame-guide_borkkdeng",
+            6,
+            36,
+            "settingingame-guide_dragon_1",
+            6,
+            37,
+            "settingingame-music_1",
+            6,
+            38,
+            "settingingame-music_2",
+            6,
+            39,
+            "settingingame-refesh_table",
+            6,
+            40,
+            "settingingame-suond_1",
+            6,
+            41,
+            "settingingame-suond_2",
+            6,
+            42
+          ]
+        ]
+      ],
+      0,
+      0,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ]
+    ],
+    [
+      [
+        {
+          "name": "sendgift-ic_star",
+          "rect": [
+            951,
+            396,
+            15,
+            15
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            15,
+            15
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "setting-bg_off",
+          "rect": [
+            1816,
+            246,
+            234,
+            91
+          ],
+          "offset": [
+            -1,
+            0
+          ],
+          "originalSize": [
+            236,
+            91
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "setting-ic_sound",
+          "rect": [
+            1830,
+            572,
+            54,
+            54
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            54,
+            58
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  ]
+]

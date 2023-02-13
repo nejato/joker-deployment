@@ -1,0 +1,2347 @@
+[
+  1,
+  [
+    "e09sRS7/FE3JMI/U5ImRLG",
+    "c6/6Sndb5Eu72rzOCAjnw4",
+    "830DgICJJJXovVSs2kteDu",
+    "53wxQ0fk5NwrkPB9XNViX5",
+    "32nXbQyipIKJrgTfzudIhx",
+    "cbdo7Nf2ZBjoGmMOYrEdZb",
+    "f5AIx+yENMXb6m+R0hoPMB",
+    "d9zNkubERMuo7P3WGaKFj+",
+    "5334Rvy7dNELF8IQKbdlcK",
+    "20udsXpy1BnKG1wLiix5YA",
+    "ffjDl5VBVIUopMhxPANPS6",
+    "b169+4oKxB4It53F2zpxyu",
+    "81A8EiuilOtq4s9rWw3cOl",
+    "0f6ELQ5vdGQK7WIUT7mUZV",
+    "c3gqLKTq5CwKFaF8uOkkVw",
+    "9bIx2H/yNANqPZY2imTJJF",
+    "0fGtMvF5FGdoG/ZTORI7Nt",
+    "84bc5/ASFN9KP0YgJvQI5G",
+    "42ogbqRT9Ph4YX4RE0js7J",
+    "55a0xVmrpHSbhinbl4Ly+a",
+    "dbnLNy8gdM7oSvx1n+woKS",
+    "90OwLihLtCooGTeuCcEg+z",
+    "29BjgCajlKSJoieROWX1Ki",
+    "14WpM9LuVPCIflIhvP6eZt",
+    "c8JEzaQK5DdoEBOiPSkEzL",
+    "07KfPHnRFFWLi2xS0/az8o",
+    "ff3tscvOBCSbdihoLHbNNS",
+    "68hhRtgGBFcbCh26mNueMu",
+    "d5OM20xcRFqaTdXSXUCOVX",
+    "69KssAy1JC2IpfIfo9SqId",
+    "ddZTnCvidB+4MQFLPDB1uP",
+    "0bg2ktNjlBXawKaH4qv6SH",
+    "4cndLuFzBPmIKl5LCSfxde",
+    "e85FAUZWpB8q7RbMTwrxko",
+    "e1mH064NJGDqGoUDkvXQV9",
+    "048E7KFipBTajkNNBu46J0",
+    "0ffCAih81NF6PQrRb0hqFF",
+    "08d+qkHEVHdYm1cY6AOGvP",
+    "f5eklTwzRPg6JMFb83PqcQ",
+    "d7PugDlS1NXrEqaVvCPz8+",
+    "3cMlwKBChPloCvaq/c1S58",
+    "87xGJLxTBIDZhl5gbFK+Zc",
+    "eaIvm4+g9NBbNuhSN+dFn2",
+    "2fGp3vLHhG0ZKjSZ9bCZsG",
+    "cf3JdesM1KcLM/kh9DPLP0",
+    "c3wPUF9wxDgLrgGj5ACKEy",
+    "c47q2rQPNHWaxOFXA6b/SA",
+    "09G1M8ULNGSJY4mNs4/bOw",
+    "d5JzzwZT9MK7wDcL1pgnUL",
+    "6e2qy5081NB5Xk09vxNwXk",
+    "2dBxuKzblLToD4H5wznFIH",
+    "05wFamX3VFvI3TaxmJlBzp",
+    "9e3I90JnZN2JB0WsuTcXqc",
+    "abRL4TzChANLgskdqbTnsP",
+    "9eCLKdxeNADbrZW7c1ooEY",
+    "ac6rEXJ9lOVqOvK+xDNQp0",
+    "e5VNeeo59JgrVRHMYFHTHg",
+    "batp+5RgBOmYVRSBr9kwc+",
+    "a8ZH3i62ZMELFHecvXlpor",
+    "30S/UhdpJAj7xEngZdP3ng",
+    "9a08YQ+09AZYCmOd9Ujf2c",
+    "aeCRS8YYRLqoLbYvqFNQOj"
+  ],
+  [
+    "_textureSetter",
+    "alert-Alert1",
+    "alert-Alert2",
+    "alert-Alert3",
+    "arrow_hand",
+    "banker_big",
+    "bg_banker_win",
+    "bg_bet_01",
+    "bg_bet_02",
+    "bg_clock",
+    "bg_common",
+    "bg_jackpot",
+    "bg_point_01",
+    "bg_point_03",
+    "bg_pot",
+    "bg_user_01",
+    "bg_user_03",
+    "btn_allin",
+    "btn_chat_02",
+    "btn_compare",
+    "btn_draw",
+    "btn_notdraw",
+    "btn_open",
+    "btn_rebet",
+    "chip_bet_big",
+    "hand",
+    "ic_..._02",
+    "ic_..._02_1",
+    "ic_..._02_2",
+    "ic_..._02_4",
+    "ic_star",
+    "jackpot-bg_01",
+    "jackpot-bg_02",
+    "jackpot-bg_03",
+    "jackpot-bg_04",
+    "light_time_big_01",
+    "light_time_big_02",
+    "light_time_small_02",
+    "line_chat_01",
+    "line_chat_02",
+    "line_pot",
+    "name_game",
+    "rebet",
+    "txt_Compare2",
+    "txt_Compare3",
+    "txt_allin",
+    "txt_bank_time_02",
+    "txt_bettime_02",
+    "txt_compare",
+    "txt_finish_02",
+    "txt_goodluck_02",
+    "txt_hoa",
+    "txt_lose",
+    "txt_max_bet",
+    "txt_not_draw",
+    "txt_open",
+    "txt_player_takecards_02",
+    "txt_pot",
+    "txt_starttime_02",
+    "x2_big",
+    "x3_big",
+    "x5_big"
+  ],
+  [
+    "cc.SpriteFrame",
+    [
+      "cc.SpriteAtlas",
+      [
+        "_name",
+        "_spriteFrames"
+      ],
+      2,
+      11
+    ]
+  ],
+  [
+    [
+      1,
+      0,
+      1,
+      2
+    ]
+  ],
+  [
+    [
+      [
+        {
+          "name": "hand",
+          "rect": [
+            23,
+            734,
+            205,
+            191
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            205,
+            191
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "light_time_small_02",
+          "rect": [
+            337,
+            734,
+            11,
+            11
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            11,
+            11
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "light_time_big_02",
+          "rect": [
+            971,
+            497,
+            16,
+            15
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            16,
+            15
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_point_03",
+          "rect": [
+            393,
+            961,
+            166,
+            57
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            166,
+            57
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_rebet",
+          "rect": [
+            688,
+            643,
+            218,
+            97
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            218,
+            97
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_clock",
+          "rect": [
+            675,
+            129,
+            153,
+            175
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            153,
+            175
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_open",
+          "rect": [
+            668,
+            463,
+            218,
+            97
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            218,
+            97
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "txt_goodluck_02",
+          "rect": [
+            23,
+            931,
+            192,
+            56
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            192,
+            56
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "x2_big",
+          "rect": [
+            896,
+            757,
+            52,
+            53
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            52,
+            53
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "arrow_hand",
+          "rect": [
+            663,
+            365,
+            185,
+            92
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            185,
+            92
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        [
+          0,
+          "shan.plist",
+          [
+            {},
+            "alert-Alert1",
+            6,
+            0,
+            "alert-Alert2",
+            6,
+            1,
+            "alert-Alert3",
+            6,
+            2,
+            "arrow_hand",
+            6,
+            3,
+            "banker_big",
+            6,
+            4,
+            "bg_banker_win",
+            6,
+            5,
+            "bg_bet_01",
+            6,
+            6,
+            "bg_bet_02",
+            6,
+            7,
+            "bg_clock",
+            6,
+            8,
+            "bg_common",
+            6,
+            9,
+            "bg_jackpot",
+            6,
+            10,
+            "bg_point_01",
+            6,
+            11,
+            "bg_point_03",
+            6,
+            12,
+            "bg_pot",
+            6,
+            13,
+            "bg_user_01",
+            6,
+            14,
+            "bg_user_03",
+            6,
+            15,
+            "btn_allin",
+            6,
+            16,
+            "btn_chat_02",
+            6,
+            17,
+            "btn_compare",
+            6,
+            18,
+            "btn_draw",
+            6,
+            19,
+            "btn_notdraw",
+            6,
+            20,
+            "btn_open",
+            6,
+            21,
+            "btn_rebet",
+            6,
+            22,
+            "chip_bet_big",
+            6,
+            23,
+            "hand",
+            6,
+            24,
+            "ic_..._02",
+            6,
+            25,
+            "ic_..._02_1",
+            6,
+            26,
+            "ic_..._02_2",
+            6,
+            27,
+            "ic_..._02_4",
+            6,
+            28,
+            "ic_star",
+            6,
+            29,
+            "jackpot-bg_01",
+            6,
+            30,
+            "jackpot-bg_02",
+            6,
+            31,
+            "jackpot-bg_03",
+            6,
+            32,
+            "jackpot-bg_04",
+            6,
+            33,
+            "light_time_big_01",
+            6,
+            34,
+            "light_time_big_02",
+            6,
+            35,
+            "light_time_small_02",
+            6,
+            36,
+            "line_chat_01",
+            6,
+            37,
+            "line_chat_02",
+            6,
+            38,
+            "line_pot",
+            6,
+            39,
+            "name_game",
+            6,
+            40,
+            "rebet",
+            6,
+            41,
+            "txt_Compare2",
+            6,
+            42,
+            "txt_Compare3",
+            6,
+            43,
+            "txt_allin",
+            6,
+            44,
+            "txt_bank_time_02",
+            6,
+            45,
+            "txt_bettime_02",
+            6,
+            46,
+            "txt_compare",
+            6,
+            47,
+            "txt_finish_02",
+            6,
+            48,
+            "txt_goodluck_02",
+            6,
+            49,
+            "txt_hoa",
+            6,
+            50,
+            "txt_lose",
+            6,
+            51,
+            "txt_max_bet",
+            6,
+            52,
+            "txt_not_draw",
+            6,
+            53,
+            "txt_open",
+            6,
+            54,
+            "txt_player_takecards_02",
+            6,
+            55,
+            "txt_pot",
+            6,
+            56,
+            "txt_starttime_02",
+            6,
+            57,
+            "x2_big",
+            6,
+            58,
+            "x3_big",
+            6,
+            59,
+            "x5_big",
+            6,
+            60
+          ]
+        ]
+      ],
+      0,
+      0,
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ]
+    ],
+    [
+      [
+        {
+          "name": "line_pot",
+          "rect": [
+            915,
+            927,
+            2,
+            32
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            2,
+            32
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_chat_02",
+          "rect": [
+            915,
+            874,
+            47,
+            47
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            47,
+            47
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "alert-Alert3",
+          "rect": [
+            23,
+            653,
+            326,
+            75
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            326,
+            75
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_bet_02",
+          "rect": [
+            23,
+            993,
+            102,
+            25
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            102,
+            25
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_compare",
+          "rect": [
+            337,
+            780,
+            220,
+            96
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            220,
+            96
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_..._02_1",
+          "rect": [
+            968,
+            926,
+            48,
+            38
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            48,
+            38
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_..._02_4",
+          "rect": [
+            948,
+            970,
+            48,
+            38
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            48,
+            38
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "txt_finish_02",
+          "rect": [
+            787,
+            746,
+            103,
+            73
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            103,
+            73
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_point_01",
+          "rect": [
+            221,
+            961,
+            166,
+            57
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            166,
+            57
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "alert-Alert2",
+          "rect": [
+            23,
+            573,
+            327,
+            74
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            327,
+            74
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_allin",
+          "rect": [
+            234,
+            734,
+            218,
+            97
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            218,
+            97
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "name_game",
+          "rect": [
+            399,
+            489,
+            263,
+            82
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            263,
+            82
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_notdraw",
+          "rect": [
+            575,
+            882,
+            218,
+            97
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            218,
+            97
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "x3_big",
+          "rect": [
+            954,
+            757,
+            52,
+            53
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            52,
+            53
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "txt_not_draw",
+          "rect": [
+            799,
+            935,
+            99,
+            44
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            99,
+            44
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "txt_max_bet",
+          "rect": [
+            699,
+            985,
+            131,
+            32
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            131,
+            32
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "txt_open",
+          "rect": [
+            856,
+            248,
+            155,
+            51
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            155,
+            51
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "x5_big",
+          "rect": [
+            924,
+            816,
+            52,
+            53
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            52,
+            53
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_jackpot",
+          "rect": [
+            675,
+            288,
+            174,
+            71
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            174,
+            71
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "txt_pot",
+          "rect": [
+            131,
+            993,
+            36,
+            16
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            36,
+            16
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_pot",
+          "rect": [
+            355,
+            730,
+            327,
+            44
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            327,
+            44
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "txt_allin",
+          "rect": [
+            984,
+            305,
+            132,
+            32
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            132,
+            32
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "alert-Alert1",
+          "rect": [
+            356,
+            577,
+            318,
+            74
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            318,
+            74
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "chip_bet_big",
+          "rect": [
+            688,
+            746,
+            26,
+            26
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            26,
+            26
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "banker_big",
+          "rect": [
+            879,
+            5,
+            134,
+            133
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            134,
+            133
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "txt_compare",
+          "rect": [
+            799,
+            872,
+            110,
+            57
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            110,
+            57
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_..._02_2",
+          "rect": [
+            904,
+            935,
+            48,
+            38
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            48,
+            38
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "line_chat_02",
+          "rect": [
+            14,
+            573,
+            434,
+            3
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            434,
+            3
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_bet_01",
+          "rect": [
+            565,
+            985,
+            128,
+            33
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            128,
+            33
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "btn_draw",
+          "rect": [
+            563,
+            780,
+            218,
+            96
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            218,
+            96
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "jackpot-bg_04",
+          "rect": [
+            912,
+            713,
+            56,
+            38
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            56,
+            38
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "jackpot-bg_03",
+          "rect": [
+            5,
+            5,
+            868,
+            63
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            868,
+            63
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "rebet",
+          "rect": [
+            787,
+            825,
+            131,
+            41
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            131,
+            41
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_banker_win",
+          "rect": [
+            5,
+            291,
+            652,
+            72
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            652,
+            72
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "line_chat_01",
+          "rect": [
+            5,
+            573,
+            434,
+            3
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            434,
+            3
+          ],
+          "rotated": 1,
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ]
+  ]
+]

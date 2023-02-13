@@ -1,0 +1,278 @@
+[
+  1,
+  [
+    "a6y+F89nNLMacEQZ/up0XF",
+    "6fbR2GMB5NUpzVcwYCwZ8r"
+  ],
+  [
+    "_textureSetter",
+    "spriteFrame"
+  ],
+  [
+    "cc.SpriteFrame",
+    [
+      "cc.BitmapFont",
+      [
+        "_name",
+        "fontSize",
+        "_fntConfig"
+      ],
+      0
+    ]
+  ],
+  [
+    [
+      1,
+      0,
+      1,
+      2,
+      4
+    ]
+  ],
+  [
+    [
+      [
+        {
+          "name": "time",
+          "rect": [
+            0,
+            0,
+            179,
+            237
+          ],
+          "offset": [
+            -38.5,
+            9.5
+          ],
+          "originalSize": [
+            256,
+            256
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        [
+          0,
+          "time",
+          30,
+          {
+            "commonHeight": 67,
+            "fontSize": 30,
+            "atlasName": "time.png",
+            "fontDefDictionary": {
+              "9": {
+                "xOffset": 0,
+                "yOffset": 0,
+                "xAdvance": 0,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              "32": {
+                "xOffset": 0,
+                "yOffset": 0,
+                "xAdvance": 0,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              "48": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 84,
+                  "y": 0,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "49": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 16,
+                "rect": {
+                  "x": 167,
+                  "y": 0,
+                  "width": 12,
+                  "height": 65
+                }
+              },
+              "50": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 42,
+                  "y": 0,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "51": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 42,
+                  "y": 132,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "52": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 44,
+                "rect": {
+                  "x": 126,
+                  "y": 0,
+                  "width": 40,
+                  "height": 65
+                }
+              },
+              "53": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 84,
+                  "y": 132,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "54": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 84,
+                  "y": 66,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "55": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 44,
+                "rect": {
+                  "x": 126,
+                  "y": 132,
+                  "width": 40,
+                  "height": 65
+                }
+              },
+              "56": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "57": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 42,
+                  "y": 66,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "58": {
+                "xOffset": 0,
+                "yOffset": 15,
+                "xAdvance": 17,
+                "rect": {
+                  "x": 0,
+                  "y": 198,
+                  "width": 13,
+                  "height": 39
+                }
+              },
+              "65": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 0,
+                  "y": 132,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "77": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 45,
+                "rect": {
+                  "x": 0,
+                  "y": 66,
+                  "width": 41,
+                  "height": 65
+                }
+              },
+              "80": {
+                "xOffset": 0,
+                "yOffset": 2,
+                "xAdvance": 44,
+                "rect": {
+                  "x": 126,
+                  "y": 66,
+                  "width": 40,
+                  "height": 65
+                }
+              }
+            },
+            "kerningDict": {}
+          }
+        ]
+      ],
+      0,
+      0,
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ]
+  ]
+]

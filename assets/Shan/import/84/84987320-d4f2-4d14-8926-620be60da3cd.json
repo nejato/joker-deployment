@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "cfSmT1MEVNrYGzHqZ7gPai"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "jackpot_small",
+      "rect": [
+        4,
+        3,
+        1009,
+        223
+      ],
+      "offset": [
+        -3.5,
+        13.5
+      ],
+      "originalSize": [
+        1024,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

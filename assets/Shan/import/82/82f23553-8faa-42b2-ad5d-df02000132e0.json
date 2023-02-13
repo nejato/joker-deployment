@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "2dFnJmgrBISqVoi8kd7j19"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "thumbBase",
+      "rect": [
+        0,
+        0,
+        275,
+        460
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "originalSize": [
+        275,
+        460
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

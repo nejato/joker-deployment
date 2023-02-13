@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "7fcP3IHslNEYDI457dR4oD"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "win_avatar",
+      "rect": [
+        3,
+        3,
+        384,
+        236
+      ],
+      "offset": [
+        -61,
+        7
+      ],
+      "originalSize": [
+        512,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

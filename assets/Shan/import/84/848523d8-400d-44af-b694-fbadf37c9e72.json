@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "01Qh+1JwVJq4mrAVGT4os3"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Compare",
+      "rect": [
+        6,
+        6,
+        241,
+        84
+      ],
+      "offset": [
+        0,
+        -0.5
+      ],
+      "originalSize": [
+        253,
+        95
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

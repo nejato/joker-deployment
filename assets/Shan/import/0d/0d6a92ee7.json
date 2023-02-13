@@ -1,0 +1,301 @@
+[
+  1,
+  [
+    "6fN3541OFLebhm9eGXWgUe",
+    "1fdO36SHdPO6yBqteHsun0",
+    "21fQVHnQJH76Uh6zUxRhpe",
+    "49wZ+GyLlIUqRDegaDbqDB",
+    "6fOOzB3PBPQ7eCd/4KE3e7",
+    "209dV9fB1KHpbThVSlR9Rt",
+    "98PNATv6VIs7Aa9h8SucXV"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    [
+      [
+        {
+          "name": "bd_avatar_big",
+          "rect": [
+            3,
+            3,
+            118,
+            118
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            124,
+            124
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    [
+      [
+        {
+          "name": "ic_bantrong",
+          "rect": [
+            0,
+            0,
+            102,
+            101
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            102,
+            101
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bg_thongtin",
+          "rect": [
+            0,
+            0,
+            159,
+            56
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            159,
+            56
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        2
+      ]
+    ],
+    [
+      [
+        {
+          "name": "x3",
+          "rect": [
+            2,
+            2,
+            43,
+            43
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            47,
+            47
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        3
+      ]
+    ],
+    [
+      [
+        {
+          "name": "x2",
+          "rect": [
+            2,
+            2,
+            43,
+            43
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            47,
+            47
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        4
+      ]
+    ],
+    [
+      [
+        {
+          "name": "bgGold",
+          "rect": [
+            0,
+            0,
+            190,
+            34
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            190,
+            34
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        5
+      ]
+    ],
+    [
+      [
+        {
+          "name": "x5",
+          "rect": [
+            2,
+            2,
+            43,
+            43
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "originalSize": [
+            47,
+            47
+          ],
+          "capInsets": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      [
+        0
+      ],
+      0,
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        6
+      ]
+    ]
+  ]
+]

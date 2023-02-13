@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "f681hvD1RIMIY+JGwlV6dM"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Rules_0001_Text_1",
+      "rect": [
+        25,
+        17,
+        1067,
+        603
+      ],
+      "offset": [
+        3,
+        -3
+      ],
+      "originalSize": [
+        1111,
+        631
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

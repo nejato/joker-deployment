@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "2auHYoik5GKZYqK2Xa0KVf"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "ic_giam",
+      "rect": [
+        5,
+        0,
+        42,
+        75
+      ],
+      "offset": [
+        0,
+        0.5
+      ],
+      "originalSize": [
+        52,
+        76
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]

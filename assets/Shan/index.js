@@ -147,9 +147,9 @@ window.__require = function e(t, n, r) {
     exports.default = TimeCountDown;
     cc._RF.pop();
   }, {} ],
-  "Shan.BankerPlayingNode": [ function(require, module, exports) {
+  "Shan.Alert": [ function(require, module, exports) {
     "use strict";
-    cc._RF.push(module, "2d511z8CflNZqk7RwV2obtv", "Shan.BankerPlayingNode");
+    cc._RF.push(module, "62c88VpTr1O1aRC1Si96Ib1", "Shan.Alert");
     "use strict";
     var __extends = this && this.__extends || function() {
       var extendStatics = function(d, b) {
@@ -178,7 +178,77 @@ window.__require = function e(t, n, r) {
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    var Shan_Controller_1 = require("../Shan.Controller");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var Alert = function(_super) {
+      __extends(Alert, _super);
+      function Alert() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.bg = null;
+        _this.txtNode = [];
+        return _this;
+      }
+      Alert.prototype.onLoad = function() {
+        this.bg.x = -1280;
+        this.txtNode.forEach(function(e) {
+          return e.active = false;
+        });
+      };
+      Alert.prototype.start = function() {};
+      Alert.prototype.show = function(count, callback) {
+        this.txtNode[count - 1].active = true;
+        cc.tween(this.bg).to(.3, {
+          x: 0
+        }, {
+          easing: "backIn"
+        }).delay(1).to(.2, {
+          x: 1280
+        }, {
+          easing: "backOut"
+        }).call(function() {
+          callback && callback();
+        }).removeSelf().start();
+      };
+      __decorate([ property(cc.Node) ], Alert.prototype, "bg", void 0);
+      __decorate([ property(cc.Node) ], Alert.prototype, "txtNode", void 0);
+      Alert = __decorate([ ccclass ], Alert);
+      return Alert;
+    }(cc.Component);
+    exports.default = Alert;
+    cc._RF.pop();
+  }, {} ],
+  "Shan.BankerPlayingNode": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "958305U3aZHG6EL1zfTC71R", "Shan.BankerPlayingNode");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Shan_Cmd_1 = require("./Shan.Cmd");
+    var Shan_NetworkClient_1 = require("./Shan.NetworkClient");
     var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var BankerPlayingNode = function(_super) {
       __extends(BankerPlayingNode, _super);
@@ -188,17 +258,20 @@ window.__require = function e(t, n, r) {
         _this.btnNoDraw = null;
         return _this;
       }
+      BankerPlayingNode.prototype.init = function(ws) {
+        this._ws = ws;
+      };
       BankerPlayingNode.prototype.onBtnDrawClicked = function() {
         this.setActive(false);
-        Shan_Controller_1.default.instance.draw();
+        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendDraw());
       };
       BankerPlayingNode.prototype.onBtnNoDrawClicked = function() {
         this.setActive(false);
-        Shan_Controller_1.default.instance.noDraw();
+        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendNoDraw());
       };
       BankerPlayingNode.prototype.onBtnCompareClicked = function() {
         this.setActive(false);
-        Shan_Controller_1.default.instance.compare();
+        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendCompare());
       };
       BankerPlayingNode.prototype.setActiveAllBtn = function(boolean) {
         this.btnDraw.active = boolean;
@@ -220,16 +293,19 @@ window.__require = function e(t, n, r) {
           }, {
             easing: "backIn"
           }).start();
-        } else cc.tween(this.node).to(.2, {
-          x: pos.x,
-          y: pos.y - 150
-        }, {
-          easing: "backOut"
-        }).call(function() {
-          _this.node.opacity = 0;
-          _this.node.setPosition(pos);
-          _this.node.active = false;
-        }).start();
+        } else {
+          var tmpPos = cc.v2(pos.x, pos.y - 150);
+          cc.tween(this.node).to(.2, {
+            x: tmpPos.x,
+            y: tmpPos.y
+          }, {
+            easing: "backOut"
+          }).call(function() {
+            _this.node.opacity = 0;
+            _this.node.setPosition(pos);
+            _this.node.active = false;
+          }).start();
+        }
       };
       __decorate([ property(cc.Node) ], BankerPlayingNode.prototype, "btnDraw", void 0);
       __decorate([ property(cc.Node) ], BankerPlayingNode.prototype, "btnNoDraw", void 0);
@@ -239,12 +315,94 @@ window.__require = function e(t, n, r) {
     exports.default = BankerPlayingNode;
     cc._RF.pop();
   }, {
-    "../Shan.Controller": "Shan.Controller"
+    "./Shan.Cmd": "Shan.Cmd",
+    "./Shan.NetworkClient": "Shan.NetworkClient"
   } ],
-  "Shan.CardRank": [ function(require, module, exports) {
+  "Shan.BankerWin": [ function(require, module, exports) {
     "use strict";
-    cc._RF.push(module, "71479M12Q5Klp4Z+qShV0QI", "Shan.CardRank");
+    cc._RF.push(module, "79167P4pahKX5eQeOAlJtmu", "Shan.BankerWin");
     "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Shan_Utils_1 = require("../common/Shan.Utils");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var BankerWin = function(_super) {
+      __extends(BankerWin, _super);
+      function BankerWin() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.lbNotify = null;
+        _this.animLabel = null;
+        return _this;
+      }
+      BankerWin.prototype.start = function() {};
+      BankerWin.prototype.onShow = function(value, name) {
+        var self = this;
+        this.node.setScale(0);
+        var str = "<color=#ffffff>Congrats to </color><color=#00ff00>" + name + "</color><color=#ffffff> on winning </color><color=#ffff> " + Shan_Utils_1.NumberUtils.format(value) + " </color><color=#ffffff> chips</color>";
+        self.lbNotify.string = str;
+        this.animLabel && (this.animLabel.animation = "animation");
+        var seq = cc.sequence(cc.scaleTo(.2, 1), cc.delayTime(2), cc.scaleTo(.2, .1), cc.removeSelf(true));
+        this.node.runAction(seq);
+      };
+      BankerWin.prototype.onClose = function() {};
+      __decorate([ property(cc.RichText) ], BankerWin.prototype, "lbNotify", void 0);
+      __decorate([ property(sp.Skeleton) ], BankerWin.prototype, "animLabel", void 0);
+      BankerWin = __decorate([ ccclass ], BankerWin);
+      return BankerWin;
+    }(cc.Component);
+    exports.default = BankerWin;
+    cc._RF.pop();
+  }, {
+    "../common/Shan.Utils": "Shan.Utils"
+  } ],
+  "Shan.BasePopup": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "d7f00B63blEMoefFGkAYEQr", "Shan.BasePopup");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
     var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
       var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
       if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
@@ -254,11 +412,110 @@ window.__require = function e(t, n, r) {
       value: true
     });
     var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var BasePopup = function(_super) {
+      __extends(BasePopup, _super);
+      function BasePopup() {
+        var _this = _super.call(this) || this;
+        _this.bg = null;
+        _this.darkBg = null;
+        _this._ws = null;
+        _this._gameLayer = null;
+        return _this;
+      }
+      BasePopup.prototype.onLoad = function() {};
+      BasePopup.prototype.start = function() {};
+      BasePopup.prototype.initWs = function(ws) {
+        this._ws = ws;
+      };
+      BasePopup.prototype.show = function() {
+        this._isClosing = false;
+        this.node.active = true;
+        this.bg.scale = .75;
+        var bgDarkOpa = 150;
+        "FreeChipsNode" !== this.name && "PiggySave" !== this.name || (bgDarkOpa = 220);
+        this.darkBg && this.darkBg.runAction(cc.fadeTo(.25, bgDarkOpa));
+        this.bg.runAction(cc.sequence(cc.spawn(cc.scaleTo(.25, 1).easing(cc.easeBackOut()), cc.fadeIn(.25)), cc.callFunc(this.finishAnimation.bind(this))));
+      };
+      BasePopup.prototype.fadeIn = function() {
+        this._isClosing = false;
+        this.node.opacity = 0;
+        this.node.active = true;
+        this.darkBg && this.darkBg.runAction(cc.fadeTo(.25, 150));
+        this.node && this.node.runAction(cc.sequence(cc.fadeIn(.25), cc.callFunc(this.finishAnimation.bind(this))));
+      };
+      BasePopup.prototype.fadeOut = function() {
+        var _this = this;
+        this.darkBg && this.darkBg.runAction(cc.fadeOut(.25));
+        this.node.runAction(cc.sequence(cc.fadeOut(.25), cc.callFunc(function() {
+          _this.onCloseDone(true);
+        })));
+      };
+      BasePopup.prototype.showSlide = function(isRightSide) {
+        var _this = this;
+        this._isRightSide = isRightSide;
+        this._isClosing = false;
+        this.node.active = true;
+        var tagetX = this.bg.x;
+        this.bg.x = isRightSide ? tagetX + this.bg.width : tagetX - this.bg.width;
+        this.bg.active = true;
+        this.darkBg && this.darkBg.runAction(cc.fadeTo(.25, 150));
+        cc.tween(this.bg).to(.25, {
+          x: tagetX
+        }, {
+          easing: "backOut"
+        }).call(function() {
+          return _this.finishAnimation();
+        }).start();
+      };
+      BasePopup.prototype.finishAnimation = function() {};
+      BasePopup.prototype.onClose = function(isDestroy) {
+        void 0 === isDestroy && (isDestroy = true);
+        if (this._isClosing) return;
+        this._isClosing = true;
+        this.darkBg && this.darkBg.active && this.darkBg.runAction(cc.fadeTo(.15, 0));
+        this.bg && this.bg.runAction(cc.spawn(cc.scaleTo(.15, .75), cc.fadeOut(.15)));
+        this.node && this.node.runAction(cc.sequence(cc.delayTime(.15), cc.callFunc(this.onCloseDone.bind(this, isDestroy))));
+      };
+      BasePopup.prototype.onSlideClose = function() {
+        if (this._isClosing) return;
+        this._isClosing = true;
+        this.darkBg && this.darkBg.active && this.darkBg.runAction(cc.fadeTo(.15, 0));
+        var tagetX;
+        tagetX = this._isRightSide ? this.bg.x + this.bg.width : this.bg.x - this.bg.width;
+        if (this.bg) {
+          cc.tween(this.bg).to(.25, {
+            x: tagetX
+          }, {
+            easing: "backIn"
+          }).start();
+          this.node.runAction(cc.sequence(cc.delayTime(.15), cc.callFunc(this.onCloseDone.bind(this))));
+        }
+      };
+      BasePopup.prototype.onCloseDone = function(isDestroy) {
+        var _this = this;
+        this.scheduleOnce(function() {
+          isDestroy ? _this.node.destroy() : _this.node.removeFromParent(false);
+        }, .1);
+      };
+      __decorate([ property(cc.Node) ], BasePopup.prototype, "bg", void 0);
+      __decorate([ property(cc.Node) ], BasePopup.prototype, "darkBg", void 0);
+      BasePopup = __decorate([ ccclass ], BasePopup);
+      return BasePopup;
+    }(cc.Component);
+    exports.default = BasePopup;
+    cc._RF.pop();
+  }, {} ],
+  "Shan.CardRank": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "71479M12Q5Klp4Z+qShV0QI", "Shan.CardRank");
+    "use strict";
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
     var CARD_RANK = function() {
       function CARD_RANK(value) {
         this.setValue("CARD_RANK", value);
       }
-      CARD_RANK_1 = CARD_RANK;
       CARD_RANK.prototype.setValue = function(className, value) {
         this._className = className;
         this._value = value;
@@ -269,37 +526,35 @@ window.__require = function e(t, n, r) {
       CARD_RANK.prototype.toString = function() {
         return this._className + "." + this._value;
       };
-      var CARD_RANK_1;
-      CARD_RANK.ACE_ALIAS = new CARD_RANK_1(1);
-      CARD_RANK.TWO = new CARD_RANK_1(2);
-      CARD_RANK.THREE = new CARD_RANK_1(3);
-      CARD_RANK.FOUR = new CARD_RANK_1(4);
-      CARD_RANK.FIVE = new CARD_RANK_1(5);
-      CARD_RANK.SIX = new CARD_RANK_1(6);
-      CARD_RANK.SEVEN = new CARD_RANK_1(7);
-      CARD_RANK.EIGHT = new CARD_RANK_1(8);
-      CARD_RANK.NINE = new CARD_RANK_1(9);
-      CARD_RANK.TEN = new CARD_RANK_1(10);
-      CARD_RANK.JACK = new CARD_RANK_1(11);
-      CARD_RANK.QUEEN = new CARD_RANK_1(12);
-      CARD_RANK.KING = new CARD_RANK_1(13);
-      CARD_RANK.ACE = new CARD_RANK_1(14);
+      CARD_RANK.ACE_ALIAS = new CARD_RANK(1);
+      CARD_RANK.TWO = new CARD_RANK(2);
+      CARD_RANK.THREE = new CARD_RANK(3);
+      CARD_RANK.FOUR = new CARD_RANK(4);
+      CARD_RANK.FIVE = new CARD_RANK(5);
+      CARD_RANK.SIX = new CARD_RANK(6);
+      CARD_RANK.SEVEN = new CARD_RANK(7);
+      CARD_RANK.EIGHT = new CARD_RANK(8);
+      CARD_RANK.NINE = new CARD_RANK(9);
+      CARD_RANK.TEN = new CARD_RANK(10);
+      CARD_RANK.JACK = new CARD_RANK(11);
+      CARD_RANK.QUEEN = new CARD_RANK(12);
+      CARD_RANK.KING = new CARD_RANK(13);
+      CARD_RANK.ACE = new CARD_RANK(14);
       CARD_RANK.ALL = {
-        2: CARD_RANK_1.TWO,
-        3: CARD_RANK_1.THREE,
-        4: CARD_RANK_1.FOUR,
-        5: CARD_RANK_1.FIVE,
-        6: CARD_RANK_1.SIX,
-        7: CARD_RANK_1.SEVEN,
-        8: CARD_RANK_1.EIGHT,
-        9: CARD_RANK_1.NINE,
-        10: CARD_RANK_1.TEN,
-        11: CARD_RANK_1.JACK,
-        12: CARD_RANK_1.QUEEN,
-        13: CARD_RANK_1.KING,
-        14: CARD_RANK_1.ACE
+        2: CARD_RANK.TWO,
+        3: CARD_RANK.THREE,
+        4: CARD_RANK.FOUR,
+        5: CARD_RANK.FIVE,
+        6: CARD_RANK.SIX,
+        7: CARD_RANK.SEVEN,
+        8: CARD_RANK.EIGHT,
+        9: CARD_RANK.NINE,
+        10: CARD_RANK.TEN,
+        11: CARD_RANK.JACK,
+        12: CARD_RANK.QUEEN,
+        13: CARD_RANK.KING,
+        14: CARD_RANK.ACE
       };
-      CARD_RANK = CARD_RANK_1 = __decorate([ ccclass ], CARD_RANK);
       return CARD_RANK;
     }();
     exports.default = CARD_RANK;
@@ -309,20 +564,13 @@ window.__require = function e(t, n, r) {
     "use strict";
     cc._RF.push(module, "a03ddwVbTNCRJ2WVM8kflQj", "Shan.CardSuit");
     "use strict";
-    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
-      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
-      return c > 3 && r && Object.defineProperty(target, key, r), r;
-    };
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var CARD_SUIT = function() {
       function CARD_SUIT(value) {
         this.setValue("CARD_SUIT", value);
       }
-      CARD_SUIT_1 = CARD_SUIT;
       CARD_SUIT.prototype.setValue = function(className, value) {
         this._className = className;
         this._value = value;
@@ -333,18 +581,16 @@ window.__require = function e(t, n, r) {
       CARD_SUIT.prototype.toString = function() {
         return this._className + "." + this._value;
       };
-      var CARD_SUIT_1;
-      CARD_SUIT.SPADE = new CARD_SUIT_1(0);
-      CARD_SUIT.CLUB = new CARD_SUIT_1(1);
-      CARD_SUIT.DIAMOND = new CARD_SUIT_1(2);
-      CARD_SUIT.HEART = new CARD_SUIT_1(3);
+      CARD_SUIT.SPADE = new CARD_SUIT(0);
+      CARD_SUIT.CLUB = new CARD_SUIT(1);
+      CARD_SUIT.DIAMOND = new CARD_SUIT(2);
+      CARD_SUIT.HEART = new CARD_SUIT(3);
       CARD_SUIT.ALL = {
-        0: CARD_SUIT_1.SPADE,
-        1: CARD_SUIT_1.CLUB,
-        2: CARD_SUIT_1.DIAMOND,
-        3: CARD_SUIT_1.HEART
+        0: CARD_SUIT.SPADE,
+        1: CARD_SUIT.CLUB,
+        2: CARD_SUIT.DIAMOND,
+        3: CARD_SUIT.HEART
       };
-      CARD_SUIT = CARD_SUIT_1 = __decorate([ ccclass ], CARD_SUIT);
       return CARD_SUIT;
     }();
     exports.default = CARD_SUIT;
@@ -358,7 +604,6 @@ window.__require = function e(t, n, r) {
       value: true
     });
     exports.common = void 0;
-    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var common;
     (function(common) {
       var CardUtils = function() {
@@ -425,7 +670,7 @@ window.__require = function e(t, n, r) {
     });
     var Shan_CardRank_1 = require("../Model/Shan.CardRank");
     var Shan_CardSuit_1 = require("../Model/Shan.CardSuit");
-    var Shan_Res_1 = require("./Shan.Res");
+    var Shan_Room_1 = require("../Shan.Room");
     var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var CARD_MODE = {
       SMALL: 0,
@@ -436,37 +681,82 @@ window.__require = function e(t, n, r) {
       __extends(Card, _super);
       function Card() {
         var _this = null !== _super && _super.apply(this, arguments) || this;
-        _this.spr = null;
-        _this.posY = 0;
-        _this.offsetY = 20;
-        _this.isSelected = false;
-        _this.callback = null;
-        _this.index = null;
+        _this.highlightNode = null;
+        _this.spCard = null;
+        _this.alasCardsMid = null;
+        _this.alasCardsBig1 = null;
+        _this.alasCardsBig2 = null;
+        _this.anim_laplanh = null;
         _this._userData = {};
+        _this.cardFrames = new Array(53);
         return _this;
       }
       Card.prototype.onLoad = function() {
-        this.spr = this.node.getComponent(cc.Sprite);
-        this.posY = this.node.y;
         this._cardId = -1;
         this._rank = null;
         this._suit = null;
+        this.highlightNode && (this.highlightNode.active = false);
+        this.show();
       };
-      Card.prototype.onSelect = function() {
-        this.node.y += this.isSelected ? -this.offsetY : this.offsetY;
-        this.isSelected = !this.isSelected;
-        this.isSelected && this.callback && this.callback(this.index);
+      Card.prototype.start = function() {};
+      Card.prototype.init = function(rank, suit) {
+        this.setRank(rank);
+        this.setSuit(suit);
       };
-      Card.prototype.setCardData = function(index, callback) {
-        void 0 === callback && (callback = null);
-        this.index = index;
-        this.setId(index);
-        null == this.spr && (this.spr = this.node.getComponent(cc.Sprite));
-        this.spr.spriteFrame = Shan_Res_1.default.getInstance().getCardFace(index);
-        this.callback = callback;
+      Card.prototype.isDirty = function() {
+        return this._dirty;
       };
-      Card.prototype.getCardIndex = function() {
-        return this.index;
+      Card.prototype.setIsActionRunning = function(boolean) {
+        this._isActionRunning = boolean;
+      };
+      Card.prototype.getIsActionRunning = function() {
+        return this._isActionRunning;
+      };
+      Card.prototype._getSpriteFrame = function() {
+        var mode = this._mode || CARD_MODE.MEDIUM;
+        switch (mode) {
+         case CARD_MODE.SMALL:
+          break;
+
+         case CARD_MODE.MEDIUM:
+          return this._rank && this._suit ? Shan_Room_1.default.instance.cardFrames[(this._cardId + 48) % 52] : Shan_Room_1.default.instance.cardFrames[52];
+
+         case CARD_MODE.BIG:
+          if (this._rank && this._suit) {
+            cc.log("_getSpriteFrame1", this._cardId);
+            var sp = Shan_Room_1.default.instance.cardFrames[(this._cardId + 48) % 52];
+            return sp;
+          }
+          cc.log("_getSpriteFrame0", this._cardId);
+          return Shan_Room_1.default.instance.cardFrames[52];
+
+         default:
+          return Shan_Room_1.default.instance.cardFrames[52];
+        }
+      };
+      Card.prototype._updateSpriteFrame = function() {
+        if (this.spCard) {
+          this.spCard.spriteFrame = this._getSpriteFrame();
+          if (this.spCard.sizeMode == cc.Sprite.SizeMode.CUSTOM) return;
+          var mode = this._mode || CARD_MODE.MEDIUM;
+          switch (mode) {
+           case CARD_MODE.SMALL:
+            break;
+
+           case CARD_MODE.MEDIUM:
+            this.node.height = 116;
+            this.node.width = 90;
+            break;
+
+           case CARD_MODE.BIG:
+            this.node.height = 417;
+            this.node.height = 320;
+            break;
+
+           default:
+            return Shan_Room_1.default.instance.cardFrames[52];
+          }
+        }
       };
       Card.prototype.getRank = function() {
         return this._rank;
@@ -484,14 +774,6 @@ window.__require = function e(t, n, r) {
         this._suit = value;
         this._rank && (this._cardId = 4 * (this._rank.valueOf() - 2) + this._suit.valueOf());
       };
-      Card.prototype.select = function() {
-        this.node.y = this.posY + this.offsetY;
-        this.isSelected = true;
-      };
-      Card.prototype.deSelect = function() {
-        this.node.y = this.posY;
-        this.isSelected = false;
-      };
       Card.prototype.getId = function() {
         return this._cardId;
       };
@@ -500,18 +782,21 @@ window.__require = function e(t, n, r) {
         this._cardId = value;
         this._rank = Shan_CardRank_1.default.ALL[Math.floor(this._cardId / 4) + 2];
         this._suit = Shan_CardSuit_1.default.ALL[this._cardId % 4];
-        isShow && (this.spr.spriteFrame = Shan_Res_1.default.getInstance().getCardFace(this._cardId));
+        isShow && this.show();
       };
-      Card.prototype.show = function() {
-        this._updateSpriteFrame();
+      Card.prototype.setTargetPos = function(pos) {
+        var userData = this._userData || {};
+        userData.targetPos = pos;
+        this._userData = userData;
       };
-      Card.prototype._updateSpriteFrame = function() {
-        null == this.spr && (this.spr = this.node.getComponent(cc.Sprite));
-        this.spr.spriteFrame = this._getSpriteFrame();
+      Card.prototype.getTargetPos = function() {
+        var userData = this._userData || {};
+        return userData.targetPos || this.node.position;
       };
-      Card.prototype._getSpriteFrame = function() {
-        if (!this._rank || !this._suit) return Shan_Res_1.default.getInstance().getCardFace(52);
-        return Shan_Res_1.default.getInstance().getCardFace(this._cardId);
+      Card.prototype.setTargetScale = function(s) {
+        var userData = this._userData || {};
+        userData.targetScale = s;
+        this._userData = userData;
       };
       Card.prototype.getTargetScale = function() {
         var userData = this._userData || {};
@@ -522,13 +807,61 @@ window.__require = function e(t, n, r) {
         this.node.scale = this.getTargetScale();
         this.node.setPosition(this.getTargetPos());
       };
-      Card.prototype.getTargetPos = function() {
-        var userData = this._userData || {};
-        return userData.targetPos || this.node.position;
+      Card.prototype.highlight = function() {
+        this.highlightNode && (this.highlightNode.active = true);
+      };
+      Card.prototype.removeHighlight = function() {
+        this.highlightNode && (this.highlightNode.active = false);
+      };
+      Card.prototype.setMode = function(mode) {
+        this._mode = mode;
+      };
+      Card.prototype.show = function() {
+        this._updateSpriteFrame();
+      };
+      Card.prototype.flipAndShow = function() {
+        var _this = this;
+        var scale = this.node.scale;
+        cc.tween(this.node).to(.1, {
+          scaleX: 0
+        }).call(function() {
+          return _this.show();
+        }).to(.1, {
+          scaleX: scale
+        }).start();
       };
       Card.prototype.setDarkMode = function(boolean) {
-        this.spr.node.color = boolean ? new cc.Color(100, 100, 100, 255) : new cc.Color(255, 255, 255, 255);
+        this.spCard.node.color = boolean ? new cc.Color(100, 100, 100, 255) : new cc.Color(255, 255, 255, 255);
       };
+      Card.prototype.clean = function() {
+        this._cardId = -1;
+        this._rank = null;
+        this._suit = null;
+        this.show();
+      };
+      Card.prototype.hide = function() {
+        this.spCard.spriteFrame = this.alasCardsMid.getSpriteFrame("card_52");
+      };
+      Card.prototype.setEffectCardBinh = function(delay) {
+        var _this = this;
+        if (!this.anim_laplanh.node) return;
+        this.anim_laplanh.node.active = true;
+        this.anim_laplanh.setAnimation(0, "animation", true);
+        this.node.runAction(cc.sequence(cc.delayTime(delay), cc.callFunc(function() {
+          _this.anim_laplanh.node.active = false;
+        })));
+      };
+      Card.prototype.hideEffectCardBinh = function() {
+        if (!this.anim_laplanh.node) return;
+        this.anim_laplanh.node.active = false;
+        this.anim_laplanh.node.stopAllActions();
+      };
+      __decorate([ property(cc.Node) ], Card.prototype, "highlightNode", void 0);
+      __decorate([ property(cc.Sprite) ], Card.prototype, "spCard", void 0);
+      __decorate([ property(cc.SpriteAtlas) ], Card.prototype, "alasCardsMid", void 0);
+      __decorate([ property(cc.SpriteAtlas) ], Card.prototype, "alasCardsBig1", void 0);
+      __decorate([ property(cc.SpriteAtlas) ], Card.prototype, "alasCardsBig2", void 0);
+      __decorate([ property(sp.Skeleton) ], Card.prototype, "anim_laplanh", void 0);
       Card = __decorate([ ccclass ], Card);
       return Card;
     }(cc.Component);
@@ -537,7 +870,7 @@ window.__require = function e(t, n, r) {
   }, {
     "../Model/Shan.CardRank": "Shan.CardRank",
     "../Model/Shan.CardSuit": "Shan.CardSuit",
-    "./Shan.Res": "Shan.Res"
+    "../Shan.Room": "Shan.Room"
   } ],
   "Shan.ChipGroup": [ function(require, module, exports) {
     "use strict";
@@ -570,7 +903,7 @@ window.__require = function e(t, n, r) {
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    var Shan_Controller_1 = require("../Shan.Controller");
+    var Shan_GameController_1 = require("../Shan.GameController");
     var Shan_Chip_1 = require("./Shan.Chip");
     var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var ChipGroup = function(_super) {
@@ -625,7 +958,7 @@ window.__require = function e(t, n, r) {
         this.updatePotMoney();
       };
       ChipGroup.prototype.updatePotMoney = function() {
-        Shan_Controller_1.default.instance.pot.setValue(this.totalBet);
+        Shan_GameController_1.default.instance.pot.setValue(this.totalBet);
       };
       ChipGroup.prototype.playerBet = function(player, bet, isBanker) {
         cc.log("playerBet player " + player.getChair() + " Bet " + bet);
@@ -635,10 +968,10 @@ window.__require = function e(t, n, r) {
         this.totalBet += bet;
       };
       ChipGroup.prototype.distributeMoney = function(players) {
+        var _this = this;
         cc.log("distributeMoney", players);
-        var i, p;
         var valueC, isLoop = true, listC;
-        for (i = ChipGroup_1.VALUE_CHIPS.length - 1; i >= 0; i--) {
+        for (var i = ChipGroup_1.VALUE_CHIPS.length - 1; i >= 0; i--) {
           listC = this.listChipShow[i];
           if (listC.length <= 0) continue;
           valueC = ChipGroup_1.VALUE_CHIPS[i];
@@ -646,7 +979,7 @@ window.__require = function e(t, n, r) {
           while (isLoop) {
             isLoop = false;
             for (var j = 0; j < players.length; j++) {
-              p = players[j];
+              var p = players[j];
               if (p.goldOut >= valueC) {
                 if (listC.length <= 0) {
                   isLoop = false;
@@ -662,15 +995,17 @@ window.__require = function e(t, n, r) {
         }
         players = this.addArrChipSecond(players);
         var maxTime = 0;
-        for (i = 0; i < players.length; i++) {
-          p = players[i];
+        var _loop_1 = function(i) {
+          var p = players[i];
           p.delay > maxTime && (maxTime = p.delay);
-          this.node.runAction(cc.sequence(cc.delayTime(p.delay), cc.callFunc(function(s, pInfo) {
-            this.payPlayer(pInfo);
-          }, this, p)));
-        }
+          this_1.node.runAction(cc.sequence(cc.delayTime(p.delay), cc.callFunc(function() {
+            _this.payPlayer(p);
+          })));
+        };
+        var this_1 = this;
+        for (var i = 0; i < players.length; i++) _loop_1(i);
         this.node.runAction(cc.sequence(cc.delayTime(maxTime + .1), cc.callFunc(function() {
-          Shan_Controller_1.default.instance.pot.setValue(Shan_Controller_1.default.instance.bankerPot);
+          Shan_GameController_1.default.instance.pot.setValue(Shan_GameController_1.default.instance.bankerPot);
         }, this)));
         this.numChip > this.maxSaveReset && (this.maxSaveReset = this.numChip);
       };
@@ -965,7 +1300,7 @@ window.__require = function e(t, n, r) {
     exports.default = ChipGroup;
     cc._RF.pop();
   }, {
-    "../Shan.Controller": "Shan.Controller",
+    "../Shan.GameController": "Shan.GameController",
     "./Shan.Chip": "Shan.Chip"
   } ],
   "Shan.Chip": [ function(require, module, exports) {
@@ -1133,7 +1468,6 @@ window.__require = function e(t, n, r) {
     var Configs_1 = require("../../Loading/src/Configs");
     var Network_InPacket_1 = require("../../Lobby/LobbyScript/Script/networks/Network.InPacket");
     var Network_OutPacket_1 = require("../../Lobby/LobbyScript/Script/networks/Network.OutPacket");
-    var Shan_Contants_1 = require("./Shan.Contants");
     var cmd;
     (function(cmd) {
       var Code = function() {
@@ -1157,7 +1491,7 @@ window.__require = function e(t, n, r) {
         Code.KE_CUA = 3106;
         Code.TU_DONG_BAT_DAU = 3107;
         Code.DONG_Y_DANH_BIEN = 3108;
-        Code.DAT_CUOC = 3109;
+        Code.DAT_CUOC = 3112;
         Code.THONG_TIN_BAN_CHOI = 3110;
         Code.DANG_KY_THOAT_PHONG = 3212;
         Code.VAO_GA = 3112;
@@ -1177,7 +1511,7 @@ window.__require = function e(t, n, r) {
         Code.PLAYER_STATUS_SITTING = 2;
         Code.PLAYER_STATUS_PLAYING = 3;
         Code.LOGOUT = 2;
-        Code.MAX_PLAYER = 8;
+        Code.MAX_PLAYER = 7;
         Code.START_GAME = 3101;
         Code.START_PHASE_ONE = 3102;
         Code.START_PHASE_TWO = 3103;
@@ -1193,6 +1527,7 @@ window.__require = function e(t, n, r) {
         Code.BANKER_WIN = 3116;
         Code.CHECK_ACTION = 3117;
         Code.ROOM_START_COUNTDOWN = 3209;
+        Code.ROOM_STOP_COUNTDOWN = 3220;
         Code.ROOM_REGISTER_LEAVE = 3212;
         return Code;
       }();
@@ -1584,6 +1919,34 @@ window.__require = function e(t, n, r) {
         return SendUserAction;
       }(Network_OutPacket_1.default);
       cmd.SendUserAction = SendUserAction;
+      var SendMatchInfo = function(_super) {
+        __extends(SendMatchInfo, _super);
+        function SendMatchInfo() {
+          var _this = _super.call(this) || this;
+          _this.initData(100);
+          _this.setControllerId(1);
+          _this.setCmdId(Code.MATCH_INFO);
+          _this.packHeader();
+          _this.updateSize();
+          return _this;
+        }
+        return SendMatchInfo;
+      }(Network_OutPacket_1.default);
+      cmd.SendMatchInfo = SendMatchInfo;
+      var SendLeaveGame = function(_super) {
+        __extends(SendLeaveGame, _super);
+        function SendLeaveGame() {
+          var _this = _super.call(this) || this;
+          _this.initData(100);
+          _this.setControllerId(1);
+          _this.setCmdId(Code.ROOM_REGISTER_LEAVE);
+          _this.packHeader();
+          _this.updateSize();
+          return _this;
+        }
+        return SendLeaveGame;
+      }(Network_OutPacket_1.default);
+      cmd.SendLeaveGame = SendLeaveGame;
       var ReceivedLogin = function(_super) {
         __extends(ReceivedLogin, _super);
         function ReceivedLogin(data) {
@@ -2158,10 +2521,18 @@ window.__require = function e(t, n, r) {
           _this.data.playerList = [];
           var listSize = _this.getShort();
           for (var i = 0; i < listSize; i++) {
-            var player;
+            var player = {
+              chair: 0,
+              stateId: 0,
+              userId: 0,
+              userName: "",
+              avatar: "",
+              money: 0,
+              vip: 0
+            };
             player.chair = _this.getByte();
             player.stateId = _this.getByte();
-            if (player.stateId != Shan_Contants_1.default.ROOM_PLAYER_STATE.NO_PLAYER) {
+            if (player.stateId != cmd.Code.PLAYER_STATUS_OUT_GAME) {
               player.userId = _this.getInt();
               player.userName = _this.getString();
               player.avatar = _this.getString();
@@ -2196,14 +2567,14 @@ window.__require = function e(t, n, r) {
             var player = {};
             player.chair = _this.getByte();
             player.stateId = _this.getByte();
-            if (player.stateId != Shan_Contants_1.default.ROOM_PLAYER_STATE.NO_PLAYER) {
+            if (player.stateId != Code.PLAYER_STATUS_OUT_GAME) {
               player.userId = _this.getInt();
               player.userName = _this.getString();
               player.avatar = _this.getString();
               player.money = _this.getLong();
               player.vip = _this.getInt();
             }
-            if (player.stateId == Shan_Contants_1.default.ROOM_PLAYER_STATE.PLAYING) {
+            if (player.stateId == Code.PLAYER_STATUS_PLAYING) {
               player.isRegisterQuit = _this.getBool();
               player.betAmount = _this.getLong();
               player.cardSize = _this.getShort();
@@ -2316,8 +2687,7 @@ window.__require = function e(t, n, r) {
   }, {
     "../../Loading/src/Configs": void 0,
     "../../Lobby/LobbyScript/Script/networks/Network.InPacket": void 0,
-    "../../Lobby/LobbyScript/Script/networks/Network.OutPacket": void 0,
-    "./Shan.Contants": "Shan.Contants"
+    "../../Lobby/LobbyScript/Script/networks/Network.OutPacket": void 0
   } ],
   "Shan.Contants": [ function(require, module, exports) {
     "use strict";
@@ -2326,20 +2696,8 @@ window.__require = function e(t, n, r) {
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.Contanst = exports.ShanContants = void 0;
-    var ShanContants;
-    (function(ShanContants) {
-      var ROOM_PLAYER_STATE = function() {
-        function ROOM_PLAYER_STATE() {}
-        ROOM_PLAYER_STATE.NO_PLAYER = 0;
-        ROOM_PLAYER_STATE.VIEWING = 1;
-        ROOM_PLAYER_STATE.SITTING = 2;
-        ROOM_PLAYER_STATE.PLAYING = 3;
-        return ROOM_PLAYER_STATE;
-      }();
-      ShanContants.ROOM_PLAYER_STATE = ROOM_PLAYER_STATE;
-    })(ShanContants = exports.ShanContants || (exports.ShanContants = {}));
-    exports.Contanst = {
+    exports.ConnectionState = exports.Constant = void 0;
+    exports.Constant = {
       SHANKOEMEE_LOCAL_TEST: false,
       SHANKOEMEE_MAX_PLAYER: 7,
       SHANKOEMEE_CHIP_VALUES: [ 1, 5, 10, 50, 100, 200 ],
@@ -2368,2106 +2726,14 @@ window.__require = function e(t, n, r) {
       SHANKOEMEE_POINTNODE_Z_INDEX: 12,
       SHANKOEMEE_USERNODE_Z_INDEX: 1
     };
-    exports.default = ShanContants;
+    exports.ConnectionState = {
+      NO_CONNECTION: 0,
+      CLOSING: 1,
+      CONNECTING: 2,
+      CONNECTED: 3
+    };
     cc._RF.pop();
   }, {} ],
-  "Shan.Controller": [ function(require, module, exports) {
-    "use strict";
-    cc._RF.push(module, "a6313Hqd0JKG7JIFairuMUa", "Shan.Controller");
-    "use strict";
-    var __extends = this && this.__extends || function() {
-      var extendStatics = function(d, b) {
-        extendStatics = Object.setPrototypeOf || {
-          __proto__: []
-        } instanceof Array && function(d, b) {
-          d.__proto__ = b;
-        } || function(d, b) {
-          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
-        };
-        return extendStatics(d, b);
-      };
-      return function(d, b) {
-        extendStatics(d, b);
-        function __() {
-          this.constructor = d;
-        }
-        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
-      };
-    }();
-    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
-      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
-      return c > 3 && r && Object.defineProperty(target, key, r), r;
-    };
-    Object.defineProperty(exports, "__esModule", {
-      value: true
-    });
-    exports.NodeShowCard = void 0;
-    var Configs_1 = require("../../Loading/src/Configs");
-    var App_1 = require("../../Lobby/LobbyScript/Script/common/App");
-    var BroadcastReceiver_1 = require("../../Lobby/LobbyScript/Script/common/BroadcastReceiver");
-    var SPUtils_1 = require("../../Lobby/LobbyScript/Script/common/SPUtils");
-    var Utils_1 = require("../../Lobby/LobbyScript/Script/common/Utils");
-    var Network_InPacket_1 = require("../../Lobby/LobbyScript/Script/networks/Network.InPacket");
-    var Sham_TimeCountDown_1 = require("./common/Sham.TimeCountDown");
-    var Shan_BankerPlayingNode_1 = require("./common/Shan.BankerPlayingNode");
-    var Shan_ChipGroup_1 = require("./common/Shan.ChipGroup");
-    var Shan_NanBai_1 = require("./common/Shan.NanBai");
-    var Shan_Pot_1 = require("./common/Shan.Pot");
-    var Shan_CardUtil_1 = require("./Shan.CardUtil");
-    var Shan_Cmd_1 = require("./Shan.Cmd");
-    var Shan_Contants_1 = require("./Shan.Contants");
-    var Shan_NetworkClient_1 = require("./Shan.NetworkClient");
-    var Shan_Player_1 = require("./Shan.Player");
-    var Shan_Room_1 = require("./Shan.Room");
-    var TW = cc.tween;
-    var audio_clip;
-    (function(audio_clip) {
-      audio_clip[audio_clip["BG"] = 0] = "BG";
-      audio_clip[audio_clip["LOSE"] = 1] = "LOSE";
-      audio_clip[audio_clip["WIN"] = 2] = "WIN";
-      audio_clip[audio_clip["CHIA_BAI"] = 3] = "CHIA_BAI";
-      audio_clip[audio_clip["CHIP"] = 4] = "CHIP";
-      audio_clip[audio_clip["CLOCK"] = 5] = "CLOCK";
-      audio_clip[audio_clip["START_BET"] = 6] = "START_BET";
-    })(audio_clip || (audio_clip = {}));
-    var configPlayer = [];
-    var defaultPlayerPos = [ [ 0, 1, 2, 3, 4, 5, 6, 7 ], [ 1, 2, 3, 4, 5, 6, 7, 0 ], [ 2, 3, 4, 5, 6, 7, 0, 1 ], [ 3, 4, 5, 6, 7, 0, 1, 2 ], [ 4, 5, 6, 7, 0, 1, 2, 3 ], [ 5, 6, 7, 0, 1, 2, 3, 4 ], [ 6, 7, 0, 1, 2, 3, 4, 5 ], [ 7, 0, 1, 2, 3, 4, 5, 6 ] ];
-    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
-    var NodeShowCard = function() {
-      function NodeShowCard() {
-        this.cardHide1 = null;
-        this.cardHide2 = null;
-        this.cardShow = null;
-        this.userHand = null;
-        this.userFinger = null;
-        this.nodeThis = null;
-        this.animHand = null;
-        this.btns = [];
-        this.btnOpen = null;
-        this.lbTime = null;
-        this._isInstantWin = false;
-        this._countDownEndAt = 0;
-        this._hasBeenShowCard = false;
-        this._canNan = false;
-        this._isClosing = false;
-        this._isBanker = false;
-        this._countDownEndAt = 0;
-        this._hasBeenShowCard = false;
-        this._isClosing = true;
-        this._canNan = false;
-      }
-      NodeShowCard.prototype.enableBtns = function(value) {
-        for (var i = 0; i < this.btns.length; i++) this.btns[i].active = value;
-      };
-      NodeShowCard.prototype.showButtons = function() {
-        cc.log("showButtons");
-        if (this._isInstantWin) {
-          cc.log("closeDialog showButtons");
-          this.enableBtns(false);
-          this.btnOpen.active = false;
-          this.hide();
-        } else {
-          this.enableBtns(true);
-          this.btnOpen.active = false;
-        }
-      };
-      NodeShowCard.prototype.setInfo = function() {
-        var _this = this;
-        this.nodeThis.on(cc.Node.EventType.TOUCH_MOVE, function(touch) {
-          _this.animHand.node.active = false;
-          var delta = touch.getDelta();
-          if (delta.x > 0 && _this.cardShow.angle > -30) {
-            _this.cardShow.angle < -12;
-            _this.cardShow.angle -= delta.x / 20;
-            _this.userFinger.angle -= delta.x / 20;
-          }
-        });
-        this.nodeThis.on(cc.Node.EventType.TOUCH_END, function(touch) {
-          _this.cardShow.angle < -20 && TW(_this.userHand).to(.5, {
-            angle: 90
-          }, {
-            easing: cc.easing.sineIn
-          }).call(function() {
-            _this.nodeThis.active = false;
-            _this._onNanFinish();
-          }).start();
-        });
-      };
-      NodeShowCard.prototype.show = function(currentCards) {
-        var _this = this;
-        this.animHand.node.active = false;
-        this.nodeThis.getChildByName("animHand").active = true;
-        this.cardHide2.angle = -2;
-        this.cardShow.angle = -5;
-        this.userFinger.angle = 0;
-        this.cardShow.getComponent("TienLen.Card").setCardData(currentCards[0]);
-        this.cardHide2.getComponent("TienLen.Card").setCardData(currentCards[1]);
-        this.cardHide1.active = false;
-        cc.Tween.stopAllByTarget(this.userHand);
-        TW(this.userHand).set({
-          angle: 90
-        }).to(.5, {
-          angle: 0
-        }, {
-          easing: cc.easing.sineOut
-        }).call(function() {
-          _this.setInfo();
-        }).start();
-      };
-      NodeShowCard.prototype.init = function(seconds, isBanker, isInstantWin, cardIds, closeCb) {
-        this._hasBeenShowCard = false;
-        this._isClosing = false;
-        this.enableBtns(false);
-        this.btnOpen.active = false;
-        this._isBanker = isBanker;
-        this._isInstantWin = isInstantWin;
-        this._cardIds = cardIds;
-        this._closeCB = closeCb;
-        this.startCount(seconds);
-        this.nodeThis.active = true;
-        this._canNan = false;
-        this._canNan = false;
-      };
-      NodeShowCard.prototype._onNanFinish = function() {
-        cc.log("showButtons On nan finish==");
-        this._hasBeenShowCard = true;
-        var actions = [];
-        this._isBanker || this.cardHide1.active ? actions.push(cc.delayTime(.5), cc.callFunc(function() {
-          cc.log("closeDialog _onNanFinish");
-          this.closeDialog();
-        }.bind(this))) : actions.push(cc.delayTime(.1), cc.callFunc(function() {
-          this.showButtons();
-        }.bind(this)));
-        this.nodeThis.stopAllActions();
-        this.nodeThis.runAction(cc.sequence(actions));
-      };
-      NodeShowCard.prototype.hide = function() {
-        var _this = this;
-        TW(this.userHand).to(.5, {
-          angle: 90
-        }, {
-          easing: cc.easing.sineIn
-        }).call(function() {
-          _this.nodeThis.active = false;
-        }).start();
-      };
-      NodeShowCard.prototype.startCount = function(seconds) {
-        this._countDownEndAt = 1e3 * seconds + cc.sys.now();
-      };
-      NodeShowCard.prototype.closeDialog = function() {
-        if (!this._isClosing) {
-          this._isClosing = true;
-          this.nodeThis.active = false;
-          this._onClose();
-        }
-      };
-      NodeShowCard.prototype._onClose = function() {
-        this._closeCB && this._closeCB();
-      };
-      NodeShowCard.prototype.update = function(dt) {
-        if (this.animHand.node.active) {
-          if (cc.sys.now() < this._countDownEndAt) this.lbTime.string = Math.ceil((this._countDownEndAt - cc.sys.now()) / 1e3) + ""; else {
-            cc.log("closeDialog update", cc.sys.now(), this._countDownEndAt);
-            this.closeDialog();
-          }
-          !this._hasBeenShowCard && Math.ceil((this._countDownEndAt - cc.sys.now()) / 1e3) < 7 && this._onNanFinish();
-        }
-      };
-      __decorate([ property(cc.Node) ], NodeShowCard.prototype, "cardHide1", void 0);
-      __decorate([ property(cc.Node) ], NodeShowCard.prototype, "cardHide2", void 0);
-      __decorate([ property(cc.Node) ], NodeShowCard.prototype, "cardShow", void 0);
-      __decorate([ property(cc.Node) ], NodeShowCard.prototype, "userHand", void 0);
-      __decorate([ property(cc.Node) ], NodeShowCard.prototype, "userFinger", void 0);
-      __decorate([ property(cc.Node) ], NodeShowCard.prototype, "nodeThis", void 0);
-      __decorate([ property(sp.Skeleton) ], NodeShowCard.prototype, "animHand", void 0);
-      __decorate([ property(cc.Node) ], NodeShowCard.prototype, "btns", void 0);
-      __decorate([ property(cc.Node) ], NodeShowCard.prototype, "btnOpen", void 0);
-      __decorate([ property(cc.Label) ], NodeShowCard.prototype, "lbTime", void 0);
-      NodeShowCard = __decorate([ ccclass("Shan.Controller.NodeShowCard") ], NodeShowCard);
-      return NodeShowCard;
-    }();
-    exports.NodeShowCard = NodeShowCard;
-    var ShanController = function(_super) {
-      __extends(ShanController, _super);
-      function ShanController() {
-        var _this = _super.call(this) || this;
-        _this.isInitedUIRoom = false;
-        _this.nanBaiPrefab = null;
-        _this.bankerPlayingPrefab = null;
-        _this.toggleMusic = null;
-        _this.toggleSound = null;
-        _this.nodeSetting = null;
-        _this.timeCountDown = null;
-        _this.pot = null;
-        _this.chipGroup = null;
-        _this.bgChat = null;
-        _this.contentChatNhanh = null;
-        _this.boxSetting = null;
-        _this.UI_Playing = null;
-        _this.meCards = null;
-        _this.groupPlayers = null;
-        _this.matchPot = null;
-        _this.labelMatchPot = null;
-        _this.cardsDeal = null;
-        _this.btnBet = null;
-        _this.btnOpenCard = null;
-        _this.btnLeaveRoom = null;
-        _this.hubChips = null;
-        _this.labelRoomId = null;
-        _this.labelRoomBet = null;
-        _this.actionBetting = null;
-        _this.betChooseValue = null;
-        _this.betChooseValueTarget = null;
-        _this.bgWarningCount = null;
-        _this.popupMatchResult = null;
-        _this.contentMatchResult = null;
-        _this.prefabItemResult = null;
-        _this.scrollMatchResult = null;
-        _this.notifyTimeStart = null;
-        _this.notifyTimeEnd = null;
-        _this.notifyTimeBet = null;
-        _this.UI_Chat = null;
-        _this.edtChatInput = null;
-        _this.popupGuide = null;
-        _this.soundManager = null;
-        _this.nodeShowCard = null;
-        _this.seatOwner = null;
-        _this.currentRoomBet = null;
-        _this.gameState = null;
-        _this.minutes = null;
-        _this.seconds = null;
-        _this.timeAutoStart = null;
-        _this.timeEnd = null;
-        _this.timeBet = null;
-        _this.intervalWaitting = null;
-        _this.intervalEnd = null;
-        _this.intervalBetting = null;
-        _this.currentCard = null;
-        _this.numCardOpened = 0;
-        _this.arrBetValue = [];
-        _this.listDataRoom = [];
-        _this.listFullRoom = [];
-        _this.arrBetPos = [ -157.5, -52.5, 52.5, 157.5 ];
-        _this.currentBetSelectedIndex = 0;
-        _this.currentMatchPotValue = 0;
-        _this.timeoutEndGame = null;
-        _this.timeoutChiaBaiDone = null;
-        _this.timeoutEndPhaseOne = null;
-        _this.timeoutEndPhaseTwo = null;
-        _this.arrPosDanhBien = [];
-        _this.timeInBg = 0;
-        _this._roomData = {};
-        return _this;
-      }
-      ShanController_1 = ShanController;
-      ShanController.prototype.onLoad = function() {
-        this.initNodeWithPrefab();
-        this.timeCountDown && (this.timeCountDown.node.zIndex = 999);
-        this.uiNode = new cc.Node();
-        this.node.addChild(this.uiNode);
-        this.uiNode.zIndex = 2;
-        ShanController_1.instance = this;
-        this.soundManager = Shan_Room_1.default.instance.soundManager;
-        this.seatOwner = -1;
-        this.initConfigPlayer();
-        this.pot.setValue(0);
-        this.btnBet.active = false;
-        this.bankerPlayingNode.node.active = false;
-        this.nanBaiLayer.node.active = false;
-        this.bgWarningCount && (this.bgWarningCount.active = false);
-        this.bgWarningCount.zIndex = Shan_Contants_1.Contanst.SHANKOEMEE_ALERT_Z_INDEX;
-        this.timeCountDown.node.zIndex = Shan_Contants_1.Contanst.SHANKOEMEE_ALERT_Z_INDEX;
-        this.chipGroup.node.zIndex = Shan_Contants_1.Contanst.SHANKOEMEE_CHIPNODE_Z_INDEX;
-        this._chipNode = new cc.Node();
-        this.node.addChild(this._chipNode);
-      };
-      ShanController.prototype.initNodeWithPrefab = function() {
-        this.nanBaiLayer = this._createNodeFromPrefab(this.nanBaiPrefab, 1e3).getComponent(Shan_NanBai_1.NodeNanBai);
-        this.bankerPlayingNode = this._createNodeFromPrefab(this.bankerPlayingPrefab, 1e3).getComponent(Shan_BankerPlayingNode_1.default);
-        this.bankerPlayingNode.node.active = false;
-      };
-      ShanController.prototype._createNodeFromPrefab = function(prefab, zIndex) {
-        var node = cc.instantiate(prefab);
-        this.node.addChild(node);
-        zIndex && (node.zIndex = zIndex);
-        return node;
-      };
-      ShanController.prototype.showSetting = function() {
-        this.toggleMusic.isChecked = SPUtils_1.default.getMusicVolumn() > 0;
-        this.toggleSound.isChecked = SPUtils_1.default.getSoundVolumn() > 0;
-        this.nodeSetting.active = true;
-      };
-      ShanController.prototype.hideSetting = function() {
-        this.nodeSetting.active = false;
-      };
-      ShanController.prototype.onBtnToggleMusic = function() {
-        SPUtils_1.default.setMusicVolumn(this.toggleMusic.isChecked ? 1 : 0);
-        BroadcastReceiver_1.default.send(BroadcastReceiver_1.default.ON_AUDIO_CHANGED);
-      };
-      ShanController.prototype.onBtnToggleSound = function() {
-        SPUtils_1.default.setSoundVolumn(this.toggleSound.isChecked ? 1 : 0);
-        BroadcastReceiver_1.default.send(BroadcastReceiver_1.default.ON_AUDIO_CHANGED);
-      };
-      ShanController.prototype.onBtnSetting = function() {
-        this.boxSetting.active = !this.boxSetting.active;
-      };
-      ShanController.prototype.onBtnClickBgChat = function() {
-        this.UI_Chat.opacity = 100;
-        this.bgChat.active = false;
-      };
-      ShanController.prototype.onBtnClickBoxChat = function() {
-        this.UI_Chat.opacity = 255;
-        this.bgChat.active = true;
-      };
-      ShanController.prototype.start = function() {
-        this.setupTimeRunInBg();
-        this.bgChat.active = false;
-        var self = this;
-        var _loop_1 = function() {
-          var node = this_1.contentChatNhanh.children[i];
-          node.on("click", function() {
-            self.chatNhanhMsg(node.children[0].getComponent(cc.Label).string);
-          });
-        };
-        var this_1 = this;
-        for (var i = 0; i < this.contentChatNhanh.childrenCount; i++) _loop_1();
-        this.setupListener();
-        this.unschedule(this.intervalBetting);
-        this.soundManager.stopAudioEffect();
-      };
-      ShanController.prototype.setupTimeRunInBg = function() {
-        var _this = this;
-        cc.game.on(cc.game.EVENT_HIDE, function() {
-          _this.timeInBg = cc.sys.now();
-        });
-        cc.game.on(cc.game.EVENT_SHOW, function() {
-          var timeNow = cc.sys.now();
-          var timeHide = _this.timeInBg;
-          cc.director.getActionManager().update((timeNow - timeHide) / 1e3);
-          cc.Tween.stopAllByTag(1);
-          if ((timeNow - timeHide) / 1e3 > 15) {
-            _this.node.active = false;
-            Shan_Room_1.default.instance.node.active = true;
-            _this.refeshListRoom();
-            App_1.default.instance.showToast(App_1.default.instance.getTextLang("txt_out_game"));
-          }
-        });
-      };
-      ShanController.prototype.genCardDeal = function() {
-        if (1 == this.cardsDeal.childrenCount) for (var i = 1; i < 24; i++) this.cardsDeal.addChild(cc.instantiate(this.cardsDeal.children[0]));
-      };
-      ShanController.prototype.joinRoom = function(info) {
-        if (Configs_1.default.Login.Coin < info.requiredMoney) {
-          App_1.default.instance.alertDialog.showMsg(App_1.default.instance.getTextLang("txt_not_enough_money"));
-          return;
-        }
-        App_1.default.instance.showLoading(true);
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendJoinRoomById(info["id"]));
-      };
-      ShanController.prototype.refeshListRoom = function() {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendGetListRoom());
-      };
-      ShanController.prototype.toggleUIChat = function() {
-        false == this.UI_Chat.active ? this.showUIChat() : this.closeUIChat();
-      };
-      ShanController.prototype.showUIChat = function() {
-        this.onBtnClickBoxChat();
-        this.UI_Chat.active = true;
-        this.UI_Chat.active = true;
-        cc.tween(this.UI_Chat).to(.3, {
-          x: cc.winSize.width / 2 - this.UI_Chat.width / 2
-        }, {
-          easing: cc.easing.sineOut
-        }).start();
-      };
-      ShanController.prototype.closeUIChat = function() {
-        var _this = this;
-        this.onBtnClickBgChat();
-        cc.tween(this.UI_Chat).to(.3, {
-          x: cc.winSize.width / 2 + this.UI_Chat.width / 2
-        }, {
-          easing: cc.easing.sineIn
-        }).call(function() {
-          _this.UI_Chat.active = false;
-        }).start();
-      };
-      ShanController.prototype.chatEmotion = function(event, id) {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendChatRoom(1, id));
-        this.closeUIChat();
-      };
-      ShanController.prototype.chatMsg = function() {
-        if (this.edtChatInput.string.trim().length > 0) {
-          Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendChatRoom(0, this.edtChatInput.string));
-          this.edtChatInput.string = "";
-          this.closeUIChat();
-        }
-      };
-      ShanController.prototype.chatNhanhMsg = function(msg) {
-        if (msg.trim().length > 0) {
-          Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendChatRoom(0, msg));
-          this.closeUIChat();
-        }
-      };
-      ShanController.prototype.showPopupGuide = function() {
-        this.popupGuide.active = true;
-      };
-      ShanController.prototype.closePopupGuide = function() {
-        this.popupGuide.active = false;
-      };
-      ShanController.prototype.closeUIPlaying = function() {
-        this.actionLeaveRoom();
-      };
-      ShanController.prototype.setupMatch = function(data) {
-        this.closePopupMatchResult();
-        this.closeUIChat();
-        for (var index = 1; index < 8; index++) {
-          var player = this.getPlayerHouse(index);
-          player.showPopupBet(false);
-          player.closePopupRequestDanhBien();
-        }
-        this._roomData.playerList = data.playerInfos;
-        var chuongChair = data["chuongChair"];
-        var countDownTime = data["countDownTime"];
-        var gameAction = data["gameAction"];
-        var gameId = data["gameId"];
-        var moneyBet = data["moneyBet"];
-        var moneyType = data["moneyType"];
-        var myChair = data["myChair"];
-        var playerInfos = data["playerInfos"];
-        var playerSize = data["playerSize"];
-        var playerStatus = data["playerStatus"];
-        var roomId = data["roomId"];
-        var rule = data["rule"];
-        this.labelRoomId.string = roomId + "";
-        this.labelRoomBet.string = Utils_1.default.formatNumber(moneyBet);
-        this.currentRoomBet = moneyBet;
-        this.gameState = gameAction;
-        configPlayer[0].playerId = Configs_1.default.Login.Nickname;
-        configPlayer[0].playerPos = myChair;
-        var numPlayers = 0;
-        var arrPlayerPosExist = [];
-        var arrPlayerInfo = [];
-        var arrPlayerStatus = [];
-        for (var index = 0; index < playerInfos.length; index++) if ("" !== playerInfos[index].nickName) {
-          numPlayers += 1;
-          arrPlayerPosExist.push(index);
-          arrPlayerInfo.push(playerInfos[index]);
-          arrPlayerStatus.push(playerStatus[index]);
-        }
-        this.resetHubChips();
-        for (var a = 0; a < configPlayer.length; a++) configPlayer[a].playerPos = defaultPlayerPos[myChair][a];
-        for (var index = 0; index < configPlayer.length; index++) {
-          var findPos = arrPlayerPosExist.indexOf(configPlayer[index].playerPos);
-          var seatId = configPlayer[index].seatId;
-          var player = this.getPlayerHouse(seatId);
-          player.resetPlayerInfo();
-          if (findPos > -1) {
-            if (arrPlayerStatus[findPos] == Shan_Cmd_1.default.Code.PLAYER_STATUS_SITTING || arrPlayerStatus[findPos] == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING) {
-              configPlayer[index].isViewer = false;
-              player.setIsViewer(false);
-            } else {
-              configPlayer[index].isViewer = true;
-              player.setIsViewer(true);
-              player.playFxViewer();
-            }
-            this.setupSeatPlayer(seatId, arrPlayerInfo[findPos]);
-          } else {
-            player.showBtnInvite(true);
-            configPlayer[index].isViewer = true;
-          }
-        }
-        for (var index = 0; index < 8; index++) {
-          var player = this.getPlayerHouse(index);
-          player.setOwner(false);
-        }
-        var seatOwner = this.findPlayerSeatByPos(chuongChair);
-        var playerOwner = this.getPlayerHouse(seatOwner);
-        if (-1 !== seatOwner) {
-          playerOwner.setOwner(true);
-          this.seatOwner = seatOwner;
-        }
-        countDownTime > 0 && (1 == this.gameState ? this.startBettingCountDown(countDownTime) : this.getNumPlayers().length < 0 && this.startEndCountDown(countDownTime));
-      };
-      ShanController.prototype.startWaittingCountDown = function(timeWait) {
-        var _this = this;
-        this.timeAutoStart = timeWait;
-        this.setTimeWaittingCountDown();
-        this.notifyTimeStart.active = true;
-        this.notifyTimeStart.parent.active = true;
-        this.unschedule(this.intervalWaitting);
-        this.unschedule(this.intervalEnd);
-        this.schedule(this.intervalWaitting = function() {
-          _this.timeAutoStart--;
-          _this.setTimeWaittingCountDown();
-          if (_this.timeAutoStart < 1) {
-            _this.unschedule(_this.intervalWaitting);
-            _this.notifyTimeStart.active = false;
-            _this.notifyTimeStart.parent.active = false;
-          }
-        }, 1);
-      };
-      ShanController.prototype.stopWaittingCountDown = function() {
-        this.unschedule(this.intervalWaitting);
-        this.notifyTimeStart.active = false;
-        this.notifyTimeStart.parent.active = false;
-      };
-      ShanController.prototype.setTimeWaittingCountDown = function() {
-        this.seconds = Math.floor(this.timeAutoStart % 60);
-        this.notifyTimeStart.getComponent(cc.Label).string = " \u1014\u1031\u102c\u1000\u103a\u1019\u103e\u1005\u1010\u1004\u103a\u1015\u102b\u104b : " + this.seconds + "s ";
-      };
-      ShanController.prototype.startEndCountDown = function(timeWait) {
-        var _this = this;
-        this.timeEnd = timeWait;
-        this.setTimeEndCountDown();
-        this.notifyTimeStart.active = true;
-        this.notifyTimeStart.parent.active = true;
-        this.unschedule(this.intervalEnd);
-        this.unschedule(this.intervalWaitting);
-        this.schedule(this.intervalEnd = function() {
-          _this.timeEnd--;
-          _this.setTimeEndCountDown();
-          if (_this.timeEnd < 1) {
-            _this.unschedule(_this.intervalEnd);
-            _this.notifyTimeEnd.active = false;
-            _this.notifyTimeEnd.parent.active = false;
-          }
-        }, 1);
-      };
-      ShanController.prototype.setTimeEndCountDown = function() {
-        this.seconds = Math.floor(this.timeEnd % 60);
-        this.notifyTimeStart.getComponent(cc.Label).string = App_1.default.instance.getTextLang("txt_end_after") + " " + this.seconds + "s ";
-      };
-      ShanController.prototype.startBettingCountDown = function(turnTime) {
-        var _this = this;
-        this.timeBet = turnTime;
-        this.actionBetting.active = true;
-        this.processBetting(1);
-        this.unschedule(this.intervalBetting);
-        this.soundManager.stopAudioEffect();
-        var deltaTime = turnTime / 200;
-        var deltaFill = .005;
-        var fullRange = 1;
-        cc.Tween.stopAllByTarget(this.actionBetting);
-        cc.tween(this.actionBetting).repeat(200, cc.tween().delay(deltaTime).call(function() {
-          fullRange -= deltaFill;
-          _this.timeBet -= deltaTime;
-          _this.processBetting(fullRange);
-          _this.timeBet < 0 && (_this.actionBetting.active = false);
-        })).start();
-        this.intervalBetting = this.schedule(function() {
-          _this.soundManager.playAudioEffect(audio_clip.CLOCK);
-        }, 1, turnTime);
-      };
-      ShanController.prototype.stopBettingCountDown = function() {
-        cc.Tween.stopAllByTarget(this.actionBetting);
-        this.unschedule(this.intervalBetting);
-        this.actionBetting.active = false;
-      };
-      ShanController.prototype.processBetting = function(rate) {
-        this.actionBetting.getChildByName("Step").getComponent(cc.Sprite).fillRange = rate;
-      };
-      ShanController.prototype.openMeCard = function(event, itemId) {
-        if (false == this.getPlayerHouse(0).isShowCard) {
-          this.nodeShowCard.nodeThis.active = true;
-          var currenCardId_1 = [];
-          this.currentCard.forEach(function(element) {
-            currenCardId_1.push(Shan_CardUtil_1.default.getNormalId(element));
-          });
-          this.nodeShowCard.show(currenCardId_1);
-        }
-      };
-      ShanController.prototype.getCardsScore = function(arrCards) {
-        var score = 0;
-        for (var a = 0; a < 3; a++) score += Shan_CardUtil_1.default.getDiemById(arrCards[a]);
-        score %= 10;
-        0 == score && (score = 10);
-        return score;
-      };
-      ShanController.prototype.moveChipsToHubNow = function(index) {
-        this.hubChips.children[2 * index].setPosition(25, 80);
-        this.hubChips.children[2 * index].scale = 0;
-        this.hubChips.children[2 * index + 1].setPosition(25, 80);
-        this.hubChips.children[2 * index + 1].scale = 0;
-      };
-      ShanController.prototype.fxMoveChips = function(chips, delay, toX, toY) {
-        chips.runAction(cc.sequence(cc.delayTime(delay), cc.scaleTo(0, 1, 1), cc.spawn(cc.moveTo(.8, toX, toY), cc.scaleTo(.8, 0, 0))));
-      };
-      ShanController.prototype.resetHubChips = function() {
-        var arrFromX = [ 70, 280, 280, 260, 100, -260, -375, -360 ];
-        var arrFromY = [ -195, -150, -55, 70, 90, 85, -30, -155 ];
-        for (var index = 0; index < 8; index++) {
-          this.hubChips.children[2 * index].setPosition(arrFromX[index], arrFromY[index]);
-          this.hubChips.children[2 * index + 1].setPosition(arrFromX[index], arrFromY[index]);
-        }
-        for (var index = 0; index < 16; index++) this.hubChips.children[index].active = false;
-      };
-      ShanController.prototype.setupBet = function() {
-        this.currentBetSelectedIndex = 0;
-        this.betChooseValueTarget.x = this.arrBetPos[this.currentBetSelectedIndex];
-      };
-      ShanController.prototype.showPopupMatchResult = function(data) {
-        this.popupMatchResult.active = true;
-        this.contentMatchResult.removeAllChildren(true);
-        for (var index = 0; index < data.length; index++) {
-          var item = cc.instantiate(this.prefabItemResult);
-          item.getComponent("Shan.ItemResult").initItem(data[index]);
-          this.contentMatchResult.addChild(item);
-        }
-        this.scrollMatchResult.scrollToTop(.2);
-      };
-      ShanController.prototype.closePopupMatchResult = function() {
-        this.popupMatchResult.active = false;
-      };
-      ShanController.prototype.setupListener = function() {
-        var _this = this;
-        Shan_NetworkClient_1.default.getInstance().addListener(function(data) {
-          var inpacket = new Network_InPacket_1.default(data);
-          switch (inpacket.getCmdId()) {
-           case Shan_Cmd_1.default.Code.LOGIN:
-            cc.log("<<<< Login <<<<");
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedLogin(data);
-            if (0 == res.getError()) {
-              _this.refeshListRoom();
-              Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.CmdReconnectRoom());
-            } else cc.log("login fail");
-            break;
-
-           case Shan_Cmd_1.default.Code.TOPSERVER:
-            cc.log("<<<< TopServer <<<<");
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedTopServer(data);
-            var rankType = res["rankType"];
-            var topDay_money = res["topDay_money"];
-            var topWeek_money = res["topWeek_money"];
-            var topMonth_money = res["topMonth_money"];
-            break;
-
-           case Shan_Cmd_1.default.Code.CMD_PINGPONG:
-            App_1.default.instance.showLoading(false);
-            break;
-
-           case Shan_Cmd_1.default.Code.CMD_JOIN_ROOM:
-            App_1.default.instance.showLoading(false);
-            cc.log("<<<< Join room <<<<");
-            break;
-
-           case Shan_Cmd_1.default.Code.CMD_RECONNECT_ROOM:
-            App_1.default.instance.showLoading(false);
-            cc.log("Reconnect room in room");
-            cc.log("<<<< Reconnect in room <<<<");
-            break;
-
-           case Shan_Cmd_1.default.Code.MONEY_BET_CONFIG:
-            App_1.default.instance.showLoading(false);
-            break;
-
-           case Shan_Cmd_1.default.Code.MATCH_INFO:
-            _this.onWsMatchInfo(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.START_GAME:
-            App_1.default.instance.showLoading(false);
-            _this.onWsMatchStart(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.START_PHASE_ONE:
-            App_1.default.instance.showLoading(false);
-            _this.onWsStartPhaseOne(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.START_PHASE_TWO:
-            App_1.default.instance.showLoading(false);
-            _this.onWsStartPhaseTwo(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.SEEN:
-            App_1.default.instance.showLoading(false);
-            _this.onWsSeen(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.BETTING:
-            App_1.default.instance.showLoading(false);
-            _this.onWsBetting(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.DRAW:
-            App_1.default.instance.showLoading(false);
-            _this.onWsDraw(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.COMPARE:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedCompare(data);
-            cc.log("Compare ", JSON.stringify(res.data));
-            break;
-
-           case Shan_Cmd_1.default.Code.BANKER_WIN:
-            App_1.default.instance.showLoading(false);
-            _this.onWsBankerWin(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.MATCH_INFO:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedMatchInfo(data);
-            cc.log("Match info ", JSON.stringify(res.data));
-            break;
-
-           case Shan_Cmd_1.default.Code.END_GAME:
-            App_1.default.instance.showLoading(false);
-            _this.onWsMatchEnd(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.FINISH:
-            App_1.default.instance.showLoading(false);
-            _this.onWsMatchFinish(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.ROOM_START_COUNTDOWN:
-            _this.onWsRoomStartCountDown(data);
-
-           case Shan_Cmd_1.default.Code.ROOM_REGISTER_LEAVE:
-            _this.onWsLeaveRoom(data);
-
-           case Shan_Cmd_1.default.Code.MO_BAI:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedMoBai(data);
-            var chairMoBai = res["chairMoBai"];
-            var cards = res["cards"];
-            var seatId_1 = _this.findPlayerSeatByPos(chairMoBai);
-            var player = _this.getPlayerHouse(seatId_1);
-            if (-1 != seatId_1 && 0 != seatId_1 && !player.isShowCard) {
-              for (var a = 0; a < 3; a++) {
-                var spriteCardId = Shan_CardUtil_1.default.getNormalId(cards[a]);
-                player.transformToCardReal(a, spriteCardId, a);
-                player.showCardReal(true);
-              }
-              player.showCardName(_this.getCardsScore(cards) + " \u101b\u1019\u103e\u1010\u103a\u1019\u103b\u102c\u1038");
-            }
-            break;
-
-           case Shan_Cmd_1.default.Code.BAT_DAU:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedFirstTurnDecision(data);
-            _this.resetHubChips();
-            _this.closePopupMatchResult();
-            break;
-
-           case Shan_Cmd_1.default.Code.KET_THUC:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedEndGame(data);
-            _this.unschedule(_this.intervalEnd);
-            _this.notifyTimeEnd.active = false;
-            _this.notifyTimeEnd.parent.active = false;
-            var cardList = res["cardList"];
-            var tienThangChuong = res["tienThangChuong"];
-            var tienThangGa = res["tienThangGa"];
-            var keCuaMoneyList = res["keCuaMoneyList"];
-            var danhBienMoneyList = res["danhBienMoneyList"];
-            var tongTienCuoiVan = res["tongTienCuoiVan"];
-            var tongTienCuocList = res["tongTienCuocList"];
-            var tongDanhBienList = res["tongDanhBienList"];
-            var tongKeCuaList = res["tongKeCuaList"];
-            var tongCuocGaList = res["tongCuocGaList"];
-            var tongCuoiVanList = res["tongCuoiVanList"];
-            var currentMoneyList = res["currentMoneyList"];
-            var timeEndGame = res["timeEndGame"];
-            var posPlaying = [];
-            for (var index = 0; index < 8; index++) cardList[index].length > 0 && posPlaying.push(index);
-            var result = [];
-            for (var index = 0; index < 8; index++) {
-              var findId = posPlaying.indexOf(configPlayer[index].playerPos);
-              var player = _this.getPlayerHouse(index);
-              if (-1 !== findId) {
-                var cards = cardList[posPlaying[findId]];
-                var cardReady = player.node.children[2].children[0];
-                if (!player.isShowCard) {
-                  for (var a = 0; a < 3; a++) if (1 == cardReady.children[a].scale) {
-                    var spriteCardId = Shan_CardUtil_1.default.getNormalId(cards[a]);
-                    player.transformToCardReal(a, spriteCardId);
-                  }
-                  player.showCardName(_this.getCardsScore(cards) + " \u101b\u1019\u103e\u1010\u103a\u1019\u103b\u102c\u1038");
-                }
-                result.push({
-                  userName: configPlayer[index].playerId,
-                  bet: tongTienCuocList[posPlaying[findId]],
-                  bien: tongDanhBienList[posPlaying[findId]],
-                  ke: tongKeCuaList[posPlaying[findId]],
-                  ga: tongCuocGaList[posPlaying[findId]],
-                  total: tongCuoiVanList[posPlaying[findId]]
-                });
-                var info = {
-                  moneyChange: tongCuoiVanList[posPlaying[findId]],
-                  money: currentMoneyList[posPlaying[findId]],
-                  ga: tongCuocGaList[posPlaying[findId]]
-                };
-                if (0 == index) {
-                  Configs_1.default.Login.Coin = info.money;
-                  BroadcastReceiver_1.default.send(BroadcastReceiver_1.default.USER_UPDATE_COIN);
-                }
-                if (info.moneyChange >= 0) {
-                  0 == index && _this.soundManager.playAudioEffect(audio_clip.WIN);
-                  player.fxWin(info);
-                } else {
-                  0 == index && _this.soundManager.playAudioEffect(audio_clip.LOSE);
-                  player.fxLose(info);
-                }
-              }
-            }
-            result.length > 0 && setTimeout(function() {
-              _this.labelMatchPot.string = "0";
-            }, 4e3);
-            _this.nodeShowCard.hide();
-            _this.stopBettingCountDown();
-            break;
-
-           case Shan_Cmd_1.default.Code.CHIA_BAI:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedChiaBai(data);
-            _this.stopBettingCountDown();
-            _this.btnBet.active = false;
-            _this.btnOpenCard.active = false;
-            for (var index = 1; index < 8; index++) {
-              var player = _this.getPlayerHouse(index);
-              player.showPopupBet(false);
-              player.closePopupRequestDanhBien();
-              player.isShowCard = false;
-            }
-            _this.getPlayerHouse(0).isShowCard = false;
-            _this.matchPot.getComponent(cc.Button).interactable = false;
-            _this.matchPot.children[0].color = cc.Color.GRAY;
-            var cards = res["cards"];
-            var timeChiaBai_1 = res["timeChiaBai"];
-            clearTimeout(_this.timeoutEndGame);
-            _this.timeoutEndGame = setTimeout(function() {
-              _this.startEndCountDown(timeChiaBai_1);
-            }, 2e3);
-            _this.currentCard = cards;
-            var arrSeatExist = _this.getNumPlayers();
-            var numPlayer_1 = arrSeatExist.length;
-            _this.genCardDeal();
-            for (var index = 0; index < 24; index++) {
-              _this.cardsDeal.children[index].active = !(index >= 3 * numPlayer_1);
-              _this.cardsDeal.children[index].setPosition(0, 0);
-              _this.cardsDeal.children[index].angle = 0;
-            }
-            var timeShip = .1;
-            for (var a = 0; a < 3; a++) for (var b = 0; b < numPlayer_1; b++) {
-              var seatId_2 = arrSeatExist[b];
-              if (-1 !== seatId_2) {
-                var card4Me = _this.cardsDeal.children[a * numPlayer_1 + b];
-                card4Me.active = true;
-                var rawPlayerPos = new cc.Vec2(_this.groupPlayers.children[seatId_2].position.x, _this.groupPlayers.children[seatId_2].position.y);
-                cc.tween(card4Me).delay((a * numPlayer_1 + b) * timeShip).parallel(cc.tween().call(function() {
-                  _this.soundManager.playAudioEffect(audio_clip.CHIA_BAI);
-                }), cc.tween().to(.2, {
-                  position: rawPlayerPos
-                }, {
-                  easing: cc.easing.sineIn
-                }), cc.tween().by(.2, {
-                  angle: 360
-                }, {
-                  easing: cc.easing.sineIn
-                })).start();
-              }
-            }
-            var delayOver2Under = .2;
-            var maxDelay = (2 * numPlayer_1 + (numPlayer_1 - 1)) * timeShip;
-            var timeUnderLayer = 1e3 * (maxDelay + .2 + delayOver2Under);
-            clearTimeout(_this.timeoutChiaBaiDone);
-            _this.timeoutChiaBaiDone = setTimeout(function() {
-              for (var index = 0; index < 24; index++) _this.cardsDeal.children[index].active = false;
-              for (var index = 0; index < numPlayer_1; index++) {
-                var seatId_3 = arrSeatExist[index];
-                if (-1 !== seatId_3) {
-                  0 == seatId_3 && _this.getPlayerHouse(seatId_3).resetCardReady();
-                  _this.getPlayerHouse(seatId_3).showCardReal(true);
-                }
-              }
-            }, timeUnderLayer);
-            break;
-
-           case Shan_Cmd_1.default.Code.TU_DONG_BAT_DAU:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedAutoStart(data);
-            if (res.isAutoStart) {
-              _this.resetHubChips();
-              _this.startWaittingCountDown(res.timeAutoStart);
-              _this.btnBet.active = false;
-              _this.btnOpenCard.active = false;
-              _this.matchPot.active = false;
-              _this.matchPot.getComponent(cc.Button).interactable = true;
-              _this.matchPot.children[0].color = cc.Color.WHITE;
-              _this.resetPlayersPlaying();
-              _this.arrPosDanhBien = [];
-            }
-            _this.closePopupMatchResult();
-            break;
-
-           case Shan_Cmd_1.default.Code.DAT_CUOC:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedDatCuoc(data);
-            var chairDatCuoc = res["chairDatCuoc"];
-            var level = res["level"];
-            var seatId_4 = _this.findPlayerSeatByPos(chairDatCuoc);
-            var player = _this.getPlayerHouse(seatId_4);
-            if (-1 != seatId_4) {
-              player.setBet(_this.arrBetValue[level - 1]);
-              player.addChips();
-            }
-            _this.soundManager.playAudioEffect(audio_clip.CHIP);
-            break;
-
-           case Shan_Cmd_1.default.Code.ROOM_REGISTER_LEAVE:
-            cc.log("Register leave room");
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedNotifyRegOutRoom(data);
-            var outChair = res["outChair"];
-            var isOutRoom = res["isOutRoom"];
-            var seatId_5 = _this.findPlayerSeatByPos(outChair);
-            0 == seatId_5 && (isOutRoom ? App_1.default.instance.showToast(App_1.default.instance.getTextLang("txt_room_leave")) : App_1.default.instance.showToast(App_1.default.instance.getTextLang("txt_room_cancel_leave")));
-            -1 !== seatId_5 && _this.getPlayerHouse(seatId_5).showLeaveRoom(isOutRoom);
-            break;
-
-           case Shan_Cmd_1.default.Code.DOI_CHUONG:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedDoiChuong(data);
-            for (var index = 0; index < 8; index++) _this.getPlayerHouse(index).setOwner(false);
-            var seatId_6 = _this.findPlayerSeatByPos(res["chuongChair"]);
-            if (-1 != seatId_6) {
-              _this.getPlayerHouse(seatId_6).setOwner(true);
-              _this.seatOwner = seatId_6;
-            }
-            break;
-
-           case Shan_Cmd_1.default.Code.MOI_DAT_CUOC:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedMoiDatCuoc(data);
-            _this.startBettingCountDown(res.timeDatCuoc);
-            _this.showSliderBet();
-            _this.numCardOpened = 0;
-            _this.soundManager.playAudioEffect(audio_clip.START_BET);
-            break;
-
-           case Shan_Cmd_1.default.Code.CHEAT_CARDS:
-           case Shan_Cmd_1.default.Code.DANG_KY_CHOI_TIEP:
-           case Shan_Cmd_1.default.Code.UPDATE_OWNER_ROOM:
-            App_1.default.instance.showLoading(false);
-            break;
-
-           case Shan_Cmd_1.default.Code.LEAVE_GAME:
-            cc.log("Leave Game");
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedUserLeaveRoom(data);
-            var chair = res["chair"];
-            var seatId_7 = _this.findPlayerSeatByPos(chair);
-            if (-1 !== seatId_7) {
-              for (var index = 0; index < configPlayer.length; index++) if (configPlayer[index].seatId == seatId_7) {
-                configPlayer[index].playerId = -1;
-                configPlayer[index].isViewer = true;
-              }
-              var player = _this.getPlayerHouse(seatId_7);
-              player.resetPlayerInfo();
-              player.showBtnInvite(true);
-              var arrSeatExistLast = _this.getNumPlayers();
-              if (1 == arrSeatExistLast.length) {
-                _this.resetPlayersPlaying();
-                _this.matchPot.active = false;
-              }
-              if (0 == seatId_7) {
-                _this.node.active = false;
-                Shan_Room_1.default.instance.node.active = true;
-                _this.refeshListRoom();
-              }
-            }
-            break;
-
-           case Shan_Cmd_1.default.Code.NOTIFY_KICK_FROM_ROOM:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedKickOff(data);
-            break;
-
-           case Shan_Cmd_1.default.Code.NEW_USER_JOIN:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedUserJoinRoom(data);
-            cc.log("<<<< New user join <<<< ", JSON.stringify(res));
-            var info = res["info"];
-            var uChair = res["uChair"];
-            var uStatus = res["uStatus"];
-            for (var index = 0; index < configPlayer.length; index++) {
-              var seatId = configPlayer[index].seatId;
-              var player = _this.getPlayerHouse(seatId);
-              if (configPlayer[index].playerPos == uChair) {
-                player.resetPlayerInfo();
-                var customPlayerInfo = {
-                  avatar: info["avatar"],
-                  nickName: info["nickName"],
-                  money: info["money"]
-                };
-                _this.setupSeatPlayer(seatId, customPlayerInfo);
-                if (uStatus == Shan_Cmd_1.default.Code.PLAYER_STATUS_VIEWER) {
-                  configPlayer[seatId].isViewer = true;
-                  player.setIsViewer(true);
-                  player.playFxViewer();
-                } else {
-                  configPlayer[seatId].isViewer = false;
-                  player.setIsViewer(false);
-                }
-              }
-            }
-            break;
-
-           case Shan_Cmd_1.default.Code.NOTIFY_USER_GET_JACKPOT:
-            App_1.default.instance.showLoading(false);
-            break;
-
-           case Shan_Cmd_1.default.Code.UPDATE_MATCH:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedUpdateMatch(data);
-            var myChair = res["myChair"];
-            var hasInfo = res["hasInfo"];
-            var infos = res["infos"];
-            for (var index = 0; index < hasInfo.length; index++) {
-              var pos = configPlayer[index]["playerPos"];
-              if (hasInfo[pos]) {
-                _this.getPlayerHouse(index).setGold(infos[pos]["money"]);
-                configPlayer[index]["playerId"] = infos[pos]["nickName"];
-                if (infos[pos]["status"] == Shan_Cmd_1.default.Code.PLAYER_STATUS_SITTING || infos[pos]["status"] == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING) {
-                  configPlayer[index]["isViewer"] = false;
-                  _this.getPlayerHouse(index).setIsViewer(false);
-                } else {
-                  configPlayer[index]["isViewer"] = true;
-                  _this.getPlayerHouse(index).setIsViewer(true);
-                  _this.getPlayerHouse(index).playFxViewer();
-                }
-                _this.setupSeatPlayer(index, infos[pos]);
-              } else {
-                configPlayer[index]["playerId"] = -1;
-                configPlayer[index]["isViewer"] = true;
-              }
-            }
-            break;
-
-           case Shan_Cmd_1.default.Code.CHAT_ROOM:
-            App_1.default.instance.showLoading(false);
-            var res = new Shan_Cmd_1.default.ReceivedChatRoom(data);
-            var chair = res["chair"];
-            var isIcon = res["isIcon"];
-            var content = res["content"];
-            if (isIcon) {
-              var seatId_8 = _this.findPlayerSeatByPos(chair);
-              -1 != seatId_8 && _this.getPlayerHouse(seatId_8).showChatEmotion(content);
-            } else {
-              var seatId_9 = _this.findPlayerSeatByPos(chair);
-              -1 != seatId_9 && _this.getPlayerHouse(seatId_9).showChatMsg(content);
-            }
-          }
-        }, this);
-      };
-      ShanController.prototype.onWsMatchStart = function(pkg) {
-        var data = new Shan_Cmd_1.default.ReceivedMatchStart(pkg).data;
-        console.log("Start game ", JSON.stringify(data.data));
-        for (var i = 0; i < this._roomData.playerList.length; i++) for (var j = 0; j < data.playerList.length; j++) if (this._roomData.playerList[i].chair == data.playerList[j].chair) {
-          this._roomData.playerList[i].avatar = data.playerList[j].avatar;
-          this._roomData.playerList[i].money = data.playerList[j].money;
-          this._roomData.playerList[i].userId = data.playerList[j].userId;
-          this._roomData.playerList[i].userName = data.playerList[j].userName;
-          this._roomData.playerList[i].stateId = Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING;
-          this._roomData.playerList[i].betAmount = data.playerList[j].betAmount;
-        }
-        this._roomData.matchId = data.matchId;
-        this._updateRoomData();
-        this.onGameBet(data.countDownTime, data.bankerChair, data.bankerPot, data.moneyAddToPot, data.warningCount);
-        this.soundManager.playAudioEffect(audio_clip.START_BET);
-      };
-      ShanController.prototype.onGameBet = function(countDownTime, bankerChair, bankerPot, moneyAddToPot, warningCount) {
-        cc.log("onGameBet", countDownTime, bankerChair, bankerPot, moneyAddToPot, warningCount);
-        this.changeBankerChair(bankerChair);
-        var timeW = this.updateWarningCount(warningCount);
-        this.bankerPot = bankerPot;
-        moneyAddToPot > 0 ? this.chipGroup.playerBet(this.getPlayerHouse[this.seatOwner], moneyAddToPot, true) : this.chipGroup.fixChipGroup(bankerPot);
-        this.pot.setValue(bankerPot);
-        0 != this.seatOwner && this.getPlayerHouse(0).status == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING && this.showSliderBet();
-      };
-      ShanController.prototype.changeBankerChair = function(chair) {
-        if (this.seatOwner != chair) {
-          this.seatOwner = chair;
-          for (var i = 0; i < this.groupPlayers.children.length; i++) this.getPlayerHouse(i).setOwner(false);
-          if (chair >= 0 && chair < this.groupPlayers.children) {
-            var seatId = this.findPlayerSeatByPos(chair);
-            var player = this.getPlayerHouse(seatId);
-            player.setOwner(true);
-            this.seatOwner = seatId;
-            this._roomData;
-          }
-        }
-      };
-      ShanController.prototype.updateWarningCount = function(count) {
-        return count <= 0 ? 0 : 2;
-      };
-      ShanController.prototype.onWsStartPhaseOne = function(data) {
-        var _this = this;
-        var res = new Shan_Cmd_1.default.ReceivedStartPhaseOne(data);
-        console.log("Start phase one", JSON.stringify(res.data));
-        this.stopBettingCountDown();
-        this.btnBet.active = false;
-        this.btnOpenCard.active = true;
-        for (var i_1 = 0; i_1 < res.data.playerList.length; i_1++) {
-          var playerData = res.data.playerList[i_1];
-          var seatId = this.findPlayerSeatByPos(playerData.chair);
-          var player = this.getPlayerHouse(seatId);
-          if (player.status == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING && playerData.bet > 0) {
-            player.setBet(playerData.bet);
-            player.setGold(playerData.remainGold);
-            0 == seatId;
-          }
-        }
-        for (var index = 1; index < 8; index++) {
-          var player = this.getPlayerHouse(index);
-          player.showPopupBet(false);
-          player.closePopupRequestDanhBien();
-          player.isShowCard = false;
-        }
-        this.getPlayerHouse(0).isShowCard = false;
-        var cards = res.data.cards;
-        var timeChiaBai = res.data.countDownTime;
-        this.currentCard = cards;
-        var arrSeatExist = this.getNumPlayers();
-        var numPlayer = arrSeatExist.length;
-        this.genCardDeal();
-        for (var index = 0; index < 24; index++) {
-          this.cardsDeal.children[index].active = !(index >= 2 * numPlayer);
-          this.cardsDeal.children[index].setPosition(0, 0);
-          this.cardsDeal.children[index].angle = 0;
-        }
-        var timeShip = .1;
-        var numCardPerPlayer = 2;
-        for (var a = 0; a < numCardPerPlayer; a++) for (var b = 0; b < numPlayer; b++) {
-          var seatId = arrSeatExist[b];
-          if (-1 !== seatId) {
-            var cardNode = this.cardsDeal.children[a * numPlayer + b];
-            cardNode.active = true;
-            var rawPlayerPos = new cc.Vec2(this.groupPlayers.children[seatId].position.x, this.groupPlayers.children[seatId].position.y);
-            cc.tween(cardNode).delay((a * numPlayer + b) * timeShip).parallel(cc.tween().call(function() {
-              _this.soundManager.playAudioEffect(audio_clip.CHIA_BAI);
-            }), cc.tween().to(.2, {
-              position: rawPlayerPos
-            }, {
-              easing: cc.easing.sineIn
-            }), cc.tween().by(.2, {
-              angle: 360
-            }, {
-              easing: cc.easing.sineIn
-            })).start();
-          }
-        }
-        var delayOver2Under = .2;
-        var maxDelay = (2 * numPlayer + (numPlayer - 1)) * timeShip;
-        var timeUnderLayer = 1e3 * (maxDelay + .2 + delayOver2Under);
-        clearTimeout(this.timeoutChiaBaiDone);
-        this.timeoutChiaBaiDone = setTimeout(function() {
-          for (var index = 0; index < 8 * numCardPerPlayer; index++) _this.cardsDeal.children[index].active = false;
-          for (var index = 0; index < numPlayer; index++) {
-            var seatId = arrSeatExist[index];
-            if (-1 !== seatId) {
-              0 == seatId && _this.getPlayerHouse(seatId).resetCardReadyPhaseOne();
-              _this.getPlayerHouse(seatId).showCardReadyPhaseOne(true);
-              _this.getPlayerHouse(seatId).showCardReal(false);
-            }
-          }
-        }, timeUnderLayer);
-        var actions = [];
-        actions.push(cc.delayTime(timeUnderLayer));
-        var isInstantEndGame = false;
-        var _loop_2 = function() {
-          var tmpSeatId = this_2.findPlayerSeatByPos(res.data.dataList[i].chair);
-          if (0 == tmpSeatId) isInstantEndGame = true; else {
-            var tempPlayer_1 = this_2.getPlayerHouse(tmpSeatId);
-            var tempDataCard_1 = res.data.dataList[i].cards;
-            actions.push(cc.delayTime(.5), cc.callFunc(function() {
-              tempPlayer_1.setCardData(tempDataCard_1);
-            }));
-          }
-        };
-        var this_2 = this;
-        for (var i = 0; i < res.data.dataList.length; i++) _loop_2();
-        var players = this.groupPlayers.children.filter(function(p) {
-          return p.getComponent(Shan_Player_1.default).status == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING;
-        });
-        actions.push(cc.delayTime(.5), cc.callFunc(function() {
-          _this.onGamePlay(data.countDownTime, isInstantEndGame);
-          for (var j = 0; j < players.length; j++) players[j].getComponent(Shan_Player_1.default).setVisibleWatingOpenCards(true);
-        }));
-        this.node.runAction(cc.sequence(actions));
-      };
-      ShanController.prototype.onGamePlay = function(seconds, isInstantEndGame) {
-        var _this = this;
-        this.timeCountDown.show("player_time", seconds, 0 == this.seatOwner);
-        cc.log("gamePlay", this.getPlayerHouse(0).status, seconds, isInstantEndGame);
-        if (this.getPlayerHouse(0).status == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING) if (seconds <= 5) this.getPlayerHouse(0).transformAllToCardReal(); else {
-          this.nanBaiLayer.init(seconds, 0 == this.seatOwner, isInstantEndGame, this.getPlayerHouse(0).getCardData(), function() {
-            _this._onNanBaiLayerClosed();
-          });
-          this.nodeShowCard.show(this.getPlayerHouse(0).getCardData());
-        }
-      };
-      ShanController.prototype._onNanBaiLayerClosed = function() {
-        this.getPlayerHouse(0).transformAllToCardReal();
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendSeen());
-      };
-      ShanController.prototype.onWsStartPhaseTwo = function(data) {
-        var res = new Shan_Cmd_1.default.ReceivedStartPhaseTwo(data);
-        cc.log("start phase two ", JSON.stringify(res.data));
-        this.onGamePhaseTwo(res.data.countDownTime);
-      };
-      ShanController.prototype.onGamePhaseTwo = function(countDownTime) {
-        var _this = this;
-        var isBanker = 0 == this.seatOwner;
-        cc.tween(this.node).delay(.5).call(function() {
-          _this.bankerPlayingNode.setActive(isBanker);
-          _this.shouldShowBtnCompare();
-        }).start();
-        clearTimeout(this.timeoutEndGame);
-        this.timeoutEndGame = setTimeout(function() {
-          _this.startEndCountDown(countDownTime);
-        }, 2e3);
-        isBanker || this.nanBaiLayer.closeDialog();
-        this.timeCountDown.show("banker_time", countDownTime, isBanker);
-      };
-      ShanController.prototype.shouldShowBtnCompare = function() {
-        var isBanker = 0 == this.seatOwner;
-        if (isBanker) {
-          var countShan = 0;
-          var countTwoCard = 0;
-          var countThreeCard = 0;
-          var countEmptyCard = 0;
-          var playerSize = this.groupPlayers.children.length;
-          for (var i = 1; i < playerSize; i++) {
-            var p = this.getPlayerHouse(i);
-            p.bgShan9.node.active || p.bgShan8.node.active || p.bgShanSap.node.active ? countShan++ : 2 == p._cardData.length ? countTwoCard++ : 3 == p._cardData.length ? countThreeCard++ : countEmptyCard++;
-          }
-          this.bankerPlayingNode.setActiveBtnCompare(countTwoCard > 0 && countThreeCard > 0);
-        }
-      };
-      ShanController.prototype.onWsSeen = function(data) {
-        var res = new Shan_Cmd_1.default.ReceivedSeen(data);
-        cc.log("seen ", JSON.stringify(res.data));
-        var seatId = this.findPlayerSeatByPos(res.data.chair);
-        var player = this.getPlayerHouse(seatId);
-        player.setVisibleWatingOpenCards(false);
-        0 == seatId ? this.nanBaiLayer.closeDialog() : player.getCardData().length > 0 && player.transformAllToCardReal();
-      };
-      ShanController.prototype.onWsMatchEnd = function(data) {
-        var res = new Shan_Cmd_1.default.ReceivedMatchEnd(data);
-        cc.log("End game ", JSON.stringify(res.data));
-        for (var i = 0; i < this.groupPlayers.children.length; i++) this.getPlayerHouse(this.findPlayerSeatByPos(i)).setVisibleWatingOpenCards(false);
-        this.nanBaiLayer.closeDialog();
-        this.onGameEndMatch(res.data);
-        this.getPlayerHouse(0).status == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING && Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendUserAction(this._userAction));
-      };
-      ShanController.prototype.onGameEndMatch = function(data) {
-        Math.floor(data.bankerCards[0] / 4) == Math.floor(data.bankerCards[1] / 4) && Math.floor(data.bankerCards[1] / 4) == Math.floor(data.bankerCards[2] / 4) && (this._delayForJackPotWin = 2);
-        0 == data.endType ? this.compareFinish(data) : this.manualFinish(data);
-      };
-      ShanController.prototype.compareFinish = function(data) {
-        var _this = this;
-        this.timeCountDown.showText("compare_3");
-        this.btnBet.active = false;
-        this.bankerPlayingNode.setActive(false);
-        this.bankerPot = data.bankerPot;
-        var banker = this.getPlayerHouse(this.seatOwner);
-        var listThree = data.playerList.filter(function(p) {
-          return 3 == p.cards.length;
-        });
-        var listTwo = data.playerList.filter(function(p) {
-          return 2 == p.cards.length;
-        });
-        var actions = [];
-        actions.push(cc.delayTime(1.5));
-        actions.push(cc.callFunc(function() {
-          _this.timeCountDown.node.active = false;
-          for (var i = 0; i < listThree.length; i++) {
-            var seatId = _this.findPlayerSeatByPos(listThree[i].chair);
-            var player = _this.getPlayerHouse(seatId);
-            if (0 != seatId) {
-              player.setCardData(listThree[i].cards);
-              player.transformAllToCardReal();
-            }
-          }
-        }));
-        actions.push(cc.delayTime(2));
-        actions.push(cc.callFunc(function() {
-          banker.setCardData(data.bankerCards.slice(0, 2));
-          banker.transformAllToCardReal();
-          for (var i = 0; i < listThree.length; i++) {
-            var seatId = _this.findPlayerSeatByPos(listThree[i].chair);
-            var player = _this.getPlayerHouse(seatId);
-            listThree[i].isWin ? player.showAnimWinLose(true) : player.showAnimWinLose(false);
-          }
-        }));
-        actions.push(cc.callFunc(function() {
-          var _loop_3 = function() {
-            pData = listThree[i];
-            var seatId = _this.findPlayerSeatByPos(pData.chair);
-            player = _this.getPlayerHouse(seatId);
-            var moneyChangeBeforTax = 0 == pData.moneyChangeBeforTax ? pData.moneyChange : pData.moneyChangeBeforTax;
-            if (!pData.isWin) {
-              player.node.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(function(sender, data) {
-                _this.chipGroup.playerBet(data.player, -moneyChangeBeforTax, false);
-                player.hideBet();
-                player.moneyChange(pData.moneyChange, pData.money, false);
-              })));
-              0 === seatId && _this.seatOwner !== seatId;
-            }
-          };
-          var pData, player;
-          for (var i = 0; i < listThree.length; i++) _loop_3();
-        }));
-        actions.push(cc.delayTime(2));
-        actions.push(cc.callFunc(function() {
-          var cardNode = _this.cardsDeal.children[0];
-          for (var i = 0; i < _this.cardsDeal.children.length; i++) if (!_this.cardsDeal.children[i].active) {
-            cardNode = _this.cardsDeal.children[i];
-            break;
-          }
-          var rawPlayerPos = new cc.Vec2(_this.groupPlayers.children[_this.seatOwner].position.x, _this.groupPlayers.children[_this.seatOwner].position.y);
-          cc.tween(cardNode).delay(.1).parallel(cc.tween().call(function() {
-            _this.soundManager.playAudioEffect(audio_clip.CHIA_BAI);
-          }), cc.tween().to(.2, {
-            position: rawPlayerPos
-          }, {
-            easing: cc.easing.sineIn
-          }), cc.tween().by(.2, {
-            angle: 360
-          }, {
-            easing: cc.easing.sineIn
-          })).call(function() {}).start();
-          _this.timeoutChiaBaiDone = setTimeout(function() {
-            cardNode.active = false;
-            banker.showCardReadyThird(true);
-            banker.showCardRealThird(false);
-          }, .6);
-          if (0 == _this.seatOwner) {
-            banker.isShowCard = false;
-            banker.addCardData(data.bankerCards[2]);
-            cc.tween(banker.node).delay(.7).call(function() {
-              banker.transformToCardReal(2, banker._cardData[2], 1);
-              banker.showGroupName(cardNode.scale, false);
-            }).start();
-          }
-        }));
-        actions.push(cc.delayTime(.5));
-        actions.push(cc.callFunc(function() {
-          _this.timeCountDown.showText("compare_2");
-        }));
-        actions.push(cc.delayTime(1.5));
-        actions.push(cc.callFunc(function() {
-          for (var i = 0; i < listTwo.length; i++) {
-            var localChair = _this.findPlayerSeatByPos(listTwo[i].chair);
-            var player = _this.getPlayerHouse(localChair);
-            if (0 != localChair) {
-              player.setCardData(listTwo[i].cards);
-              player.transformAllToCardReal();
-            }
-          }
-        }));
-        actions.push(cc.delayTime(2));
-        actions.push(cc.callFunc(function() {
-          banker.setCardData(data.bankerCards);
-          banker.isShowCard = false;
-          banker.transformAllToCardReal();
-          for (var i = 0; i < listTwo.length; i++) {
-            var seatId = _this.findPlayerSeatByPos(listTwo[i].chair);
-            var player = _this.getPlayerHouse(seatId);
-            listTwo[i].isWin ? player.showAnimWinLose(true) : player.showAnimWinLose(false);
-          }
-        }));
-        actions.push(cc.delayTime(.5));
-        actions.push(cc.callFunc(function() {
-          var _loop_4 = function() {
-            pData = listTwo[i];
-            localChair = this_3._getLocalChair(pData.chair);
-            player = this_3.playerNodes[localChair];
-            var moneyChangeBeforTax = 0 == pData.moneyChangeBeforTax ? pData.moneyChange : pData.moneyChangeBeforTax;
-            if (!pData.isWin) {
-              player.node.runAction(cc.callFunc(function(sender, data) {
-                this.chipGroup.playerBet(data.player, -moneyChangeBeforTax, false);
-                data.player.hideBet();
-                data.player.moneyChange(data.pData.moneyChange, data.pData.money, false);
-              }, this_3, {
-                player: player,
-                pData: pData
-              }));
-              0 === localChair && this_3._getLocalChair(this_3.bankerChair) !== localChair;
-            }
-          };
-          var this_3 = this, pData, localChair, player;
-          for (var i = 0; i < listTwo.length; i++) _loop_4();
-        }.bind(this)));
-        actions.push(cc.delayTime(1));
-        actions.push(cc.callFunc(function() {
-          var dataPay = [ {
-            goldOut: data.bankerPot,
-            goldOutRaw: data.bankerPot,
-            goldChange: data.bankerPot,
-            player: banker,
-            isBanker: true,
-            arrC: []
-          } ];
-          var delayBetweenPlayer = data.isShowUserByUser ? 1 : 0;
-          for (var i = 0; i < data.playerList.length; i++) {
-            var pData = data.playerList[i];
-            var seatId = _this.findPlayerSeatByPos(listTwo[i].chair);
-            var player = _this.getPlayerHouse(seatId);
-            if (pData.isWin) {
-              dataPay.push({
-                goldOut: pData.moneyChangeBeforTax,
-                goldOutRaw: pData.moneyChangeBeforTax,
-                goldChange: pData.moneyChange,
-                goldFinal: pData.money,
-                player: player,
-                arrC: [],
-                delay: delayBetweenPlayer * i
-              });
-              0 === seatId && _this.seatOwner !== seatId;
-            }
-          }
-          0 === _this.seatOwner;
-          _this.chipGroup.node.runAction(cc.callFunc(function() {
-            _this.chipGroup.distributeMoney(dataPay);
-          }));
-        }));
-        this.node.runAction(cc.sequence(actions));
-      };
-      ShanController.prototype.manualFinish = function(data) {
-        var _this = this;
-        this.timeCountDown.node.active = false;
-        this.btnBet.active = false;
-        this.bankerPlayingNode.setActive(false);
-        this.bankerPot = data.bankerPot;
-        var banker = this.getPlayerHouse(this.seatOwner);
-        var actions = [];
-        0 != data.endType && 1 != data.endType || actions.push(cc.callFunc(function() {
-          var cardNode = _this.cardsDeal.children[0];
-          for (var i = 0; i < _this.cardsDeal.children.length; i++) if (!_this.cardsDeal.children[i].active) {
-            cardNode = _this.cardsDeal.children[i];
-            break;
-          }
-          var rawPlayerPos = new cc.Vec2(_this.groupPlayers.children[_this.seatOwner].position.x, _this.groupPlayers.children[_this.seatOwner].position.y);
-          cc.tween(cardNode).delay(.1).parallel(cc.tween().call(function() {
-            _this.soundManager.playAudioEffect(audio_clip.CHIA_BAI);
-          }), cc.tween().to(.2, {
-            position: rawPlayerPos
-          }, {
-            easing: cc.easing.sineIn
-          }), cc.tween().by(.2, {
-            angle: 360
-          }, {
-            easing: cc.easing.sineIn
-          })).call(function() {}).start();
-          _this.timeoutChiaBaiDone = setTimeout(function() {
-            cardNode.active = false;
-            banker.showCardReadyThird(true);
-            banker.showCardRealThird(false);
-          }, .6);
-          if (0 == _this.seatOwner) {
-            banker.addCardData(data.bankerCards[2]);
-            banker.isShowCard = false;
-            cc.tween(banker.node).delay(.7).call(function() {
-              banker.transformAllToCardReal();
-            }).start();
-          }
-        }));
-        actions.push(cc.delayTime(1));
-        actions.push(cc.callFunc(function() {
-          for (var i = 0; i < data.playerList.length; i++) {
-            var pData = data.playerList[i];
-            var localChair = _this.findPlayerSeatByPos(pData.chair);
-            var player = _this.getPlayerHouse(localChair);
-            if (0 != localChair) {
-              player.setCardData(pData.cards);
-              player.transformAllToCardReal();
-            }
-          }
-        }));
-        if (0 != this.seatOwner) {
-          actions.push(cc.delayTime(.5));
-          actions.push(cc.callFunc(function() {
-            banker.isShowCard = false;
-            banker.setCardData(data.bankerCards);
-            banker.transformAllToCardReal();
-          }));
-        }
-        actions.push(cc.delayTime(.5));
-        actions.push(cc.callFunc(function() {
-          for (var i = 0; i < data.playerList.length; i++) {
-            var pData = data.playerList[i];
-            var localChair = _this.findPlayerSeatByPos(pData.chair);
-            var player = _this.getPlayerHouse(localChair);
-            pData.isWin ? player.showAnimWinLose(true) : player.showAnimWinLose(false);
-          }
-        }));
-        actions.push(cc.delayTime(1));
-        actions.push(cc.callFunc(function() {
-          var hasPlayerLose = false;
-          var dataPay = [ {
-            goldOut: data.bankerPot,
-            goldOutRaw: data.bankerPot,
-            goldChange: data.bankerPot,
-            player: banker,
-            isBanker: true,
-            arrC: []
-          } ];
-          var delayBetweenPlayer = data.isShowUserByUser ? 1 : 0;
-          var _loop_5 = function() {
-            pData = data.playerList[i];
-            localChair = _this.findPlayerSeatByPos(pData.chair);
-            player = _this.getPlayerHouse(localChair);
-            var moneyChangeBeforTax = 0 == pData.moneyChangeBeforTax ? pData.moneyChange : pData.moneyChangeBeforTax;
-            if (pData.isWin) dataPay.push({
-              goldOut: pData.moneyChangeBeforTax,
-              goldOutRaw: pData.moneyChangeBeforTax,
-              goldChange: pData.moneyChange,
-              goldFinal: pData.money,
-              player: player,
-              arrC: [],
-              delay: delayBetweenPlayer * i
-            }); else {
-              hasPlayerLose = true;
-              player.node.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(function(sender, data) {
-                this.chipGroup.playerBet(data.player, -moneyChangeBeforTax, false);
-                data.player.hideBet();
-                data.player.moneyChange(data.pData.moneyChange, data.pData.money, false);
-              }, _this, {
-                player: player,
-                pData: pData
-              })));
-            }
-            0 === localChair && _this.seatOwner !== localChair;
-          };
-          var pData, localChair, player;
-          for (var i = 0; i < data.playerList.length; i++) _loop_5();
-          0 === _this.seatOwner;
-          _this.chipGroup.node.runAction(cc.sequence(cc.delayTime(hasPlayerLose ? 2 : 0), cc.callFunc(function() {
-            _this.chipGroup.distributeMoney(dataPay);
-          })));
-        }));
-        this.node.runAction(cc.sequence(actions));
-      };
-      ShanController.prototype.onWsMatchFinish = function(data) {
-        var res = new Shan_Cmd_1.default.ReceivedMatchFinish(data);
-        cc.log("Finish ", JSON.stringify(res.data));
-        this.onGameFinishMatch(res.data);
-      };
-      ShanController.prototype.onGameFinishMatch = function(data) {
-        this.clean();
-        this._userAction = false;
-        this.unschedule(this.intervalEnd);
-        this.notifyTimeEnd.active = false;
-        this.notifyTimeEnd.parent.active = false;
-        this.changeBankerChair(data.bankerChair);
-        this.pot.setValue(data.bankerPot);
-        0 == data.bankerPot && this.chipGroup.reset();
-        this._roomData.playerList = data.playerList;
-        for (var i = 0; i < this.groupPlayers.children.length; i++) {
-          var p = this.getPlayerHouse(i);
-          p.updateInfo(this._roomData.playerList[i]);
-        }
-        this.onGameNewMatch();
-      };
-      ShanController.prototype.clean = function() {
-        this.node.stopAllActions();
-        for (var i = 0; i < this.groupPlayers.children.length; i++) this.getPlayerHouse(i).clean();
-        this.uiNode.removeAllChildren();
-        this._userAction = false;
-      };
-      ShanController.prototype.onGameNewMatch = function() {
-        this._updateRoomData();
-        this.btnBet.active = false;
-      };
-      ShanController.prototype._updateRoomData = function() {
-        this._updatePlayerNodes();
-        this._updateRoomOwner();
-        for (var i = 0; i < 8; i++) this.getPlayerHouse(i).setBaseBetAmount(this._roomData.moneyBet());
-        this.chipGroup.initChip(this, this._roomData.moneyBet);
-      };
-      ShanController.prototype._updatePlayerNodes = function() {
-        for (var i = 0; i < this._roomData.playerList.length; i++) {
-          var d = this._roomData.playerList[i];
-          var localChair = this.findPlayerSeatByPos(d.chair);
-          this.getPlayerHouse(localChair).updateInfo(d);
-        }
-      };
-      ShanController.prototype.showBankerWin = function(value, name) {};
-      ShanController.prototype.onWsRoomInfo = function(data) {
-        cc.log(data);
-        this._roomData = data;
-        this._updateRoomData();
-        App_1.default.instance.showLoading(false);
-      };
-      ShanController.prototype.restoreGame = function(data) {
-        cc.log("restoreGame", data);
-        var ownCardList = data.cardList;
-        var countDownTime = data.countDownTime;
-        var bankerChair = data.bankerChair;
-        var bankerPot = data.bankerPot;
-        var isInstantEndGame = data.isInstantEndGame;
-        var playerList = data.playerList.filter(function(p) {
-          return p.stateId == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING;
-        });
-        this.onWsRoomInfo(data);
-        cc.log(playerList);
-        for (var i = 0; i < playerList.length; i++) {
-          var localChair = this.findPlayerSeatByPos(playerList[i].chair);
-          0 != localChair ? playerList[i].isShow ? this.getPlayerHouse(localChair).instantlyAddCard(playerList[i].cards, true, this.node) : this.getPlayerHouse(localChair).instantlyAddCard([], false, this.node) : this.getPlayerHouse(0).instantlyAddCard(ownCardList, false, this.node);
-          if (playerList[i].betAmount > 0) {
-            this.getPlayerHouse(localChair).setBet(playerList[i].betAmount);
-            this.getPlayerHouse(localChair).setGold(playerList[i].money);
-            this.getPlayerHouse(localChair).showViewBet(playerList[i].betAmount, this._roomData.moneyBet, true);
-          }
-        }
-        for (var i_2 = 0; i_2 < this.groupPlayers.children.length; i_2++) {
-          var player = this.getPlayerHouse(i_2);
-          player._data.stateId == Shan_Cmd_1.default.Code.PLAYER_STATUS_VIEWER && player.showWaitingNewMatch(true);
-        }
-        this.changeBankerChair(bankerChair);
-        this.chipGroup.fixChipGroup(bankerPot);
-        switch (data.gameState) {
-         case 1:
-          this.onGameBet(countDownTime, bankerChair, bankerPot, 0, data.warningCount);
-          break;
-
-         case 2:
-          this.pot.setValue(bankerPot);
-          this.onGamePlay(countDownTime, isInstantEndGame);
-          break;
-
-         case 3:
-          this.pot.setValue(bankerPot);
-          this.getPlayerHouse(0).transformAllToCardReal();
-          this.onGamePhaseTwo(countDownTime);
-          break;
-
-         case 4:
-          this.pot.setValue(bankerPot);
-        }
-        this.getPlayerHouse(0).status !== Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING;
-      };
-      ShanController.prototype.onWsMatchKick = function() {};
-      ShanController.prototype.onWsMatchInfo = function(data) {
-        cc.log("On Ws Match info");
-        var res = new Shan_Cmd_1.default.ReceivedMatchInfo(data);
-        this.onMatchInfo(data);
-      };
-      ShanController.prototype.onMatchInfo = function(data) {
-        cc.log("onWsMatchInfo", data);
-        this.restoreGame(data);
-        this.node.active = false;
-      };
-      ShanController.prototype.onWsDraw = function(data) {
-        var _this = this;
-        var res = new Shan_Cmd_1.default.ReceivedDrawCard(data);
-        cc.log("on Ws draw ", res.data);
-        if (0 != res.getError()) {
-          cc.log("Draw err ", res.getError());
-          return;
-        }
-        var seatId = this.findPlayerSeatByPos(res.data.chair);
-        var player = this.getPlayerHouse(seatId);
-        cc.log("Draw ", JSON.stringify(res.data));
-        var cardNode = this.cardsDeal.children[0];
-        for (var i = 0; i < this.cardsDeal.children.length; i++) if (!this.cardsDeal.children[i].active) {
-          cardNode = this.cardsDeal.children[i];
-          break;
-        }
-        cardNode.active = true;
-        var rawPlayerPos = new cc.Vec2(this.groupPlayers.children[seatId].position.x, this.groupPlayers.children[seatId].position.y);
-        cc.tween(cardNode).delay(.1).parallel(cc.tween().call(function() {
-          _this.soundManager.playAudioEffect(audio_clip.CHIA_BAI);
-        }), cc.tween().to(.2, {
-          position: rawPlayerPos
-        }, {
-          easing: cc.easing.sineIn
-        }), cc.tween().by(.2, {
-          angle: 360
-        }, {
-          easing: cc.easing.sineIn
-        })).call(function() {
-          cardNode.active = false;
-          player.showCardReadyThird(true);
-        }).start();
-        if (0 == seatId) {
-          this.getPlayerHouse(0).hideGroupName();
-          player.addCardData(res.data.cardId);
-          if (seatId == this.seatOwner) {
-            var banker_1 = this.getPlayerHouse(this.seatOwner);
-            banker_1.node.runAction(cc.sequence(cc.delayTime(.3), cc.callFunc(function() {
-              banker_1.transformToCardReal(2, banker_1._cardData[2], 1);
-            })));
-          }
-          this.nanBaiLayer.node.active && this.nanBaiLayer.drawCard(data.cardId);
-        }
-      };
-      ShanController.prototype.onWsBetting = function(data) {
-        var res = new Shan_Cmd_1.default.ReceivedBet(data);
-        if (0 != res.getError()) {
-          cc.log("bet errr ", res.getError());
-          return;
-        }
-        cc.log("Betting ", JSON.stringify(res.data));
-        var chairDatCuoc = res.data.chair;
-        var seatId = this.findPlayerSeatByPos(chairDatCuoc);
-        var player = this.getPlayerHouse(seatId);
-        data.totalBet != this.pot.getValue() && 0 != data.remainGold || 0 != seatId || (this.btnBet.active = false);
-        0 == data.remainGold;
-        data.totalBet == this.pot.getValue();
-        if (-1 != seatId) {
-          player.setBet(res.data.totalBet);
-          player.addChips();
-          player.setGold(res.data.remainGold);
-        }
-        this.soundManager.playAudioEffect(audio_clip.CHIP);
-      };
-      ShanController.prototype.onWsCompare = function() {};
-      ShanController.prototype.onWsBankerWin = function(data) {
-        var res = new Shan_Cmd_1.default.ReceivedBankerWin(data);
-        cc.log("Banker win ", JSON.stringify(res.data));
-        this.changeBankerChair(-1);
-        var seatId = this.findPlayerSeatByPos(res.data.chair);
-        var player = this.getPlayerHouse(seatId);
-        this.chipGroup.collectGold(player);
-        player.moneyChange(data.moneyWin, data.balance, false);
-        this.pot.setValue(0);
-        this.showBankerWin(data.moneyWin, player.getUserName());
-      };
-      ShanController.prototype.onWsLeaveRoom = function(_data, callTime) {
-        cc.log("onWsLeaveRoom", _data);
-        var res = new Shan_Cmd_1.default.ReceivedRoomLeaving(_data);
-        var data = res.data;
-        if (0 == this.findPlayerSeatByUid(data.userId)) this.node.removeFromParent(); else {
-          if (!this._userCouldLeaveRoom(data)) return;
-          var localChair = this.findPlayerSeatByUid(data.userId);
-          if (localChair == this.seatOwner) {
-            if (this.getPlayerHouse(localChair).status == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING) {
-              this._showComputerPlayForBanker();
-              return;
-            }
-            this.chipGroup.reset();
-            this.pot.setValue(0);
-          }
-          this._roomData.roomOwnerId != data.roomOwnerId && (this._roomData.roomOwnerId = data.roomOwnerId);
-          var playerList = this._roomData.playerList;
-          var player = playerList.filter(function(p) {
-            return p.userId == data.userId;
-          })[0];
-          player && this._removePlayer(data, playerList);
-        }
-      };
-      ShanController.prototype._removePlayer = function(data, playerList) {
-        var localChair = this.findPlayerSeatByUid(data.userId);
-        playerList = this._roomData.playerList;
-        var player = playerList.filter(function(p) {
-          return p.userId == data.userId;
-        })[0];
-        if (!player) return cc.log("WARNING: Player Not Found - " + data.userId, playerList);
-        var chair = player.chair;
-        var d = {
-          chair: chair,
-          stateId: Shan_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME
-        };
-        playerList[chair] = d;
-        this._roomData.playerList = playerList;
-        this._roomData.numPlayer -= 1;
-        if (this.getPlayerHouse(localChair)) var success = this.getPlayerHouse(localChair).updateInfo(d);
-        this._updateRoomOwner();
-      };
-      ShanController.prototype._updateRoomOwner = function() {};
-      ShanController.prototype._showComputerPlayForBanker = function() {
-        this.getPlayerHouse(this.seatOwner).showComputerPlay();
-      };
-      ShanController.prototype._userCouldLeaveRoom = function(data) {
-        var localChair = this.findPlayerSeatByUid(data.userId);
-        if (isNaN(localChair)) return;
-        return true;
-      };
-      ShanController.prototype.onWsCheckAction = function() {};
-      ShanController.prototype.onWsRoomStartCountDown = function(data) {
-        var res = new Shan_Cmd_1.default.ReceivedRoomStartCountDown(data);
-        this.startWaittingCountDown(res.data.seconds);
-        this.timeCountDown && this.timeCountDown.show("start_countdown", res.data.seconds);
-      };
-      ShanController.prototype.onWsRoomStopCountDown = function() {
-        this.stopWaittingCountDown();
-        this.timeCountDown && (this.timeCountDown.node.active = false);
-      };
-      ShanController.prototype.actReJoinRoom = function(res) {
-        this.closePopupMatchResult();
-        this.closeUIChat();
-        var myChair = res["myChair"];
-        var chuongChair = res["chuongChair"];
-        var cards = res["cards"];
-        var cuocDanhBienList = res["cuocDanhBienList"];
-        var cuocKeCuaList = res["cuocKeCuaList"];
-        var gameServerState = res["gameServerState"];
-        var isAutoStart = res["isAutoStart"];
-        var gameAction = res["gameAction"];
-        var countDownTime = res["countDownTime"];
-        var moneyType = res["moneyType"];
-        var moneyBet = res["moneyBet"];
-        var gameId = res["gameId"];
-        var roomId = res["roomId"];
-        var hasInfo = res["hasInfo"];
-        var players = res["players"];
-        this.labelRoomId.string = roomId;
-        this.labelRoomBet.string = Utils_1.default.formatNumber(moneyBet);
-        this.currentRoomBet = moneyBet;
-        this.gameState = gameAction;
-        this.currentCard = cards;
-        configPlayer[0].playerId = Configs_1.default.Login.Nickname;
-        configPlayer[0].playerPos = myChair;
-        var numPlayers = 0;
-        var arrPlayerPosExist = [];
-        var arrPlayerInfo = [];
-        for (var index = 0; index < hasInfo.length; index++) if (hasInfo[index]) {
-          numPlayers += 1;
-          arrPlayerPosExist.push(index);
-          arrPlayerInfo.push(players[index]);
-        }
-        for (var a = 0; a < configPlayer.length; a++) configPlayer[a].playerPos = defaultPlayerPos[myChair][a];
-        for (var index = 0; index < configPlayer.length; index++) {
-          var findPos = arrPlayerPosExist.indexOf(configPlayer[index].playerPos);
-          var seatId = configPlayer[index].seatId;
-          var player = this.getPlayerHouse(seatId);
-          player.resetPlayerInfo();
-          var playerInfo = arrPlayerInfo[findPos];
-          if (findPos > -1) {
-            configPlayer[index].isViewer = false;
-            player.setIsViewer(false);
-            this.setupSeatPlayer(seatId, playerInfo);
-            player.setBet(playerInfo.cuocChuong * moneyBet);
-            player.addChips();
-            playerInfo.nickName == Configs_1.default.Login.Nickname && 0 == playerInfo.cuocChuong && 1 == this.gameState && this.showSliderBet();
-            if (0 != playerInfo.cuocGa) {
-              this.currentMatchPotValue += 3 * moneyBet;
-              this.labelMatchPot.string = Utils_1.default.formatNumber(this.currentMatchPotValue);
-              player.playFxVaoGa();
-            }
-            1 == this.gameState && player.resetCardReal();
-          } else {
-            player.showBtnInvite(true);
-            configPlayer[index].isViewer = true;
-          }
-        }
-        for (var index = 0; index < 8; index++) this.getPlayerHouse(index).setOwner(false);
-        var seatOwner = this.findPlayerSeatByPos(chuongChair);
-        if (-1 !== seatOwner) {
-          this.getPlayerHouse(seatOwner).setOwner(true);
-          this.seatOwner = seatOwner;
-        }
-        this.resetHubChips();
-        this.currentCard.length > 0 && ShanController_1.instance.showCardReal();
-        if (countDownTime > 0) if (1 == this.gameState) {
-          this.matchPot.active = true;
-          this.startBettingCountDown(countDownTime);
-        } else this.startEndCountDown(countDownTime);
-      };
-      ShanController.prototype.showSliderBet = function() {
-        this.arrBetValue = [];
-        for (var index = 0; index < 4; index++) {
-          this.arrBetValue.push(this.currentRoomBet * (index + 1));
-          var raw = this.currentRoomBet * (4 - index);
-          this.betChooseValue.children[index].children[0].getComponent(cc.Label).string = 1500 == raw ? "1.5K" : Utils_1.default.formatNumberMin(raw);
-        }
-        if (!this.getPlayerHouse(0).isViewing) if (0 == this.seatOwner) {
-          this.btnOpenCard.active = false;
-          this.btnBet.active = false;
-        } else {
-          this.btnBet.active = true;
-          this.btnOpenCard.active = false;
-          this.setupBet();
-        }
-      };
-      ShanController.prototype.actionLeaveRoom = function() {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.CmdSendRequestLeaveGame());
-        this.soundManager.effSound.stop();
-      };
-      ShanController.prototype.actionOpenCard = function() {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.CmdSendMoBai());
-        this.btnOpenCard.active = false;
-      };
-      ShanController.prototype.actionSendVaoGa = function() {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendVaoGa());
-        this.matchPot.children[0].color = cc.Color.WHITE;
-        this.matchPot.getComponent(cc.Button).interactable = false;
-      };
-      ShanController.prototype.actionAcceptDanhBien = function(event, seatId) {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.CmdSendAcceptDanhBien(configPlayer[seatId].playerPos));
-        this.getPlayerHouse(seatId).closePopupRequestDanhBien();
-      };
-      ShanController.prototype.increaseBetValue = function() {
-        this.currentBetSelectedIndex == this.arrBetValue.length - 1 || (this.currentBetSelectedIndex += 1);
-        this.betChooseValueTarget.x = this.arrBetPos[this.currentBetSelectedIndex];
-      };
-      ShanController.prototype.actClickBetValue = function(even, data) {
-        data = parseInt(data);
-        this.currentBetSelectedIndex = data;
-        this.betChooseValueTarget.x = this.arrBetPos[this.currentBetSelectedIndex];
-      };
-      ShanController.prototype.decreaseBetValue = function() {
-        0 == this.currentBetSelectedIndex || (this.currentBetSelectedIndex -= 1);
-        this.betChooseValueTarget.x = this.arrBetPos[this.currentBetSelectedIndex];
-      };
-      ShanController.prototype.actionBet = function() {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.CmdSendDatCuoc(this.currentBetSelectedIndex + 1));
-        this.btnBet.active = false;
-        for (var index = 0; index < configPlayer.length; index++) if (index !== this.seatOwner && !configPlayer[index].isViewer && -1 !== configPlayer[index].playerId) {
-          this.getPlayerHouse(index).setBet(this.currentRoomBet);
-          this.getPlayerHouse(index).addChips();
-          if (0 != index) {
-            this.getPlayerHouse(index).showPopupBet(true);
-            this.getPlayerHouse(index).setupBetValue(this.currentRoomBet);
-          }
-        }
-      };
-      ShanController.prototype.actionDanhBien = function(event, id) {
-        var seatId = parseInt(id.substring(0, 1));
-        var level = parseInt(id.substring(1, 2));
-        var pos = this.findPlayerPosBySeat(seatId);
-        if (-1 != pos) {
-          this.getPlayerHouse(seatId).disableDanhBien(level);
-          this.getPlayerHouse(seatId).showChatMsg("\u101e\u102e\u1038\u101e\u1014\u1037\u103a\u101c\u1031\u102c\u1004\u103a\u1038\u1000\u103c\u1031\u1038");
-          Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.CmdSendDanhBien(pos, level));
-        }
-      };
-      ShanController.prototype.actionKeCua = function(event, id) {
-        var seatId = parseInt(id.substring(0, 1));
-        var level = parseInt(id.substring(1, 2)) - 2;
-        var pos = this.findPlayerPosBySeat(seatId);
-        if (-1 != pos) {
-          this.getPlayerHouse(seatId).disableKeCua(level);
-          Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.CmdSendKeCua(pos, level));
-        }
-      };
-      ShanController.prototype.initConfigPlayer = function() {
-        configPlayer = [];
-        for (var index = 0; index < 8; index++) configPlayer.push({
-          seatId: index,
-          playerId: -1,
-          playerPos: -1,
-          isViewer: true
-        });
-      };
-      ShanController.prototype.resetPlayersPlaying = function() {
-        for (var index = 0; index < 8; index++) this.getPlayerHouse(index).resetMatchHistory();
-      };
-      ShanController.prototype.setupSeatPlayer = function(seatId, playerInfo) {
-        configPlayer[seatId].playerId = playerInfo.nickName;
-        var player = this.getPlayerHouse(seatId);
-        player.setAvatar(playerInfo.avatar);
-        player.setName(playerInfo.nickName);
-        player.setGold(playerInfo.money);
-        this.gameState > 0 && !player.isViewing && player.showCardReal(true);
-      };
-      ShanController.prototype.findPlayerSeatByUid = function(uid) {
-        var seat = -1;
-        for (var index = 0; index < configPlayer.length; index++) configPlayer[index].playerId === uid && (seat = configPlayer[index].seatId);
-        return seat;
-      };
-      ShanController.prototype.findPlayerPosBySeat = function(seat) {
-        return configPlayer[seat].playerPos;
-      };
-      ShanController.prototype.findPlayerSeatByPos = function(pos) {
-        if (-1 == pos) return -1;
-        var seat = -1;
-        for (var index = 0; index < configPlayer.length; index++) configPlayer[index].playerPos === pos && (seat = configPlayer[index].seatId);
-        return seat;
-      };
-      ShanController.prototype.getPlayerHouse = function(seatId) {
-        return this.groupPlayers.children[seatId].getComponent(Shan_Player_1.default);
-      };
-      ShanController.prototype.getNumPlayers = function() {
-        var playerPosEntry = [];
-        for (var index = 0; index < configPlayer.length; index++) -1 === configPlayer[index].playerId || configPlayer[index].isViewer || playerPosEntry.push(configPlayer[index].seatId);
-        return playerPosEntry;
-      };
-      ShanController.prototype.showCardReal = function() {
-        this.getPlayerHouse(0).isShowCard = true;
-        this.getPlayerHouse(0).transformAllToCardReal();
-      };
-      ShanController.prototype.draw = function() {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendDraw());
-      };
-      ShanController.prototype.noDraw = function() {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendNoDraw());
-      };
-      ShanController.prototype.compare = function() {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendCompare());
-      };
-      var ShanController_1;
-      ShanController.instance = null;
-      __decorate([ property(cc.Prefab) ], ShanController.prototype, "nanBaiPrefab", void 0);
-      __decorate([ property(cc.Prefab) ], ShanController.prototype, "bankerPlayingPrefab", void 0);
-      __decorate([ property(cc.Toggle) ], ShanController.prototype, "toggleMusic", void 0);
-      __decorate([ property(cc.Toggle) ], ShanController.prototype, "toggleSound", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "nodeSetting", void 0);
-      __decorate([ property(Sham_TimeCountDown_1.default) ], ShanController.prototype, "timeCountDown", void 0);
-      __decorate([ property(Shan_Pot_1.default) ], ShanController.prototype, "pot", void 0);
-      __decorate([ property(Shan_ChipGroup_1.default) ], ShanController.prototype, "chipGroup", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "bgChat", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "contentChatNhanh", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "boxSetting", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "UI_Playing", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "meCards", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "groupPlayers", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "matchPot", void 0);
-      __decorate([ property(cc.Label) ], ShanController.prototype, "labelMatchPot", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "cardsDeal", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "btnBet", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "btnOpenCard", void 0);
-      __decorate([ property(cc.Button) ], ShanController.prototype, "btnLeaveRoom", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "hubChips", void 0);
-      __decorate([ property(cc.Label) ], ShanController.prototype, "labelRoomId", void 0);
-      __decorate([ property(cc.Label) ], ShanController.prototype, "labelRoomBet", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "actionBetting", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "betChooseValue", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "betChooseValueTarget", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "bgWarningCount", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "popupMatchResult", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "contentMatchResult", void 0);
-      __decorate([ property(cc.Prefab) ], ShanController.prototype, "prefabItemResult", void 0);
-      __decorate([ property(cc.ScrollView) ], ShanController.prototype, "scrollMatchResult", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "notifyTimeStart", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "notifyTimeEnd", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "notifyTimeBet", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "UI_Chat", void 0);
-      __decorate([ property(cc.EditBox) ], ShanController.prototype, "edtChatInput", void 0);
-      __decorate([ property(cc.Node) ], ShanController.prototype, "popupGuide", void 0);
-      __decorate([ property(NodeShowCard) ], ShanController.prototype, "nodeShowCard", void 0);
-      ShanController = ShanController_1 = __decorate([ ccclass ], ShanController);
-      return ShanController;
-    }(cc.Component);
-    exports.default = ShanController;
-    cc._RF.pop();
-  }, {
-    "../../Loading/src/Configs": void 0,
-    "../../Lobby/LobbyScript/Script/common/App": void 0,
-    "../../Lobby/LobbyScript/Script/common/BroadcastReceiver": void 0,
-    "../../Lobby/LobbyScript/Script/common/SPUtils": void 0,
-    "../../Lobby/LobbyScript/Script/common/Utils": void 0,
-    "../../Lobby/LobbyScript/Script/networks/Network.InPacket": void 0,
-    "./Shan.CardUtil": "Shan.CardUtil",
-    "./Shan.Cmd": "Shan.Cmd",
-    "./Shan.Contants": "Shan.Contants",
-    "./Shan.NetworkClient": "Shan.NetworkClient",
-    "./Shan.Player": "Shan.Player",
-    "./Shan.Room": "Shan.Room",
-    "./common/Sham.TimeCountDown": "Sham.TimeCountDown",
-    "./common/Shan.BankerPlayingNode": "Shan.BankerPlayingNode",
-    "./common/Shan.ChipGroup": "Shan.ChipGroup",
-    "./common/Shan.NanBai": "Shan.NanBai",
-    "./common/Shan.Pot": "Shan.Pot"
-  } ],
   "Shan.CreateRoomItem": [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "42a4cKXqAZC5a+QbZg26AnS", "Shan.CreateRoomItem");
@@ -4529,6 +2795,1582 @@ window.__require = function e(t, n, r) {
       return CreateRoomItem;
     }(cc.Component);
     exports.default = CreateRoomItem;
+    cc._RF.pop();
+  }, {} ],
+  "Shan.GameController": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "a0669QFjHtG65o4CiU+M8Uk", "Shan.GameController");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Shan_SettingInGame_1 = require("./common/Shan.SettingInGame");
+    var Shan_Card_1 = require("./common/Shan.Card");
+    var Shan_Chip_1 = require("./common/Shan.Chip");
+    var Shan_ChipGroup_1 = require("./common/Shan.ChipGroup");
+    var Shan_GameLayer_1 = require("./common/Shan.GameLayer");
+    var Shan_Pot_1 = require("./common/Shan.Pot");
+    var Shan_Utils_1 = require("./common/Shan.Utils");
+    var Shan_Jackpot_1 = require("./Model/Shan.Jackpot");
+    var Shan_BankerPlayingNode_1 = require("./Shan.BankerPlayingNode");
+    var Shan_Cmd_1 = require("./Shan.Cmd");
+    var Shan_Contants_1 = require("./Shan.Contants");
+    var Shan_NanBai_1 = require("./Shan.NanBai");
+    var Shan_PlayingNode_1 = require("./Shan.PlayingNode");
+    var Shan_Sound_1 = require("./Shan.Sound");
+    var Shan_NetworkClient_1 = require("./Shan.NetworkClient");
+    var Network_InPacket_1 = require("../../Lobby/LobbyScript/Script/networks/Network.InPacket");
+    var App_1 = require("../../Lobby/LobbyScript/Script/common/App");
+    var Shan_Room_1 = require("./Shan.Room");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var GameController = function(_super) {
+      __extends(GameController, _super);
+      function GameController() {
+        var _this = _super.call(this) || this;
+        _this.playingNodePrefab = null;
+        _this.bankerPlayingNodePrefab = null;
+        _this.ShanKoeMeeJackpotPrefab = null;
+        _this.nanBaiLayerPrefab = null;
+        _this.pot = null;
+        _this.chipGroup = null;
+        _this.bankerWin = null;
+        _this.bgWarningCount = null;
+        _this.lbWarningCount = null;
+        _this.shanKoeMeeSound = null;
+        _this.prefabJackPotBig = null;
+        _this.prefabJackPotSmall = null;
+        _this.prefabShanAlert = null;
+        _this.lstBgUser = [];
+        _this.lstSpMutil = [];
+        _this.lstWaitingOpen = [];
+        _this.lstPointNode = [];
+        _this.lstBgPoint = [];
+        _this.lstBgPointLose = [];
+        _this.lstBgShan8 = [];
+        _this.lstBgShan9 = [];
+        _this.lstBgShanSap = [];
+        _this.lstBbPoint = [];
+        _this.MAX_PLAYER = Shan_Contants_1.Constant.SHANKOEMEE_MAX_PLAYER;
+        _this._chips = [];
+        _this.playingNode = null;
+        _this.shanKoeMeeJackpot = null;
+        _this.bankerPlayingNode = null;
+        _this.nanBaiLayer = null;
+        _this._sound = null;
+        _this._delayForJackPotWin = 0;
+        GameController_1.instance = _this;
+        return _this;
+      }
+      GameController_1 = GameController;
+      GameController.prototype.onLoad = function() {
+        _super.prototype.onLoad.call(this);
+        this._gameName = "shankoemee";
+        this.pot.setValue(0);
+        this.playingNode.node.active = false;
+        this.bankerPlayingNode.node.active = false;
+        this.nanBaiLayer.node.active = false;
+        this.bgWarningCount.active = false;
+        this.bgWarningCount.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_ALERT_Z_INDEX;
+        this.timeCountDown.node.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_ALERT_Z_INDEX;
+        this.chipGroup.node.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_CHIPNODE_Z_INDEX;
+        this._chipNode = new cc.Node();
+        this.node.addChild(this._chipNode);
+      };
+      GameController.prototype.initPlayerNodeWithPrefab = function() {
+        cc.log("initPlayerNodeWithPrefab", this.playerNodes.length);
+        for (var i = 0; i < this.playerNodes.length; i++) {
+          var player = this.playerNodes[i];
+          this.lstBgUser.length > i && this.lstBgUser[i].setPosition(this.playerPos[i].getPosition());
+          if (this.lstSpMutil.length > i) {
+            player.multiple = this.lstSpMutil[i];
+            this.lstSpMutil[i].node.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_MUTILPLE_Z_INDEX;
+          }
+          if (this.lstWaitingOpen.length > i) {
+            player.waitingOpen = this.lstWaitingOpen[i];
+            this.lstWaitingOpen[i].zIndex = Shan_Contants_1.Constant.SHANKOEMEE_WAITOPEN_Z_INDEX;
+          }
+          this.lstPointNode.length > i && (this.lstPointNode[i].zIndex = Shan_Contants_1.Constant.SHANKOEMEE_POINTNODE_Z_INDEX);
+          this.lstBgPoint.length > i && (player.bgPoint = this.lstBgPoint[i]);
+          this.lstBgPointLose.length > i && (player.bgPointLose = this.lstBgPointLose[i]);
+          this.lstBgShan8.length > i && (player.bgShan8 = this.lstBgShan8[i]);
+          this.lstBgShan9.length > i && (player.bgShan9 = this.lstBgShan9[i]);
+          this.lstBgShanSap.length > i && (player.bgShanSap = this.lstBgShanSap[i]);
+          this.lstBbPoint.length > i && (player.lbPoint = this.lstBbPoint[i]);
+        }
+      };
+      GameController.prototype.initNodeWithPrefab = function() {
+        _super.prototype.initNodeWithPrefab.call(this);
+        this._settingNode = this._createNodeFromPrefab(this.prefabSetting, 1e3).getComponent(Shan_SettingInGame_1.default);
+        this.playingNode = this._createNodeFromPrefab(this.playingNodePrefab, 1e3).getComponent(Shan_PlayingNode_1.default);
+        this.shanKoeMeeJackpot = this._createNodeFromPrefab(this.ShanKoeMeeJackpotPrefab, 1e3).getComponent(Shan_Jackpot_1.default);
+        this.nanBaiLayer = this._createNodeFromPrefab(this.nanBaiLayerPrefab, 1e3).getComponent(Shan_NanBai_1.NodeNanBai);
+        this.bankerPlayingNode = this._createNodeFromPrefab(this.bankerPlayingNodePrefab, 1e3).getComponent(Shan_BankerPlayingNode_1.default);
+        this.initPlayerNodeWithPrefab();
+      };
+      GameController.prototype.init = function(ws, target) {
+        _super.prototype.init.call(this, ws, target);
+        this.bankerPlayingNode.init(ws);
+        this.nanBaiLayer.setWs(ws);
+        this.shanKoeMeeJackpot.initWs(ws);
+        this.nanBaiLayer.setGameLayer(this);
+        this._settingNode.init(ws, this);
+        this.initListener();
+      };
+      GameController.prototype.initListener = function() {
+        var _this = this;
+        Shan_NetworkClient_1.default.getInstance().addListener(function(data) {
+          if (_this._ws.getState() != Shan_Contants_1.ConnectionState.CONNECTED) return true;
+          var inpacket = new Network_InPacket_1.default(data);
+          switch (inpacket.getCmdId()) {
+           case Shan_Cmd_1.default.Code.LOGIN:
+            cc.log("<<<< Login <<<<");
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedLogin(data);
+            var failError = res.getError();
+            0 == failError ? _this.onWsLoggedIn(true) : cc.log("login fail");
+            break;
+
+           case Shan_Cmd_1.default.Code.START_GAME:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedMatchStart(data);
+            _this.onWsMatchStart(res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.START_PHASE_ONE:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedStartPhaseOne(data);
+            _this.onWsStartPhaseOne(res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.START_PHASE_TWO:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedStartPhaseTwo(data);
+            _this.onWsStartPhaseTwo(res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.SEEN:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedSeen(data);
+            _this.onWsSeen(res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.BETTING:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedBet(data);
+            _this.onWsBet(res.getError(), res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.DRAW:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedDrawCard(data);
+            _this.onWsDrawCard(res.getError(), res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.COMPARE:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedCompare(data);
+            _this.onWsCompare(res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.BANKER_WIN:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedBankerWin(data);
+            _this.onWsBankerWin(res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.MATCH_INFO:
+            break;
+
+           case Shan_Cmd_1.default.Code.END_GAME:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedMatchEnd(data);
+            _this.onWsMatchEnd(res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.FINISH:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedMatchFinish(data);
+            _this.onWsMatchFinish(res.data);
+            break;
+
+           case Shan_Cmd_1.default.Code.ROOM_START_COUNTDOWN:
+            cc.log("Start count down ");
+            var res = new Shan_Cmd_1.default.ReceivedRoomStartCountDown(data);
+            _this.onWsRoomStartCountdown(res.data.seconds);
+            break;
+
+           case Shan_Cmd_1.default.Code.ROOM_STOP_COUNTDOWN:
+            cc.log("Stop Count down");
+            _this.onWsRoomStopCountDown();
+            break;
+
+           case Shan_Cmd_1.default.Code.ROOM_REGISTER_LEAVE:
+            _this.onWsLeaveRoom(data);
+            break;
+
+           case Shan_Cmd_1.default.Code.ROOM_REGISTER_LEAVE:
+            break;
+
+           case Shan_Cmd_1.default.Code.CHEAT_CARDS:
+           case Shan_Cmd_1.default.Code.DANG_KY_CHOI_TIEP:
+           case Shan_Cmd_1.default.Code.UPDATE_OWNER_ROOM:
+            App_1.default.instance.showLoading(false);
+            break;
+
+           case Shan_Cmd_1.default.Code.LEAVE_GAME:
+            cc.log("Leave Game");
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedUserLeaveRoom(data);
+            break;
+
+           case Shan_Cmd_1.default.Code.NOTIFY_KICK_FROM_ROOM:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedKickOff(data);
+            break;
+
+           case Shan_Cmd_1.default.Code.NEW_USER_JOIN:
+            App_1.default.instance.showLoading(false);
+            var res = new Shan_Cmd_1.default.ReceivedUserJoinRoom(data);
+            cc.log("<<<< New user join <<<< ", JSON.stringify(res));
+            break;
+
+           case Shan_Cmd_1.default.Code.NOTIFY_USER_GET_JACKPOT:
+            App_1.default.instance.showLoading(false);
+          }
+        }, this);
+      };
+      GameController.prototype.refeshListRoom = function() {
+        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendGetListRoom());
+      };
+      GameController.prototype.onWsLoggedIn = function(succeed, msg) {
+        if (succeed) {
+          this.refeshListRoom();
+          Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.CmdReconnectRoom());
+        } else {
+          this._dontHandleDisconnected = true;
+          this._ws.disconnect();
+        }
+      };
+      GameController.prototype._updateRoomData = function() {
+        _super.prototype._updateRoomData.call(this);
+        this.playerNodes.forEach(function(playerNode) {
+          playerNode.setBaseBetAmount(this._roomData.moneyBet);
+        }.bind(this));
+        this.chipGroup.initChip(this, this._roomData.moneyBet);
+      };
+      GameController.prototype._showComputerPlayForBanker = function() {
+        this.playerNodes[this._getLocalChair(this.bankerChair)].showComputerPlay();
+      };
+      GameController.prototype.onWsRoomStartCountdown = function(seconds) {
+        cc.log("start count down", seconds);
+        this.timeCountDown && this.timeCountDown.show("start_countdown", seconds);
+        this.shanKoeMeeSound.playStart();
+      };
+      GameController.prototype.onGameBet = function(countDownTime, bankerChair, bankerPot, moneyAddToPot, warningCount) {
+        cc.log("onGameBet", countDownTime, bankerChair, bankerPot, moneyAddToPot, warningCount);
+        var self = this;
+        this.changeBankerChair(bankerChair);
+        var timeW = this.updateWarningCount(warningCount);
+        this.bankerPot = bankerPot;
+        cc.tween(this.bgWarningCount).delay(timeW).call(function() {
+          self.timeCountDown.show("bet_time", countDownTime - timeW);
+        }).start();
+        moneyAddToPot > 0 ? this.chipGroup.playerBet(this.playerNodes[this._getLocalChair(bankerChair)], moneyAddToPot, true) : this.chipGroup.fixChipGroup(bankerPot);
+        this.pot.setValue(bankerPot);
+        this.playingNode.setActive(0 != this._getLocalChair(bankerChair) && this.playerNodes[0].getState() == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING);
+        this.playingNode.node.active && this.playingNode.setData(this._ws, this.bankerPot, this._roomData.moneyBet);
+        this.basePopUpActive && 0 != this.bankerChair && this.basePopUpActive.onClose();
+        this.shanKoeMeeSound.playBetTime();
+      };
+      GameController.prototype.onGamePhaseOne = function(data) {
+        cc.log("onGamePhaseOne ", data);
+        this.playingNode.setActive(false);
+        this.playerNodes[0].setCardData(data.cards);
+        for (var i = 0; i < data.playerList.length; i++) {
+          var playerData = data.playerList[i];
+          var player = this.playerNodes[this._getLocalChair(playerData.chair)];
+          if (player.getState() == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING) if (!player.bgBet.active && playerData.bet > 0) {
+            player.bet(playerData.bet, playerData.remain);
+            0 == this._getLocalChair(playerData.chair) && this.playingNode.setLastBet(playerData.bet);
+            player.showViewBet(playerData.bet, this._roomData.moneyBet);
+          } else player.lbBetAmount.string = Shan_Utils_1.default.shorten(playerData.bet, 2);
+        }
+        var players = this.playerNodes.filter(function(p) {
+          return p.getState() == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING;
+        });
+        var actions = [];
+        for (var i = 0; i < 2; i++) for (var j = 0; j < players.length; j++) actions.push(cc.delayTime(.1), cc.callFunc(function(target, data) {
+          this.dealerAction("Deal");
+          var cardNode = cc.instantiate(this.prefabCard);
+          cardNode.scale = .6 * Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE;
+          cardNode.angle = 180;
+          cardNode.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_CARD_Z_INDEX;
+          cardNode.setPosition(cc.v2(0, 0));
+          this.uiNode.addChild(cardNode);
+          players[data.j].addCard(cardNode.getComponent(Shan_Card_1.default));
+          this.shanKoeMeeSound.playDealCard();
+        }, this, {
+          i: i,
+          j: j
+        }));
+        var isInstantEndGame = false;
+        var _loop_1 = function() {
+          if (0 == this_1._getLocalChair(data.dataList[i].chair)) isInstantEndGame = true; else {
+            var tempPlayer_1 = this_1.playerNodes[this_1._getLocalChair(data.dataList[i].chair)];
+            var tempDataCard_1 = data.dataList[i].cards;
+            actions.push(cc.delayTime(.5), cc.callFunc(function() {
+              tempPlayer_1.setCardData(tempDataCard_1);
+            }));
+          }
+        };
+        var this_1 = this;
+        for (var i = 0; i < data.dataList.length; i++) _loop_1();
+        actions.push(cc.delayTime(.5), cc.callFunc(function() {
+          this.onGamePlay(data.countDownTime, isInstantEndGame);
+          for (var j = 0; j < players.length; j++) players[j].setVisibleWatingOpenCards(true);
+        }.bind(this)));
+        this.node.runAction(cc.sequence(actions));
+      };
+      GameController.prototype.onGamePlay = function(seconds, isInstantEndGame) {
+        this.timeCountDown.show("player_time", seconds, 0 == this._getLocalChair(this.bankerChair));
+        cc.log("gamePlay", this.playerNodes[0].getState(), seconds, isInstantEndGame);
+        this.playerNodes[0].getState() == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING && (seconds <= 5 ? this.playerNodes[0].showCards() : this.nanBaiLayer.init(seconds, 0 == this._getLocalChair(this.bankerChair), isInstantEndGame, this.playerNodes[0].getCardData(), function() {
+          this._onNanBaiLayerClosed();
+        }.bind(this)));
+        this.basePopUpActive && this.basePopUpActive.onClose();
+      };
+      GameController.prototype.onGamePhaseTwo = function(countDownTime) {
+        var _this = this;
+        var isBanker = 0 == this._getLocalChair(this.bankerChair);
+        cc.tween(this.node).delay(.5).call(function() {
+          _this.bankerPlayingNode.setActive(isBanker);
+          _this.shouldShowBtnCompare();
+        }).start();
+        this.playerNodes[this._getLocalChair(this.bankerChair)].showBurnBorderAnim();
+        this.isBanker || this.nanBaiLayer.closeDialog();
+        this.timeCountDown.show("banker_time", countDownTime, 0 == this._getLocalChair(this.bankerChair));
+        this.basePopUpActive && 0 == this.bankerChair && this.basePopUpActive.onClose();
+      };
+      GameController.prototype.onGameEndMatch = function(data) {
+        cc.log("onendMatch", JSON.stringify(data));
+        Math.floor(data.bankerCards[0] / 4) == Math.floor(data.bankerCards[1] / 4) && Math.floor(data.bankerCards[1] / 4) == Math.floor(data.bankerCards[2] / 4) && (this._delayForJackPotWin = 2);
+        0 == data.endType ? this.compareFinish(data) : this.manualFinish(data);
+      };
+      GameController.prototype.compareFinish = function(data) {
+        var _this = this;
+        this.timeCountDown.showText("compare_3");
+        this.playingNode.setActive(false);
+        this.bankerPlayingNode.setActive(false);
+        this.bankerPot = data.bankerPot;
+        var banker = this.playerNodes[this._getLocalChair(this.bankerChair)];
+        var listThree = data.playerList.filter(function(p) {
+          return 3 == p.cards.length;
+        });
+        var listTwo = data.playerList.filter(function(p) {
+          return 2 == p.cards.length;
+        });
+        var actions = [];
+        actions.push(cc.delayTime(1.5));
+        actions.push(cc.callFunc(function() {
+          _this.timeCountDown.node.active = false;
+          for (var i = 0; i < listThree.length; i++) {
+            var localChair = _this._getLocalChair(listThree[i].chair);
+            var player = _this.playerNodes[localChair];
+            if (0 != localChair) {
+              player.setCardData(listThree[i].cards);
+              player.showAllCards();
+            }
+          }
+        }));
+        actions.push(cc.delayTime(2));
+        actions.push(cc.callFunc(function() {
+          banker.setCardData(data.bankerCards.slice(0, 2));
+          banker.setShow(false);
+          banker.showAllCards();
+          for (var i = 0; i < listThree.length; i++) {
+            var localChair = _this._getLocalChair(listThree[i].chair);
+            var player = _this.playerNodes[localChair];
+            listThree[i].isWin ? player.showWinEffect() : player.showLoseEffect();
+          }
+        }));
+        actions.push(cc.callFunc(function() {
+          var _loop_2 = function() {
+            pData = listThree[i];
+            localChair = this_2._getLocalChair(pData.chair);
+            player = this_2.playerNodes[localChair];
+            var moneyChangeBeforTax = 0 == pData.moneyChangeBeforTax ? pData.moneyChange : pData.moneyChangeBeforTax;
+            if (!pData.isWin) {
+              player.node.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(function(sender, data) {
+                this.chipGroup.playerBet(data.player, -moneyChangeBeforTax, false);
+                data.player.hideBet();
+                data.player.moneyChange(data.pData.moneyChange, data.pData.money, false);
+              }, this_2, {
+                player: player,
+                pData: pData
+              })));
+              0 === localChair && this_2._getLocalChair(this_2.bankerChair) !== localChair && this_2._chatNode.notifyWinLost(pData.isWin, pData.moneyChange, pData.cards, data.bankerCards);
+            }
+          };
+          var this_2 = this, pData, localChair, player;
+          for (var i = 0; i < listThree.length; i++) _loop_2();
+        }.bind(this)));
+        actions.push(cc.delayTime(2));
+        actions.push(cc.callFunc(function() {
+          var cardNode = cc.instantiate(_this.prefabCard);
+          cardNode.scale = Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE;
+          cardNode.angle = 180;
+          cardNode.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_CARD_BASE_Z_ORDER;
+          _this.uiNode.addChild(cardNode);
+          banker.addCard(cardNode.getComponent(Shan_Card_1.default));
+          _this.shanKoeMeeSound.playDealOneCard();
+          if (0 == _this._getLocalChair(_this.bankerChair)) {
+            cardNode.getComponent(Shan_Card_1.default).setId(data.bankerCards[2]);
+            cc.tween(banker.node).delay(.5).call(function() {
+              cardNode.getComponent(Shan_Card_1.default).flipAndShow();
+              banker.showGroupName(cardNode.scale, false);
+              banker.showMultiple();
+            }).start();
+          }
+        }));
+        actions.push(cc.delayTime(.5));
+        actions.push(cc.callFunc(function() {
+          _this.timeCountDown.showText("compare_2");
+        }));
+        actions.push(cc.delayTime(1.5));
+        actions.push(cc.callFunc(function() {
+          _this.timeCountDown.node.active = false;
+          for (var i = 0; i < listTwo.length; i++) {
+            var localChair = _this._getLocalChair(listTwo[i].chair);
+            var player = _this.playerNodes[localChair];
+            if (0 != localChair) {
+              player.setCardData(listTwo[i].cards);
+              player.showAllCards();
+            }
+          }
+        }));
+        actions.push(cc.delayTime(2));
+        actions.push(cc.callFunc(function() {
+          banker.setCardData(data.bankerCards);
+          banker.setShow(false);
+          banker.showAllCards();
+          for (var i = 0; i < listTwo.length; i++) {
+            var localChair = _this._getLocalChair(listTwo[i].chair);
+            var player = _this.playerNodes[localChair];
+            listTwo[i].isWin ? player.showWinEffect() : player.showLoseEffect();
+          }
+        }));
+        actions.push(cc.delayTime(.5));
+        actions.push(cc.callFunc(function() {
+          var _loop_3 = function() {
+            pData = listTwo[i];
+            localChair = this_3._getLocalChair(pData.chair);
+            player = this_3.playerNodes[localChair];
+            var moneyChangeBeforTax = 0 == pData.moneyChangeBeforTax ? pData.moneyChange : pData.moneyChangeBeforTax;
+            if (!pData.isWin) {
+              player.node.runAction(cc.callFunc(function(sender, data) {
+                this.chipGroup.playerBet(data.player, -moneyChangeBeforTax, false);
+                data.player.hideBet();
+                data.player.moneyChange(data.pData.moneyChange, data.pData.money, false);
+              }, this_3, {
+                player: player,
+                pData: pData
+              }));
+              0 === localChair && this_3._getLocalChair(this_3.bankerChair) !== localChair && this_3._chatNode.notifyWinLost(pData.isWin, pData.moneyChange, pData.cards, data.bankerCards);
+            }
+          };
+          var this_3 = this, pData, localChair, player;
+          for (var i = 0; i < listTwo.length; i++) _loop_3();
+        }.bind(this)));
+        actions.push(cc.delayTime(1));
+        actions.push(cc.callFunc(function() {
+          var dataPay = [ {
+            goldOut: data.bankerPot,
+            goldOutRaw: data.bankerPot,
+            goldChange: data.bankerPot,
+            player: banker,
+            isBanker: true,
+            arrC: []
+          } ];
+          var delayBetweenPlayer = data.isShowUserByUser ? 1 : 0;
+          for (var i = 0; i < data.playerList.length; i++) {
+            var pData = data.playerList[i];
+            var localChair = this._getLocalChair(pData.chair);
+            var player = this.playerNodes[localChair];
+            if (pData.isWin) {
+              dataPay.push({
+                goldOut: pData.moneyChangeBeforTax,
+                goldOutRaw: pData.moneyChangeBeforTax,
+                goldChange: pData.moneyChange,
+                goldFinal: pData.money,
+                player: player,
+                arrC: [],
+                delay: delayBetweenPlayer * i
+              });
+              0 === localChair && this._getLocalChair(this.bankerChair) !== localChair && this._chatNode.notifyWinLost(pData.isWin, pData.moneyChange, pData.cards, data.bankerCards);
+            }
+          }
+          0 === this._getLocalChair(this.bankerChair);
+          this.chipGroup.node.runAction(cc.callFunc(function() {
+            this.chipGroup.distributeMoney(dataPay);
+            this.shanKoeMeeSound.playBet();
+          }.bind(this)));
+        }.bind(this)));
+        this.node.runAction(cc.sequence(actions));
+      };
+      GameController.prototype.manualFinish = function(data) {
+        this.timeCountDown.node.active = false;
+        this.playingNode.setActive(false);
+        this.bankerPlayingNode.setActive(false);
+        this.bankerPot = data.bankerPot;
+        var banker = this.playerNodes[this._getLocalChair(this.bankerChair)];
+        var actions = [];
+        0 != data.endType && 1 != data.endType || actions.push(cc.callFunc(function() {
+          var cardNode = cc.instantiate(this.prefabCard);
+          cardNode.scale = Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE;
+          cardNode.angle = 180;
+          cardNode.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_CARD_BASE_Z_ORDER;
+          this.uiNode.addChild(cardNode);
+          banker.addCard(cardNode.getComponent(Shan_Card_1.default));
+          this.shanKoeMeeSound.playDealOneCard();
+          if (0 == this._getLocalChair(this.bankerChair)) {
+            banker.setShow(false);
+            banker.setCardData(data.bankerCards);
+            cc.tween(banker.node).delay(.5).call(function() {
+              banker.showAllCards();
+            }).start();
+          }
+        }.bind(this)));
+        actions.push(cc.delayTime(1));
+        actions.push(cc.callFunc(function() {
+          for (var i = 0; i < data.playerList.length; i++) {
+            var pData = data.playerList[i];
+            var localChair = this._getLocalChair(pData.chair);
+            var player = this.playerNodes[localChair];
+            if (0 != localChair) {
+              player.setCardData(pData.cards);
+              player.showAllCards();
+            }
+          }
+        }.bind(this)));
+        if (0 != this._getLocalChair(this.bankerChair)) {
+          actions.push(cc.delayTime(.5));
+          actions.push(cc.callFunc(function() {
+            banker.setShow(false);
+            banker.setCardData(data.bankerCards);
+            banker.showAllCards();
+          }.bind(this)));
+        }
+        actions.push(cc.delayTime(.5));
+        actions.push(cc.callFunc(function() {
+          for (var i = 0; i < data.playerList.length; i++) {
+            var pData = data.playerList[i];
+            var localChair = this._getLocalChair(pData.chair);
+            var player = this.playerNodes[localChair];
+            pData.isWin ? player.showWinEffect() : player.showLoseEffect();
+          }
+        }.bind(this)));
+        actions.push(cc.delayTime(1));
+        actions.push(cc.callFunc(function() {
+          var hasPlayerLose = false;
+          var dataPay = [ {
+            goldOut: data.bankerPot,
+            goldOutRaw: data.bankerPot,
+            goldChange: data.bankerPot,
+            player: banker,
+            isBanker: true,
+            arrC: []
+          } ];
+          var delayBetweenPlayer = data.isShowUserByUser ? 1 : 0;
+          var _loop_4 = function() {
+            pData = data.playerList[i];
+            localChair = this_4._getLocalChair(pData.chair);
+            player = this_4.playerNodes[localChair];
+            var moneyChangeBeforTax = 0 == pData.moneyChangeBeforTax ? pData.moneyChange : pData.moneyChangeBeforTax;
+            if (pData.isWin) dataPay.push({
+              goldOut: pData.moneyChangeBeforTax,
+              goldOutRaw: pData.moneyChangeBeforTax,
+              goldChange: pData.moneyChange,
+              goldFinal: pData.money,
+              player: player,
+              arrC: [],
+              delay: delayBetweenPlayer * i
+            }); else {
+              hasPlayerLose = true;
+              player.node.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(function(sender, data) {
+                this.chipGroup.playerBet(data.player, -moneyChangeBeforTax, false);
+                data.player.hideBet();
+                data.player.moneyChange(data.pData.moneyChange, data.pData.money, false);
+              }, this_4, {
+                player: player,
+                pData: pData
+              })));
+            }
+            0 === localChair && this_4._getLocalChair(this_4.bankerChair) !== localChair;
+          };
+          var this_4 = this, pData, localChair, player;
+          for (var i = 0; i < data.playerList.length; i++) _loop_4();
+          0 === this._getLocalChair(this.bankerChair);
+          this.chipGroup.node.runAction(cc.sequence(cc.delayTime(hasPlayerLose ? 2 : 0), cc.callFunc(function() {
+            this.chipGroup.distributeMoney(dataPay);
+            this.shanKoeMeeSound.playBet();
+          }.bind(this))));
+        }.bind(this)));
+        this.node.runAction(cc.sequence(actions));
+      };
+      GameController.prototype.onGameFinishMatch = function(data) {
+        this.clean();
+        this._delayForJackPotWin = 0;
+        this._userAction = false;
+        this.changeBankerChair(data.bankerChair);
+        this.pot.setValue(data.bankerPot);
+        0 == data.bankerPot && this.chipGroup.reset();
+        this._roomData.playerList = data.playerList;
+        for (var i = 0; i < this.playerNodes.length; i++) {
+          var p = this.playerNodes[i];
+          p.updateInfo(this._roomData.playerList[i]);
+          p._data.userName == this._user.Nickname && Shan_Utils_1.default.setChip(p._data.money);
+        }
+        this.onGameNewMatch();
+      };
+      GameController.prototype.onGameNewMatch = function() {
+        this._updateRoomData();
+        this.playingNode.setActive(false);
+        this.playingNode.setLastBet(-1);
+      };
+      GameController.prototype.showBankerWin = function(value, name) {
+        var c = cc.instantiate(this.bankerWin);
+        this.node.addChild(c);
+        c.getComponent("ShanKoeMeeBankerWin").onShow(value, name);
+        this.shanKoeMeeSound.playBankerWin();
+        this.timeCountDown.node.opacity = 0;
+        cc.tween(this.timeCountDown.node).delay(2).to(0, {
+          opacity: 255
+        }).start();
+      };
+      GameController.prototype.restoreGame = function(data) {
+        cc.log("restoreGame", data);
+        var ownCardList = data.cardList;
+        var countDownTime = data.countDownTime;
+        var bankerChair = data.bankerChair;
+        var bankerPot = data.bankerPot;
+        var isInstantEndGame = data.isInstantEndGame;
+        var playerList = data.playerList.filter(function(p) {
+          return p.stateId == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING;
+        });
+        this.onWsRoomInfo(data);
+        cc.log(playerList);
+        for (var i = 0; i < playerList.length; i++) {
+          var localChair = this._getLocalChair(playerList[i].chair);
+          0 != localChair ? playerList[i].isShow ? this.playerNodes[localChair].instantlyAddCard(playerList[i].cards, true, this.uiNode) : this.playerNodes[localChair].instantlyAddCard(playerList[i].cardSize, false, this.uiNode) : this.playerNodes[0].instantlyAddCard(ownCardList, false, this.uiNode);
+          if (playerList[i].betAmount > 0) {
+            this.playerNodes[localChair].bet(playerList[i].betAmount, playerList[i].money);
+            this.playerNodes[localChair].showViewBet(playerList[i].betAmount, this._roomData.moneyBet, true);
+          }
+        }
+        for (var i_1 = 0; i_1 < this.playerNodes.length; i_1++) {
+          var player = this.playerNodes[i_1];
+          player._data.stateId == Shan_Cmd_1.default.Code.PLAYER_STATUS_VIEWER && this.playerNodes[i_1].showWaitingNewMatch(true);
+        }
+        this.changeBankerChair(bankerChair);
+        this.chipGroup.fixChipGroup(bankerPot);
+        switch (data.gameState) {
+         case 1:
+          this.onGameBet(countDownTime, bankerChair, bankerPot, 0, data.warningCount);
+          break;
+
+         case 2:
+          this.pot.setValue(bankerPot);
+          this.onGamePlay(countDownTime, isInstantEndGame);
+          break;
+
+         case 3:
+          this.pot.setValue(bankerPot);
+          this.playerNodes[0].showCards();
+          this.onGamePhaseTwo(countDownTime);
+          break;
+
+         case 4:
+          this.pot.setValue(bankerPot);
+        }
+        this.playerNodes[0].getState() !== Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING && this.shanKoeMeeSound.playWaiting();
+      };
+      GameController.prototype.getChipThrowingLocation = function() {
+        return cc.v2(0, 0);
+      };
+      GameController.prototype.addChip = function(c) {
+        this._chips.push(c.getComponent(Shan_Chip_1.default));
+        this._chipNode.addChild(c);
+      };
+      GameController.prototype.getChips = function() {
+        return this._chips;
+      };
+      GameController.prototype.removeChip = function(c) {
+        var idx = this._chips.indexOf(c);
+        idx >= 0 && this._chips.splice(idx, 1);
+      };
+      GameController.prototype.clearChips = function() {
+        this._chipNode.removeAllChildren();
+        this._chips = [];
+      };
+      GameController.prototype._onNanBaiLayerClosed = function() {
+        this.playerNodes[0].showCards();
+        this._ws.seen();
+      };
+      GameController.prototype.onWsLeaveRoom = function(data) {
+        cc.log("onWsLeaveRoom", data);
+        if (data.userName == this._user.Nickname) {
+          Shan_Utils_1.default.setChip(this.playerNodes[0]._data.money);
+          this._eventTarget._onGameLeave.call(this._eventTarget);
+          this.node.removeFromParent();
+          Shan_Room_1.default.instance.UI_Playing = null;
+        } else {
+          if (!this._userCouldLeaveRoom(data)) return;
+          var localChair = this._userIdToChairMapping[data.userName];
+          if (localChair == this._getLocalChair(this.bankerChair)) {
+            if (this.playerNodes[localChair].getState() == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING) {
+              this._showComputerPlayForBanker();
+              return;
+            }
+            this.chipGroup.reset();
+            this.pot.setValue(0);
+          }
+          this._roomData.roomOwnerId != data.roomOwnerId && (this._roomData.roomOwnerId = data.roomOwnerId);
+          var playerList = this._roomData.playerList;
+          var player = playerList.filter(function(p) {
+            return p.userName == data.userName;
+          })[0];
+          if (player) {
+            this._removePlayer(data, playerList);
+            this._chatNode.notifyUserExit(player.userName);
+          }
+        }
+      };
+      GameController.prototype.onWsJoinRoomOther = function(data) {
+        cc.log("onWsJoinRoomOther", JSON.stringify(data));
+        var playerList = this._roomData.playerList;
+        var idx = -1;
+        for (var i = 0; i < playerList.length; i++) if (playerList[i].chair == data.chair) {
+          idx = i;
+          break;
+        }
+        idx = idx >= 0 ? idx : playerList.length;
+        playerList[idx] = data;
+        this._roomData.playerList = playerList;
+        var localChair = this._getLocalChair(data.chair);
+        this.playerNodes[localChair].updateInfo(data);
+        this._userIdToChairMapping[data.userName] = localChair;
+        data.stateId == Shan_Cmd_1.default.Code.PLAYER_STATUS_VIEWER && this.playerNodes[localChair].showWaitingNewMatch(true);
+        this._chatNode.notifyUserJoin(data.userName);
+      };
+      GameController.prototype.onWsMatchStart = function(data) {
+        cc.log("onWsMatchStart ", data);
+        for (var i = 0; i < this._roomData.playerList.length; i++) for (var j = 0; j < data.playerList.length; j++) if (this._roomData.playerList[i].chair == data.playerList[j].chair) {
+          this._roomData.playerList[i].avatar = data.playerList[j].avatar;
+          this._roomData.playerList[i].money = data.playerList[j].money;
+          this._roomData.playerList[i].userId = data.playerList[j].userId;
+          this._roomData.playerList[i].userName = data.playerList[j].userName;
+          this._roomData.playerList[i].stateId = Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING;
+          this._roomData.playerList[i].betAmount = data.playerList[j].betAmount;
+        }
+        this._roomData.matchId = data.matchId;
+        this._updateRoomData();
+        this.onGameBet(data.countDownTime, data.bankerChair, data.bankerPot, data.moneyAddToPot, data.warningCount);
+      };
+      GameController.prototype.onWsMatchEnd = function(data) {
+        cc.log("on match end");
+        for (var i = 0; i < this.playerNodes.length; i++) this.playerNodes[this._getLocalChair(i)].setVisibleWatingOpenCards(false);
+        this.nanBaiLayer.closeDialog();
+        this.onGameEndMatch(data);
+        this.playerNodes[0].getState() == Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING && this._ws.sendUserAction(this._userAction);
+      };
+      GameController.prototype.onWsMatchFinish = function(data) {
+        cc.log("onGameFinishMatch");
+        this.onGameFinishMatch(data);
+      };
+      GameController.prototype.onWsBet = function(errorCode, data) {
+        cc.log("onWsBet", data);
+        if (errorCode) return;
+        cc.log(data.totalBet, this.pot.getValue());
+        data.totalBet != this.pot.getValue() && 0 != data.remainGold || 0 != this._getLocalChair(data.chair) || this.playingNode.setActive(false);
+        if (0 == data.remainGold) {
+          this.playerNodes[this._getLocalChair(data.chair)].showAllInAnim(true);
+          this.playerNodes[this._getLocalChair(data.chair)].showAMaxBetAnim(true);
+        }
+        data.totalBet == this.pot.getValue() && this.playerNodes[this._getLocalChair(data.chair)].showAMaxBetAnim(true);
+        this.playerNodes[this._getLocalChair(data.chair)].bet(data.totalBet, data.remainGold);
+        this.playerNodes[this._getLocalChair(data.chair)].showViewBet(data.bet, this._roomData.moneyBet);
+        0 == this._getLocalChair(data.chair) && this.playingNode.setLastBet(data.totalBet);
+        this.shanKoeMeeSound.playBet();
+      };
+      GameController.prototype.onWsStartPhaseOne = function(data) {
+        this.onGamePhaseOne(data);
+      };
+      GameController.prototype.onWsStartPhaseTwo = function(data) {
+        cc.log("on ws phase two ", data);
+        this.onGamePhaseTwo(data.countDownTime);
+      };
+      GameController.prototype.onWsSeen = function(data) {
+        cc.log("onWsSeen", data);
+        this.playerNodes[this._getLocalChair(data.chair)].setVisibleWatingOpenCards(false);
+        if (0 == this._getLocalChair(data.chair)) this.nanBaiLayer.closeDialog(); else if (this.playerNodes[this._getLocalChair(data.chair)].getCardData().length > 0) {
+          this.playerNodes[this._getLocalChair(data.chair)].showAllCards();
+          this.shanKoeMeeSound.playOtherShan();
+        }
+      };
+      GameController.prototype.onWsDrawCard = function(errorCode, data) {
+        if (errorCode) return;
+        var chair = this._getLocalChair(data.chair);
+        var cardNode = cc.instantiate(this.prefabCard);
+        cardNode.scale = Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE;
+        cardNode.angle = 180;
+        cardNode.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_CARD_BASE_Z_ORDER;
+        cardNode.setPosition(cc.v2(0, 0));
+        this.uiNode.addChild(cardNode);
+        this.playerNodes[chair].addCard(cardNode.getComponent(Shan_Card_1.default));
+        this.dealerAction("Deal");
+        if (0 == this._getLocalChair(data.chair)) {
+          this.playerNodes[0].hideGroupName();
+          this.playerNodes[0].addCardData(data.cardId);
+          if (data.chair == this.bankerChair) {
+            var bankPlayer_1 = this.playerNodes[chair];
+            cardNode.runAction(cc.sequence(cc.delayTime(.3), cc.callFunc(function() {
+              this.setId(data.cardId, true);
+              bankPlayer_1.setShow(false);
+              bankPlayer_1.showAllCards();
+            }.bind(cardNode.getComponent(Shan_Card_1.default)))));
+          }
+          this.nanBaiLayer.node.active && this.nanBaiLayer.drawCard(data.cardId);
+        }
+        this.shanKoeMeeSound.playDealOneCard();
+      };
+      GameController.prototype.onWsCompare = function(data) {};
+      GameController.prototype.onWsBankerWin = function(data) {
+        this.changeBankerChair(-1);
+        var player = this.playerNodes[this._getLocalChair(data.chair)];
+        this.chipGroup.collectGold(player);
+        player.moneyChange(data.moneyWin, data.balance, false);
+        this.pot.setValue(0);
+        this.showBankerWin(data.moneyWin, this.playerNodes[this._getLocalChair(data.chair)].getUserName());
+        this._chatNode.notifyBankerWin(this.playerNodes[this._getLocalChair(data.chair)].getUserName(), data.moneyWin);
+      };
+      GameController.prototype.onKeyDown = function(event) {
+        cc.log("onKeyDown", event);
+      };
+      GameController.prototype.changeBankerChair = function(chair) {
+        if (this.bankerChair != chair) {
+          this.bankerChair = chair;
+          this.playingNode.setLastBet(0);
+          this.playerNodes.forEach(function(pn) {
+            pn.setBanker(false);
+          });
+          if (chair >= 0 && chair < this.playerNodes.length) {
+            this.playerNodes[this._getLocalChair(chair)].setBanker(true);
+            this.playerNodes[this._getLocalChair(chair)].showBurnBorderAnim();
+          }
+        }
+      };
+      GameController.prototype.updateWarningCount = function(count) {
+        if (count <= 0) {
+          this.bgWarningCount.active = false;
+          return 0;
+        }
+        if (3 == count) {
+          this.bgWarningCount.setScale(0);
+          this.bgWarningCount.active = true;
+          this.lbWarningCount.string = "" + count;
+          this.bgWarningCount.angle = 0;
+          cc.tween(this.bgWarningCount).to(.5, {
+            scale: 2,
+            angle: -360
+          }, {
+            easing: "sineOutIn"
+          }).to(.5, {
+            scale: 1,
+            angle: -720
+          }, {
+            easing: "sineOutIn"
+          }).start();
+          this.shanKoeMeeSound.playLast3game();
+        } else {
+          this.bgWarningCount.active = true;
+          this.lbWarningCount.string = "" + count;
+          this.bgWarningCount.angle = 0;
+          cc.tween(this.bgWarningCount).to(.5, {
+            scale: 2,
+            angle: -360
+          }, {
+            easing: "sineInOut"
+          }).to(.5, {
+            scale: 1,
+            angle: -720
+          }, {
+            easing: "sineInOut"
+          }).start();
+          this.shanKoeMeeSound.playLast3game();
+        }
+        var alertCount = cc.instantiate(this.prefabShanAlert);
+        this.node.addChild(alertCount);
+        alertCount.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_ALERT_Z_INDEX;
+        alertCount.getComponent("ShanKoeMeeAlert").show(count);
+        return 2;
+      };
+      GameController.prototype.shouldShowBtnCompare = function() {
+        var isBanker = 0 == this._getLocalChair(this.bankerChair);
+        if (isBanker) {
+          var countShan = 0;
+          var countTwoCard = 0;
+          var countThreeCard = 0;
+          var countEmptyCard = 0;
+          for (var i = 1; i < this.playerNodes.length; i++) {
+            var p = this.playerNodes[i];
+            p.bgShan9.node.active || p.bgShan8.node.active || p.bgShanSap.node.active ? countShan++ : 2 == p._cards.length ? countTwoCard++ : 3 == p._cards.length ? countThreeCard++ : 3 == p._cards.length ? countThreeCard++ : countEmptyCard++;
+          }
+          this.bankerPlayingNode.setActiveBtnCompare(countTwoCard > 0 && countThreeCard > 0);
+        }
+      };
+      GameController.prototype.onShowJackPot = function() {
+        cc.log("onShowJackPot");
+        this.shanKoeMeeJackpot.showAn\u0111UpateData();
+      };
+      GameController.prototype.onBtnShowEmoClick = function() {
+        this._chatNode.showEmoNode();
+      };
+      GameController.prototype.onWsBoomJackpot = function(data) {
+        var _this = this;
+        cc.log("onWsBoomJackpot ", data);
+        var player = this.playerNodes[this._getLocalChair(data.chair)];
+        0 == this._getLocalChair(data.chair) ? cc.tween(this.node).delay(this._delayForJackPotWin).call(function() {
+          var jpNode = cc.instantiate(_this.prefabJackPotBig);
+          jpNode.zIndex = 99999;
+          _this.node.addChild(jpNode);
+          player.moneyChange(data.amount, data.balance, false);
+          jpNode.getComponent("ShanKoeMeeJackPotBig").showWinJackpot(data.amount);
+        }).start() : cc.tween(this.node).delay(this._delayForJackPotWin).call(function() {
+          var jpNode = cc.instantiate(_this.prefabJackPotSmall);
+          _this.node.addChild(jpNode);
+          jpNode.setPosition(player.node.getPosition().add(cc.v2(0, 100)));
+          jpNode.getComponent("ShanKoeMeeJackPotSmall").showWinJackpot(data.amount);
+          player.moneyChange(data.amount, data.balance, false);
+          player.setCardData(data.cardList);
+          player.showAllCards();
+        }).start();
+      };
+      GameController.prototype.onBtnBackClicked = function() {
+        0 == this._getLocalChair(this.bankerChair), this._ws.leaveRoom();
+      };
+      var GameController_1;
+      GameController.instance = null;
+      __decorate([ property(cc.Prefab) ], GameController.prototype, "playingNodePrefab", void 0);
+      __decorate([ property(cc.Prefab) ], GameController.prototype, "bankerPlayingNodePrefab", void 0);
+      __decorate([ property(cc.Prefab) ], GameController.prototype, "ShanKoeMeeJackpotPrefab", void 0);
+      __decorate([ property(cc.Prefab) ], GameController.prototype, "nanBaiLayerPrefab", void 0);
+      __decorate([ property(Shan_Pot_1.default) ], GameController.prototype, "pot", void 0);
+      __decorate([ property(Shan_ChipGroup_1.default) ], GameController.prototype, "chipGroup", void 0);
+      __decorate([ property(cc.Prefab) ], GameController.prototype, "bankerWin", void 0);
+      __decorate([ property(cc.Node) ], GameController.prototype, "bgWarningCount", void 0);
+      __decorate([ property(cc.Label) ], GameController.prototype, "lbWarningCount", void 0);
+      __decorate([ property(Shan_Sound_1.default) ], GameController.prototype, "shanKoeMeeSound", void 0);
+      __decorate([ property(cc.Prefab) ], GameController.prototype, "prefabJackPotBig", void 0);
+      __decorate([ property(cc.Prefab) ], GameController.prototype, "prefabJackPotSmall", void 0);
+      __decorate([ property(cc.Prefab) ], GameController.prototype, "prefabShanAlert", void 0);
+      __decorate([ property(cc.Node) ], GameController.prototype, "lstBgUser", void 0);
+      __decorate([ property(cc.Sprite) ], GameController.prototype, "lstSpMutil", void 0);
+      __decorate([ property(cc.Node) ], GameController.prototype, "lstWaitingOpen", void 0);
+      __decorate([ property(cc.Node) ], GameController.prototype, "lstPointNode", void 0);
+      __decorate([ property(cc.Node) ], GameController.prototype, "lstBgPoint", void 0);
+      __decorate([ property(cc.Node) ], GameController.prototype, "lstBgPointLose", void 0);
+      __decorate([ property(sp.Skeleton) ], GameController.prototype, "lstBgShan8", void 0);
+      __decorate([ property(sp.Skeleton) ], GameController.prototype, "lstBgShan9", void 0);
+      __decorate([ property(sp.Skeleton) ], GameController.prototype, "lstBgShanSap", void 0);
+      __decorate([ property(cc.Label) ], GameController.prototype, "lstBbPoint", void 0);
+      GameController = GameController_1 = __decorate([ ccclass ], GameController);
+      return GameController;
+    }(Shan_GameLayer_1.default);
+    exports.default = GameController;
+    cc._RF.pop();
+  }, {
+    "../../Lobby/LobbyScript/Script/common/App": void 0,
+    "../../Lobby/LobbyScript/Script/networks/Network.InPacket": void 0,
+    "./Model/Shan.Jackpot": "Shan.Jackpot",
+    "./Shan.BankerPlayingNode": "Shan.BankerPlayingNode",
+    "./Shan.Cmd": "Shan.Cmd",
+    "./Shan.Contants": "Shan.Contants",
+    "./Shan.NanBai": "Shan.NanBai",
+    "./Shan.NetworkClient": "Shan.NetworkClient",
+    "./Shan.PlayingNode": "Shan.PlayingNode",
+    "./Shan.Room": "Shan.Room",
+    "./Shan.Sound": "Shan.Sound",
+    "./common/Shan.Card": "Shan.Card",
+    "./common/Shan.Chip": "Shan.Chip",
+    "./common/Shan.ChipGroup": "Shan.ChipGroup",
+    "./common/Shan.GameLayer": "Shan.GameLayer",
+    "./common/Shan.Pot": "Shan.Pot",
+    "./common/Shan.SettingInGame": "Shan.SettingInGame",
+    "./common/Shan.Utils": "Shan.Utils"
+  } ],
+  "Shan.GameLayer": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "5c06dXFhwxCcoJdCMpHC/QB", "Shan.GameLayer");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Configs_1 = require("../../../Loading/src/Configs");
+    var App_1 = require("../../../Lobby/LobbyScript/Script/common/App");
+    var Shan_Cmd_1 = require("../Shan.Cmd");
+    var Sham_TimeCountDown_1 = require("./Sham.TimeCountDown");
+    var Shan_PlayerNode_1 = require("./Shan.PlayerNode");
+    var Shan_Utils_1 = require("./Shan.Utils");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var GameLayer = function(_super) {
+      __extends(GameLayer, _super);
+      function GameLayer() {
+        var _this = _super.call(this) || this;
+        _this.lbID = null;
+        _this.lbBet = null;
+        _this.lbRoomInfo = null;
+        _this.lbBetInfo = null;
+        _this.btnLeave = null;
+        _this.lbJackPot = null;
+        _this.icChipJackpot = null;
+        _this.playerPos = [];
+        _this.playerPrefab = [];
+        _this.timeCountDown = null;
+        _this.prefabCard = null;
+        _this.prefabItemAnim = null;
+        _this.prefabEmoAnim = null;
+        _this.prefabPopupMessage = null;
+        _this.dealerNode = null;
+        _this.dealerAnim = null;
+        _this.prefabChip = null;
+        _this.prefabSetting = null;
+        _this.prefabInteractDealer = null;
+        _this.chatNodePrefab = null;
+        _this.prefabGetChip = null;
+        _this.prefabInvite = null;
+        _this.audio = null;
+        _this._userIdToChairMapping = {};
+        _this._userIdToChairMapping = {};
+        _this.MAX_PLAYER = 4;
+        _this._roomData = null;
+        _this._ownChair = 0;
+        _this.playerNodes = [];
+        _this._chatNode = null;
+        _this.uiNode = null;
+        _this.basePopUpActive = null;
+        _this._userAction = false;
+        _this._jackpotValue = 0;
+        _this._isDealerAction = false;
+        return _this;
+      }
+      GameLayer.prototype.onLoad = function() {
+        cc.log("GameLayer onLoad");
+        this.initNodeWithPrefab();
+        this.timeCountDown && (this.timeCountDown.node.zIndex = 999);
+        this.uiNode = new cc.Node();
+        this.node.addChild(this.uiNode);
+        this.uiNode.zIndex = 2;
+      };
+      GameLayer.prototype.start = function() {
+        var _this = this;
+        var self = this;
+        setTimeout(function() {
+          for (var i = 0; i < self.playerPos.length; i++) {
+            self.playerNodes[i].node.setPosition(self.playerPos[i].getPosition());
+            self.playerNodes[i].node.opacity = 255;
+            self.playerPos[i].destroy();
+          }
+          self.playerPos = [];
+        }, 50);
+        this.schedule(function() {
+          _this._isDealerAction || _this.dealerAction("Idle");
+        }, 8);
+      };
+      GameLayer.prototype.initNodeWithPrefab = function() {
+        this.playerNodes = [];
+        cc.log("initNodeWithPrefab", this.playerPos.length);
+        for (var i = 0; i < this.playerPos.length; i++) {
+          var node = this._createNodeFromPrefab(this.playerPrefab[i]);
+          node.setPosition(this.playerPos[i].getPosition());
+          node.scale = this.playerPos[i].scale;
+          node.angle = this.playerPos[i].angle;
+          node.opacity = 0;
+          node.zIndex = 2;
+          var player = node.getComponent(Shan_PlayerNode_1.default);
+          player.localChair = i;
+          player.setGameLayer(this);
+          this.playerNodes.push(player);
+          this.playerPos[i].opacity = 0;
+        }
+      };
+      GameLayer.prototype.init = function(ws, target) {
+        this._ws = ws;
+        this._eventTarget = target;
+        this._user = Configs_1.default.Login;
+      };
+      GameLayer.prototype._createNodeFromPrefab = function(prefab, zIndex) {
+        var node = cc.instantiate(prefab);
+        this.node.addChild(node);
+        zIndex && (node.zIndex = zIndex);
+        return node;
+      };
+      GameLayer.prototype._updateRoomOwner = function() {};
+      GameLayer.prototype._getLocalChair = function(chair) {
+        return (chair - this._ownChair + this.MAX_PLAYER) % this.MAX_PLAYER;
+      };
+      GameLayer.prototype._onRoomInvite = function() {};
+      GameLayer.prototype._onShowUserInfo = function(userId) {};
+      GameLayer.prototype.getChildrenCount = function() {
+        return 0;
+      };
+      GameLayer.prototype.onInviteLayerClosed = function() {
+        this._inviteLayer = null;
+      };
+      GameLayer.prototype.onBtnSettingClicked = function() {};
+      GameLayer.prototype.showChatLayer = function(tabIdx) {
+        cc.log("showChatLayer");
+      };
+      GameLayer.prototype.showShop = function() {};
+      GameLayer.prototype._updatePlayerNodes = function() {
+        for (var i = 0; i < this._roomData.playerList.length; i++) {
+          var d = this._roomData.playerList[i];
+          var localChair = this._getLocalChair(d.chair);
+          this._userIdToChairMapping[d.userName] = localChair;
+          this.playerNodes[localChair].updateInfo(d);
+        }
+      };
+      GameLayer.prototype._updateRoomData = function() {
+        this._ownChair = this._roomData.playerList.filter(function(p) {
+          return p.userName == this._user.Nickname;
+        }.bind(this))[0].chair;
+        this._updatePlayerNodes();
+        this._updateRoomOwner();
+        var strRoomInfo = this._roomData.roomId;
+        this.lbRoomInfo.string = strRoomInfo;
+        var strBetInfo = Shan_Utils_1.NumberUtils.format(this._roomData.moneyBet);
+        this.lbBetInfo.string = strBetInfo;
+      };
+      GameLayer.prototype._removePlayer = function(data, playerList) {
+        var localChair = this._userIdToChairMapping[data.userName];
+        var playerList = this._roomData.playerList;
+        var player = playerList.filter(function(p) {
+          return p.userId == data.userId;
+        })[0];
+        if (!player) return cc.log("WARNING: Player Not Found - " + data.userId, playerList);
+        var chair = player.chair;
+        var d = {
+          chair: chair,
+          stateId: Shan_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME
+        };
+        playerList[chair] = d;
+        this._roomData.playerList = playerList;
+        this._roomData.numPlayer -= 1;
+        if (this.playerNodes[localChair]) var success = this.playerNodes[localChair].updateInfo(d);
+        delete this._userIdToChairMapping[data.userName];
+        this._updateRoomOwner();
+      };
+      GameLayer.prototype._userCouldLeaveRoom = function(data) {
+        var localChair = this._userIdToChairMapping[data.userName];
+        if (isNaN(localChair)) return;
+        return true;
+      };
+      GameLayer.prototype._showMsgIngame = function(msg) {};
+      GameLayer.prototype.onBtnBackClicked = function() {
+        this._ws.leaveRoom();
+      };
+      GameLayer.prototype.onWsRoomStartCountdown = function(seconds) {
+        cc.log("start count down", seconds);
+        this.timeCountDown && this.timeCountDown.show("start_countdown", seconds);
+      };
+      GameLayer.prototype.onWsRoomInfo = function(data) {
+        cc.log(data);
+        this._roomData = data;
+        this._updateRoomData();
+        App_1.default.instance.showLoading(false);
+      };
+      GameLayer.prototype.onWsLeaveRoom = function(data) {
+        cc.log("onWsLeaveRoom", data);
+        if (data.userId == this._user.Nickname) {
+          this._eventTarget._onGameLeave.call(this._eventTarget);
+          this.node.removeFromParent();
+        } else {
+          if (!this._userCouldLeaveRoom(data)) return;
+          this._roomData.roomOwnerId != data.roomOwnerId && (this._roomData.roomOwnerId = data.roomOwnerId);
+          var playerList = this._roomData.playerList;
+          var player = playerList.filter(function(p) {
+            return p.userId == data.userId;
+          })[0];
+          player && this._removePlayer(data, playerList);
+        }
+      };
+      GameLayer.prototype.onReMatchClick = function() {
+        this.onBtnBackClicked();
+        this._eventTarget._registerRematch ? this._eventTarget._registerRematch = false : this._eventTarget._registerRematch = true;
+        cc.log("onReMatchClick", this._eventTarget._registerRematch);
+      };
+      GameLayer.prototype.onWsRegisterLeaveRoom = function(data) {
+        cc.log("onWsRegisterLeaveRoom", data);
+        if (data.userId == this._user.Nickname) {
+          App_1.default.instance.showLoading(false);
+          this.btnLeave.color = data.isRegister ? cc.Color.GRAY : cc.Color.WHITE;
+          data.isRegister ? this._showMsgIngame("Register back") : this._showMsgIngame("Unrigister back");
+        }
+        var localChair = this._userIdToChairMapping[data.userName];
+        localChair >= 0 && localChair < this.playerNodes.length && this.playerNodes[localChair].showRegisterBack(data.isRegister);
+      };
+      GameLayer.prototype.onWsJoinRoomOther = function(data) {
+        cc.log("onWsJoinRoomOther", JSON.stringify(data));
+        var playerList = this._roomData.playerList;
+        var idx = -1;
+        for (var i = 0; i < playerList.length; i++) if (playerList[i].chair == data.chair) {
+          idx = i;
+          break;
+        }
+        idx = idx >= 0 ? idx : playerList.length;
+        playerList[idx] = data;
+        this._roomData.playerList = playerList;
+        var localChair = this._getLocalChair(data.chair);
+        this.playerNodes[localChair].updateInfo(data);
+        this._userIdToChairMapping[data.userName] = localChair;
+      };
+      GameLayer.prototype.onWsGetInviteeList = function(list) {
+        cc.log("onWsGetInviteeList:", list);
+        var node = cc.instantiate(this.prefabInvite);
+        this.node.addChild(node);
+        node.zIndex = 9998;
+        this._inviteLayer = node.getComponent("InviteList");
+        this._inviteLayer.init(this._ws);
+        this._inviteLayer.show();
+        this._inviteLayer.onWsGetInviteeList(list);
+      };
+      GameLayer.prototype.onWsGetJackpot = function(data) {
+        cc.log("onWsGetJackpot", data);
+        var oldValue = this._jackpotValue;
+        this._jackpotValue = data.chip;
+        if (this.lbJackPot) {
+          var count_1 = 0;
+          this.schedule(function() {
+            this.lbJackPot.string = Shan_Utils_1.NumberUtils.format(Math.floor(oldValue + count_1++ * (this._jackpotValue - oldValue) / 100));
+            this.icChipJackpot && (this.icChipJackpot.x = this.lbJackPot.node.x - this.lbJackPot.node.width / 2 - 15);
+          }, .01, 100, 1e-4);
+        }
+      };
+      GameLayer.prototype.onWsBoomJackpot = function(data) {
+        cc.log("onWsBoomJackpot ", data);
+      };
+      GameLayer.prototype.onWsChat = function(data) {
+        cc.log("onWsChat", data);
+        var localChair = this._userIdToChairMapping[data.userName];
+        if (cc.js.isNumber(localChair)) {
+          var userName = this.playerNodes[localChair]._data.userName;
+          data.username = userName;
+          if (this._chatNode) {
+            var dataChat = JSON.parse(data.content);
+            if ("quick" == dataChat.type) {
+              this._chatNode.onNewQuickChat(userName, dataChat.content);
+              this._showUserMessage(localChair, "chat.quick_chat." + this._gameName + "." + dataChat.content);
+            } else if ("text" == dataChat.type) {
+              this._chatNode.onNewTextChat(userName, dataChat.content);
+              this._showUserMessage(localChair, dataChat.content);
+            } else "emo" == dataChat.type && this._showUserEmoMessage(localChair, dataChat.content);
+          }
+        }
+      };
+      GameLayer.prototype._showUserMessage = function(localChair, msStr) {
+        var popupMessage = cc.instantiate(this.prefabPopupMessage);
+        this.node.addChild(popupMessage);
+        popupMessage.zIndex = 9999;
+        popupMessage.getComponent("PopupMessage").show(msStr);
+        popupMessage.setPosition(this.playerNodes[localChair].node.getPosition().add(cc.v2(0, 100)));
+        popupMessage.y + popupMessage.height / 2 > this.node.height / 2 && (popupMessage.y = this.node.height / 2 - popupMessage.height / 2 - 10);
+        popupMessage.x + popupMessage.width / 2 > this.node.width / 2 && (popupMessage.x = this.node.width / 2 - popupMessage.width / 2 - 10);
+        popupMessage.x - popupMessage.width / 2 < -this.node.width / 2 && (popupMessage.x = -this.node.width / 2 + popupMessage.width / 2 + 10);
+      };
+      GameLayer.prototype._showUserEmoMessage = function(localChair, msStr) {
+        var emoAnim = cc.instantiate(this.prefabEmoAnim);
+        this.playerNodes[localChair].node.addChild(emoAnim);
+        emoAnim.getComponent("EmotionAnim").show(msStr, 2);
+      };
+      GameLayer.prototype.onWsEmoChat = function(data) {
+        var localChair = this._userIdToChairMapping[data.userName];
+      };
+      GameLayer.prototype.onWsRoomStopCountDown = function() {
+        this.timeCountDown && (this.timeCountDown.node.active = false);
+      };
+      GameLayer.prototype.onWsgameInteract = function(data) {
+        cc.log("onWsgameInteract", data);
+        var itemConfig = this.getItem(data.itemId);
+        if (-1 == data.targetChair || 255 == data.targetChair) for (var i = 0; i < this.playerNodes.length; i++) this.throwItemTo(this._getLocalChair(data.fromChair), i, itemConfig); else if (-2 == data.targetChair || 254 == data.targetChair) {
+          this.throwItemTo(this._getLocalChair(data.fromChair), -2, itemConfig);
+          [ 2, 4, 5 ].includes(data.itemId) ? this.dealerAction("Fun", 1) : this.dealerAction("Angry", 1);
+        } else this.throwItemTo(this._getLocalChair(data.fromChair), this._getLocalChair(data.targetChair), itemConfig);
+      };
+      GameLayer.prototype.onWsReceiveJackpotWinners = function(data) {
+        cc.log("onWsReceiveJackpotWinners", data);
+      };
+      GameLayer.prototype.throwItemTo = function(fromLocalChair, localChair, itemConfig) {
+        if (-2 == localChair || 254 == localChair) this.throwItem(this.playerNodes[fromLocalChair].node.getPosition(), this.dealerNode.getPosition().add(cc.v2(0, 80)), itemConfig); else {
+          if (this.playerNodes[localChair].getState() === Shan_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME || fromLocalChair == localChair) return;
+          this.throwItem(this.playerNodes[fromLocalChair].node.getPosition(), this.playerNodes[localChair].node.getPosition(), itemConfig);
+        }
+      };
+      GameLayer.prototype.throwItem = function(start, des, itemConfig) {
+        var node = cc.instantiate(this.prefabItemAnim);
+        this.node.addChild(node);
+        node.setPosition(start);
+        node.zIndex = 30;
+        cc.log("Throw Item");
+      };
+      GameLayer.prototype.getItem = function(id) {
+        var items = [];
+        for (var i = 0; i < 7; i++) items.push({
+          id: i + 1,
+          imgPath: "interact/expression_icon-" + (i + 1)
+        });
+        for (var i = 0, size = items.length; i < size; i++) if (items[i].id == id) return items[i];
+        return null;
+      };
+      GameLayer.prototype.onWsgameTip = function(data) {
+        var _this = this;
+        cc.log("onWsgameTip", data);
+        if (data.amount > 0) {
+          var chipNode = cc.instantiate(this.prefabChip);
+          this.node.addChild(chipNode);
+          chipNode.scale = .8;
+          chipNode.getComponent("Chip").setValue(null, Shan_Utils_1.NumberUtils.format(data.amount));
+          chipNode.setPosition(this.playerNodes[this._getLocalChair(data.chair)].node.getPosition());
+          chipNode.getComponent("Chip").updateChipTexture(data.amount);
+          var tmpPos = this.dealerNode.getPosition().add(cc.v2(0, 50));
+          cc.tween(chipNode).to(.5, {
+            x: tmpPos.x,
+            y: tmpPos.y,
+            rotation: 360
+          }, {
+            easing: "quintOut"
+          }).to(.2, {
+            opacity: 0
+          }).call(function() {
+            _this.dealerAction("Heart", .1);
+            var arr = [ 2, 4, 5 ];
+            var itemConfig = _this.getItem(arr[Math.floor(3 * Math.random())]);
+            _this.throwItem(_this.dealerNode.getPosition().add(cc.v2(0, 80)), _this.playerNodes[_this._getLocalChair(data.chair)].node.getPosition(), itemConfig);
+          }).removeSelf().start();
+          this._chatNode && this._chatNode.notifyTipDealer(this.playerNodes[this._getLocalChair(data.chair)].getUserName(), Shan_Utils_1.NumberUtils.format(data.amount));
+          var localChair = this._userIdToChairMapping[data.userName];
+          this.playerNodes[localChair].updateMoney(data.balance);
+        }
+      };
+      GameLayer.prototype.onWsSetCheat = function(data) {};
+      GameLayer.prototype.clean = function() {
+        this.node.stopAllActions();
+        this.playerNodes.forEach(function(p) {
+          p.clean();
+        });
+        this.uiNode.removeAllChildren();
+        this._userAction = false;
+      };
+      GameLayer.prototype.onTipDealerClick = function() {
+        cc.log("onTipDealerClick");
+        this._userAction = true;
+        Shan_Utils_1.default.getChip() > 2 * this._roomData.moneyBet;
+      };
+      GameLayer.prototype.onDealerClick = function() {
+        var node = cc.instantiate(this.prefabInteractDealer);
+        node.zIndex = 999;
+        this.node.addChild(node);
+        var interactDealer = node.getComponent("InteractDealer");
+        interactDealer.setData(this);
+        this.basePopUpActive = interactDealer;
+      };
+      GameLayer.prototype.dealerAction = function(key, delay) {
+        var _this = this;
+        delay = delay || 0;
+        this._isDealerAction = true;
+        this.dealerNode && this.dealerAnim && cc.tween(this.dealerNode).delay(delay).call(function() {
+          switch (key) {
+           case "Idle":
+            _this.dealerAnim.animation = "Idle";
+            break;
+
+           case "Heart":
+            _this.dealerAnim.animation = "thatim";
+            break;
+
+           case "Deal":
+            _this.dealerAnim.animation = "Chiabai";
+            break;
+
+           case "Fun":
+            _this.dealerAnim.animation = "vui" + (Math.floor(3 * Math.random()) + 1);
+            break;
+
+           case "Angry":
+            _this.dealerAnim.animation = "tucgian" + (Math.floor(3 * Math.random()) + 1);
+          }
+        }).delay(3).call(function() {
+          _this._isDealerAction = false;
+        }).start();
+      };
+      GameLayer.prototype.onBtnShowEmoClick = function() {
+        this._chatNode.showEmoNode();
+      };
+      GameLayer.prototype.onBtnShowQuickChatClick = function() {
+        this._chatNode.showQuickChatNode();
+      };
+      __decorate([ property(cc.Node) ], GameLayer.prototype, "lbID", void 0);
+      __decorate([ property(cc.Node) ], GameLayer.prototype, "lbBet", void 0);
+      __decorate([ property(cc.Label) ], GameLayer.prototype, "lbRoomInfo", void 0);
+      __decorate([ property(cc.Label) ], GameLayer.prototype, "lbBetInfo", void 0);
+      __decorate([ property(cc.Node) ], GameLayer.prototype, "btnLeave", void 0);
+      __decorate([ property(cc.Label) ], GameLayer.prototype, "lbJackPot", void 0);
+      __decorate([ property(cc.Node) ], GameLayer.prototype, "icChipJackpot", void 0);
+      __decorate([ property(cc.Node) ], GameLayer.prototype, "playerPos", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "playerPrefab", void 0);
+      __decorate([ property(Sham_TimeCountDown_1.default) ], GameLayer.prototype, "timeCountDown", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabCard", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabItemAnim", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabEmoAnim", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabPopupMessage", void 0);
+      __decorate([ property(cc.Node) ], GameLayer.prototype, "dealerNode", void 0);
+      __decorate([ property(sp.Skeleton) ], GameLayer.prototype, "dealerAnim", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabChip", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabSetting", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabInteractDealer", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "chatNodePrefab", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabGetChip", void 0);
+      __decorate([ property(cc.Prefab) ], GameLayer.prototype, "prefabInvite", void 0);
+      __decorate([ property(cc.AudioClip) ], GameLayer.prototype, "audio", void 0);
+      GameLayer = __decorate([ ccclass ], GameLayer);
+      return GameLayer;
+    }(cc.Component);
+    exports.default = GameLayer;
+    cc._RF.pop();
+  }, {
+    "../../../Loading/src/Configs": void 0,
+    "../../../Lobby/LobbyScript/Script/common/App": void 0,
+    "../Shan.Cmd": "Shan.Cmd",
+    "./Sham.TimeCountDown": "Sham.TimeCountDown",
+    "./Shan.PlayerNode": "Shan.PlayerNode",
+    "./Shan.Utils": "Shan.Utils"
+  } ],
+  "Shan.InteractItem": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "4d2fbD7OXNGYqEpNOsplwoY", "Shan.InteractItem");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var InteractItem = function(_super) {
+      __extends(InteractItem, _super);
+      function InteractItem() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.image = null;
+        _this.timer = null;
+        _this.nodeTimer = null;
+        return _this;
+      }
+      InteractItem.prototype.onload = function() {
+        this.nodeTimer && (this.nodeTimer.active = false);
+      };
+      InteractItem.prototype.update = function(dt) {
+        if (this.nodeTimer && this.nodeTimer.active) var now = cc.sys.now();
+      };
+      InteractItem.prototype.setData = function(cb, itemId, imagePath) {
+        this._cb = cb;
+        this._itemId = itemId;
+        this._imagePath = imagePath;
+        this._updateImage();
+      };
+      InteractItem.prototype.onClicked = function() {
+        this._cb && this._cb(this._itemId);
+      };
+      InteractItem.prototype._itemId = function(_itemId) {
+        throw new Error("Method not implemented.");
+      };
+      InteractItem.prototype._updateImage = function() {};
+      InteractItem.prototype.setRotation = function(rotation) {
+        this.node.angle = rotation;
+      };
+      __decorate([ property(cc.Sprite) ], InteractItem.prototype, "image", void 0);
+      __decorate([ property(cc.ProgressBar) ], InteractItem.prototype, "timer", void 0);
+      __decorate([ property(cc.Node) ], InteractItem.prototype, "nodeTimer", void 0);
+      InteractItem = __decorate([ ccclass ], InteractItem);
+      return InteractItem;
+    }(cc.Component);
+    exports.default = InteractItem;
     cc._RF.pop();
   }, {} ],
   "Shan.ItemResult": [ function(require, module, exports) {
@@ -4713,7 +4555,6 @@ window.__require = function e(t, n, r) {
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    var Shan_Controller_1 = require("./Shan.Controller");
     var Utils_1 = require("../../Lobby/LobbyScript/Script/common/Utils");
     var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var ShanItemRoom = function(_super) {
@@ -4735,9 +4576,7 @@ window.__require = function e(t, n, r) {
         this.labelNumPlayers.string = info["userCount"] + "/" + info["maxUserPerRoom"];
         this.progressNumPlayers.fillRange = info["userCount"] / info["maxUserPerRoom"];
       };
-      ShanItemRoom.prototype.chooseRoom = function() {
-        Shan_Controller_1.default.instance.joinRoom(this.roomInfo);
-      };
+      ShanItemRoom.prototype.chooseRoom = function() {};
       __decorate([ property(cc.Label) ], ShanItemRoom.prototype, "labelBet", void 0);
       __decorate([ property(cc.Label) ], ShanItemRoom.prototype, "labelBetMin", void 0);
       __decorate([ property(cc.Label) ], ShanItemRoom.prototype, "labelNumPlayers", void 0);
@@ -4748,12 +4587,262 @@ window.__require = function e(t, n, r) {
     exports.default = ShanItemRoom;
     cc._RF.pop();
   }, {
-    "../../Lobby/LobbyScript/Script/common/Utils": void 0,
-    "./Shan.Controller": "Shan.Controller"
+    "../../Lobby/LobbyScript/Script/common/Utils": void 0
+  } ],
+  "Shan.JackpotBig": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "af55aCtas1DbrnHPHNoOvOh", "Shan.JackpotBig");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var JackpotBig = function(_super) {
+      __extends(JackpotBig, _super);
+      function JackpotBig() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.animJackpot = null;
+        _this.lbChip = null;
+        _this.soundJackPot = null;
+        return _this;
+      }
+      JackpotBig.prototype.start = function() {};
+      JackpotBig.prototype.showWinJackpot = function(chips) {};
+      __decorate([ property(sp.Skeleton) ], JackpotBig.prototype, "animJackpot", void 0);
+      __decorate([ property(cc.Label) ], JackpotBig.prototype, "lbChip", void 0);
+      __decorate([ property(cc.AudioClip) ], JackpotBig.prototype, "soundJackPot", void 0);
+      JackpotBig = __decorate([ ccclass ], JackpotBig);
+      return JackpotBig;
+    }(cc.Component);
+    exports.default = JackpotBig;
+    cc._RF.pop();
+  }, {} ],
+  "Shan.JackpotItem": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "c594fKiWLdD6bjtG7rfMBdC", "Shan.JackpotItem");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Shan_Utils_1 = require("../common/Shan.Utils");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var JackpotItem = function(_super) {
+      __extends(JackpotItem, _super);
+      function JackpotItem() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.lbName = null;
+        _this.lbChip = null;
+        _this.lbTime = null;
+        _this.lbBet = null;
+        return _this;
+      }
+      JackpotItem.prototype.updateUi = function(data) {
+        this.lbName.string = Shan_Utils_1.StringUtils.shorten(data.userName, 13);
+        this.lbChip.string = Shan_Utils_1.NumberUtils.format(data.amount);
+        this.lbBet.string = Shan_Utils_1.NumberUtils.format(data.bet);
+      };
+      __decorate([ property(cc.Label) ], JackpotItem.prototype, "lbName", void 0);
+      __decorate([ property(cc.Label) ], JackpotItem.prototype, "lbChip", void 0);
+      __decorate([ property(cc.Label) ], JackpotItem.prototype, "lbTime", void 0);
+      __decorate([ property(cc.Label) ], JackpotItem.prototype, "lbBet", void 0);
+      JackpotItem = __decorate([ ccclass ], JackpotItem);
+      return JackpotItem;
+    }(cc.Component);
+    exports.default = JackpotItem;
+    cc._RF.pop();
+  }, {
+    "../common/Shan.Utils": "Shan.Utils"
+  } ],
+  "Shan.JackpotSmall": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "0b5b3dc6wxF8pXPREIUT3wz", "Shan.JackpotSmall");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var JackpotBig = function(_super) {
+      __extends(JackpotBig, _super);
+      function JackpotBig() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.animJackpot = null;
+        _this.lbChip = null;
+        return _this;
+      }
+      JackpotBig.prototype.start = function() {};
+      JackpotBig.prototype.showWinJackpot = function(chips) {};
+      __decorate([ property(sp.Skeleton) ], JackpotBig.prototype, "animJackpot", void 0);
+      __decorate([ property(cc.Label) ], JackpotBig.prototype, "lbChip", void 0);
+      JackpotBig = __decorate([ ccclass ], JackpotBig);
+      return JackpotBig;
+    }(cc.Component);
+    exports.default = JackpotBig;
+    cc._RF.pop();
+  }, {} ],
+  "Shan.Jackpot": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "d504acRni1ILbwg5EBuR4Bf", "Shan.Jackpot");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var App_1 = require("../../../Lobby/LobbyScript/Script/common/App");
+    var Shan_BasePopup_1 = require("./Shan.BasePopup");
+    var Shan_JackpotItem_1 = require("./Shan.JackpotItem");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var Jackpot = function(_super) {
+      __extends(Jackpot, _super);
+      function Jackpot() {
+        var _this = _super.call(this) || this;
+        _this.shanJackpotItem = null;
+        _this.lstContent = null;
+        _this._listHeight = 0;
+        return _this;
+      }
+      Jackpot.prototype.onLoad = function() {
+        this.node.zIndex = 1e4;
+        this.onCloseDone();
+      };
+      Jackpot.prototype.showAn\u0111UpateData = function() {
+        this.show();
+      };
+      Jackpot.prototype.finishAnimation = function() {
+        App_1.default.instance.showLoading(false);
+      };
+      Jackpot.prototype.updateData = function(data) {
+        return this;
+      };
+      Jackpot.prototype.onBtnCloseClicked = function() {};
+      Jackpot.prototype.onCloseDone = function() {
+        this.node.active = false;
+      };
+      Jackpot.prototype.updateListUser = function(list) {
+        var _this = this;
+        this.lstContent.removeAllChildren();
+        this._listHeight = 0;
+        list = list || [];
+        list.forEach(function(element) {
+          var item = cc.instantiate(_this.shanJackpotItem);
+          _this.lstContent.addChild(item);
+          item.setPosition(cc.v2(0, -_this._listHeight));
+          _this._listHeight += item.height + 5;
+          item.getComponent(Shan_JackpotItem_1.default).updateUi(element);
+          _this.lstContent.height = _this._listHeight;
+        });
+      };
+      Jackpot.instance = null;
+      Jackpot.prefab = null;
+      __decorate([ property(cc.Prefab) ], Jackpot.prototype, "shanJackpotItem", void 0);
+      __decorate([ property(cc.Node) ], Jackpot.prototype, "lstContent", void 0);
+      Jackpot = __decorate([ ccclass ], Jackpot);
+      return Jackpot;
+    }(Shan_BasePopup_1.default);
+    exports.default = Jackpot;
+    cc._RF.pop();
+  }, {
+    "../../../Lobby/LobbyScript/Script/common/App": void 0,
+    "./Shan.BasePopup": "Shan.BasePopup",
+    "./Shan.JackpotItem": "Shan.JackpotItem"
   } ],
   "Shan.NanBai": [ function(require, module, exports) {
     "use strict";
-    cc._RF.push(module, "a631brghOxEoI/7l5SFZCrh", "Shan.NanBai");
+    cc._RF.push(module, "3f6b83itldPXa/R91UB9rje", "Shan.NanBai");
     "use strict";
     var __extends = this && this.__extends || function() {
       var extendStatics = function(d, b) {
@@ -4783,8 +4872,7 @@ window.__require = function e(t, n, r) {
       value: true
     });
     exports.NodeNanBai = void 0;
-    var Shan_Controller_1 = require("../Shan.Controller");
-    var Shan_Card_1 = require("./Shan.Card");
+    var Shan_Card_1 = require("./common/Shan.Card");
     var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var TW = cc.tween;
     var NodeNanBai = function(_super) {
@@ -4798,12 +4886,26 @@ window.__require = function e(t, n, r) {
         _this.lbTime = null;
         _this.hands = [];
         _this.openCard = null;
+        _this._countDownEndAt = 0;
+        _this._hasBeenShowCard = false;
+        _this._isClosing = true;
+        _this._canNan = false;
         return _this;
       }
+      NodeNanBai.prototype.setWs = function(ws) {
+        this._ws = ws;
+      };
+      NodeNanBai.prototype.setGameLayer = function(game) {
+        this._gameLayer = game;
+      };
       NodeNanBai.prototype.onLoad = function() {
         this.node.on(cc.Node.EventType.TOUCH_START, this.maskTouchBegan, this);
         this.node.on(cc.Node.EventType.TOUCH_MOVE, this.maskTouchMove, this);
         this.node.on(cc.Node.EventType.TOUCH_END, this.maskTouchEnd, this);
+        this.cards[0].setMode(2);
+        this.cards[1].setMode(2);
+        this.cards[2].setMode(2);
+        cc.log("this.cards[0]._mode========= ", this.cards[2]._mode);
       };
       NodeNanBai.prototype.update = function(dt) {
         if (this.node.active) {
@@ -4847,7 +4949,8 @@ window.__require = function e(t, n, r) {
         for (var i = 0; i < cardIds.length; i++) {
           var c = this.cards[i];
           c.node.stopAllActions();
-          c.setCardData(cardIds[i]);
+          c.setId(cardIds[i]);
+          c.show();
           c.node.x = 400 * (i - (cardIds.length - 1) / 2);
           this.masks[i].setPosition(c.node.getPosition());
         }
@@ -4887,7 +4990,7 @@ window.__require = function e(t, n, r) {
           this._selectedMask.setPosition(pos.sub(this._deltaPos));
           var originPos = this._selectedMask == this.masks[1] ? this.cards[1].node.getPosition() : this.cards[2].node.getPosition();
           if (this._selectedMask.x - originPos.x > .25 * this.cards[0].node.getContentSize().width || this._selectedMask.y - originPos.y > .65 * this.cards[0].node.getContentSize().height || -(this._selectedMask.x - originPos.x) > .45 * this.cards[0].node.getContentSize().width || -(this._selectedMask.y - originPos.y) > .25 * this.cards[0].node.getContentSize().height) {
-            Shan_Controller_1.default.instance._userAction = true;
+            this._gameLayer._userAction = true;
             this._onNanFinish();
           }
         }
@@ -4951,20 +5054,20 @@ window.__require = function e(t, n, r) {
         this._closeCB && this._closeCB();
       };
       NodeNanBai.prototype.onBtnDrawClicked = function() {
-        Shan_Controller_1.default.instance._userAction = true;
+        this._gameLayer._userAction = true;
         this.enableBtns(false);
         this.btnOpen.active = false;
-        Shan_Controller_1.default.instance.draw();
+        this._ws.draw();
       };
       NodeNanBai.prototype.onBtnNoDrawClicked = function() {
-        Shan_Controller_1.default.instance._userAction = true;
+        this._gameLayer._userAction = true;
         this.enableBtns(false);
         this.btnOpen.active = false;
         cc.log("closeDialog onBtnNoDrawClicked");
         this.closeDialog();
       };
       NodeNanBai.prototype.onBtnOpenClicked = function() {
-        Shan_Controller_1.default.instance._userAction = true;
+        this._gameLayer._userAction = true;
         if (!this.masks[2].active) {
           this._selectedMask = this.masks[1];
           this._belowCard = this.cards[1];
@@ -4985,7 +5088,8 @@ window.__require = function e(t, n, r) {
         this._cardIds.push(cardId);
         var card = this.cards[2];
         var mask = this.masks[2];
-        card.setCardData(cardId);
+        card.setId(cardId, true);
+        card.show();
         mask.opacity = 255;
         mask.active = true;
         card.node.active = true;
@@ -5009,8 +5113,7 @@ window.__require = function e(t, n, r) {
     exports.NodeNanBai = NodeNanBai;
     cc._RF.pop();
   }, {
-    "../Shan.Controller": "Shan.Controller",
-    "./Shan.Card": "Shan.Card"
+    "./common/Shan.Card": "Shan.Card"
   } ],
   "Shan.NetworkClient": [ function(require, module, exports) {
     "use strict";
@@ -5042,12 +5145,15 @@ window.__require = function e(t, n, r) {
     var Network_InPacket_1 = require("../../Lobby/LobbyScript/Script/networks/Network.InPacket");
     var Network_NetworkClient_1 = require("../../Lobby/LobbyScript/Script/networks/Network.NetworkClient");
     var Network_NetworkListener_1 = require("../../Lobby/LobbyScript/Script/networks/Network.NetworkListener");
+    var Shan_Cmd_1 = require("./Shan.Cmd");
+    var Shan_Contants_1 = require("./Shan.Contants");
     var ShanNetworkClient = function(_super) {
       __extends(ShanNetworkClient, _super);
       function ShanNetworkClient() {
         var _this = _super.call(this) || this;
         _this.listeners = new Array();
         _this.isUseWSS = Configs_1.default.App.USE_WSS;
+        _this._state = Shan_Contants_1.ConnectionState.NO_CONNECTION;
         return _this;
       }
       ShanNetworkClient.getInstance = function() {
@@ -5055,10 +5161,16 @@ window.__require = function e(t, n, r) {
         return this.instance;
       };
       ShanNetworkClient.prototype.connect = function() {
+        this.setState(Shan_Contants_1.ConnectionState.CONNECTING);
         _super.prototype.connect.call(this, "shankoemee.vietkieu888.com", 443);
       };
       ShanNetworkClient.prototype.onOpen = function(ev) {
         _super.prototype.onOpen.call(this, ev);
+        this.setState(Shan_Contants_1.ConnectionState.CONNECTED);
+      };
+      ShanNetworkClient.prototype.onError = function(ev) {
+        _super.prototype.onError.call(this, ev);
+        this.setState(Shan_Contants_1.ConnectionState.NO_CONNECTION);
       };
       ShanNetworkClient.prototype.onMessage = function(ev) {
         var data = new Uint8Array(ev.data);
@@ -5075,10 +5187,50 @@ window.__require = function e(t, n, r) {
       ShanNetworkClient.prototype.addListener = function(callback, target) {
         this.listeners.push(new Network_NetworkListener_1.default(target, callback));
       };
+      ShanNetworkClient.prototype.setState = function(s) {
+        this._state = s;
+      };
+      ShanNetworkClient.prototype.getState = function() {
+        return this._state;
+      };
       ShanNetworkClient.prototype.send = function(packet) {
         cc.log(">>>>>", packet._cmdId, ">>>>>");
         for (var b = new Int8Array(packet._length), c = 0; c < packet._length; c++) b[c] = packet._data[c];
         null != this.ws && this.isConnected() && this.ws.send(b.buffer);
+      };
+      ShanNetworkClient.prototype.leaveRoom = function() {
+        this.send(new Shan_Cmd_1.default.SendLeaveGame());
+      };
+      ShanNetworkClient.prototype.sendUserAction = function(_userAction) {
+        this.send(new Shan_Cmd_1.default.SendUserAction(_userAction));
+      };
+      ShanNetworkClient.prototype.getJackPot = function() {
+        throw new Error("Method not implemented.");
+      };
+      ShanNetworkClient.prototype.seen = function() {
+        this.send(new Shan_Cmd_1.default.SendSeen());
+      };
+      ShanNetworkClient.prototype.bet = function(amount) {
+        cc.log("send bet ", amount);
+        this.send(new Shan_Cmd_1.default.SendBet(amount));
+      };
+      ShanNetworkClient.prototype.draw = function() {
+        cc.log("Draw");
+        this.send(new Shan_Cmd_1.default.SendDraw());
+      };
+      ShanNetworkClient.prototype.noDraw = function() {
+        this.send(new Shan_Cmd_1.default.SendNoDraw());
+      };
+      ShanNetworkClient.prototype.compare = function() {
+        this.send(new Shan_Cmd_1.default.SendCompare());
+      };
+      ShanNetworkClient.prototype.getUserInfo = function(userId, cb) {};
+      ShanNetworkClient.prototype.disconnect = function() {
+        this.getState() != Shan_Contants_1.ConnectionState.NO_CONNECTION && this.getState() != Shan_Contants_1.ConnectionState.CLOSING && this.closeSocket();
+        this.setState(Shan_Contants_1.ConnectionState.CLOSING);
+      };
+      ShanNetworkClient.prototype.closeSocket = function() {
+        this.ws.close();
       };
       return ShanNetworkClient;
     }(Network_NetworkClient_1.default);
@@ -5088,7 +5240,311 @@ window.__require = function e(t, n, r) {
     "../../Loading/src/Configs": void 0,
     "../../Lobby/LobbyScript/Script/networks/Network.InPacket": void 0,
     "../../Lobby/LobbyScript/Script/networks/Network.NetworkClient": void 0,
-    "../../Lobby/LobbyScript/Script/networks/Network.NetworkListener": void 0
+    "../../Lobby/LobbyScript/Script/networks/Network.NetworkListener": void 0,
+    "./Shan.Cmd": "Shan.Cmd",
+    "./Shan.Contants": "Shan.Contants"
+  } ],
+  "Shan.PlayerNode": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "d545d7tOeRMeqkgNmguRDTT", "Shan.PlayerNode");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var App_1 = require("../../../Lobby/LobbyScript/Script/common/App");
+    var Shan_Cmd_1 = require("../Shan.Cmd");
+    var Shan_Card_1 = require("./Shan.Card");
+    var Shan_ProgressBar_1 = require("./Shan.ProgressBar");
+    var Shan_Utils_1 = require("./Shan.Utils");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var PlayerNode = function(_super) {
+      __extends(PlayerNode, _super);
+      function PlayerNode() {
+        var _this = _super.call(this) || this;
+        _this.localChair = -1;
+        _this.lbMoney = null;
+        _this.lbName = null;
+        _this.avatar = null;
+        _this.waitingNode = null;
+        _this.userNode = null;
+        _this.timer = null;
+        _this.timerBar = null;
+        _this.prefabPlayerInfo = null;
+        _this.prefabCard = null;
+        _this.prefabWinLabel = null;
+        _this.prefabLoseLabel = null;
+        _this.progressParticle = null;
+        _this.winEffect = null;
+        _this.winEffectAvatar = null;
+        _this.lostEffect = null;
+        _this.sp_icChip = null;
+        _this.sp_register_back = null;
+        _this._data = null;
+        _this._cards = [];
+        _this._cardData = [];
+        return _this;
+      }
+      PlayerNode.prototype.showComputerPlay = function() {};
+      PlayerNode.prototype.showWaitingNewMatch = function(arg0) {};
+      PlayerNode.prototype.showViewBet = function(betAmount, moneyBet, arg2) {};
+      PlayerNode.prototype.bet = function(betAmount, money) {};
+      PlayerNode.prototype.instantlyAddCard = function(cards, arg1, uiNode) {};
+      PlayerNode.prototype.setGameLayer = function(gameLayer) {
+        this._gameLayer = gameLayer;
+      };
+      PlayerNode.prototype.clean = function() {
+        this.node.stopAllActions();
+        this._cards.forEach(function(c) {
+          c.stopAllActions();
+          c.node.removeFromParent();
+          c.setDarkMode(false);
+        });
+        this._cards = [];
+        this._cardData = [];
+        this.winEffect && (this.winEffect.node.active = false);
+        this.winEffectAvatar && (this.winEffectAvatar.node.active = false);
+        this.lostEffect && (this.lostEffect.active = false);
+        this.setDarkMode && this.setDarkMode(false);
+      };
+      PlayerNode.prototype.setDarkMode = function(value) {};
+      PlayerNode.prototype.onLoad = function() {
+        this.timer && (this.timer.node.active = false);
+        this.winEffect && (this.winEffect.node.active = false);
+        this.winEffectAvatar && (this.winEffectAvatar.node.active = false);
+        this.lostEffect && (this.lostEffect.active = false);
+        this.setVisibleInviteBtn(false);
+      };
+      PlayerNode.prototype.updateInfo = function(data) {
+        cc.log("updateUserInfo", data);
+        this._data = data;
+        if (this._data && this._data.stateId == Shan_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME) {
+          this.userNode.active = false;
+          this._gameLayer.lstBgUser && this._gameLayer.lstBgUser.length > this.localChair && (this._gameLayer.lstBgUser[this.localChair].active = false);
+          return false;
+        }
+        this.userNode && (this.userNode.active = true);
+        this._gameLayer.lstBgUser && this._gameLayer.lstBgUser.length > this.localChair && (this._gameLayer.lstBgUser[this.localChair].active = true);
+        this.lbName && (this.lbName.string = Shan_Utils_1.StringUtils.shorten(this._data.userName, 12));
+        this._data.avatar && this.updateAvatar();
+        this.sp_register_back && (this.sp_register_back.active = false);
+        return true;
+      };
+      PlayerNode.prototype.update = function(dt) {
+        if (this.getState() == Shan_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME) return;
+        if (this.lbMoney) {
+          this.lbMoney.string = Shan_Utils_1.NumberUtils.format(this._data.money);
+          this.sp_icChip && (this.sp_icChip.x = this.lbMoney.node.x - this.lbMoney.node.width / 2 - 20);
+        }
+        if (this.timer && this.timer.node.active) {
+          var userData = this.timer.userData;
+          var now = cc.sys.now();
+          var delta = now - userData.startTime;
+          var deltaPercent = delta / (1e3 * userData.duration);
+          var percentage = userData.startPercentage + (0 - userData.startPercentage) * deltaPercent;
+          this.timer.progress = percentage;
+          !this._isTriggered && percentage < .25 && this._triggleAlert();
+          if (this.progressParticle && percentage > 0) {
+            var radius = this.timer.node.width / 2;
+            var angle = 2 * percentage * Math.PI;
+            var x = -radius * Math.sin(angle);
+            var y = radius * Math.cos(angle);
+            this.progressParticle.setPosition(cc.v2(x, y));
+            this.progressParticle.active = true;
+          } else this.progressParticle && (this.progressParticle.active = false);
+          this.timerBar && percentage < .25 ? this.timerBar.color = cc.Color.RED : this.timerBar && percentage < .5 && (this.timerBar.color = cc.Color.YELLOW);
+        }
+      };
+      PlayerNode.prototype._triggleAlert = function() {};
+      PlayerNode.prototype.updateAvatar = function() {
+        this.avatar.spriteFrame = App_1.default.instance.getAvatarSpriteFrame(this._data.avatar);
+      };
+      PlayerNode.prototype.getUserName = function() {
+        return this._data.userName || "";
+      };
+      PlayerNode.prototype.getState = function() {
+        return this._data ? this._data.stateId : Shan_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME;
+      };
+      PlayerNode.prototype.getUserId = function() {
+        return this._data ? this._data.userId : null;
+      };
+      PlayerNode.prototype.startPlaying = function() {
+        this.getState() == Shan_Cmd_1.default.Code.PLAYER_STATUS_SITTING && this._setState(Shan_Cmd_1.default.Code.PLAYER_STATUS_PLAYING);
+      };
+      PlayerNode.prototype.startCountDown = function(time, startPercentage) {
+        cc.log("startCountDown", time, startPercentage);
+        var percentage = (startPercentage || 100) / 100;
+        var startColor = cc.Color.GREEN;
+        this.timer.userData = {
+          startTime: cc.sys.now(),
+          startPercentage: percentage,
+          startColor: startColor,
+          duration: time * percentage
+        };
+        this.timer.node.active = true;
+        this.timerBar && (this.timerBar.color = startColor);
+        this.timer.progress = percentage / 100;
+      };
+      PlayerNode.prototype.stopCountDown = function() {
+        this.timer.node.stopAllActions();
+        this.timer.node.active = false;
+        this._isTriggered = false;
+      };
+      PlayerNode.prototype.updateMoney = function(money) {
+        this._data.money = money;
+      };
+      PlayerNode.prototype.getMoney = function() {
+        return this._data.money;
+      };
+      PlayerNode.prototype.getChair = function() {
+        return this._data.chair;
+      };
+      PlayerNode.prototype._setState = function(value) {
+        this._data.stateId = value;
+      };
+      PlayerNode.prototype.setCardData = function(cardData) {
+        this._cardData = cardData;
+      };
+      PlayerNode.prototype.addCardData = function(card) {
+        this._cardData.push(card);
+      };
+      PlayerNode.prototype.removeCardData = function(card) {
+        -1 !== this._cardData.indexOf(card) && this._cardData.splice(this._cardData.indexOf(card), 1);
+      };
+      PlayerNode.prototype.getCardData = function() {
+        return this._cardData;
+      };
+      PlayerNode.prototype._addCard = function(card) {
+        cc.log("_addCard", card instanceof Shan_Card_1.default);
+        if (!(card instanceof Shan_Card_1.default)) return false;
+        this._cards.push(card);
+        return true;
+      };
+      PlayerNode.prototype.addCard = function(card) {
+        if (this._addCard(card)) {
+          var newPos = this.node.getPosition().add(this._getCardPos());
+          card.node.runAction(cc.sequence(cc.spawn(cc.moveTo(.2, newPos), cc.rotateBy(.2, 180)), cc.callFunc(function(obj, pos) {
+            card.setPosition(newPos);
+            card.setRotation(0);
+          })));
+        }
+      };
+      PlayerNode.prototype._getCardPos = function() {
+        return cc.v2(0, 0);
+      };
+      PlayerNode.prototype.removeCard = function(card) {
+        var idx = this._cards.map(function(c) {
+          return c.getId();
+        }).indexOf(card.getId());
+        cc.log("removeCard", card, idx);
+        if (idx < 0) return;
+        var removed = this._cards.splice(idx, 1);
+        return removed[0];
+      };
+      PlayerNode.prototype.removeAllCards = function() {
+        this._cards.forEach(function(c) {
+          c.node.removeFromParent();
+        });
+        this._cards = [];
+      };
+      PlayerNode.prototype.updateNumberCardLeft = function() {
+        0 !== this.localChair && this._cards.length > 0 ? this.showCardLeft(this._cards.length) : this.hideCardLeft();
+      };
+      PlayerNode.prototype.showCardLeft = function(value) {};
+      PlayerNode.prototype.hideCardLeft = function() {};
+      PlayerNode.prototype.moneyChange = function(moneyChange, targetMoney, isSpawn) {
+        void 0 === isSpawn && (isSpawn = true);
+        if (this.lbMoney) {
+          var str = (moneyChange > 0 ? "+" + Shan_Utils_1.NumberUtils.format(moneyChange) : Shan_Utils_1.NumberUtils.format(moneyChange)).toString();
+          var node = cc.instantiate(moneyChange >= 0 ? this.prefabWinLabel : this.prefabLoseLabel);
+          node.zIndex = 100;
+          node.setPosition(this.node.getPosition());
+          this.node.parent.addChild(node);
+          var lb = node.getComponent(cc.Label);
+          lb.string = str;
+          node.scale = .45;
+          var act = null;
+          if (isSpawn) {
+            cc.log("Co Spawn");
+            act = cc.sequence(cc.spawn(cc.moveBy(1.2, cc.v2(0, 100)), cc.fadeOut(1.4)), cc.removeSelf());
+          } else {
+            cc.log("k Co Spawn");
+            act = cc.sequence(cc.sequence(cc.moveBy(1.2, cc.v2(0, 100)), cc.fadeOut(1.4)), cc.removeSelf());
+          }
+          node.runAction(act);
+        }
+        "undefined" != typeof targetMoney && (this._data.money = targetMoney);
+      };
+      PlayerNode.prototype.onAvatarClicked = function() {};
+      PlayerNode.prototype.setVisibleInviteBtn = function(visible) {
+        this.waitingNode && (this.waitingNode.active = visible);
+      };
+      PlayerNode.prototype.vibrateAvatar = function() {
+        var pos = this.waitingNode.getPosition();
+        cc.tween(this.userNode).to(.1, {
+          y: pos.y + 10
+        }).to(.1, {
+          y: pos.y
+        }).start();
+      };
+      PlayerNode.prototype.showRegisterBack = function(boolean) {
+        this.sp_register_back && (this.sp_register_back.active = boolean);
+      };
+      PlayerNode.prototype.onInviteClicked = function() {
+        this._gameLayer._ws.getInviteeList();
+      };
+      __decorate([ property ], PlayerNode.prototype, "localChair", void 0);
+      __decorate([ property(cc.Label) ], PlayerNode.prototype, "lbMoney", void 0);
+      __decorate([ property(cc.Label) ], PlayerNode.prototype, "lbName", void 0);
+      __decorate([ property(cc.Sprite) ], PlayerNode.prototype, "avatar", void 0);
+      __decorate([ property(cc.Node) ], PlayerNode.prototype, "waitingNode", void 0);
+      __decorate([ property(cc.Node) ], PlayerNode.prototype, "userNode", void 0);
+      __decorate([ property(Shan_ProgressBar_1.default) ], PlayerNode.prototype, "timer", void 0);
+      __decorate([ property(cc.Node) ], PlayerNode.prototype, "timerBar", void 0);
+      __decorate([ property(cc.Prefab) ], PlayerNode.prototype, "prefabPlayerInfo", void 0);
+      __decorate([ property(cc.Prefab) ], PlayerNode.prototype, "prefabCard", void 0);
+      __decorate([ property(cc.Prefab) ], PlayerNode.prototype, "prefabWinLabel", void 0);
+      __decorate([ property(cc.Prefab) ], PlayerNode.prototype, "prefabLoseLabel", void 0);
+      __decorate([ property(cc.Node) ], PlayerNode.prototype, "progressParticle", void 0);
+      __decorate([ property(sp.Skeleton) ], PlayerNode.prototype, "winEffect", void 0);
+      __decorate([ property(sp.Skeleton) ], PlayerNode.prototype, "winEffectAvatar", void 0);
+      __decorate([ property(cc.Node) ], PlayerNode.prototype, "lostEffect", void 0);
+      __decorate([ property(cc.Node) ], PlayerNode.prototype, "sp_icChip", void 0);
+      __decorate([ property(cc.Node) ], PlayerNode.prototype, "sp_register_back", void 0);
+      PlayerNode = __decorate([ ccclass ], PlayerNode);
+      return PlayerNode;
+    }(cc.Component);
+    exports.default = PlayerNode;
+    cc._RF.pop();
+  }, {
+    "../../../Lobby/LobbyScript/Script/common/App": void 0,
+    "../Shan.Cmd": "Shan.Cmd",
+    "./Shan.Card": "Shan.Card",
+    "./Shan.ProgressBar": "Shan.ProgressBar",
+    "./Shan.Utils": "Shan.Utils"
   } ],
   "Shan.Player": [ function(require, module, exports) {
     "use strict";
@@ -5121,298 +5577,125 @@ window.__require = function e(t, n, r) {
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    var BaCay_Cmd_1 = require("../../BaCay/BaCayScript/BaCay.Cmd");
-    var App_1 = require("../../Lobby/LobbyScript/Script/common/App");
-    var Utils_1 = require("../../Lobby/LobbyScript/Script/common/Utils");
+    var Shan_Card_1 = require("./common/Shan.Card");
     var Shan_Chip_1 = require("./common/Shan.Chip");
     var Shan_ChipGroup_1 = require("./common/Shan.ChipGroup");
+    var Shan_PlayerNode_1 = require("./common/Shan.PlayerNode");
     var Shan_Utils_1 = require("./common/Shan.Utils");
     var ShanCardGroup_1 = require("./Model/ShanCardGroup");
     var ShanCardGroupName_1 = require("./Model/ShanCardGroupName");
+    var Shan_Cmd_1 = require("./Shan.Cmd");
+    var Shan_Contants_1 = require("./Shan.Contants");
+    var Shan_GameController_1 = require("./Shan.GameController");
     var TW = cc.tween;
     var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var Player = function(_super) {
       __extends(Player, _super);
       function Player() {
         var _this = _super.call(this) || this;
-        _this.btnInvite = null;
-        _this.avatar = null;
-        _this.cardReady = null;
-        _this.cardReal = null;
-        _this.userName = null;
-        _this.userGold = null;
-        _this.owner = null;
-        _this.cardsName = null;
-        _this.actionVaoGa = null;
-        _this.actionDanhBien = null;
-        _this.actionViewer = null;
-        _this.actionThinking = null;
-        _this.actionWin = null;
-        _this.goldWin = null;
-        _this.actionLose = null;
-        _this.goldLose = null;
-        _this.hub = null;
-        _this.goldBet = null;
-        _this.prefabItemChip = null;
+        _this.bgBet = null;
+        _this.lbBetAmount = null;
+        _this.status = null;
         _this.prefabChip = null;
-        _this.notify = null;
-        _this.chatEmotion = null;
-        _this.chatMsg = null;
-        _this.popupBet = null;
-        _this.popupRequestDanhBien = null;
-        _this.labelValueDanhBien = null;
-        _this.dataAnimWin = null;
-        _this.fontNumber = [];
-        _this.waitingOpen = null;
-        _this.lbPoint = null;
-        _this.posCardOpened = null;
-        _this.timeoutNotify = null;
-        _this.timeoutShowCardName = null;
-        _this.timeoutChat = null;
-        _this.animWinLose = null;
-        _this.isShowCard = false;
-        _this.isViewing = false;
-        _this.status = 0;
+        _this.bankerEffect = null;
+        _this.multipleFrame = [];
+        _this.animAllIn = null;
+        _this.animMaxBet = null;
+        _this.lbWaiting = null;
+        _this.drawEfected = null;
         _this.bgPoint = null;
         _this.bgPointLose = null;
         _this.bgShan8 = null;
         _this.bgShan9 = null;
         _this.bgShanSap = null;
-        _this.bgPoint = null;
+        _this.lbPoint = null;
         _this.multiple = null;
         _this.waitingOpen = null;
         _this._isBanker = false;
         return _this;
       }
-      Player.prototype.start = function() {
-        this.userNode || (this.userNode = this.node.children[3]);
-        this.bgBet || (this.bgBet = this.hub.parent);
-        for (var i = 0; i < this.cardReal.childrenCount; i++) {
-          var card = this.cardReal.children[i].children[0];
-          card["initPos"] = card.getPosition();
-        }
-        this.lbPoint || (this.lbPoint = this.cardsName.children[0].getComponent(cc.Label));
-        this.bgPoint || (this.bgPoint = this.cardsName);
+      Player.prototype.onLoad = function() {
+        _super.prototype.onLoad.call(this);
+        this._target = Shan_GameController_1.default.instance;
+        this.lbBetAmount && (this.lbBetAmount.node.parent.active = false);
       };
-      Player.prototype.updatePosCardOpened = function(data) {
-        this.posCardOpened = data;
+      Player.prototype.showComputerPlay = function() {
+        this._data.userName = "compute playing";
+        this.lbName.string = this._data.userName;
       };
-      Player.prototype.showChatEmotion = function(content) {
-        var _this = this;
-        this.node.children[7].active = true;
-        this.chatEmotion.active = true;
-        this.chatMsg.active = false;
-        clearTimeout(this.timeoutChat);
-        this.chatEmotion.getComponent(sp.Skeleton).setAnimation(0, content, true);
-        this.timeoutChat = setTimeout(function() {
-          _this.chatEmotion.active = false;
-          _this.chatMsg.active = false;
-        }, 3e3);
+      Player.prototype.setBaseBetAmount = function(value) {
+        this._baseBetAmount = value;
       };
-      Player.prototype.showChatMsg = function(content) {
-        var _this = this;
-        this.node.children[7].active = true;
-        this.chatEmotion.active = false;
-        this.chatMsg.active = true;
-        clearTimeout(this.timeoutChat);
-        this.chatMsg.getComponentInChildren(cc.Label).string = content;
-        this.timeoutChat = setTimeout(function() {
-          _this.chatEmotion.active = false;
-          _this.chatMsg.active = false;
-        }, 5e3);
+      Player.prototype.updateBetAmount = function(value) {
+        this._data.betAmount = value;
       };
-      Player.prototype.showPopupBet = function(state) {
-        this.popupBet.active = state;
-        if (state) {
-          this.popupBet.children[2].active = true;
-          this.popupBet.children[3].active = true;
-          this.popupBet.children[5].active = true;
-          this.popupBet.children[6].active = true;
-          this.setCanDanhBien(true);
-          this.setCanKeCua(true);
+      Player.prototype.getBetAmount = function() {
+        return this._data.betAmount || 0;
+      };
+      Player.prototype.bet = function(betAmount, remainMoney) {
+        this._data.betAmount = betAmount;
+        this._data.money = remainMoney;
+        this.vibrateAvatar();
+      };
+      Player.prototype.setBanker = function(boolean) {
+        this._isBanker = boolean;
+        if (this.bankerEffect) {
+          this.bankerEffect.active = boolean;
+          this.bankerEffect.setScale(0);
+          cc.tween(this.bankerEffect).to(.2, {
+            scale: 1
+          }).start();
         }
       };
-      Player.prototype.setupBetValue = function(bet) {
-        this.popupBet.children[2].children[1].getComponent(cc.Label).string = Utils_1.default.formatNumber(bet);
-        this.popupBet.children[3].children[1].getComponent(cc.Label).string = Utils_1.default.formatNumber(2 * bet);
-        this.popupBet.children[5].children[1].getComponent(cc.Label).string = Utils_1.default.formatNumber(bet);
-        this.popupBet.children[6].children[1].getComponent(cc.Label).string = Utils_1.default.formatNumber(2 * bet);
+      Player.prototype.clean = function() {
+        _super.prototype.clean.call(this);
+        this.bgBet && (this.bgBet.active = false);
+        this.multiple.node.active = false;
+        this.bgPoint.active = false;
+        this.bgShan8.node.active = false;
+        this.bgShan9.node.active = false;
+        this.bgShanSap.node.active = false;
+        this._data.betAmount = 0;
+        this._isShow = false;
+        this.drawEfected && (this.drawEfected.active = false);
+        this.setDarkMode(false);
+        this.showAllInAnim(false);
+        this.showAMaxBetAnim(false);
+        this.showWaitingNewMatch(false);
       };
-      Player.prototype.disableDanhBien = function(id) {
-        1 == id ? this.popupBet.children[3].active = false : this.popupBet.children[2].active = false;
-        this.setCanDanhBien(false);
+      Player.prototype.setShow = function(isShow) {
+        this._isShow = isShow;
       };
-      Player.prototype.disableKeCua = function(id) {
-        1 == id ? this.popupBet.children[6].active = false : this.popupBet.children[5].active = false;
-        this.setCanKeCua(false);
-      };
-      Player.prototype.setCanDanhBien = function(state) {
-        this.popupBet.children[2].getComponent(cc.Button).interactable = state;
-        this.popupBet.children[3].getComponent(cc.Button).interactable = state;
-      };
-      Player.prototype.setCanKeCua = function(state) {
-        this.popupBet.children[5].getComponent(cc.Button).interactable = state;
-        this.popupBet.children[6].getComponent(cc.Button).interactable = state;
-      };
-      Player.prototype.showBtnInvite = function(state) {
-        this.btnInvite.active = state;
-      };
-      Player.prototype.setOwner = function(state) {
-        this.owner.active = state;
-      };
-      Player.prototype.setAvatar = function(avatar) {
-        this.node.children[1].active = true;
-        this.avatar.getComponent(cc.Sprite).spriteFrame = App_1.default.instance.getAvatarSpriteFrame(avatar);
-      };
-      Player.prototype.setIsViewer = function(state) {
-        this.isViewing = state;
-        this.avatar.color = state ? cc.Color.GRAY : cc.Color.WHITE;
-        var bgInfo = cc.find("Info/BG", this.node);
-        bgInfo.color = state ? cc.Color.GRAY : cc.Color.WHITE;
-        cc.find("Info/UserName", this.node).color = state ? cc.Color.GRAY : cc.Color.WHITE;
-        cc.find("Info/userGold", this.node).color = state ? cc.Color.GRAY : cc.Color.WHITE;
-      };
-      Player.prototype.setName = function(data) {
-        this.node.children[3].active = true;
-        this.userName.string = data;
-      };
-      Player.prototype.showCardReady = function(state, num) {
-        num || (num = 3);
-        this.node.children[2].active = true;
-        this.cardReady.active = state;
-        this.cardReady.children.forEach(function(elm) {
-          return elm.active = false;
-        });
-        for (var i = 0; i < num; i++) this.cardReady.children[0].active = true;
-      };
-      Player.prototype.showCardReadyPhaseOne = function(state) {
-        this.node.children[2].active = true;
-        this.cardReady.active = state;
-        this.cardReal.children[0].active = false;
-        this.cardReal.children[1].active = false;
-        this.cardReal.children[2].active = false;
-        this.showCardReadyThird(false);
-      };
-      Player.prototype.showCardReadyThird = function(state) {
-        this.cardReady.children[2].active = state;
-      };
-      Player.prototype.showCardReal = function(state, num) {
-        num || (num = 3);
-        this.cardsName.active = false;
-        this.node.children[2].active = true;
-        this.cardReal.active = state;
-        this.cardReal.children[0].active = num > 0;
-        this.cardReal.children[1].active = num > 1;
-        this.cardReal.children[2].active = num > 2;
-      };
-      Player.prototype.showCardRealPhaseOne = function(state) {
-        this.cardsName.active = false;
-        this.node.children[2].active = true;
-        this.cardReal.active = state;
-        this.cardReal.children[0].active = true;
-        this.cardReal.children[1].active = true;
-        this.cardReal.children[2].active = false;
-      };
-      Player.prototype.showCardRealThird = function(state) {
-        this.cardsName.active = false;
-        this.node.children[2].active = true;
-        this.cardReal.active = state;
-        this.cardReal.children[2].active = true;
-      };
-      Player.prototype.prepareToTransform = function() {
-        this.prepareCardReal(0);
-        this.prepareCardReal(1);
-        this.prepareCardReal(2);
-      };
-      Player.prototype.prepareCardReal = function(pos) {
-        this.cardReal.children[pos].runAction(cc.scaleTo(0, 0, 1));
-      };
-      Player.prototype.transformToCardReal = function(cardPos, idCard, indexCard) {
-        void 0 === indexCard && (indexCard = null);
-        var cardReady = this.cardReady.children[cardPos];
-        cardReady.active = false;
-        var cardReal = this.cardReal.children[cardPos].children[0].getComponent("TienLen.Card");
-        cardReal.node.parent.active = true;
-        var delay = .1 * indexCard;
-        this.effCard(cardReal, delay, idCard);
-        this.isShowCard = true;
-      };
-      Player.prototype.transformAllToCardReal = function() {
-        if (0 == this._cardData.length || this.isShowCard) return;
-        for (var i = 0; i < this._cardData.length; i++) this.transformToCardReal(i, this._cardData[i], i);
-      };
-      Player.prototype.transformCardRealPhaseOne = function() {
-        for (var i = 0; i < this._cardData.length; i++) this.transformToCardReal(i, this._cardData[i], i);
-      };
-      Player.prototype.effCard = function(card, delay, idCard) {
-        var sk1 = 0;
-        var sk2 = 0;
-        var index = 1;
-        if (index <= 1) {
-          sk1 = -15;
-          sk2 = 15;
-        } else {
-          sk1 = 15;
-          sk2 = -15;
+      Player.prototype.showAllCards = function() {
+        this.setVisibleWatingOpenCards(false);
+        if (0 == this._cards.length || 0 == this._cardData.length || this._isShow) return;
+        this._isShow = true;
+        0 == this.localChair && cc.log("showAllCards", this._cards.length);
+        for (var i = 0; i < this._cards.length; i++) {
+          var c = this._cards[i];
+          c.setId(this._cardData[i]);
+          c.node.stopAllActions();
         }
-        var orgPos = card.node["initPos"];
-        cc.Tween.stopAllByTarget(card.node);
-        TW(card.node).delay(delay).to(.15, {
-          scaleX: 0,
-          scaleY: 1.05,
-          skewX: 0,
-          skewY: sk1
-        }, {
-          easing: cc.easing.cubicOut
-        }).call(function() {
-          card.setCardData(52);
-          card.node.skewY = sk2;
-        }).to(.15, {
-          scale: 1.05,
-          skewX: 0,
-          skewY: 0
-        }, {
-          easing: cc.easing.cubicOut
-        }).to(.15, {
-          scaleX: 0,
-          scaleY: 1.05,
-          skewX: 0,
-          skewY: sk1
-        }, {
-          easing: cc.easing.cubicOut
-        }).call(function() {
-          card.setCardData(idCard);
-          card.node.skewY = sk2;
-        }).to(.15, {
-          scale: 1,
-          skewX: 0,
-          skewY: 0
-        }, {
-          easing: cc.easing.cubicOut
-        }).call(function() {}).start();
-        TW(card.node).delay(delay).to(.3, {
-          position: cc.v2(orgPos.x, orgPos.y + 30)
-        }, {
-          easing: cc.easing.cubicOut
-        }).to(.3, {
-          position: orgPos
-        }, {
-          easing: cc.easing.cubicOut
-        }).start();
-      };
-      Player.prototype.showCardName = function(name) {
-        this.cardsName.active = true;
-        this.cardsName.children[0].getComponent(cc.Label).string = name;
+        if (this._isSpecicalGroup()) this._showSpecicalHand(); else {
+          this._showNomalHand();
+          this._gameLayer.shanKoeMeeSound.playShowAllCards();
+        }
       };
       Player.prototype._showCardGroup = function() {
         var group = new ShanCardGroup_1.default();
         group.setCards(this._cards);
-        var scale = this._cards[0].getTargetScale() || this._cards[0].node.scale;
+        var scale = this._cards[0].getTargetScale() || this._cards[0].scale;
         var animScale = scale;
         0 != this.localChair && (animScale *= 1.2);
         if (group.getGroupName().valueOf() == ShanCardGroupName_1.default.NONE.valueOf()) {
           this.bgPoint.active = true;
-          10 == group.getPoint() ? this.lbPoint.string = " \u101b\u1019\u103e\u1010\u103a\u1019\u103b\u102c\u1038" : this.lbPoint.string = group.getPoint() + "  \u101b\u1019\u103e\u1010\u103a\u1019\u103b\u102c\u1038";
+          if (10 == group.getPoint()) {
+            this.lbPoint.string = "\u17a2\u17bb\u1784\u1794\u17b8\u178a\u17be\u1798";
+            this.lbPoint.node.y = 4;
+          } else {
+            this.lbPoint.string = group.getPoint() + " \u1782\u17d2\u179a\u17b6\u1794\u17cb";
+            this.lbPoint.node.y = 4;
+          }
           this.bgPoint.scaleX = 0;
           this.bgPoint.scaleY = scale;
           cc.tween(this.bgPoint).to(.15, {
@@ -5427,7 +5710,8 @@ window.__require = function e(t, n, r) {
           this.bgPoint.active = false;
           this.bgShanSap.node.active = true;
           this.bgShanSap.node.scale = animScale;
-          this.bgShanSap.animation = "animation";
+          this.bgShanSap.animation = "Cam";
+          this._gameLayer.shanKoeMeeSound.playThreeOfAKind();
           return this.bgShanSap.node;
         }
         this.bgPoint.active = false;
@@ -5435,15 +5719,15 @@ window.__require = function e(t, n, r) {
         if (8 == group.getPoint()) {
           this.bgShan8.node.active = true;
           this.bgShan8.node.scale = animScale;
-          this.bgShan8.animation = "cam";
-          0 === this.localChair;
+          this.bgShan8.animation = "Cam";
+          0 === this.localChair && this._gameLayer.shanKoeMeeSound.playShan8();
           return this.bgShan8.node;
         }
         if (9 == group.getPoint()) {
           this.bgShan9.node.active = true;
           this.bgShan9.node.scale = animScale;
-          this.bgShan9.animation = "cam";
-          0 === this.localChair;
+          this.bgShan9.animation = "Cam";
+          0 === this.localChair && this._gameLayer.shanKoeMeeSound.playShan9();
           return this.bgShan9.node;
         }
       };
@@ -5459,289 +5743,147 @@ window.__require = function e(t, n, r) {
           cardGroupNode.x = newPos.x;
         }
       };
-      Player.prototype.setGold = function(data) {
-        this.actionThinking.active = false;
-        this.showGold(true);
-        this.userGold.string = this.formatGold(data);
+      Player.prototype._isSpecicalGroup = function() {
+        var group = new ShanCardGroup_1.default();
+        group.setCards(this._cards);
+        return group.getGroupName().valueOf() != ShanCardGroupName_1.default.NONE.valueOf();
       };
-      Player.prototype.setBet = function(data) {
-        this.showPlayerBet(true);
-        this.goldBet.string = this.formatGold(data);
-      };
-      Player.prototype.addChips = function() {
-        var item1 = cc.instantiate(this.prefabItemChip);
-        var item2 = cc.instantiate(this.prefabItemChip);
-        this.hub.addChild(item1);
-        this.hub.addChild(item2);
-      };
-      Player.prototype.showPlayerBet = function(state) {
-        this.node.children[5].active = state;
-        state || this.hub.removeAllChildren(true);
-      };
-      Player.prototype.setCardReal01 = function(data) {
-        this.cardReal.children[0].children[0].getComponent(cc.Sprite).spriteFrame = data;
-      };
-      Player.prototype.setCardReal02 = function(data) {
-        this.cardReal.children[1].children[0].getComponent(cc.Sprite).spriteFrame = data;
-      };
-      Player.prototype.showPlayCountdown = function() {
-        this.node.children[4].active = true;
-        this.actionThinking.active = true;
-        this.processThinking(0);
-      };
-      Player.prototype.hidePlayCountdown = function() {
-        this.actionThinking.active = false;
-      };
-      Player.prototype.processThinking = function(rate) {
-        this.actionThinking.getComponent(cc.Sprite).fillRange = rate;
-      };
-      Player.prototype.showGold = function(state) {
-        this.node.children[3].children[2].active = state;
-      };
-      Player.prototype.showPopupRequestDanhBien = function(value) {
-        this.popupRequestDanhBien.active = true;
-        this.labelValueDanhBien.string = this.formatGold(value);
-      };
-      Player.prototype.closePopupRequestDanhBien = function() {
-        this.popupRequestDanhBien.active = false;
-      };
-      Player.prototype.prepareFxAction = function() {
-        this.node.children[4].active = true;
-        this.resetAction();
-      };
-      Player.prototype.playFxDanhBien = function() {
-        this.node.children[4].active = true;
-        this.actionDanhBien.active = true;
-        this.actionDanhBien.runAction(cc.sequence(cc.scaleTo(0, 0), cc.scaleTo(.1, 1.1, 1.1), cc.scaleTo(.05, 1, 1)));
-      };
-      Player.prototype.playFxVaoGa = function() {
-        this.node.children[4].active = true;
-        this.actionVaoGa.active = true;
-        this.actionVaoGa.runAction(cc.sequence(cc.scaleTo(0, 0), cc.scaleTo(.1, 1.1, 1.1), cc.scaleTo(.05, 1, 1)));
-      };
-      Player.prototype.playFxViewer = function() {
-        this.prepareFxAction();
-        this.actionViewer.active = true;
-      };
-      Player.prototype.fxOtherPlayerFold = function() {
-        this.cardReady.runAction(cc.moveBy(.5, 0, -100));
-      };
-      Player.prototype.fxMeFold = function() {
-        this.shadowCardReal(true);
-        this.cardReal.runAction(cc.moveBy(.5, 0, -20));
-      };
-      Player.prototype.showEatGa = function(state) {
-        var sprTextGa = this.node.getChildByName("Action").getChildByName("Fx An Ga");
-        sprTextGa.active = state;
-        TW(sprTextGa).set({
-          y: 48
-        }).to(1, {
-          y: 100
-        }, {
-          easing: cc.easing.backOut
-        }).start();
-      };
-      Player.prototype.fxWin = function(playerInfo) {
-        var _this = this;
-        this.node.children[4].active = true;
-        this.actionWin.active = true;
-        this.fxGoldChange(0, playerInfo.moneyChange, this.goldWin.node);
-        this.setGold(this.formatGold(playerInfo.money));
-        setTimeout(function() {
-          _this.actionWin.active = false;
-          _this.node.children[4].active = false;
-          _this.hideAnimWinLose();
-        }, 3e3);
-        this.showAnimWinLose(true);
-      };
-      Player.prototype.fxLose = function(playerInfo) {
-        var _this = this;
-        this.node.children[4].active = true;
-        this.actionLose.active = true;
-        this.fxGoldChange(0, playerInfo.moneyChange, this.goldLose.node);
-        this.setGold(this.formatGold(playerInfo.money));
-        setTimeout(function() {
-          _this.actionLose.active = false;
-          _this.node.children[4].active = false;
-          _this.hideAnimWinLose();
-        }, 3e3);
-        this.showAnimWinLose(false);
-      };
-      Player.prototype.shadowCardReady = function(state) {
-        this.cardReady.children[0].color = state ? cc.Color.GRAY : cc.Color.WHITE;
-        this.cardReady.children[1].color = state ? cc.Color.GRAY : cc.Color.WHITE;
-        this.cardReady.children[2].color = state ? cc.Color.GRAY : cc.Color.WHITE;
-      };
-      Player.prototype.shadowCardReal = function(state) {
-        this.cardReal.children[0].children[0].color = state ? cc.Color.GRAY : cc.Color.WHITE;
-        this.cardReal.children[1].children[0].color = state ? cc.Color.GRAY : cc.Color.WHITE;
-        this.cardReal.children[2].children[0].color = state ? cc.Color.GRAY : cc.Color.WHITE;
-      };
-      Player.prototype.setCardWin = function(pos, state) {
-        this.cardReal.children[pos].children[0].color = state ? cc.Color.WHITE : cc.Color.GRAY;
-      };
-      Player.prototype.showNotify = function(content) {
-        var _this = this;
-        this.notify.active = true;
-        this.notify.children[1].getComponent(cc.Label).string = content;
-        clearTimeout(this.timeoutNotify);
-        this.timeoutNotify = setTimeout(function() {
-          _this.notify.active = false;
-        }, 1500);
-      };
-      Player.prototype.showLeaveRoom = function(status) {
-        this.notify.active = status;
-      };
-      Player.prototype.resetAction = function() {
-        for (var index = 0; index < this.node.children[4].childrenCount; index++) this.node.children[4].children[index].active = false;
-      };
-      Player.prototype.resetMatchHistory = function() {
-        this.resetCardReady();
-        this.resetCardReal();
-        this.node.children[2].active = false;
-        this.showGold(true);
-        this.cardsName.active = false;
-        this.resetAction();
-        this.node.children[5].active = false;
-        this.goldBet.string = "0";
-        this.hub.removeAllChildren(true);
-      };
-      Player.prototype.resetCardReady = function() {
-        this.cardReady.children[0].scale = 1;
-        this.cardReady.children[0].active = true;
-        this.cardReady.children[1].scale = 1;
-        this.cardReady.children[1].active = true;
-        this.cardReady.children[2].scale = 1;
-        this.cardReady.children[2].active = true;
-        this.cardReady.active = false;
-      };
-      Player.prototype.resetCardReadyPhaseOne = function() {
-        this.cardReady.children[0].scale = 1;
-        this.cardReady.children[0].active = true;
-        this.cardReady.children[1].scale = 1;
-        this.cardReady.children[1].active = true;
-        this.cardReady.children[2].scale = 1;
-        this.cardReady.children[2].active = false;
-        this.cardReady.active = false;
-      };
-      Player.prototype.resetCardReal = function() {
-        this.cardReal.active = false;
-        this.cardReal.y = 0;
-        this.cardReal.children[0].children[0].getComponent("TienLen.Card").setCardData(52);
-        this.cardReal.children[1].children[0].getComponent("TienLen.Card").setCardData(52);
-        this.cardReal.children[2].children[0].getComponent("TienLen.Card").setCardData(52);
-        this.shadowCardReal(false);
-      };
-      Player.prototype.resetPlayerInfo = function() {
-        for (var index = 0; index < this.node.childrenCount; index++) this.node.children[index].active = false;
-        this.cardReal.children[0].children[0].getComponent("TienLen.Card").setCardData(52);
-        this.cardReal.children[1].children[0].getComponent("TienLen.Card").setCardData(52);
-        this.cardReal.children[2].children[0].getComponent("TienLen.Card").setCardData(52);
-        this.cardReady.active = false;
-        this.cardReal.active = false;
-        this.cardsName.active = false;
-        this.actionVaoGa.active = false;
-        this.actionDanhBien.active = false;
-        this.actionViewer.active = false;
-        this.actionThinking.active = false;
-        this.actionWin.active = false;
-        this.actionLose.active = false;
-        this.goldBet.string = "0";
-        this.hub.removeAllChildren(true);
-        this.setIsViewer(true);
-      };
-      Player.prototype.fxGoldChange = function(goldStart, goldEnd, node) {
-        var _this = this;
-        var goldAdd = goldEnd - goldStart;
-        node.getComponent(cc.Label).string = this.formatGold(goldStart);
-        node.getComponent(cc.Label).font = goldAdd > 0 ? this.fontNumber[0] : this.fontNumber[1];
-        node.getComponent(cc.Label).fontSize = 20;
-        node.y = goldAdd > 0 ? 16 : 21;
-        var steps = 10;
-        var deltaGoldAdd = Math.floor(goldAdd / steps);
-        var rep = cc.repeat(cc.sequence(cc.delayTime(.05), cc.callFunc(function() {
-          goldStart += deltaGoldAdd;
-          node.getComponent(cc.Label).string = (goldAdd > 0 ? "+" : "") + _this.formatGold(goldStart);
-        })), steps);
-        var seq = cc.sequence(rep, cc.callFunc(function() {
-          goldStart = goldEnd;
-          node.getComponent(cc.Label).string = (goldAdd > 0 ? "+" : "") + _this.formatGold(goldStart);
-        }));
-        node.runAction(seq);
-      };
-      Player.prototype.formatGold = function(price) {
-        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-      };
-      Player.prototype.showAnimWinLose = function(state) {
-        if (null == this.animWinLose) {
-          this.animWinLose = new cc.Node("animWinLose").addComponent(sp.Skeleton);
-          this.animWinLose.skeletonData = this.dataAnimWin;
-          this.animWinLose.node.parent = this.node;
+      Player.prototype.showMultiple = function() {
+        var group = new ShanCardGroup_1.default();
+        group.setCards(this._cards);
+        var _num = group.getMultiple();
+        this.multiple.node.active = false;
+        cc.log("showMultiple: " + _num);
+        switch (_num) {
+         case 1:
+          this.multiple.node.active = false;
+          break;
+
+         case 2:
+          this.multiple.node.active = true;
+          this.multiple.spriteFrame = this.multipleFrame[0];
+          break;
+
+         case 3:
+          this.multiple.node.active = true;
+          this.multiple.spriteFrame = this.multipleFrame[1];
+          break;
+
+         case 5:
+          this.multiple.node.active = true;
+          this.multiple.spriteFrame = this.multipleFrame[2];
         }
-        this.animWinLose.node.active = true;
-        var animName = state ? "th\u1eafng3" : "thua";
-        this.animWinLose.node.scale = state ? .6 : .7;
-        var posAnim = state ? cc.v2(0, -87) : cc.v2(-40, -87);
-        this.animWinLose.node.setPosition(posAnim);
-        this.animWinLose.setAnimation(0, animName, true);
+        var scale = this._cards[0] ? this._cards[0].node.scale : 1;
+        var cardLast = this._cards[this._cards.length - 1];
+        var position = cc.v2(cardLast.node.x + .45 * cardLast.node.getContentSize().width * scale, cardLast.node.y + .4 * cardLast.node.getContentSize().height);
+        this.multiple.node.setPosition(position);
       };
-      Player.prototype.hideAnimWinLose = function() {
-        null != this.animWinLose && (this.animWinLose.node.active = false);
-      };
-      Player.prototype.addCardData = function(card) {
-        this._cardData.push(card);
-      };
-      Player.prototype.getCardData = function() {
-        return this._cardData;
-      };
-      Player.prototype.setCardData = function(cardData) {
-        this._cardData = cardData;
-      };
-      Player.prototype.setVisibleWatingOpenCards = function(value) {
-        this.waitingOpen && (this.waitingOpen.active = value);
-      };
-      Player.prototype.hideBet = function() {
-        this.hub.parent && (this.hub.parent.active = false);
-      };
-      Player.prototype.moneyChange = function(moneyChange, targetMoney, isSpawn) {
-        this.userGold && this.fxGoldChange(targetMoney - moneyChange, targetMoney, this.userGold);
-        "undefined" != typeof targetMoney;
-      };
-      Player.prototype.updateInfo = function(data) {
-        cc.log("updateUserInfo", data);
-        this._data = data;
-        this.userGold && this.setGold(this._data.money);
-        if (this._data && this._data.stateId == BaCay_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME) {
-          this.userNode.active = false;
-          return false;
-        }
-        this.userNode && (this.userNode.active = true);
-        this.userName && this.setName(this._data.userName);
-        this._data.avatar && this.setAvatar(this._data.avatar);
-        this.notify && (this.notify.active = false);
-        return true;
-      };
-      Player.prototype.setBaseBetAmount = function(value) {
-        this._baseBetAmount = value;
+      Player.prototype.hideGroupName = function() {
+        this.multiple.node.active = false;
+        this.bgPoint.active = false;
+        this.bgShan8.node.active = false;
+        this.bgShan9.node.active = false;
+        this.bgShanSap.node.active = false;
       };
       Player.prototype.instantlyAddCard = function(data, isShow, nodeHasCard) {
+        var _this = this;
         cc.log("instantlyAddCard", data, isShow);
-        if (this._data.stateId == BaCay_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME || !data) return;
+        if (this._data.stateId == Shan_Cmd_1.default.Code.PLAYER_STATUS_OUT_GAME || !data) return;
         var numberOfCard = isShow ? data.length : data;
         isShow && (this._cardData = data);
-        this.showCardReady(true, this._cardData.length);
-        this.showCardReal(true, this._cardData.length);
-        isShow && this.showGroupName();
+        var newPos = this._getCardPos();
+        var offsetX = Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_GAP * Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE;
+        for (var i = 0; i < numberOfCard; i++) {
+          var c = cc.instantiate(this.prefabCard);
+          c.setPosition(cc.v2(newPos.x + offsetX * i, newPos.y));
+          c.scale = Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE;
+          nodeHasCard.addChild(c);
+          var card = c.getComponent(Shan_Card_1.default);
+          if (isShow) {
+            card.setId(data[i]);
+            card.show();
+          }
+          this._addCard(card);
+        }
+        cc.tween(nodeHasCard).delay(.1).call(function() {
+          _this._updateCardRotation();
+        }).start();
+        if (isShow) {
+          this.showGroupName();
+          this.showMultiple();
+        }
         cc.log("checker", this._cards.length, this._cardData.length, data, isShow);
         return this._cards;
       };
-      Player.prototype.showWaitingNewMatch = function(boolean) {
-        this.lbWaiting && (this.lbWaiting.node.active = boolean);
+      Player.prototype.addCard = function(card) {
+        if (this._addCard(card)) {
+          var cardStartPosX = this._getCardStartPosX();
+          var offsetX = Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_GAP * Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE;
+          var newPos = cc.v2(cardStartPosX + offsetX * (this._cards.length - 1), this._getCardPos().y);
+          card.setTargetPos(newPos);
+          card.setTargetScale(Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE);
+          card.node.runAction(cc.sequence(cc.spawn(cc.moveTo(.2, newPos), cc.rotateBy(.2, 180), cc.scaleTo(.2, Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE)), cc.callFunc(function() {
+            this._updateCardRotation();
+          }.bind(this))));
+        }
+      };
+      Player.prototype._updateCardRotation = function() {
+        if (this._cards.length > 1) for (var i = 0; i < this._cards.length; i++) {
+          this._cards[i].node.angle = Shan_Contants_1.Constant.SHANKOEMEE_ROTATION_CARD[this._cards.length - Shan_Contants_1.Constant.SHANKOEMEE_MIN_NUM_CARD][i];
+          this._cards[i].node.y = this._getCardPos().y + Shan_Contants_1.Constant.SHANKOEMEE_POS_Y_CARD[this._cards.length - Shan_Contants_1.Constant.SHANKOEMEE_MIN_NUM_CARD][i];
+        }
+      };
+      Player.prototype._getCardStartPosX = function() {
+        var newPos = cc.v2(0, 0);
+        newPos = 4 == this.localChair || 5 == this.localChair || 6 == this.localChair ? cc.v2(-125, 0) : (1 == this.localChair || 2 == this.localChair || 3 == this.localChair, 
+        cc.v2(100, 0));
+        return this.node.getPosition().x + newPos.x;
+      };
+      Player.prototype._getCardPos = function() {
+        var newPos = cc.v2();
+        newPos = 4 == this.localChair || 5 == this.localChair || 6 == this.localChair ? cc.v2(-125, 0) : 1 == this.localChair || 2 == this.localChair || 3 == this.localChair ? cc.v2(100, 0) : 7 == this.localChair ? cc.v2(115, 0) : cc.v2(100, 0);
+        return this.node.getPosition().add(newPos);
+      };
+      Player.prototype.hideBet = function() {
+        this.bgBet && (this.bgBet.active = false);
+      };
+      Player.prototype.showWinEffect = function() {
+        this.winEffect.node.active = true;
+        this.winEffect.animation = "win_text";
+        this.winEffectAvatar.node.active = true;
+        this.winEffectAvatar.animation = "animation";
+        0 === this.localChair && this._gameLayer.shanKoeMeeSound.playWin();
+      };
+      Player.prototype.showLoseEffect = function() {
+        var pos = this.lostEffect.getPosition();
+        this.lostEffect.active = true;
+        this.lostEffect.setPosition(pos.add(cc.v2(0, 60)));
+        cc.tween(this.lostEffect).to(.3, {
+          y: pos.y
+        }, {
+          easing: "sineInOut"
+        }).start();
+        0 === this.localChair && this._gameLayer.shanKoeMeeSound.playLose();
+        this._cards.forEach(function(c) {
+          c.setDarkMode(true);
+        });
+        this.setDarkMode(true);
+      };
+      Player.prototype.showDrawEffect = function() {
+        var pos = this.drawEfected.getPosition();
+        this.drawEfected.active = true;
+        this.drawEfected.setPosition(pos.add(cc.v2(0, 60)));
+        cc.tween(this.drawEfected).to(.3, {
+          y: pos.y
+        }, {
+          easing: "sineInOut"
+        }).start();
+        0 === this.localChair && this._gameLayer.shanKoeMeeSound.playTie();
       };
       Player.prototype.showViewBet = function(bet, roomBet, disableEffect) {
         if (disableEffect) {
           this.bgBet.active = true;
-          this.goldBet.string = this.getBetAmount();
+          this.lbBetAmount.string = Shan_Utils_1.default.shorten(this.getBetAmount(), 2);
         } else {
           var arrC = Shan_Utils_1.getArrChipFromMoney(bet);
           for (var i = 0; i < arrC.length; i++) {
@@ -5750,11 +5892,11 @@ window.__require = function e(t, n, r) {
             chip.node.scale = .5;
             chip.node.active = true;
             chip.node.opacity = 0;
-            chip.node.setPosition(this.userGold.node.getPosition());
+            chip.node.setPosition(this.lbMoney.node.getPosition());
             this.node.addChild(chip.node);
             var pos = this.localChair > 3 ? this.bgBet.getPosition().sub(cc.v2(this.bgBet.width / 2 - 15, 0)) : this.bgBet.getPosition().add(cc.v2(this.bgBet.width / 2 - 15, 0));
             chip.node.runAction(cc.sequence(cc.spawn(cc.moveTo(Shan_ChipGroup_1.default.TIME_FADE_CHIP, pos).easing(cc.easeOut(1)), cc.fadeIn(Shan_ChipGroup_1.default.TIME_FADE_CHIP)), cc.removeSelf(), cc.callFunc(function() {
-              this.lbBetAmount.string = this.getBetAmount().shorten(2);
+              this.lbBetAmount.string = Shan_Utils_1.default.shorten(this.getBetAmount(), 2);
             }.bind(this))));
           }
           if (!this.bgBet.active) {
@@ -5764,95 +5906,277 @@ window.__require = function e(t, n, r) {
           }
         }
       };
-      Player.prototype.getBetAmount = function() {
-        return this._data.betAmount || 0;
+      Player.prototype.setVisibleWatingOpenCards = function(boolean) {
+        this.waitingOpen.active = boolean;
+        this.waitingOpen.x = this._getCardStartPosX();
       };
-      Player.prototype.showComputerPlay = function() {
-        this._data.userName = "compute playing";
-        this.userName.string = this._data.userName;
+      Player.prototype._showNomalHand = function() {
+        var _loop_1 = function(i) {
+          var c = this_1._cards[i];
+          c.node.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_CARD_BASE_Z_ORDER + i;
+          scale = c.getTargetScale() || c.scale;
+          cardStartPosX = this_1._getCardStartPosX();
+          offsetX = Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_GAP * Shan_Contants_1.Constant.SHANKOEMEE_CARD_DEALING_SCALE;
+          0 === this_1.localChair && (offsetX = Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_GAP * Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_SCALE);
+          newPos = cc.v2(cardStartPosX + offsetX * i, this_1._getCardPos().y + Shan_Contants_1.Constant.SHANKOEMEE_POS_Y_CARD[this_1._cards.length - Shan_Contants_1.Constant.SHANKOEMEE_MIN_NUM_CARD][i]);
+          if (c.node) {
+            var toPositon = cc.v2(cardStartPosX, this_1._getCardPos().y);
+            cc.tween(c.node).to(.1, {
+              angle: Shan_Contants_1.Constant.SHANKOEMEE_ROTATION_CARD[this_1._cards.length - Shan_Contants_1.Constant.SHANKOEMEE_MIN_NUM_CARD][0],
+              x: toPositon.x,
+              y: toPositon.y
+            }).to(.05, {
+              scaleX: 0,
+              scaleY: scale
+            }, {
+              easing: "backOut"
+            }).call(function() {
+              c.show();
+            }).to(.05, {
+              scale: scale
+            }, {
+              easing: "backIn"
+            }).delay(.02).to(.1, {
+              angle: Shan_Contants_1.Constant.SHANKOEMEE_ROTATION_CARD[this_1._cards.length - Shan_Contants_1.Constant.SHANKOEMEE_MIN_NUM_CARD][i],
+              x: newPos.x,
+              y: newPos.y
+            }).call(function() {
+              if (i == this._cards.length - 1) {
+                this.showGroupName(scale, false);
+                this.showMultiple();
+              }
+              this._updateCardRotation();
+            }.bind(this_1)).start();
+          }
+        };
+        var this_1 = this, scale, cardStartPosX, offsetX, newPos;
+        for (var i = 0; i < this._cards.length; i++) _loop_1(i);
       };
-      Player.prototype.clean = function() {
-        this.node.stopAllActions();
-        this._cards.forEach(function(c) {
-          c.stopAllActions();
-          c.node.removeFromParent();
-          c.setDarkMode(false);
-        });
-        this._cards = [];
-        this._cardData = [];
-        this.setDarkMode && this.setDarkMode(false);
-        this.resetMatchHistory();
+      Player.prototype._showSpecicalHand = function() {
+        var _loop_2 = function(i) {
+          var c = this_2._cards[i];
+          c.node.zIndex = Shan_Contants_1.Constant.SHANKOEMEE_CARD_BASE_Z_ORDER + i;
+          scale = c.getTargetScale() || c.scale;
+          c.node && cc.tween(c.node).call(function() {
+            c.show();
+          }).to(.15, {
+            skewX: 0,
+            skewY: 0,
+            scaleX: 1.8 * scale,
+            scaleY: 1.8 * scale
+          }, {
+            easing: "backOut"
+          }).delay(.02).to(.15, {
+            scale: scale
+          }, {
+            easing: "backIn"
+          }).call(function() {
+            c.setTargetScale(0);
+            c.node.skewX = c.node.skewY = 0;
+            if (i == this._cards.length - 1) {
+              this.showGroupName(scale, true);
+              this.showMultiple();
+            }
+          }.bind(this_2)).start();
+        };
+        var this_2 = this, scale;
+        for (var i = 0; i < this._cards.length; i++) _loop_2(i);
       };
       Player.prototype.setDarkMode = function(boolean) {
         if (boolean) {
           this.bgPointLose.active = true;
           this.lbPoint.node.color = new cc.Color(0, 0, 0, 255);
-          this.avatar && (this.avatar.color = new cc.Color(80, 80, 80, 255));
+          this.avatar && (this.avatar.node.color = new cc.Color(80, 80, 80, 255));
         } else {
           this.bgPointLose.active = false;
           this.lbPoint.node.color = new cc.Color(139, 65, 21, 255);
-          this.avatar && (this.avatar.color = new cc.Color(255, 255, 255, 255));
+          this.avatar && (this.avatar.node.color = new cc.Color(255, 255, 255, 255));
         }
       };
-      Player.prototype.hideGroupName = function() {
-        this.multiple && (this.multiple.node.active = false);
-        this.bgPoint.active = false;
-        this.bgShan8.node.active = false;
-        this.bgShan9.node.active = false;
-        this.bgShanSap.node.active = false;
+      Player.prototype.showBurnBorderAnim = function() {
+        var node = new cc.Node("New Sprite");
+        var sprite = node.addComponent(cc.Sprite);
+        Shan_Utils_1.setTextureFromRes(sprite, "res/textures/in_light_1");
+        for (var i = 0; i < 6; i++) {
+          var nodeClone = cc.instantiate(node);
+          this.node.addChild(nodeClone);
+          cc.tween(nodeClone).delay(.1 * i).to(.3, {
+            opacity: 0,
+            scale: 1.5
+          }).delay(.9).to(.3, {
+            opacity: 255,
+            scale: 1
+          }).removeSelf().start();
+        }
       };
-      Player.prototype.getUserName = function() {
-        return this._data.userName || "";
+      Player.prototype.showAllInAnim = function(boolean) {
+        if (this.animAllIn) {
+          this.animAllIn.node.active = boolean;
+          this.animAllIn.animation = "Allin";
+        }
       };
-      Player.prototype.getChair = function() {
-        return this._data.chair;
+      Player.prototype.showAMaxBetAnim = function(boolean) {
+        if (this.animMaxBet) {
+          this.animMaxBet.node.active = boolean;
+          this.animMaxBet.animation = "animation";
+        }
       };
-      __decorate([ property(cc.Node) ], Player.prototype, "btnInvite", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "avatar", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "cardReady", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "cardReal", void 0);
-      __decorate([ property(cc.Label) ], Player.prototype, "userName", void 0);
-      __decorate([ property(cc.Label) ], Player.prototype, "userGold", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "owner", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "cardsName", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "actionVaoGa", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "actionDanhBien", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "actionViewer", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "actionThinking", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "actionWin", void 0);
-      __decorate([ property(cc.Label) ], Player.prototype, "goldWin", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "actionLose", void 0);
-      __decorate([ property(cc.Label) ], Player.prototype, "goldLose", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "hub", void 0);
-      __decorate([ property(cc.Label) ], Player.prototype, "goldBet", void 0);
-      __decorate([ property(cc.Prefab) ], Player.prototype, "prefabItemChip", void 0);
+      Player.prototype.showWaitingNewMatch = function(boolean) {
+        this.setDarkMode(boolean);
+        this.lbWaiting && (this.lbWaiting.node.active = boolean);
+      };
+      __decorate([ property(cc.Node) ], Player.prototype, "bgBet", void 0);
+      __decorate([ property(cc.Label) ], Player.prototype, "lbBetAmount", void 0);
+      __decorate([ property(cc.Sprite) ], Player.prototype, "status", void 0);
       __decorate([ property(cc.Prefab) ], Player.prototype, "prefabChip", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "notify", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "chatEmotion", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "chatMsg", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "popupBet", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "popupRequestDanhBien", void 0);
-      __decorate([ property(cc.Label) ], Player.prototype, "labelValueDanhBien", void 0);
-      __decorate([ property(sp.SkeletonData) ], Player.prototype, "dataAnimWin", void 0);
-      __decorate([ property([ cc.BitmapFont ]) ], Player.prototype, "fontNumber", void 0);
-      __decorate([ property(cc.Node) ], Player.prototype, "waitingOpen", void 0);
-      __decorate([ property(cc.Label) ], Player.prototype, "lbPoint", void 0);
-      __decorate([ property(sp.Skeleton) ], Player.prototype, "bgShan8", void 0);
-      __decorate([ property(sp.Skeleton) ], Player.prototype, "bgShan9", void 0);
-      __decorate([ property(sp.Skeleton) ], Player.prototype, "bgShanSap", void 0);
+      __decorate([ property(cc.Node) ], Player.prototype, "bankerEffect", void 0);
+      __decorate([ property(cc.SpriteFrame) ], Player.prototype, "multipleFrame", void 0);
+      __decorate([ property(sp.Skeleton) ], Player.prototype, "animAllIn", void 0);
+      __decorate([ property(sp.Skeleton) ], Player.prototype, "animMaxBet", void 0);
+      __decorate([ property(cc.Label) ], Player.prototype, "lbWaiting", void 0);
+      __decorate([ property(cc.Node) ], Player.prototype, "drawEfected", void 0);
       Player = __decorate([ ccclass ], Player);
       return Player;
-    }(cc.Component);
+    }(Shan_PlayerNode_1.default);
     exports.default = Player;
     cc._RF.pop();
   }, {
-    "../../BaCay/BaCayScript/BaCay.Cmd": void 0,
-    "../../Lobby/LobbyScript/Script/common/App": void 0,
-    "../../Lobby/LobbyScript/Script/common/Utils": void 0,
     "./Model/ShanCardGroup": "ShanCardGroup",
     "./Model/ShanCardGroupName": "ShanCardGroupName",
+    "./Shan.Cmd": "Shan.Cmd",
+    "./Shan.Contants": "Shan.Contants",
+    "./Shan.GameController": "Shan.GameController",
+    "./common/Shan.Card": "Shan.Card",
     "./common/Shan.Chip": "Shan.Chip",
     "./common/Shan.ChipGroup": "Shan.ChipGroup",
+    "./common/Shan.PlayerNode": "Shan.PlayerNode",
+    "./common/Shan.Utils": "Shan.Utils"
+  } ],
+  "Shan.PlayingNode": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "7662boNI45IILoIlsJuWwef", "Shan.PlayingNode");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Shan_Utils_1 = require("./common/Shan.Utils");
+    var Shan_NetworkClient_1 = require("./Shan.NetworkClient");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var PlayingNode = function(_super) {
+      __extends(PlayingNode, _super);
+      function PlayingNode() {
+        var _this = _super.call(this) || this;
+        _this.lbBtns = [];
+        _this.rebetNode = null;
+        _this.lbAllIn = null;
+        _this.lbMaxBet = null;
+        _this.lbRebet = null;
+        _this._lastBet = 0;
+        _this._tempLastBet = 0;
+        return _this;
+      }
+      PlayingNode.prototype.setData = function(ws, potValue, betValue) {
+        this._ws = ws;
+        var arr = [ 1, 2, 3, 4 ];
+        arr = potValue < 40 * betValue ? [ 1, 2, 5, 10 ] : potValue < 100 * betValue ? [ 1, 5, 10, 20 ] : [ 1, 5, 10, 50 ];
+        for (var i = 0; i < arr.length; i++) {
+          this.lbBtns[i].string = Shan_Utils_1.default.shorten(arr[i] * betValue, 1);
+          this.lbBtns[i].node.parent.userData = arr[i] * betValue;
+        }
+        this._lastBet > 0 ? this.rebetNode.active = true : this.rebetNode.active = false;
+        if (Shan_Utils_1.default.getChip() <= potValue) {
+          this.lbAllIn.active = true;
+          this.lbMaxBet.active = false;
+        } else {
+          this.lbAllIn.active = false;
+          this.lbMaxBet.active = true;
+        }
+      };
+      PlayingNode.prototype.onBtnClicked = function(event) {
+        Shan_NetworkClient_1.default.getInstance().bet(event.target.userData);
+      };
+      PlayingNode.prototype.onReBetClicked = function() {
+        this._ws.bet(this._lastBet);
+      };
+      PlayingNode.prototype.onAllInClicked = function() {
+        this._ws.bet(-1);
+      };
+      PlayingNode.prototype.setLastBet = function(value) {
+        if (-1 == value) {
+          this.lbRebet.string = Shan_Utils_1.NumberUtils.format(this._tempLastBet);
+          this._lastBet = this._tempLastBet;
+        } else if (0 == value) {
+          this._lastBet = 0;
+          this.lbRebet.string = "";
+          this.rebetNode.active = false;
+        }
+        this._tempLastBet = value;
+        cc.log("setLastBet", value, this._lastBet, this.lbRebet.string);
+      };
+      PlayingNode.prototype.setActive = function(boolean) {
+        var _this = this;
+        var pos = cc.v2(0, 0);
+        this.node.stopAllActions();
+        if (boolean) {
+          this.node.setPosition(cc.v2(pos.x, pos.y - 100));
+          this.node.active = true;
+          this.node.opacity = 255;
+          cc.tween(this.node).to(.3, {
+            x: pos.x,
+            y: pos.y
+          }, {
+            easing: "backIn"
+          }).start();
+        } else {
+          var tmpPos = cc.v2(pos.x, pos.y - 100);
+          cc.tween(this.node).to(.2, {
+            x: tmpPos.x,
+            y: tmpPos.y
+          }, {
+            easing: "backOut"
+          }).call(function() {
+            _this.node.opacity = 0;
+            _this.node.setPosition(pos);
+            _this.node.active = false;
+          }).start();
+        }
+      };
+      __decorate([ property(cc.Label) ], PlayingNode.prototype, "lbBtns", void 0);
+      __decorate([ property(cc.Node) ], PlayingNode.prototype, "rebetNode", void 0);
+      __decorate([ property(cc.Node) ], PlayingNode.prototype, "lbAllIn", void 0);
+      __decorate([ property(cc.Node) ], PlayingNode.prototype, "lbMaxBet", void 0);
+      __decorate([ property(cc.Label) ], PlayingNode.prototype, "lbRebet", void 0);
+      PlayingNode = __decorate([ ccclass ], PlayingNode);
+      return PlayingNode;
+    }(cc.Component);
+    exports.default = PlayingNode;
+    cc._RF.pop();
+  }, {
+    "./Shan.NetworkClient": "Shan.NetworkClient",
     "./common/Shan.Utils": "Shan.Utils"
   } ],
   "Shan.PopupCreateRoom": [ function(require, module, exports) {
@@ -5950,6 +6274,189 @@ window.__require = function e(t, n, r) {
   }, {
     "./Shan.CreateRoomItem": "Shan.CreateRoomItem"
   } ],
+  "Shan.PopupMessage": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "59e08dcS8FHSqO05tLqAwo6", "Shan.PopupMessage");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Shan_Utils_1 = require("./Shan.Utils");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var PopupMessage = function(_super) {
+      __extends(PopupMessage, _super);
+      function PopupMessage() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.bgMs = null;
+        _this.lbMs = null;
+        return _this;
+      }
+      PopupMessage.prototype.start = function() {};
+      PopupMessage.prototype.show = function(ms) {
+        this.lbMs.string = Shan_Utils_1.StringUtils.shorten(ms, 1e3);
+        this.bgMs.node.height = this.lbMs.node.height + 50;
+        this.node.opacity = 0;
+        this.node.width = this.bgMs.node.width;
+        this.node.height = this.bgMs.node.height;
+        cc.tween(this.node).to(.1, {
+          opacity: 255
+        }).delay(3).to(.1, {
+          opacity: 0
+        }).removeSelf().start();
+      };
+      __decorate([ property(cc.Sprite) ], PopupMessage.prototype, "bgMs", void 0);
+      __decorate([ property(cc.Label) ], PopupMessage.prototype, "lbMs", void 0);
+      PopupMessage = __decorate([ ccclass ], PopupMessage);
+      return PopupMessage;
+    }(cc.Component);
+    exports.default = PopupMessage;
+    cc._RF.pop();
+  }, {
+    "./Shan.Utils": "Shan.Utils"
+  } ],
+  "Shan.PopupPlayerInfo": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "86f87caVORHdYrhto14jO1P", "Shan.PopupPlayerInfo");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Shan_BasePopup_1 = require("../Model/Shan.BasePopup");
+    var Shan_InteractItem_1 = require("./Shan.InteractItem");
+    var Shan_Utils_1 = require("./Shan.Utils");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var PopupPlayerInfo = function(_super) {
+      __extends(PopupPlayerInfo, _super);
+      function PopupPlayerInfo() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.prefabItem = null;
+        _this.prefabItemAnim = null;
+        _this.listView = null;
+        _this.lbName = null;
+        _this.lbChip = null;
+        _this.lbId = null;
+        _this.avatar = null;
+        _this.btnAddFriend = null;
+        _this.btnChat = null;
+        _this.prefabSendMail = null;
+        return _this;
+      }
+      PopupPlayerInfo.prototype.onLoad = function() {
+        this.items = [];
+        var arrRotate = [ 1, 0, 0, 0, 1, 0, 1, 1 ];
+        for (var i = 0; i < 7; i++) {
+          this.items.push({
+            id: i + 1,
+            imgPath: "interact/expression_icon-" + (i + 1),
+            rotate: arrRotate[i]
+          });
+          var node = cc.instantiate(this.prefabItem);
+          this.listView.content.addChild(node);
+          node.x = 65 + 130 * i;
+          var item = node.getComponent(Shan_InteractItem_1.default);
+          item.setData(this.onItemClicked.bind(this), this.items[i].id, this.items[i].imgPath);
+        }
+        this.listView.content.width = 100 * this.items.length;
+      };
+      PopupPlayerInfo.prototype.onItemClicked = function(itemId) {
+        this.onCloseDone();
+      };
+      PopupPlayerInfo.prototype.setData = function(gameLayer, localChair, chair, playerData) {
+        this._localChair = localChair;
+        this._chair = chair;
+        this._gameLayer = gameLayer;
+        this._ws = gameLayer._ws;
+        this._playerData = playerData;
+        this.updateUiInfo(playerData);
+      };
+      PopupPlayerInfo.prototype.updateUiInfo = function(data) {
+        cc.log("updateUiInfo", data);
+        this.lbName.string = data.userName;
+        this.lbChip.string = Shan_Utils_1.NumberUtils.format(data.money);
+        this.lbId.string = data.userId > 0 ? data.userId : data.userId < -14777777 ? -data.userId : data.userId + 14623528;
+      };
+      PopupPlayerInfo.prototype.convertIdToAnimation = function(id) {
+        var arrayAnimation = [ "nemtrung", "kiss", "votay", "hoahong", "nemdep", "heart", "cachua", "thuocno" ];
+        return arrayAnimation[id - 1];
+      };
+      PopupPlayerInfo.prototype.onMessageClick = function() {
+        return;
+        var gameLayer;
+        var node;
+        var readmail;
+      };
+      PopupPlayerInfo.prototype.onAddFriendClick = function() {};
+      PopupPlayerInfo.prototype.onClose = function() {
+        _super.prototype.onClose.call(this);
+      };
+      __decorate([ property(cc.Prefab) ], PopupPlayerInfo.prototype, "prefabItem", void 0);
+      __decorate([ property(cc.Prefab) ], PopupPlayerInfo.prototype, "prefabItemAnim", void 0);
+      __decorate([ property(cc.ScrollView) ], PopupPlayerInfo.prototype, "listView", void 0);
+      __decorate([ property(cc.Label) ], PopupPlayerInfo.prototype, "lbName", void 0);
+      __decorate([ property(cc.Label) ], PopupPlayerInfo.prototype, "lbChip", void 0);
+      __decorate([ property(cc.Label) ], PopupPlayerInfo.prototype, "lbId", void 0);
+      __decorate([ property(cc.Sprite) ], PopupPlayerInfo.prototype, "avatar", void 0);
+      __decorate([ property(cc.Node) ], PopupPlayerInfo.prototype, "btnAddFriend", void 0);
+      __decorate([ property(cc.Node) ], PopupPlayerInfo.prototype, "btnChat", void 0);
+      __decorate([ property(cc.Prefab) ], PopupPlayerInfo.prototype, "prefabSendMail", void 0);
+      PopupPlayerInfo = __decorate([ ccclass ], PopupPlayerInfo);
+      return PopupPlayerInfo;
+    }(Shan_BasePopup_1.default);
+    exports.default = PopupPlayerInfo;
+    cc._RF.pop();
+  }, {
+    "../Model/Shan.BasePopup": "Shan.BasePopup",
+    "./Shan.InteractItem": "Shan.InteractItem",
+    "./Shan.Utils": "Shan.Utils"
+  } ],
   "Shan.Pot": [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "5f92e+EZ8tPKqwzFa14DVZs", "Shan.Pot");
@@ -6023,6 +6530,49 @@ window.__require = function e(t, n, r) {
       return Pot;
     }(cc.Component);
     exports.default = Pot;
+    cc._RF.pop();
+  }, {} ],
+  "Shan.ProgressBar": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "ed55dYleQlCxKynepIF9YHS", "Shan.ProgressBar");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var ProgressBar = function(_super) {
+      __extends(ProgressBar, _super);
+      function ProgressBar() {
+        return null !== _super && _super.apply(this, arguments) || this;
+      }
+      ProgressBar = __decorate([ ccclass ], ProgressBar);
+      return ProgressBar;
+    }(cc.ProgressBar);
+    exports.default = ProgressBar;
     cc._RF.pop();
   }, {} ],
   "Shan.Res": [ function(require, module, exports) {
@@ -6174,6 +6724,7 @@ window.__require = function e(t, n, r) {
       __extends(ShanRoom, _super);
       function ShanRoom() {
         var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.prefabGame = null;
         _this.contentListRooms = null;
         _this.labelNickName = null;
         _this.labelCoin = null;
@@ -6187,6 +6738,7 @@ window.__require = function e(t, n, r) {
         _this.listDataRoom = [];
         _this.listFullRoom = [];
         _this.isInitedUIRoom = false;
+        _this.cardFrames = new Array(53);
         _this.isSortRoom = false;
         return _this;
       }
@@ -6194,6 +6746,21 @@ window.__require = function e(t, n, r) {
       ShanRoom.prototype.onLoad = function() {
         ShanRoom_1.instance = this;
         null != Shan_NetworkClient_1.default.getInstance().ws && (Shan_NetworkClient_1.default.getInstance()._onCloses = []);
+        this.loadCardFrame();
+      };
+      ShanRoom.prototype.loadCardFrame = function() {
+        var _this = this;
+        var _loop_1 = function(i) {
+          var path = "res/textures/card/labai_" + i;
+          try {
+            cc.assetManager.getBundle("Shan").load(path, cc.SpriteFrame, function(err1, spriteFrame) {
+              _this.cardFrames[i] = spriteFrame;
+            });
+          } catch (e) {
+            cc.log("Load card fail ", path);
+          }
+        };
+        for (var i = 0; i < 53; i++) _loop_1(i);
       };
       ShanRoom.prototype.start = function() {
         this.showUIRooms();
@@ -6326,10 +6893,14 @@ window.__require = function e(t, n, r) {
            case Shan_Cmd_1.default.Code.JOIN_ROOM_SUCCESS:
             var res = new Shan_Cmd_1.default.ReceivedJoinRoomSucceed(data);
             cc.log("Shan JOIN_ROOM_SUCCESS ", JSON.stringify(res));
+            break;
+
+           case Shan_Cmd_1.default.Code.MATCH_INFO:
+            var res = new Shan_Cmd_1.default.ReceivedMatchInfo(data);
             var cb = function(res) {
-              _this.UI_Playing.getComponent("Shan.Controller").setupMatch(res);
+              _this.UI_Playing.getComponent("Shan.Controller").onWsMatchInfo(res);
             };
-            _this.showUIPlaying(res, cb);
+            _this.onWsMatchInfo(res.data);
             break;
 
            case Shan_Cmd_1.default.Code.THONG_TIN_BAN_CHOI:
@@ -6346,23 +6917,39 @@ window.__require = function e(t, n, r) {
         }, this);
       };
       ShanRoom.prototype.showUIPlaying = function(res, cb) {
-        var _this = this;
         if (null == this.UI_Playing) {
           App_1.default.instance.showLoading(true);
-          cc.assetManager.getBundle("Shan").load("prefabs/UI_Play", cc.Prefab, function(finish, total, item) {}, function(err1, prefab) {
-            App_1.default.instance.showLoading(false);
-            _this.UI_Playing = cc.instantiate(prefab);
-            _this.UI_Playing.parent = _this.node.parent;
-            _this.UI_Playing.active = true;
-            _this.node.active = false;
-            cb(res);
-            _this.closeUIRoom();
-          });
+          App_1.default.instance.showLoading(false);
+          this.UI_Playing = cc.instantiate(this.prefabGame);
+          this.UI_Playing.parent = this.node.parent;
+          this.UI_Playing.active = true;
+          this.node.active = false;
+          cb(res);
+          this.closeUIRoom();
         } else {
           App_1.default.instance.showLoading(false);
           this.UI_Playing.active = true;
           this.node.active = false;
           cb(res);
+        }
+      };
+      ShanRoom.prototype.onWsMatchInfo = function(res) {
+        cc.log("ON ws match info");
+        if (null == this.UI_Playing) {
+          App_1.default.instance.showLoading(true);
+          App_1.default.instance.showLoading(false);
+          var tmp = cc.instantiate(this.prefabGame);
+          this.node.parent.addChild(tmp);
+          this.node.active = false;
+          tmp.active = true;
+          tmp.getComponent("Shan.GameController").init(Shan_NetworkClient_1.default.getInstance(), this);
+          tmp.getComponent("Shan.GameController").restoreGame(res);
+          this.closeUIRoom();
+        } else {
+          App_1.default.instance.showLoading(false);
+          this.UI_Playing.active = true;
+          this.node.active = false;
+          this.UI_Playing.getComponent("Shan.Controller").restoreGame(res);
         }
       };
       ShanRoom.prototype.createRoom = function() {
@@ -6376,7 +6963,7 @@ window.__require = function e(t, n, r) {
         this.popupCreateRoom.node.active = false;
       };
       ShanRoom.prototype.cbCreateRoom = function(data) {
-        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendCreateRoom(Configs_1.default.App.MONEY_TYPE, 8, data.moneyBet, 0, 8, "", "", data.moneyRequire));
+        Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendCreateRoom(Configs_1.default.App.MONEY_TYPE, 7, data.moneyBet, 0, 7, "", "", data.moneyRequire));
       };
       ShanRoom.prototype.getGameConfig = function() {
         Shan_NetworkClient_1.default.getInstance().send(new Shan_Cmd_1.default.SendGetGameConfig());
@@ -6471,6 +7058,7 @@ window.__require = function e(t, n, r) {
       };
       var ShanRoom_1;
       ShanRoom.instance = null;
+      __decorate([ property(cc.Prefab) ], ShanRoom.prototype, "prefabGame", void 0);
       __decorate([ property(cc.Node) ], ShanRoom.prototype, "contentListRooms", void 0);
       __decorate([ property(cc.Label) ], ShanRoom.prototype, "labelNickName", void 0);
       __decorate([ property(cc.Label) ], ShanRoom.prototype, "labelCoin", void 0);
@@ -6499,6 +7087,422 @@ window.__require = function e(t, n, r) {
     "./Shan.NetworkClient": "Shan.NetworkClient",
     "./components/Shan.PopupCreateRoom": "Shan.PopupCreateRoom"
   } ],
+  "Shan.ScrollView": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "70bc8esR4RIpa1aVs7p2SM7", "Shan.ScrollView");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var ScrollView = function(_super) {
+      __extends(ScrollView, _super);
+      function ScrollView() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.view = null;
+        _this.isOpacity = false;
+        return _this;
+      }
+      ScrollView.prototype.update = function(dt) {
+        var pos = cc.v2(-this.view.width / 2, -this.view.height / 2);
+        pos = this.node.convertToNodeSpaceAR(this.view.convertToWorldSpaceAR(pos));
+        this.viewRect = cc.rect(pos.x, pos.y, this.view.width, this.view.height);
+        for (var i = 0; i < this.node.children.length; i++) {
+          var node = this.node.children[i];
+          this.viewRect.intersects(node.getBoundingBox()) ? this.isOpacity ? node.opacity = 255 : node.active = true : this.isOpacity ? node.opacity = 0 : node.active = false;
+        }
+      };
+      __decorate([ property(cc.Node) ], ScrollView.prototype, "view", void 0);
+      __decorate([ property ], ScrollView.prototype, "isOpacity", void 0);
+      ScrollView = __decorate([ ccclass ], ScrollView);
+      return ScrollView;
+    }(cc.Component);
+    exports.default = ScrollView;
+    cc._RF.pop();
+  }, {} ],
+  "Shan.SelfPlayer": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "77b78wJHGVE1LNjQQhuXrHO", "Shan.SelfPlayer");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var Shan_Card_1 = require("./common/Shan.Card");
+    var Shan_Contants_1 = require("./Shan.Contants");
+    var Shan_Player_1 = require("./Shan.Player");
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var SelfPlayer = function(_super) {
+      __extends(SelfPlayer, _super);
+      function SelfPlayer() {
+        return null !== _super && _super.apply(this, arguments) || this;
+      }
+      SelfPlayer.prototype.instantlyAddCard = function(cardIds, isShow, nodeHasCard) {
+        var _this = this;
+        if (cardIds.length <= 0) return;
+        this._cardData = cardIds;
+        var cardStartPosX = this._getCardStartPosX();
+        for (var i = 0; i < cardIds.length; i++) {
+          var c = cc.instantiate(this.prefabCard);
+          c.zIndex = 10;
+          c.x = cardStartPosX + Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_SCALE * Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_GAP * i;
+          c.y = this._getCardPos().y + Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_Y_OFFSET;
+          c.scale = Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_SCALE;
+          nodeHasCard.addChild(c);
+          var card = c.getComponent(Shan_Card_1.default);
+          isShow && card.setId(cardIds[i], isShow);
+          this._addCard(card);
+        }
+        cc.tween(nodeHasCard).delay(.1).call(function() {
+          _this._updateCardRotation();
+        }).start();
+        if (isShow) {
+          this.showGroupName();
+          this.showMultiple();
+        }
+        return this._cards;
+      };
+      SelfPlayer.prototype.addCard = function(card) {
+        if (this._addCard(card)) {
+          var cardStartPosX = this._getCardStartPosX();
+          var newPos = cc.v2(cardStartPosX + Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_SCALE * Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_GAP * (this._cards.length - 1), this._getCardPos().y + Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_Y_OFFSET);
+          card.setTargetPos(newPos);
+          card.setTargetScale(Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_SCALE);
+          card.node.runAction(cc.sequence(cc.spawn(cc.moveTo(.2, newPos), cc.rotateBy(.2, 180), cc.scaleTo(.2, Shan_Contants_1.Constant.SHANKOEMEE_CARD_ON_HAND_SCALE)), cc.callFunc(function() {
+            this._updateCardRotation();
+          }.bind(this))));
+        }
+      };
+      SelfPlayer.prototype.showCards = function() {
+        for (var i = 0; i < this._cards.length; i++) {
+          var c = this._cards[i];
+          c.setId(this._cardData[i], true);
+        }
+        this.node.runAction(cc.sequence(cc.delayTime(.3), cc.callFunc(function() {
+          this.showAllCards();
+        }.bind(this))));
+      };
+      SelfPlayer.prototype._getCardStartPosX = function() {
+        return this.node.getPosition().x + 135;
+      };
+      SelfPlayer = __decorate([ ccclass ], SelfPlayer);
+      return SelfPlayer;
+    }(Shan_Player_1.default);
+    exports.default = SelfPlayer;
+    cc._RF.pop();
+  }, {
+    "./Shan.Contants": "Shan.Contants",
+    "./Shan.Player": "Shan.Player",
+    "./common/Shan.Card": "Shan.Card"
+  } ],
+  "Shan.SettingInGame": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "97f4715ki5JGaFDg0CHuPul", "Shan.SettingInGame");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var SP_BTN_MAP = {
+      shankoemee: 0,
+      baucua: 1,
+      luckybork: 1,
+      tienlen: 0
+    };
+    var TimeCountDown = function(_super) {
+      __extends(TimeCountDown, _super);
+      function TimeCountDown() {
+        var _this = _super.call(this) || this;
+        _this.bg = null;
+        _this.spSoundOff = null;
+        _this.spMusicOff = null;
+        _this.bgClose = null;
+        _this.prefabGuide = null;
+        _this.spBtnSetting = null;
+        _this.lstSpriteFrameBtn = [];
+        _this.isOnMusic = false;
+        _this.isOnSound = false;
+        _this._ws = null;
+        _this._gameLayer = null;
+        _this._isShow = false;
+        return _this;
+      }
+      TimeCountDown.prototype.init = function(ws, gameLayer, gamename) {
+        this._ws = ws;
+        this._gameLayer = gameLayer;
+        this.spBtnSetting.spriteFrame = this.lstSpriteFrameBtn[SP_BTN_MAP[this._gameLayer._gameName]];
+      };
+      TimeCountDown.prototype.onLoad = function() {
+        this.spSoundOff.active = !this.isOnSound;
+        this.spMusicOff.active = !this.isOnMusic;
+      };
+      TimeCountDown.prototype.start = function() {};
+      TimeCountDown.prototype.onSoundClick = function() {
+        if (this.isOnSound) {
+          this.isOnSound = false;
+          this.spSoundOff.active = true;
+        } else {
+          this.isOnSound = true;
+          this.spSoundOff.active = false;
+        }
+        this.onMenuClick();
+      };
+      TimeCountDown.prototype.onMusicClick = function() {
+        if (this.isOnMusic) {
+          this.isOnMusic = false;
+          this.spMusicOff.active = true;
+        } else {
+          this.isOnMusic = true;
+          this.spMusicOff.active = false;
+        }
+        this.onMenuClick();
+      };
+      TimeCountDown.prototype.onGuideClick = function() {
+        var guide = cc.instantiate(this.prefabGuide);
+        this.node.parent.addChild(guide, cc.macro.MAX_ZINDEX, "guide");
+        this.onMenuClick();
+      };
+      TimeCountDown.prototype.onReMatchClick = function() {
+        this._gameLayer.onReMatchClick();
+        this.onMenuClick();
+      };
+      TimeCountDown.prototype.onMenuClick = function() {
+        this._isShow = !this._isShow;
+        var posY = "baucua" == this._gameLayer._gameName || "luckybork" == this._gameLayer._gameName ? 100 : 50;
+        if (this._isShow) {
+          cc.tween(this.bg).to(.1, {
+            y: posY
+          }, {
+            easing: "backOut"
+          }).start();
+          this.bgClose.active = true;
+        } else {
+          cc.tween(this.bg).to(.1, {
+            y: 400
+          }, {
+            easing: "backIn"
+          }).start();
+          this.bgClose.active = false;
+        }
+      };
+      __decorate([ property(cc.Node) ], TimeCountDown.prototype, "bg", void 0);
+      __decorate([ property(cc.Node) ], TimeCountDown.prototype, "spSoundOff", void 0);
+      __decorate([ property(cc.Node) ], TimeCountDown.prototype, "spMusicOff", void 0);
+      __decorate([ property(cc.Node) ], TimeCountDown.prototype, "bgClose", void 0);
+      __decorate([ property(cc.Prefab) ], TimeCountDown.prototype, "prefabGuide", void 0);
+      __decorate([ property(cc.Sprite) ], TimeCountDown.prototype, "spBtnSetting", void 0);
+      __decorate([ property(cc.SpriteFrame) ], TimeCountDown.prototype, "lstSpriteFrameBtn", void 0);
+      TimeCountDown = __decorate([ ccclass ], TimeCountDown);
+      return TimeCountDown;
+    }(cc.Component);
+    exports.default = TimeCountDown;
+    cc._RF.pop();
+  }, {} ],
+  "Shan.Sound": [ function(require, module, exports) {
+    "use strict";
+    cc._RF.push(module, "0b9e2rD4LJCj7eYuykJPkK2", "Shan.Sound");
+    "use strict";
+    var __extends = this && this.__extends || function() {
+      var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf || {
+          __proto__: []
+        } instanceof Array && function(d, b) {
+          d.__proto__ = b;
+        } || function(d, b) {
+          for (var p in b) Object.prototype.hasOwnProperty.call(b, p) && (d[p] = b[p]);
+        };
+        return extendStatics(d, b);
+      };
+      return function(d, b) {
+        extendStatics(d, b);
+        function __() {
+          this.constructor = d;
+        }
+        d.prototype = null === b ? Object.create(b) : (__.prototype = b.prototype, new __());
+      };
+    }();
+    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
+      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
+      return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    Object.defineProperty(exports, "__esModule", {
+      value: true
+    });
+    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+    var Sound = function(_super) {
+      __extends(Sound, _super);
+      function Sound() {
+        var _this = null !== _super && _super.apply(this, arguments) || this;
+        _this.waiting = null;
+        _this.clock = null;
+        _this.startMusic = null;
+        _this.dealCard = null;
+        _this.betTime = null;
+        _this.allIn = null;
+        _this.bet = null;
+        _this.draw = null;
+        _this.notDraw = null;
+        _this.compare = null;
+        _this.dealOneCard = null;
+        _this.openCard = null;
+        _this.shan8 = null;
+        _this.shan9 = null;
+        _this.win = null;
+        _this.lose = null;
+        _this.tie = null;
+        _this.chipDrop = null;
+        _this.bankerWin = null;
+        _this.winJackPot = null;
+        _this.changeBanker = null;
+        _this.bankerIsMe = null;
+        _this.last3game = null;
+        _this.tip = null;
+        _this.dealerKiss = null;
+        _this.otherShan = null;
+        _this.compareLose = null;
+        _this.compareWin = null;
+        _this.threeOfAKind = null;
+        _this.showAllCards = null;
+        return _this;
+      }
+      Sound.prototype.playWaiting = function() {};
+      Sound.prototype.playClock = function() {};
+      Sound.prototype.playStart = function() {};
+      Sound.prototype.playDealCard = function() {};
+      Sound.prototype.playBetTime = function() {};
+      Sound.prototype.playAllIn = function() {};
+      Sound.prototype.playBet = function() {};
+      Sound.prototype.playDrawClick = function() {};
+      Sound.prototype.playNotDraw = function() {};
+      Sound.prototype.playCompare = function() {};
+      Sound.prototype.playDealOneCard = function() {};
+      Sound.prototype.playOpenCard = function() {};
+      Sound.prototype.playShan8 = function() {};
+      Sound.prototype.playShan9 = function() {};
+      Sound.prototype.playWin = function() {};
+      Sound.prototype.playLose = function() {};
+      Sound.prototype.playTie = function() {};
+      Sound.prototype.playChipDrop = function() {};
+      Sound.prototype.playBankerWin = function() {};
+      Sound.prototype.playWinJackPot = function() {};
+      Sound.prototype.playChangeBanker = function() {};
+      Sound.prototype.playBankerIsMe = function() {};
+      Sound.prototype.playLast3game = function() {};
+      Sound.prototype.playTip = function() {};
+      Sound.prototype.playDealerKiss = function() {};
+      Sound.prototype.playOtherShan = function() {};
+      Sound.prototype.playCompareLose = function() {};
+      Sound.prototype.playCompareWin = function() {};
+      Sound.prototype.playThreeOfAKind = function() {};
+      Sound.prototype.playShowAllCards = function() {};
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "waiting", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "clock", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "startMusic", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "dealCard", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "betTime", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "allIn", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "bet", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "draw", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "notDraw", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "compare", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "dealOneCard", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "openCard", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "shan8", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "shan9", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "win", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "lose", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "tie", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "chipDrop", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "bankerWin", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "winJackPot", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "changeBanker", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "bankerIsMe", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "last3game", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "tip", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "dealerKiss", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "otherShan", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "compareLose", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "compareWin", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "threeOfAKind", void 0);
+      __decorate([ property(cc.AudioClip) ], Sound.prototype, "showAllCards", void 0);
+      Sound = __decorate([ ccclass ], Sound);
+      return Sound;
+    }(cc.Component);
+    exports.default = Sound;
+    cc._RF.pop();
+  }, {} ],
   "Shan.Utils": [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "80288dJkXdMnKqJJqxPvS01", "Shan.Utils");
@@ -6506,7 +7510,11 @@ window.__require = function e(t, n, r) {
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.getArrChipFromMoney = void 0;
+    exports.NumberUtils = exports.StringUtils = exports.format = exports.shorten = exports.getAvatarPath = exports.setTextureFromRes = exports.getSuit = exports.getRank = exports.getArrChipFromMoney = void 0;
+    var Configs_1 = require("../../../Loading/src/Configs");
+    var BroadcastReceiver_1 = require("../../../Lobby/LobbyScript/Script/common/BroadcastReceiver");
+    var Shan_CardRank_1 = require("../Model/Shan.CardRank");
+    var Shan_CardSuit_1 = require("../Model/Shan.CardSuit");
     var VALUE_CHIPS = [ 1, 2, 5, 10, 20, 50, 100, 200, 500, 1e3, 2e3, 5e3, 1e4, 2e4, 5e4, 1e5, 2e5, 5e5, 1e6, 2e6, 5e6, 1e7, 2e7, 5e7, 1e8, 2e8, 5e8 ];
     function getArrChipFromMoney(goldIn, isMany) {
       if (isMany) {
@@ -6531,26 +7539,153 @@ window.__require = function e(t, n, r) {
       return arr;
     }
     exports.getArrChipFromMoney = getArrChipFromMoney;
+    function getRank(cardid) {
+      return Shan_CardRank_1.default.ALL[Math.floor(cardid / 4) + 2];
+    }
+    exports.getRank = getRank;
+    function getSuit(cardid) {
+      return Shan_CardSuit_1.default.ALL[cardid % 4];
+    }
+    exports.getSuit = getSuit;
+    function setTextureFromRes(sprite, res) {
+      cc.assetManager.getBundle("Shan").load(res, cc.SpriteFrame, function(err, spriteFrame) {
+        if (err) {
+          cc.error(err.message);
+          return;
+        }
+        try {
+          sprite.spriteFrame = spriteFrame;
+        } catch (e) {
+          console.error(e);
+        }
+      });
+    }
+    exports.setTextureFromRes = setTextureFromRes;
+    function getAvatarPath(avatarId) {
+      avatarId = parseInt(avatarId) || 0;
+      avatarId = avatarId % 20 + 1;
+      return "avatar/" + NumberUtils.pad(avatarId, 2);
+    }
+    exports.getAvatarPath = getAvatarPath;
+    function shorten(value, digits) {
+      var si = [ {
+        value: 1e18,
+        symbol: "E"
+      }, {
+        value: 1e15,
+        symbol: "P"
+      }, {
+        value: 1e12,
+        symbol: "T"
+      }, {
+        value: 1e9,
+        symbol: "B"
+      }, {
+        value: 1e6,
+        symbol: "M"
+      }, {
+        value: 1e3,
+        symbol: "K"
+      } ], rx = /\.0+$|(\.[0-9]*[1-9])0+$/, i;
+      for (i = 0; i < si.length; i++) if (value >= si[i].value) return (value / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+      return value.toFixed(digits).replace(rx, "$1");
+    }
+    exports.shorten = shorten;
+    function format(value, separator) {
+      separator = separator || ".";
+      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+    }
+    exports.format = format;
+    var ShanUtils = function() {
+      function ShanUtils() {}
+      ShanUtils.getChip = function() {
+        return Configs_1.default.Login.Coin;
+      };
+      ShanUtils.setChip = function(value) {
+        Configs_1.default.Login.Coin = value;
+        BroadcastReceiver_1.default.send(BroadcastReceiver_1.default.USER_UPDATE_COIN);
+      };
+      ShanUtils.formatWithArg = function(str) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) args[_i - 1] = arguments[_i];
+        var a = str;
+        var b;
+        for (b in args) a = a.replace(/%[a-z]/, args[b]);
+        return a;
+      };
+      ShanUtils.format = function(value, separator) {
+        separator = separator || ".";
+        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+      };
+      ShanUtils.shorten = function(value, digits) {
+        var si = [ {
+          value: 1e18,
+          symbol: "E"
+        }, {
+          value: 1e15,
+          symbol: "P"
+        }, {
+          value: 1e12,
+          symbol: "T"
+        }, {
+          value: 1e9,
+          symbol: "B"
+        }, {
+          value: 1e6,
+          symbol: "M"
+        }, {
+          value: 1e3,
+          symbol: "K"
+        } ], rx = /\.0+$|(\.[0-9]*[1-9])0+$/, i;
+        for (i = 0; i < si.length; i++) if (value >= si[i].value) return (value / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+        return value.toFixed(digits).replace(rx, "$1");
+      };
+      return ShanUtils;
+    }();
+    exports.default = ShanUtils;
+    var StringUtils = function() {
+      function StringUtils() {}
+      StringUtils.shorten = function(v, l, c) {
+        l = l || 12;
+        c = c || ".";
+        if (v.length > l) return v.substring(0, l) + "" + c + c;
+        return v.slice();
+      };
+      return StringUtils;
+    }();
+    exports.StringUtils = StringUtils;
+    var NumberUtils = function() {
+      function NumberUtils() {}
+      NumberUtils.pad = function(v, size) {
+        var s = String(v);
+        while (s.length < (size || 2)) s = "0" + s;
+        return s;
+      };
+      NumberUtils.format = function(value, separator) {
+        separator = separator || ".";
+        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, separator);
+      };
+      return NumberUtils;
+    }();
+    exports.NumberUtils = NumberUtils;
     cc._RF.pop();
-  }, {} ],
+  }, {
+    "../../../Loading/src/Configs": void 0,
+    "../../../Lobby/LobbyScript/Script/common/BroadcastReceiver": void 0,
+    "../Model/Shan.CardRank": "Shan.CardRank",
+    "../Model/Shan.CardSuit": "Shan.CardSuit"
+  } ],
   ShanCardGroupName: [ function(require, module, exports) {
     "use strict";
     cc._RF.push(module, "974c4N5KuNFaqBofUKp1XGs", "ShanCardGroupName");
     "use strict";
-    var __decorate = this && this.__decorate || function(decorators, target, key, desc) {
-      var c = arguments.length, r = c < 3 ? target : null === desc ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) r = Reflect.decorate(decorators, target, key, desc); else for (var i = decorators.length - 1; i >= 0; i--) (d = decorators[i]) && (r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r);
-      return c > 3 && r && Object.defineProperty(target, key, r), r;
-    };
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var GROUP_CARD_NAME = function() {
       function GROUP_CARD_NAME(value) {
         this.setValue("Shan.GROUP_CARD_NAME", value);
       }
-      GROUP_CARD_NAME_1 = GROUP_CARD_NAME;
       GROUP_CARD_NAME.prototype.setValue = function(className, value) {
         this._className = className;
         this._value = value;
@@ -6561,16 +7696,14 @@ window.__require = function e(t, n, r) {
       GROUP_CARD_NAME.prototype.toString = function() {
         return this._className + "." + this._value;
       };
-      var GROUP_CARD_NAME_1;
-      GROUP_CARD_NAME.NONE = new GROUP_CARD_NAME_1(0);
-      GROUP_CARD_NAME.SAP = new GROUP_CARD_NAME_1(1);
-      GROUP_CARD_NAME.SHAN = new GROUP_CARD_NAME_1(2);
+      GROUP_CARD_NAME.NONE = new GROUP_CARD_NAME(0);
+      GROUP_CARD_NAME.SAP = new GROUP_CARD_NAME(1);
+      GROUP_CARD_NAME.SHAN = new GROUP_CARD_NAME(2);
       GROUP_CARD_NAME.ALL = {
-        0: GROUP_CARD_NAME_1.NONE,
-        1: GROUP_CARD_NAME_1.SAP,
-        2: GROUP_CARD_NAME_1.SHAN
+        0: GROUP_CARD_NAME.NONE,
+        1: GROUP_CARD_NAME.SAP,
+        2: GROUP_CARD_NAME.SHAN
       };
-      GROUP_CARD_NAME = GROUP_CARD_NAME_1 = __decorate([ ccclass ], GROUP_CARD_NAME);
       return GROUP_CARD_NAME;
     }();
     exports.default = GROUP_CARD_NAME;
@@ -6592,10 +7725,7 @@ window.__require = function e(t, n, r) {
     var ShanCardGroupName_1 = require("./ShanCardGroupName");
     var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
     var CardGroup = function() {
-      function CardGroup() {
-        this._groupName = ShanCardGroupName_1.default.NONE;
-        this._multiple = 1;
-      }
+      function CardGroup() {}
       CardGroup.prototype.setCards = function(cards) {
         this._cards = cards.slice(0, 3).sort(function(a, b) {
           return b.getId() - a.getId();
@@ -6658,4 +7788,4 @@ window.__require = function e(t, n, r) {
     "./Shan.CardRank": "Shan.CardRank",
     "./ShanCardGroupName": "ShanCardGroupName"
   } ]
-}, {}, [ "Shan.CardRank", "Shan.CardSuit", "ShanCardGroup", "ShanCardGroupName", "Shan.CardUtil", "Shan.Cmd", "Shan.Contants", "Shan.Controller", "Shan.ItemResult", "Shan.ItemRoom", "Shan.ItemRoomz", "Shan.NetworkClient", "Shan.Player", "Shan.Room", "Sham.TimeCountDown", "Shan.BankerPlayingNode", "Shan.Card", "Shan.Chip", "Shan.ChipGroup", "Shan.NanBai", "Shan.Pot", "Shan.Res", "Shan.Utils", "Shan.CreateRoomItem", "Shan.PopupCreateRoom" ]);
+}, {}, [ "Shan.Alert", "Shan.BankerWin", "Shan.BasePopup", "Shan.CardRank", "Shan.CardSuit", "Shan.Jackpot", "Shan.JackpotBig", "Shan.JackpotItem", "Shan.JackpotSmall", "ShanCardGroup", "ShanCardGroupName", "Shan.BankerPlayingNode", "Shan.CardUtil", "Shan.Cmd", "Shan.Contants", "Shan.GameController", "Shan.ItemResult", "Shan.ItemRoom", "Shan.ItemRoomz", "Shan.NanBai", "Shan.NetworkClient", "Shan.Player", "Shan.PlayingNode", "Shan.Room", "Shan.SelfPlayer", "Shan.Sound", "Sham.TimeCountDown", "Shan.Card", "Shan.Chip", "Shan.ChipGroup", "Shan.GameLayer", "Shan.InteractItem", "Shan.PlayerNode", "Shan.PopupMessage", "Shan.PopupPlayerInfo", "Shan.Pot", "Shan.ProgressBar", "Shan.Res", "Shan.ScrollView", "Shan.SettingInGame", "Shan.Utils", "Shan.CreateRoomItem", "Shan.PopupCreateRoom" ]);

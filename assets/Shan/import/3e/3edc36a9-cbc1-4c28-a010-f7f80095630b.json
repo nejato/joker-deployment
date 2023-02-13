@@ -1,0 +1,51 @@
+[
+  1,
+  [
+    "fcizjvUZBAxKZRIgEq/7ui"
+  ],
+  [
+    "_textureSetter"
+  ],
+  [
+    "cc.SpriteFrame"
+  ],
+  0,
+  [
+    {
+      "name": "Allin_BG",
+      "rect": [
+        2,
+        2,
+        504,
+        244
+      ],
+      "offset": [
+        -2,
+        4
+      ],
+      "originalSize": [
+        512,
+        256
+      ],
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  [
+    0
+  ],
+  0,
+  [
+    0
+  ],
+  [
+    0
+  ],
+  [
+    0
+  ]
+]
